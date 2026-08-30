@@ -1,0 +1,27 @@
+{
+  "homework": "hw01",
+  "sid4": 7838,
+  "verified_at_utc": "2026-08-30T07:27:42Z",
+  "status": "partial_pass",
+  "checks": {
+    "part1_source_checks": {
+      "status": "passed",
+      "passed": 23,
+      "failed": 0,
+      "command": "node code/web_application/tests/run-tests.js"
+    },
+    "docker_image_build": {
+      "status": "passed",
+      "command": "docker build -f code/Dockerfile -t hw1-rental-listings:1.0 ."
+    },
+    "docker_localhost": {
+      "status": "passed",
+      "container": "s7838-rental-housing",
+      "port_mapping": "8638:80",
+      "http_status": 200
+    },
+    "parts_2_to_4": {
+      "status": "not_implemented"
+    }
+  }
+}

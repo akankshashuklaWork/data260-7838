@@ -1,0 +1,41 @@
+Homework 1 reproducible run log
+Repository: data260-7838
+
+[2026-08-30T07:19:21Z] Command: node code/web_application/tests/run-tests.js
+PASS: page title is HW1-Akanksha
+PASS: largest heading tag names the entity
+PASS: primary text input is required and autofocus
+PASS: secondary input is required
+PASS: submitter email uses email type
+PASS: description is a required textarea
+PASS: category dropdown has four selectable options
+PASS: terms label has required wording
+PASS: script is linked at the end of body
+PASS: description validation requires more than 25 characters
+PASS: terms checkbox is validated
+PASS: form data is converted to a JSON string
+PASS: JSON string is parsed
+PASS: object destructuring extracts title and email
+PASS: spread operator adds submissionDate
+PASS: submission counter uses a closure
+PASS: schema defines the entity fields
+PASS: strict mode is enabled
+PASS: regular and arrow functions are demonstrated
+PASS: Promise and async-await are demonstrated
+PASS: successful submissions are added to the page
+PASS: delete handler uses bind
+PASS: JavaScript parses without syntax errors
+All assignment checks passed.
+
+[2026-08-30] Command: docker build -f code/Dockerfile -t hw1-rental-listings:1.0 .
+Result: PASS
+Docker loaded the Nginx Alpine base image, copied index.html, styles.css, and script.js from code/web_application/, and created hw1-rental-listings:1.0.
+
+[2026-08-30T07:27:42Z] Commands: docker run ... --publish 8638:80; internal HTTP check; curl http://localhost:8638/
+Container: s7838-rental-housing
+Image: hw1-rental-listings:1.0
+Port mapping: 0.0.0.0:8638->80/tcp
+Container-internal HTTP status: 200
+Localhost HTTP status: 200
+
+Note: These 23 checks are local source-level Part 1 checks. They do not represent completion of Homework 1 Parts 2–4.

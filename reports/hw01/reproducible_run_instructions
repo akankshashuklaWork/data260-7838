@@ -1,0 +1,27 @@
+# Homework 1 Reproducible Run Instructions
+
+Run these commands from the repository root.
+
+## Part 1 checks
+
+```bash
+node code/web_application/tests/run-tests.js
+```
+
+## Build and run the web application with Docker
+
+```bash
+docker build -f code/Dockerfile -t hw1-rental-listings:1.0 .
+docker run --detach --name s7838-rental-housing --publish 8638:80 hw1-rental-listings:1.0
+```
+
+Open http://localhost:8638 in a browser.
+
+Stop the local container when finished:
+
+```bash
+docker stop s7838-rental-housing
+```
+
+Parts 2–4 commands will be added after those implementations are complete.
+The current `report.pdf` is explicitly marked as a draft and must be replaced after all homework parts and screenshots are complete.

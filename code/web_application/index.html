@@ -1,0 +1,104 @@
+<!-- The DOCTYPE declaration tells the browser that this document uses HTML5 -->
+<!DOCTYPE html>
+<!-- The html tag is the root element. The lang attribute describes the page language -->
+<html lang="en">
+<!-- The head contains page information that is not displayed as the main content -->
+<head>
+  <!-- UTF-8 supports common letters, symbols, and punctuation -->
+  <meta charset="UTF-8">
+  <!-- The viewport setting makes the layout work properly on phones and tablets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit a rental housing listing.">
+  <!-- The title appears in the browser tab. -->
+  <title>HW1-Akanksha</title>
+  <!-- The link tag loads the page styles from an external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- The body contains everything displayed on the page -->
+<body>
+  <!-- main identifies the primary content of this page -->
+  <main>
+    <!-- h1 is the largest heading and names the assigned domain entity -->
+    <h1>Rental Housing Listing</h1>
+    <p class="intro">Enter the property information below. All fields are required.</p>
+
+    <!-- The form collects all information needed for one rental listing -->
+    <form id="rentalListingForm">
+      <!-- A label is connected to its input through matching for and id values -->
+      <label for="propertyTitle">Property title *</label>
+      <!-- autofocus places the cursor in this required primary field when the page loads -->
+      <input
+        type="text"
+        id="propertyTitle"
+        name="propertyTitle"
+        placeholder="e.g., Sunny two-bedroom near downtown"
+        autofocus
+        required
+      >
+
+      <label for="propertyLocation">Property location *</label>
+      <!-- This required text input stores the entity's secondary field -->
+      <input
+        type="text"
+        id="propertyLocation"
+        name="propertyLocation"
+        placeholder="e.g., 123 Market St, San Jose, CA"
+        required
+      >
+
+      <label for="submitterEmail">Submitter email *</label>
+      <!-- type=email lets the browser check that the value resembles an email address -->
+      <input
+        type="email"
+        id="submitterEmail"
+        name="submitterEmail"
+        placeholder="e.g., owner@example.com"
+        required
+      >
+
+      <label for="propertyDescription">Property description *</label>
+      <!-- textarea is used for longer, multi-line property information -->
+      <textarea
+        id="propertyDescription"
+        name="propertyDescription"
+        rows="5"
+        placeholder="Describe the rooms, amenities, rent, and nearby attractions (more than 25 characters)."
+        required
+      ></textarea>
+      <p id="characterCount" class="help-text" aria-live="polite">0 characters</p>
+
+      <label for="propertyCategory">Property category *</label>
+      <!-- select creates a dropdown menu; each option is one allowed category -->
+      <select id="propertyCategory" name="propertyCategory" required>
+        <option value="" selected disabled>Select a category</option>
+        <option value="Apartment">Apartment</option>
+        <option value="House">House</option>
+        <option value="Condo">Condo</option>
+        <option value="Townhouse">Townhouse</option>
+      </select>
+
+      <!-- The checkbox records whether the user accepts the terms and conditions -->
+      <div class="terms-row">
+        <input type="checkbox" id="termsAccepted" name="termsAccepted" value="agreed">
+        <label for="termsAccepted">I agree to the terms and conditions.</label>
+      </div>
+
+      <!-- A submit button triggers the form's JavaScript submit event -->
+      <button type="submit">Publish Rental Listing</button>
+      <!-- role=status and aria-live allow assistive technology to announce updates -->
+      <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <!-- Valid listings are added to this list after the simulated save succeeds -->
+    <section aria-labelledby="submissionsHeading">
+      <h2 id="submissionsHeading">Successful submissions</h2>
+      <ul id="listingSubmissions">
+        <li id="emptyState" class="empty-state">No listings submitted yet.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- The script is placed at the end so the HTML elements exist before JavaScript uses them -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.git
+.gitignore
+.DS_Store
+node_modules
+reports
+src
+code/other_application_code
+code/web_application/tests
+code/*.py
+*.md

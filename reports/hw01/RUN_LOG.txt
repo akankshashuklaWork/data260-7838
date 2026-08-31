@@ -136,7 +136,7 @@ Sun Aug 30 17:09:22 PDT 2026
 ║     Part 3: Non-Determinism Testing (40 runs total)            ║
 ╚════════════════════════════════════════════════════════════════╝
 
-❌ ERROR: Input file not found: reports/hw01/cases/nondeterminism_input.json
+ERROR: Input file not found: reports/hw01/cases/nondeterminism_input.json
 Sun Aug 30 23:10:48 PDT 2026
 ╔════════════════════════════════════════════════════════════════╗
 ║     Part 3: Non-Determinism Testing (40 runs total)            ║
@@ -144,7 +144,7 @@ Sun Aug 30 23:10:48 PDT 2026
 
 ✓ Input file: ../reports/hw01/cases/nondeterminism_input.json
 
-📊 Running 20 tests at temperature 0.7 (creative)...
+  Running 20 tests at temperature 0.7 (creative)...
   Running test 1/40 at temperature 0.7... ✓ 5298ms
   Running test 2/40 at temperature 0.7... ✓ 3890ms
   Running test 3/40 at temperature 0.7... ✓ 5027ms
@@ -166,7 +166,7 @@ Sun Aug 30 23:10:48 PDT 2026
   Running test 19/40 at temperature 0.7... ✓ 4911ms
   Running test 20/40 at temperature 0.7... ✓ 5234ms
 
-📊 Running 20 tests at temperature 0.0 (deterministic)...
+  Running 20 tests at temperature 0.0 (deterministic)...
   Running test 21/40 at temperature 0.0... ✓ 4064ms
   Running test 22/40 at temperature 0.0... ✓ 3950ms
   Running test 23/40 at temperature 0.0... ✓ 4010ms
@@ -188,8 +188,8 @@ Sun Aug 30 23:10:48 PDT 2026
   Running test 39/40 at temperature 0.0... ✓ 3989ms
   Running test 40/40 at temperature 0.0... ✓ 3942ms
 
-✅ Results saved to: ../reports/hw01/raw/nondeterminism_results.json
-✅ Total runs completed: 40
+  Results saved to: ../reports/hw01/raw/nondeterminism_results.json
+  Total runs completed: 40
 
 ╔════════════════════════════════════════════════════════════════╗
 ║                    NEXT STEPS                                  ║

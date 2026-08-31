@@ -7,6 +7,7 @@ Uses Ollama with local LLM to generate tags and summary
 
 import json
 import sys
+import time
 from typing import Optional
 from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -16,30 +17,30 @@ MODEL_NAME = "qwen2:7b"  # or qwen3:8b if hardware supports
 OLLAMA_BASE_URL = "http://localhost:11434"
 TEMPERATURE = 0.7
 
-def create_planner_agent() -> ChatOllama:
+def create_planner_agent(temperature: float = TEMPERATURE) -> ChatOllama:
     """Create the Planner agent."""
     return ChatOllama(
         model=MODEL_NAME,
         base_url=OLLAMA_BASE_URL,
-        temperature=TEMPERATURE,
+        temperature=temperature,
         format="json"
     )
 
-def create_reviewer_agent() -> ChatOllama:
+def create_reviewer_agent(temperature: float = TEMPERATURE) -> ChatOllama:
     """Create the Reviewer agent."""
     return ChatOllama(
         model=MODEL_NAME,
         base_url=OLLAMA_BASE_URL,
-        temperature=TEMPERATURE,
+        temperature=temperature,
         format="json"
     )
 
-def planner_step(title: str, content: str) -> dict:
+def planner_step(title: str, content: str, temperature: float = TEMPERATURE, verbose: bool = True) -> dict:
     """
     Planner Agent: Generates initial tags and summary from title and content.
     Returns a JSON object with tags and summary.
     """
-    planner = create_planner_agent()
+    planner = create_planner_agent(temperature)
 
     system_prompt = SystemMessage(content="""You are a content analyst. Analyze the given title and content to generate:
 1. Exactly 3 topical tags (relevant keywords from the content, not generic)
@@ -64,21 +65,23 @@ Analyze this and generate 3 tags and a summary. Output ONLY valid JSON, no other
 
     try:
         result = json.loads(response.content)
-        print("\n" + "="*80)
-        print("PLANNER OUTPUT:")
-        print("="*80)
-        print(json.dumps(result, indent=2))
+        if verbose:
+            print("\n" + "="*80)
+            print("PLANNER OUTPUT:")
+            print("="*80)
+            print(json.dumps(result, indent=2))
         return result
     except json.JSONDecodeError:
-        print(f"ERROR: Planner output is not valid JSON:\n{response.content}")
+        if verbose:
+            print(f"ERROR: Planner output is not valid JSON:\n{response.content}")
         return {"tags": [], "summary": "", "reasoning": "Failed to parse"}
 
-def reviewer_step(title: str, content: str, planner_output: dict) -> dict:
+def reviewer_step(title: str, content: str, planner_output: dict, temperature: float = TEMPERATURE, verbose: bool = True) -> dict:
     """
     Reviewer Agent: Reviews and potentially improves the Planner's tags and summary.
     Returns a JSON object indicating changes made.
     """
-    reviewer = create_reviewer_agent()
+    reviewer = create_reviewer_agent(temperature)
 
     system_prompt = SystemMessage(content="""You are a quality reviewer. Review the tags and summary provided by the Planner:
 1. Check if tags are relevant and specific (not generic)
@@ -111,23 +114,26 @@ Review these. Output ONLY valid JSON with improved tags/summary if needed.""")
 
     try:
         result = json.loads(response.content)
-        print("\n" + "="*80)
-        print("REVIEWER OUTPUT:")
-        print("="*80)
-        print(json.dumps(result, indent=2))
+        if verbose:
+            print("\n" + "="*80)
+            print("REVIEWER OUTPUT:")
+            print("="*80)
+            print(json.dumps(result, indent=2))
         return result
     except json.JSONDecodeError:
-        print(f"ERROR: Reviewer output is not valid JSON:\n{response.content}")
+        if verbose:
+            print(f"ERROR: Reviewer output is not valid JSON:\n{response.content}")
         return planner_output
 
-def finalizer_step(planner_output: dict, reviewer_output: dict) -> dict:
+def finalizer_step(planner_output: dict, reviewer_output: dict, verbose: bool = True) -> dict:
     """
     Finalizer: Combines Planner and Reviewer outputs into final JSON.
     Ensures exactly 3 tags and ≤25 word summary.
     """
-    print("\n" + "="*80)
-    print("FINALIZER STEP:")
-    print("="*80)
+    if verbose:
+        print("\n" + "="*80)
+        print("FINALIZER STEP:")
+        print("="*80)
 
     # Use Reviewer output if it changed something meaningful, otherwise use Planner
     if reviewer_output.get("changed", False) and reviewer_output.get("tags"):
@@ -151,13 +157,54 @@ def finalizer_step(planner_output: dict, reviewer_output: dict) -> dict:
         "source": source
     }
 
-    print(json.dumps(final_output, indent=2))
+    if verbose:
+        print(json.dumps(final_output, indent=2))
     return final_output
 
-def main():
-    """Main execution: Run Planner → Reviewer → Finalizer pipeline."""
+def run_pipeline(title: str, content: str, temperature: float = TEMPERATURE, verbose: bool = True) -> dict:
+    """Run the full Planner -> Reviewer -> Finalizer pipeline once and return the final output."""
+    planner_result = planner_step(title, content, temperature, verbose)
+    reviewer_result = reviewer_step(title, content, planner_result, temperature, verbose)
+    final_result = finalizer_step(planner_result, reviewer_result, verbose)
+    return final_result
 
-    # Example input (Rental Housing domain)
+def main():
+    """
+    Main execution.
+
+    Default mode (no arguments): runs the demo pipeline on the fixed example
+    Rental Housing listing and prints each stage verbosely, as used for Part 2.
+
+    Test mode: python agents_demo.py <input_json_path> <temperature>
+    Loads {"title": ..., "content": ...} from input_json_path, runs the same
+    pipeline once at the given temperature, and prints ONLY a single-line JSON
+    object {"tags": [...], "summary": ..., "latency_ms": ...} to stdout - used
+    by run_nondeterminism_tests.py for the Part 3 non-determinism experiment.
+    """
+    args = sys.argv[1:]
+
+    if len(args) >= 2:
+        # Test mode: quiet, single-line JSON output for automated scripting.
+        input_path = args[0]
+        temperature = float(args[1])
+
+        with open(input_path, "r") as f:
+            input_data = json.load(f)
+
+        start_time = time.time()
+        final_result = run_pipeline(
+            input_data["title"], input_data["content"], temperature, verbose=False
+        )
+        latency_ms = (time.time() - start_time) * 1000
+
+        print(json.dumps({
+            "tags": final_result["tags"],
+            "summary": final_result["summary"],
+            "latency_ms": latency_ms
+        }))
+        return final_result
+
+    # Default demo mode (Part 2): Example input (Rental Housing domain)
     title = "Spacious 2BR Apartment in Downtown San Jose"
     content = """This beautifully renovated 2-bedroom, 1-bathroom apartment is located in the heart of downtown San Jose.
     Features include hardwood floors, high ceilings, in-unit washer/dryer, and a large balcony with city views.
@@ -167,16 +214,8 @@ def main():
     print(f"INPUT TITLE: {title}")
     print(f"INPUT CONTENT: {content}")
 
-    # Step 1: Planner generates initial tags and summary
-    planner_result = planner_step(title, content)
+    final_result = run_pipeline(title, content, TEMPERATURE, verbose=True)
 
-    # Step 2: Reviewer reviews and improves if needed
-    reviewer_result = reviewer_step(title, content, planner_result)
-
-    # Step 3: Finalizer produces final JSON output
-    final_result = finalizer_step(planner_result, reviewer_result)
-
-    # Print final output
     print("\n" + "="*80)
     print("FINAL PUBLISH OUTPUT (VALID JSON):")
     print("="*80)

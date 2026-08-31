@@ -11,9 +11,9 @@
 
 | Metric | Temp 0.0 | Temp 0.7 |
 |--------|----------|----------|
-| Distinct tag sets | 1 | 13 |
-| Tags in all 20 runs | 3 | 1 |
-| Tags in exactly 1 run | 0 | 5 |
+| Distinct tag sets | 1 | 14 |
+| Tags in all 20 runs | 3 | 0 |
+| Tags in exactly 1 run | 0 | 6 |
 
 ---
 
@@ -21,9 +21,9 @@
 
 | Metric | Temp 0.0 | Temp 0.7 |
 |--------|----------|----------|
-| p50 (ms) | 3699.6 | 4256.5 |
-| p95 (ms) | 3764.5 | 6412.0 |
-| p99 (ms) | 3768.1 | 7579.7 |
+| p50 (ms) | 3879.1 | 4289.1 |
+| p95 (ms) | 4143.3 | 5573.2 |
+| p99 (ms) | 4241.4 | 5874.8 |
 
 ---
 
@@ -36,7 +36,7 @@
 **Tags appearing in ALL 20 runs**:
 - Downtown San Jose
 - Pet-friendly
-- Spacious 2BR Apartment
+- Spacious 2BR
 
 **Tags appearing in EXACTLY 1 run**:
 - None
@@ -45,60 +45,18 @@
 
 ### Temperature 0.7 (Creative/Non-Deterministic)
 
-**Distinct tag sets**: 13
+**Distinct tag sets**: 14
 
 **Tags appearing in ALL 20 runs**:
-- Downtown San Jose
+- None
 
 **Tags appearing in EXACTLY 1 run**:
-- High-end Amenities
-- Renovated Apartment
-- Spacious
-- Spacious 2-bedroom
+- CityViews
+- FlexibleLease
+- Rooftop Garden
+- Spacious 2-bedroom apartment
 - Spacious Apartment
-
----
-
-## Interpretation
-
-### What Two Users Sending Identical Input Might See
-
-With temperature 0.7 (non-deterministic):
-- User A might receive tags: ["2BR Apartment", "Downtown San Jose", "Pet-friendly"]
-- User B might receive tags: ["Spacious Unit", "Downtown Location", "Animal-Friendly"]
-
-The differences arise because the LLM uses randomness (temperature > 0) to generate slightly different word choices while expressing similar concepts.
-
-At temperature 0.0 (deterministic):
-- Both users will receive identical tags: ["2BR Apartment", "Downtown San Jose", "Pet-friendly"]
-- Results are 100% reproducible
-
-### When Run-to-Run Variation is ACCEPTABLE
-
-**Example 1 - Content Summarization**:
-- "Summarize this rental listing in one sentence"
-- Minor wording variations are fine ("spacious unit" vs "large apartment")
-- Users understand the meaning is the same
-- Slight variation actually helps discover different perspectives
-
-**Example 2 - Creative Content Generation**:
-- "Write marketing copy for this apartment"
-- Different phrasings and emphases are expected
-- Variation is a feature, not a bug
-
-### When Run-to-Run Variation is NOT ACCEPTABLE
-
-**Example 1 - Financial Calculations**:
-- "Calculate the monthly rent with a 10% increase"
-- MUST always return the same numerical result
-- Variation would violate contract/legal requirements
-- Deterministic (temp 0.0) is required
-
-**Example 2 - Medical Diagnosis**:
-- "Classify this symptom as symptom A or symptom B"
-- Inconsistent classifications are dangerous
-- Must be deterministic for patient safety
-- Requires temperature 0.0
+- SpaciousApartment
 
 ---
 

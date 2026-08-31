@@ -1,8 +1,8 @@
 {
   "homework": "hw01",
   "sid4": 7838,
-  "verified_at_utc": "2026-08-30T07:27:42Z",
-  "status": "partial_pass",
+  "verified_at_utc": "2026-08-31T07:47:05Z",
+  "status": "passed",
   "checks": {
     "part1_source_checks": {
       "status": "passed",
@@ -20,8 +20,68 @@
       "port_mapping": "8638:80",
       "http_status": 200
     },
-    "parts_2_to_4": {
-      "status": "not_implemented"
+    "aws_ecs_public_ip": {
+      "status": "passed",
+      "public_ip": "32.192.189.237",
+      "verified_by": "manual browser test, form submission succeeded",
+      "screenshot": "reports/hw01/screenshots/Screenshot 2026-08-30 at 3.22.30 PM.png"
+    },
+    "part2_agentic_ai": {
+      "status": "passed",
+      "command": "python agents_demo.py",
+      "model": "qwen2:7b",
+      "final_tags": ["2BR Apartment", "Downtown San Jose", "Rental Offer"],
+      "final_word_count": 25,
+      "reviewer_changed": true,
+      "screenshots": [
+        "reports/hw01/screenshots/Screenshot 2026-08-30 at 4.11.38 PM.png",
+        "reports/hw01/screenshots/Screenshot 2026-08-30 at 4.13.03 PM.png",
+        "reports/hw01/screenshots/Screenshot 2026-08-30 at 4.14.00 PM.png",
+        "reports/hw01/screenshots/Screenshot 2026-08-30 at 4.15.18 PM.png"
+      ]
+    },
+    "part3_nondeterminism": {
+      "status": "passed",
+      "command": "python run_nondeterminism_tests.py && python analyze_nondeterminism.py",
+      "total_runs": 40,
+      "distinct_tag_sets_temp_0.0": 1,
+      "distinct_tag_sets_temp_0.7": 14,
+      "raw_data": "reports/hw01/raw/nondeterminism_results.json",
+      "metrics_file": "reports/hw01/METRICS.md",
+      "screenshots": [
+        "reports/hw01/screenshots/Screenshot 2026-08-30 at 11.18.23 PM.png",
+        "reports/hw01/screenshots/Screenshot 2026-08-30 at 11.58.39 PM.png",
+        "reports/hw01/screenshots/Screenshot 2026-08-31 at 12.00.52 AM.png",
+        "reports/hw01/screenshots/Screenshot 2026-08-31 at 12.01.19 AM.png"
+      ]
+    },
+    "part4_token_accounting": {
+      "status": "passed",
+      "command": "python hw1_client.py",
+      "model": "qwen2:7b",
+      "turns": 5,
+      "stats_after_turn_3": {
+        "cumulative_input_tokens": 1282,
+        "cumulative_output_tokens": 987,
+        "cumulative_total_tokens": 2269,
+        "serialized_history_chars": 4609
+      },
+      "stats_after_turn_5": {
+        "cumulative_input_tokens": 4028,
+        "cumulative_output_tokens": 2187,
+        "cumulative_total_tokens": 6215,
+        "serialized_history_chars": 9726
+      },
+      "bugs_found_and_fixed_via_agent_md_review": [
+        "conversation_history duplication in complete() causing near-exponential token growth",
+        "ModuleNotFoundError on src.model_client import due to missing sys.path entry",
+        "conversation_history_length measured raw text instead of serialized JSON length"
+      ],
+      "screenshots": [
+        "reports/hw01/screenshots/Screenshot 2026-08-31 at 12.45.13 AM.png",
+        "reports/hw01/screenshots/Screenshot 2026-08-31 at 12.45.55 AM.png",
+        "reports/hw01/screenshots/Screenshot 2026-08-31 at 12.47.05 AM.png"
+      ]
     }
   }
 }

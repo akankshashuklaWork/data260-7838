@@ -3,6 +3,7 @@ Model Client Adapter
 Reusable wrapper around LLM calls with token accounting
 """
 
+import json
 from typing import Optional, List, Dict, Any
 from langchain_ollama import ChatOllama
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage, AIMessage
@@ -88,10 +89,10 @@ class ModelClient:
         self.cumulative_output_tokens += output_tokens
         self.turn_count += 1
 
-        # Store in conversation history
-        for msg in langchain_messages:
-            self.conversation_history.append(msg)
-        self.conversation_history.append(AIMessage(content=response.content))
+        # Replace history with exactly what was sent plus the new reply.
+        # (`messages` already contains the full prior history reconstructed by the
+        # caller, so appending on top of self.conversation_history would duplicate it.)
+        self.conversation_history = langchain_messages + [AIMessage(content=response.content)]
 
         return {
             'content': response.content,
@@ -123,8 +124,13 @@ class ModelClient:
         return self.conversation_history
 
     def get_history_length(self) -> int:
-        """Get the length of conversation history in characters."""
-        return sum(len(msg.content) for msg in self.conversation_history)
+        """Get the length of the serialized (JSON) conversation history, in characters."""
+        role_map = {SystemMessage: 'system', AIMessage: 'assistant', HumanMessage: 'user'}
+        serializable = [
+            {'role': role_map.get(type(msg), 'user'), 'content': msg.content}
+            for msg in self.conversation_history
+        ]
+        return len(json.dumps(serializable))
 
     def get_stats(self) -> Dict[str, Any]:
         """

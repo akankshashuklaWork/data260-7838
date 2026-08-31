@@ -104,19 +104,19 @@ Example output:
 ```
 
 ### Part 3: Non-Determinism Testing
-Tests how temperature affects AI behavior:
-- Temp 0.0: 1 unique output (deterministic)
-- Temp 0.7: 13 unique outputs (creative)
+Tests how temperature affects AI behavior across 40 real runs (20 at each temperature):
+- Temp 0.0: 1 distinct tag set across all 20 runs (deterministic)
+- Temp 0.7: 14 distinct tag sets across 20 runs (creative)
 - **Finding**: Higher temp = More variety but less consistency
 
-Results in `reports/hw01/METRICS.md`
+Results in `reports/hw01/METRICS.md`, full explanation in `reports/hw01/report.pdf`
 
 ### Part 4: Token Accounting
-Demonstrates why AI conversations get expensive:
-- Each turn requires resending entire conversation history
-- Turn 1: 50 input tokens
-- Turn 2: 100 input tokens (doubled!)
-- Turn 3: 150 input tokens (keeps growing)
+Demonstrates why AI conversations get expensive. Real numbers from a 5-turn conversation:
+- Per-turn input tokens: 56, 462, 764, 1094, 1652 (turns 1-5) - growing every turn
+- Cumulative after turn 3: 1282 input / 987 output tokens
+- Cumulative after turn 5: 4028 input / 2187 output tokens
+- Each turn resends the entire conversation history, so nothing already sent is ever removed
 
 ---
 
@@ -177,8 +177,25 @@ curl http://localhost:11434/api/tags  # test it
 ```bash
 cd code
 source venv/bin/activate
-export PYTHONPATH=/Users/akanksha/Downloads/data260-7838:$PYTHONPATH
+python hw1_client.py
 ```
+(hw1_client.py inserts the repo root into sys.path itself, so no manual PYTHONPATH is needed.)
+
+---
+
+## Q&A: Understanding Tokens and Context (Part 4)
+
+**Why is prior conversation context resent with every turn?**
+The model is stateless - it has no memory between separate calls. The only way it responds consistently with earlier turns is if the caller resends the full prior conversation (system prompt, all previous messages) alongside the new one every time.
+
+**How is a system prompt different from a user message?**
+A system prompt sets the assistant's behavior/rules and is written by the application. A user message is the actual question from the person using it. Both count as input tokens and get resent every turn, but one is an instruction to the model and the other is data for the model to respond to.
+
+**Why do input tokens grow over a conversation?**
+Each turn's input is the system prompt plus every prior message plus the new message - nothing already sent is ever removed. In this project's real 5-turn run, per-turn input tokens were 56, 462, 764, 1094, then 1652 - climbing every turn because turn N's input contains all of turns 1 through N-1.
+
+**What eventually limits that growth?**
+The model's context window is the hard limit (a fixed max tokens per call). Before that, cost and latency are practical limits - more tokens per turn means slower responses and higher cost, which is why production systems often truncate or summarize history instead of resending an ever-growing transcript.
 
 ---
 

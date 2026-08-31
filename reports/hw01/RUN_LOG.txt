@@ -1,4 +1,4 @@
-Homework 1 reproducible run log
+Homework part1 reproducible run log
 Repository: data260-7838
 
 [2026-08-30T07:19:21Z] Command: node code/web_application/tests/run-tests.js
@@ -38,4 +38,814 @@ Port mapping: 0.0.0.0:8638->80/tcp
 Container-internal HTTP status: 200
 Localhost HTTP status: 200
 
-Note: These 23 checks are local source-level Part 1 checks. They do not represent completion of Homework 1 Parts 2–4.
+[2026-08-30 14:51 PDT] Manual browser test: opened code/web_application/index.html directly in Chrome
+Action: Submitted a rental listing (title "Spacious 2BR Apartment in Downtown San Jose", category Apartment, location San Jose CA)
+Result: PASS - "Listing submitted successfully. Submission #2" shown; entry appended to Successful submissions list
+Screenshot: reports/hw01/screenshots/Screenshot 2026-08-30 at 2.51.24 PM.png
+
+[2026-08-30 14:52 PDT] Manual browser test: DevTools console output for the same submission
+Verified console.log output for: JSON.stringify of form data, JSON.parse of the string, destructured propertyTitle/submitterEmail, spread-updated object with submissionDate, and closure-based submission count
+Result: PASS - all 5 required JS behaviors observed in console
+Screenshot: reports/hw01/screenshots/Screenshot 2026-08-30 at 2.52.49 PM.png
+
+[2026-08-30 14:58 PDT] Command: cd /Users/akanksha/Downloads/data260-7838 && docker build -f code/Dockerfile -t hw1-rental-listings:1.0 . && docker run --detach --name s7838-rental-housing --publish 8638:80 hw1-rental-listings:1.0
+Result: PASS - image built successfully (naming to docker.io/library/hw1-rental-listings:1.0), container started
+Screenshot: reports/hw01/screenshots/Screenshot 2026-08-30 at 2.58.35 PM.png
+
+[2026-08-30 15:01 PDT] Manual browser test: opened http://localhost:8638 (Dockerized app)
+Verified: form loads from container, submission succeeds ("Listing submitted successfully. Submission #1"), console shows JSON/destructuring/spread/closure output identical to the non-Dockerized version
+Result: PASS
+Screenshot: reports/hw01/screenshots/Screenshot 2026-08-30 at 3.01.32 PM.png
+
+[2026-08-30 15:22 PDT] Manual browser test: opened http://32.192.189.237 (AWS ECS task public IP, port 80)
+Verified: form loads from the ECS-hosted container, submission succeeds ("Listing submitted successfully. Submission #1")
+Result: PASS - Part 1 AWS ECS deployment confirmed reachable on public IP
+Screenshot: reports/hw01/screenshots/Screenshot 2026-08-30 at 3.22.30 PM.png
+
+Note: These checks (23 automated + 5 manual browser/Docker/AWS verifications) cover Homework 1 Part 1 only. Parts 2-4 run logs will be added below once executed.
+
+=============================================================
+Homework part2
+
+Sun Aug 30 16:08:27 PDT 2026
+INPUT TITLE: Spacious 2BR Apartment in Downtown San Jose
+INPUT CONTENT: This beautifully renovated 2-bedroom, 1-bathroom apartment is located in the heart of downtown San Jose.
+    Features include hardwood floors, high ceilings, in-unit washer/dryer, and a large balcony with city views.
+    Building amenities include a fitness center, rooftop garden, and 24/7 security. Near public transit, restaurants,
+    and shopping. Pet-friendly with a $500 deposit. Move-in special: first month 50% off. Lease term flexible.
+
+================================================================================
+PLANNER OUTPUT:
+================================================================================
+{
+  "tags": [
+    "2BR Apartment",
+    "Downtown San Jose",
+    "Rental Offer"
+  ],
+  "summary": "Spacious, renovated 2-bedroom apartment in downtown San Jose with city views and building amenities, offering a move-in special of 50% off the first month's rent.",
+  "reasoning": "The title and content highlight the apartment's location, bedroom count, and special offer, which are the most relevant keywords for this content."
+}
+
+================================================================================
+REVIEWER OUTPUT:
+================================================================================
+{
+  "tags": [
+    "2BR Apartment",
+    "Downtown San Jose",
+    "Rental Offer",
+    "City Views",
+    "Building Amenities",
+    "Move-in Special"
+  ],
+  "summary": "Spacious, renovated 2-bedroom apartment with city views in downtown San Jose, offering building amenities and a move-in special of 50% off the first month's rent.",
+  "changed": true,
+  "explanation": "Added 'City Views', 'Building Amenities', and 'Move-in Special' to provide more specific details and benefits."
+}
+
+================================================================================
+FINALIZER STEP:
+================================================================================
+{
+  "tags": [
+    "2BR Apartment",
+    "Downtown San Jose",
+    "Rental Offer"
+  ],
+  "summary": "Spacious, renovated 2-bedroom apartment with city views in downtown San Jose, offering building amenities and a move-in special of 50% off the first month's rent.",
+  "word_count": 25,
+  "source": "Reviewer"
+}
+
+================================================================================
+FINAL PUBLISH OUTPUT (VALID JSON):
+================================================================================
+{
+  "tags": [
+    "2BR Apartment",
+    "Downtown San Jose",
+    "Rental Offer"
+  ],
+  "summary": "Spacious, renovated 2-bedroom apartment with city views in downtown San Jose, offering building amenities and a move-in special of 50% off the first month's rent.",
+  "word_count": 25,
+  "source": "Reviewer"
+}
+Sun Aug 30 17:09:22 PDT 2026
+╔════════════════════════════════════════════════════════════════╗
+║     Part 3: Non-Determinism Testing (40 runs total)            ║
+╚════════════════════════════════════════════════════════════════╝
+
+❌ ERROR: Input file not found: reports/hw01/cases/nondeterminism_input.json
+Sun Aug 30 23:10:48 PDT 2026
+╔════════════════════════════════════════════════════════════════╗
+║     Part 3: Non-Determinism Testing (40 runs total)            ║
+╚════════════════════════════════════════════════════════════════╝
+
+✓ Input file: ../reports/hw01/cases/nondeterminism_input.json
+
+📊 Running 20 tests at temperature 0.7 (creative)...
+  Running test 1/40 at temperature 0.7... ✓ 5298ms
+  Running test 2/40 at temperature 0.7... ✓ 3890ms
+  Running test 3/40 at temperature 0.7... ✓ 5027ms
+  Running test 4/40 at temperature 0.7... ✓ 5088ms
+  Running test 5/40 at temperature 0.7... ✓ 4961ms
+  Running test 6/40 at temperature 0.7... ✓ 3529ms
+  Running test 7/40 at temperature 0.7... ✓ 4160ms
+  Running test 8/40 at temperature 0.7... ✓ 5484ms
+  Running test 9/40 at temperature 0.7... ✓ 4048ms
+  Running test 10/40 at temperature 0.7... ✓ 3629ms
+  Running test 11/40 at temperature 0.7... ✓ 4700ms
+  Running test 12/40 at temperature 0.7... ✓ 3769ms
+  Running test 13/40 at temperature 0.7... ✓ 3898ms
+  Running test 14/40 at temperature 0.7... ✓ 4615ms
+  Running test 15/40 at temperature 0.7... ✓ 4621ms
+  Running test 16/40 at temperature 0.7... ✓ 4609ms
+  Running test 17/40 at temperature 0.7... ✓ 3968ms
+  Running test 18/40 at temperature 0.7... ✓ 5016ms
+  Running test 19/40 at temperature 0.7... ✓ 4911ms
+  Running test 20/40 at temperature 0.7... ✓ 5234ms
+
+📊 Running 20 tests at temperature 0.0 (deterministic)...
+  Running test 21/40 at temperature 0.0... ✓ 4064ms
+  Running test 22/40 at temperature 0.0... ✓ 3950ms
+  Running test 23/40 at temperature 0.0... ✓ 4010ms
+  Running test 24/40 at temperature 0.0... ✓ 3941ms
+  Running test 25/40 at temperature 0.0... ✓ 4011ms
+  Running test 26/40 at temperature 0.0... ✓ 3942ms
+  Running test 27/40 at temperature 0.0... ✓ 3974ms
+  Running test 28/40 at temperature 0.0... ✓ 3944ms
+  Running test 29/40 at temperature 0.0... ✓ 3968ms
+  Running test 30/40 at temperature 0.0... ✓ 4001ms
+  Running test 31/40 at temperature 0.0... ✓ 3941ms
+  Running test 32/40 at temperature 0.0... ✓ 3997ms
+  Running test 33/40 at temperature 0.0... ✓ 3948ms
+  Running test 34/40 at temperature 0.0... ✓ 3999ms
+  Running test 35/40 at temperature 0.0... ✓ 3947ms
+  Running test 36/40 at temperature 0.0... ✓ 3949ms
+  Running test 37/40 at temperature 0.0... ✓ 4009ms
+  Running test 38/40 at temperature 0.0... ✓ 3944ms
+  Running test 39/40 at temperature 0.0... ✓ 3989ms
+  Running test 40/40 at temperature 0.0... ✓ 3942ms
+
+✅ Results saved to: ../reports/hw01/raw/nondeterminism_results.json
+✅ Total runs completed: 40
+
+╔════════════════════════════════════════════════════════════════╗
+║                    NEXT STEPS                                  ║
+╚════════════════════════════════════════════════════════════════╝
+
+1. Run this script: python run_nondeterminism_tests.py
+2. Wait for all 40 tests to complete
+3. Run: python analyze_nondeterminism.py
+4. Check reports/hw01/METRICS.md for results
+
+Sun Aug 30 23:23:58 PDT 2026
+Part 3: Non-Determinism Testing (40 runs total)
+
+Input file: ../reports/hw01/cases/nondeterminism_input.json
+
+Running 20 tests at temperature 0.7 (creative)...
+  Running test 1/40 at temperature 0.7... 5591ms
+  Running test 2/40 at temperature 0.7... 4105ms
+  Running test 3/40 at temperature 0.7... 4014ms
+  Running test 4/40 at temperature 0.7... 3664ms
+  Running test 5/40 at temperature 0.7... 5019ms
+  Running test 6/40 at temperature 0.7... 4267ms
+  Running test 7/40 at temperature 0.7... 3940ms
+  Running test 8/40 at temperature 0.7... 4143ms
+  Running test 9/40 at temperature 0.7... 4659ms
+  Running test 10/40 at temperature 0.7... 3914ms
+  Running test 11/40 at temperature 0.7... 4776ms
+  Running test 12/40 at temperature 0.7... 4066ms
+  Running test 13/40 at temperature 0.7... 4311ms
+  Running test 14/40 at temperature 0.7... 4501ms
+  Running test 15/40 at temperature 0.7... 4601ms
+  Running test 16/40 at temperature 0.7... 3666ms
+  Running test 17/40 at temperature 0.7... 4753ms
+  Running test 18/40 at temperature 0.7... 5232ms
+  Running test 19/40 at temperature 0.7... 4383ms
+  Running test 20/40 at temperature 0.7... 4240ms
+
+Running 20 tests at temperature 0.0 (deterministic)...
+  Running test 21/40 at temperature 0.0... 4149ms
+  Running test 22/40 at temperature 0.0... 3950ms
+  Running test 23/40 at temperature 0.0... 3963ms
+  Running test 24/40 at temperature 0.0... 3951ms
+  Running test 25/40 at temperature 0.0... 3961ms
+  Running test 26/40 at temperature 0.0... 3953ms
+  Running test 27/40 at temperature 0.0... 3946ms
+  Running test 28/40 at temperature 0.0... 3961ms
+  Running test 29/40 at temperature 0.0... 4032ms
+  Running test 30/40 at temperature 0.0... 3894ms
+  Running test 31/40 at temperature 0.0... 3843ms
+  Running test 32/40 at temperature 0.0... 3861ms
+  Running test 33/40 at temperature 0.0... 3849ms
+  Running test 34/40 at temperature 0.0... 3843ms
+  Running test 35/40 at temperature 0.0... 3859ms
+  Running test 36/40 at temperature 0.0... 3844ms
+  Running test 37/40 at temperature 0.0... 3864ms
+  Running test 38/40 at temperature 0.0... 3850ms
+  Running test 39/40 at temperature 0.0... 3856ms
+  Running test 40/40 at temperature 0.0... 3860ms
+
+Results saved to: ../reports/hw01/raw/nondeterminism_results.json
+Total runs completed: 40
+
+Next steps:
+1. Run: python analyze_nondeterminism.py
+2. Check reports/hw01/METRICS.md for results
+
+Mon Aug 31 00:33:56 PDT 2026
+Part 4: Model Client & Token Accounting
+Type a message and press Enter. Type /stats for stats, /exit to quit.
+
+You: 
+================================================================================
+
+TURN 1
+
+================================================================================
+
+User: What should I include in a rental listing description to attract tenants?
+
+Assistant: To attract tenants in a rental listing, include the following key elements:
+
+1. **Detailed Property Description**: Mention the type of property (apartment, house, studio), number of bedrooms and bathrooms, size, layout, and any unique features (e.g., garden, gym, parking).
+
+2. **Location Details**: Provide a clear description of the neighborhood, proximity to amenities (shops, schools, public transport), and local attractions.
+
+3. **Rental Terms**: Specify the monthly rent, security deposit, utilities included, and any application or move-in fees.
+
+4. **Pet Policy**: Clearly state if pets are allowed and any restrictions.
+
+5. **Lease Length**: Mention if the lease is for a specific period (e.g., year-long, month-to-month).
+
+6. **Availability Date**: Indicate when the property will be available for move-in.
+
+7. **Qualification Requirements**: Briefly outline who qualifies for the rental (e.g., credit score, income requirements).
+
+8. **Contact Information**: Provide clear contact details for inquiries.
+
+9. **Photographs**: Include high-quality images of the property from multiple angles and highlight key features.
+
+10. **Safety and Security**: Mention any security features like security systems, fenced areas, or gated communities.
+
+11. **Amenities**: List any on-site amenities like a gym, pool, laundry facilities, or parking.
+
+12. **Tenant Amenities**: Explain what services or help are provided (e.g., maintenance, cleaning services).
+
+13. **Rules and Regulations**: Briefly describe any specific rules tenants must follow.
+
+14. **Review and Feedback**: If available, include positive reviews from previous tenants to build trust.
+
+15. **Accessibility**: Mention accessibility features if applicable.
+
+By including these details, your rental listing will provide potential tenants with all the necessary information to make an informed decision.
+
+Turn 1 Token Usage:
+  Input Tokens (this turn): 56
+  Output Tokens (this turn): 466
+  Total Tokens (this turn): 522
+
+You: 
+================================================================================
+
+TURN 2
+
+================================================================================
+
+User: Give me 3 examples of amenities that make a rental listing stand out.
+
+Assistant: 1. **Gated Community**: This provides a sense of security and privacy, making the property appealing to families and individuals who value safety.
+
+2. **In-unit Washer and Dryer**: This amenity is highly sought after as it eliminates the need for tenants to use shared facilities or carry laundry elsewhere, offering convenience and privacy.
+
+3. **Private Outdoor Space**: Features like balconies, patios, or a backyard can make a rental property feel more like a home, especially in urban settings where outdoor space is limited.
+
+Turn 2 Token Usage:
+  Input Tokens (this turn): 540
+  Output Tokens (this turn): 132
+  Total Tokens (this turn): 672
+
+You: 
+================================================================================
+
+TURN 3
+
+================================================================================
+
+User: How does a fixed-term lease differ from a month-to-month lease?
+
+Assistant: A fixed-term lease and a month-to-month lease are two different types of rental agreements, differing in duration and stability:
+
+1. **Fixed-Term Lease**: This is a lease agreement for a specific, predetermined period, such as 6 months or 12 months. At the end of the agreed term, the lease expires and typically needs to be renewed with a new lease agreement. Tenants usually have the option to renew the lease or move out at the end of the term.
+
+2. **Month-to-Month Lease**: This lease agreement continues on a rolling monthly basis without a set end date. Either the landlord or tenant can terminate the lease by providing notice in advance, usually one month. It offers more flexibility for both parties but may involve higher risk and uncertainty.
+
+The main differences are in their duration, flexibility, and the notice periods for ending the lease. Fixed-term leases offer more stability for tenants, while month-to-month leases provide greater flexibility but may involve periodic rent increases or other adjustments.
+
+Turn 3 Token Usage:
+  Input Tokens (this turn): 688
+  Output Tokens (this turn): 256
+  Total Tokens (this turn): 944
+
+You: 
+/stats (after turn 3):
+  Turn Count: 3
+  Cumulative Input Tokens: 1284
+  Cumulative Output Tokens: 854
+  Cumulative Total Tokens: 2138
+  Serialized Conversation History Length: 4070 chars
+
+You: 
+================================================================================
+
+TURN 4
+
+================================================================================
+
+User: What factors typically affect the monthly rent for an apartment?
+
+Assistant: Several factors can influence the monthly rent for an apartment, including:
+
+1. **Location**: Proximity to desirable areas, such as downtown, public transportation, schools, and amenities, generally increases rent.
+
+2. **Size and Layout**: Larger apartments and those with more bedrooms typically command higher rents.
+
+3. **Condition and Amenities**: Newly renovated or luxury apartments with modern features like high-end appliances or gym facilities can have higher rents.
+
+4. **Market Demand**: Rents are influenced by the overall demand for rental properties in the area; in high-demand areas, rents tend to be higher.
+
+5. **Type of Building**: Luxury buildings or those with amenities like doormen, gyms, or pools may have higher rents.
+
+6. **Lease Length**: In some areas, short-term leases might offer higher rents due to the convenience for tenants seeking temporary housing.
+
+7. **Economic Conditions**: Economic factors, such as interest rates and overall economic health, can affect rental prices.
+
+8. **Local Regulations**: Zoning laws, rent control policies, and housing market regulations can impact what landlords can charge.
+
+9. **Seasonal Fluctuations**: Markets may see seasonal changes in rent prices, with higher costs during peak rental seasons.
+
+10. **Competitive Landscaping**: The presence of other similar apartments in the area can affect pricing strategies, leading to competitive pricing.
+
+Understanding these factors can help in predicting and justifying rental prices in different markets.
+
+Turn 4 Token Usage:
+  Input Tokens (this turn): 961
+  Output Tokens (this turn): 380
+  Total Tokens (this turn): 1341
+
+You: 
+================================================================================
+
+TURN 5
+
+================================================================================
+
+User: What factors typically affect the monthly rent for an apartment?
+
+Assistant: Several factors can influence the monthly rent for an apartment, including:
+
+1. **Location**: Proximity to amenities, public transport, schools, and employment centers significantly impacts rent.
+
+2. **Size and Layout**: Larger apartments, with more bedrooms or additional features, often command higher rents.
+
+3. **Condition and Amenities**: Newer buildings or those with high-end amenities like gyms, pools, or doormen can have higher rents.
+
+4. **Market Demand**: Areas with high demand and low supply will have higher rents.
+
+5. **Lease Type**: Fixed-term leases might offer slightly higher rents compared to month-to-month leases.
+
+6. **Economic Conditions**: Economic stability and growth in the area can increase rental prices.
+
+7. **Seasonality**: Summer and winter rental markets might have different pricing due to seasonal demands.
+
+8. **Building Type**: Historic buildings or luxury apartments might have premium rents.
+
+9. **Utility Inclusions**: Apartments that include utilities (like water, gas, or electricity) can have higher base rents.
+
+10. **Security and Services**: Buildings with 24/7 security, parking, or concierge services often have higher rents.
+
+These factors collectively determine the rental market's pricing dynamics for apartments.
+
+Turn 5 Token Usage:
+  Input Tokens (this turn): 1357
+  Output Tokens (this turn): 316
+  Total Tokens (this turn): 1673
+
+You: Mon Aug 31 00:38:02 PDT 2026
+Part 4: Model Client & Token Accounting
+Type a message and press Enter. Type /stats for stats, /exit to quit.
+
+You: 
+================================================================================
+
+TURN 1
+
+================================================================================
+
+User: What should I include in a rental listing description to attract tenants?
+
+Assistant: To attract tenants to your rental listing, focus on including the following key elements:
+
+1. **Property Details**:
+   - **Address**: Provide the exact address for clarity.
+   - **Size**: Mention the square footage or room count.
+   - **Number of Bedrooms and Bathrooms**: Clearly state how many bedrooms and bathrooms are available.
+   - **Type of Property**: Specify if it's an apartment, house, studio, etc.
+
+2. **Location**:
+   - **Neighborhood**: Highlight the neighborhood's charm, proximity to public transport, shopping, schools, and amenities.
+   - **Distance from key locations**: Mention distances to major landmarks or cities.
+
+3. **Amenities**:
+   - **Utilities**: Indicate if utilities are included in the rent.
+   - **Facilities**: List features like a gym, swimming pool, laundry facilities, parking, etc.
+   - **Internet and Services**: Mention if high-speed internet, cable TV, or other services are provided.
+
+4. **Rent and Payment Details**:
+   - **Rent**: Clearly state the monthly rent amount.
+   - **Deposit**: Mention the required security deposit.
+   - **Payment Terms**: Include information on how and when rent should be paid.
+
+5. **Leasing Information**:
+   - **Pet Policy**: Specify if pets are allowed and any restrictions.
+   - **Smoking Policy**: State whether smoking is allowed in the property.
+   - **Lease Length**: Indicate the minimum lease term.
+   - **Availability Date**: Provide the date when the property will be available for move-in.
+
+6. **Description**:
+   - **Interior and Exterior**: Describe the condition and style of the property, including recent renovations or upgrades.
+   - **Layout**: Provide details on the layout and flow of the property.
+
+7. **Photos**:
+   - **High-Quality Images**: Include multiple photos of the property, focusing on both the interior and exterior.
+
+8. **Contact Information**:
+   - **Agent or Landlord Contact**: Provide a phone number, email, and possibly a contact form for inquiries.
+
+9. **Legal Compliance**:
+   - **Rules and Regulations**: Mention any specific rules or compliance requirements that tenants need to follow.
+
+By including these elements, your rental listing will provide tenants with a comprehensive view of the property, making it more appealing and easier to understand.
+
+Turn 1 Token Usage:
+  Input Tokens (this turn): 56
+  Output Tokens (this turn): 568
+  Total Tokens (this turn): 624
+
+You: 
+================================================================================
+
+TURN 2
+
+================================================================================
+
+User: Give me 3 examples of amenities that make a rental listing stand out.
+
+Assistant: 1. **On-site Fitness Center**: Offering a well-equipped gym or fitness center on the property can be a significant draw, especially for tenants who value convenience and are health-conscious. This amenity reduces the need to leave the building for exercise, making it appealing to busy professionals and fitness enthusiasts.
+
+2. ** Rooftop Deck or Lounge Area**: Providing an outdoor space, such as a rooftop deck or a lounge area with city or park views, can significantly enhance the appeal of a rental property. This feature is particularly attractive to tenants who enjoy social gatherings, relaxation, or activities that benefit from natural light and fresh air.
+
+3. ** Smart Home Features**: Incorporating modern technology into the rental property, such as smart thermostats, remote-controlled lighting, and automated security systems, can make the space more appealing to tech-savvy tenants. These features not only enhance the living experience but also offer energy efficiency and convenience, which are increasingly important to modern renters.
+
+Turn 2 Token Usage:
+  Input Tokens (this turn): 641
+  Output Tokens (this turn): 263
+  Total Tokens (this turn): 904
+
+You: 
+================================================================================
+
+TURN 3
+
+================================================================================
+
+User: How does a fixed-term lease differ from a month-to-month lease?
+
+Assistant: A fixed-term lease and a month-to-month lease differ fundamentally in terms of duration, flexibility, and obligations:
+
+1. **Duration**: 
+   - **Fixed-term lease**: Has a specific, predetermined end date. This lease typically lasts for a set period, such as 6 months, 1 year, or longer, depending on local laws and agreements.
+   - **Month-to-month lease**: Continues on a rolling basis until either party gives notice. The lease does not have an explicit end date and can be terminated by either landlord or tenant with sufficient notice.
+
+2. **Termination**:
+   - **Fixed-term lease**: Generally requires a formal process to end the lease, often involving a notice period specified in the lease agreement.
+   - **Month-to-month lease**: Can be terminated by either party providing notice usually in writing, often with a standard notice period (e.g., 30 days).
+
+3. **Flexibility**:
+   - **Fixed-term lease**: Offers less flexibility because it has a set end date. The tenant is locked into the lease until it expires.
+   - **Month-to-month lease**: Provides more flexibility as the tenant can move out at any time as long as the notice period is met. Landlords may also have more flexibility in adjusting rental rates.
+
+4. **Renewal**:
+   - **Fixed-term lease**: Automatically renews for another term unless one party gives notice not to renew the lease.
+   - **Month-to-month lease**: Does not automatically renew unless explicitly agreed upon or specified in the lease terms.
+
+5. **Cost and Commitment**:
+   - **Fixed-term lease**: Typically involves a longer-term commitment, which can lead to more stability in rent payments and utility costs. The cost is usually fixed for the duration of the lease.
+   - **Month-to-month lease**: Offers more flexibility in terms of financial commitment since the lease does not automatically renew, but the rent might be subject to change with each month.
+
+Understanding these differences helps tenants and landlords make informed decisions based on their specific needs and preferences regarding stability, flexibility, and commitment.
+
+Turn 3 Token Usage:
+  Input Tokens (this turn): 921
+  Output Tokens (this turn): 519
+  Total Tokens (this turn): 1440
+
+You: 
+/stats (after turn 3):
+  Turn Count: 3
+  Cumulative Input Tokens: 1618
+  Cumulative Output Tokens: 1350
+  Cumulative Total Tokens: 2968
+  Serialized Conversation History Length: 6078 chars
+
+You: 
+================================================================================
+
+TURN 4
+
+================================================================================
+
+User: What factors typically affect the monthly rent for an apartment?
+
+Assistant: The monthly rent for an apartment can be influenced by several key factors:
+
+1. **Location**: Proximity to amenities, transportation, and employment centers significantly affects rent. Urban and prime locations tend to have higher rents.
+2. **Size and Layout**: Larger apartments with more bedrooms or bathrooms usually command higher rents. Unique layouts or features like balconies or extra storage can also increase cost.
+3. **Quality of Building and Amenities**: Newer buildings with modern amenities, such as fitness centers, pools, or 24/7 security, often have higher rental rates.
+4. **Supply and Demand**: Areas with limited supply relative to demand, such as popular neighborhoods or near universities, typically see higher rents.
+5. **Market Conditions**: Economic conditions, interest rates, and overall real estate market trends can influence rental prices.
+6. **Building Age and Maintenance**: Older buildings may require more maintenance, which can lead to higher rents to cover these expenses.
+7. **Security Features**: High-security features like cameras, access control, and surveillance systems can increase the cost of rent.
+8. **Utility Inclusion**: Whether utilities (electricity, water, gas) are included in the rent can affect the total cost of living in an apartment.
+9. **Renovation and Upgrades**: Recently renovated apartments with modern finishes and appliances can attract higher rents.
+10. **Tenancy Requirements**: Landlord preferences such as requiring long-term leases or specific tenant profiles can influence rental prices.
+
+These factors interact to determine the market rate for an apartment, making rental pricing a dynamic aspect of real estate.
+
+Turn 4 Token Usage:
+  Input Tokens (this turn): 1456
+  Output Tokens (this turn): 421
+  Total Tokens (this turn): 1877
+
+You: 
+================================================================================
+
+TURN 5
+
+================================================================================
+
+User: What are common red flags renters should watch for in a listing?
+
+Assistant: When evaluating rental listings, renters should be aware of several common red flags that might indicate potential issues with the property or the rental process. Here are some key indicators to watch out for:
+
+1. **Misleading Photos**: If the photos do not accurately represent the condition of the property, it could be a sign of hiding major issues. Always ask for additional photos or schedule a viewing.
+
+2. **High Rent for the Area**: If the rental price is significantly higher than what other similar properties in the area are charging, it could suggest the property has issues that need addressing, like structural problems, lack of amenities, or poor location.
+
+3. **Excessive Fees**: Watch out for additional fees not mentioned in the listing, such as application fees, move-in fees, or fees for utilities. These can add unexpectedly to the cost of renting.
+
+4. **Lack of Contact Information**: A professional landlord or property management company will typically provide clear contact information. Difficulty in contacting the landlord or property manager can suggest poor management.
+
+5. **Unusual Lease Terms**: Leases with very short notice periods or very long lease terms (often not standard), or clauses that are excessively one-sided in favor of the landlord, might indicate potential issues.
+
+6. **No References or Reviews**: If the landlord or property has no online reviews or references from previous tenants, it could be a red flag. Tenants often leave reviews on platforms like Google or Facebook.
+
+7. **Pressing Urgency to Move In**: A landlord might try to pressure you into signing a lease immediately, perhaps by claiming the unit will be gone fast or by offering incentives that seem too good to be true. This urgency could be due to needing to rent out the property quickly, potentially due to issues with the property.
+
+8. **Poor or Inaccessible Location**: A listing that emphasizes being close to amenities or public transportation but does not provide details about the actual distance or access could be misleading. Make sure to confirm the location details.
+
+9. **Neglected Maintenance**: Notice if the listing mentions repairs or maintenance that are not yet completed. This could indicate the property was not properly maintained in the past or is currently being neglected.
+
+10. **Pets Policy**: If the listing is overly restrictive about pets, it might suggest that pets are not allowed at all, or there are hidden costs associated with having a pet.
+
+By being aware of these common red flags, you can make more informed decisions about your rental choices and potentially avoid dealing with problematic landlords or properties.
+
+Turn 5 Token Usage:
+  Input Tokens (this turn): 1893
+  Output Tokens (this turn): 667
+  Total Tokens (this turn): 2560
+
+You: 
+================================================================================
+
+TURN 6
+
+================================================================================
+
+User: /stats/exit
+
+Assistant: Exiting the statistics operation. If you need further assistance, please let me know.
+
+Turn 6 Token Usage:
+  Input Tokens (this turn): 2564
+  Output Tokens (this turn): 21
+  Total Tokens (this turn): 2585
+
+You: Mon Aug 31 00:43:25 PDT 2026
+Part 4: Model Client & Token Accounting
+Type a message and press Enter. Type /stats for stats, /exit to quit.
+
+You: 
+================================================================================
+
+TURN 1
+
+================================================================================
+
+User: What should I include in a rental listing description to attract tenants?
+
+Assistant: To attract tenants to your rental listing, focus on including the following key elements:
+
+1. **Clear and Descriptive Title**: Use a title that succinctly describes the property, highlighting its best features.
+
+2. **High-Quality Images**: Include multiple, high-resolution photos that showcase the property from various angles and spaces.
+
+3. **Accurate and Detailed Description**: Write a detailed description highlighting features like the number of rooms, size, layout, and any unique features (e.g., a garden, garage, or modern kitchen).
+
+4. **Location Details**: Mention the neighborhood, proximity to public transport, amenities, and attractions.
+
+5. **Rent and Utilities**: Clearly state the monthly rent, whether utilities are included, and if there are any additional fees.
+
+6. **Pet Policy**: Indicate if pets are allowed and any restrictions.
+
+7. **Available Date**: Specify when the property will be available for move-in.
+
+8. **Rental Requirements**: Clearly outline any requirements, such as credit score, income level, or rental history.
+
+9. **Contact Information**: Provide clear contact details or a call-to-action to respond.
+
+10. **Security and Safety**: Highlight any safety features or security measures in place.
+
+11. **Privacy Policy**: Inform tenants about how you handle their personal information.
+
+12. **Review and Updates**: Regularly update the listing with feedback and photos of the property as it is being managed.
+
+By including these elements, you can create a compelling rental listing that attracts the right tenants.
+
+Turn 1 Token Usage:
+  Input Tokens (this turn): 56
+  Output Tokens (this turn): 388
+  Total Tokens (this turn): 444
+
+You: 
+================================================================================
+
+TURN 2
+
+================================================================================
+
+User: Give me 3 examples of amenities that make a rental listing stand out.
+
+Assistant: 1. **On-site Gym and Fitness Center**: This amenity is highly attractive, especially to tenants who value convenience and the ability to maintain their fitness routine without leaving the property. It adds value to the rental property, making it more appealing to health-conscious individuals or those who prefer workout facilities with privacy and exclusivity.
+
+2. **Smart Home Features**: Incorporating smart home technology such as automated lighting, temperature control, and security systems can significantly enhance the appeal of a rental property. This not only offers tenants the convenience of managing their home remotely but also appeals to tech-savvy renters who appreciate the latest home automation features.
+
+3. **Roof-Top Garden or Deck**: A unique outdoor space like a roof-top garden or a private deck provides tenants with a serene space for relaxation, entertainment, or gardening. This feature is particularly appealing to those who enjoy spending time outdoors, especially in urban areas where green spaces might be limited. It adds a distinctive character to the rental property, setting it apart from others in the market.
+
+Turn 2 Token Usage:
+  Input Tokens (this turn): 462
+  Output Tokens (this turn): 286
+  Total Tokens (this turn): 748
+
+You: 
+================================================================================
+
+TURN 3
+
+================================================================================
+
+User: How does a fixed-term lease differ from a month-to-month lease?
+
+Assistant: A fixed-term lease and a month-to-month lease differ primarily in their duration and structure:
+
+1. **Duration**: 
+   - **Fixed-term lease** has a defined start and end date, typically lasting for a specific period like one, two, or three years.
+   - **Month-to-month lease** is ongoing with no specified end date; it can be terminated by either party with proper notice.
+
+2. **Renewal**:
+   - **Fixed-term lease** does not automatically renew at the end of the term; it requires a new agreement for continuation.
+   - **Month-to-month lease** typically renews automatically unless one party gives notice to end the agreement.
+
+3. **Flexibility**:
+   - **Fixed-term lease** offers stability and predictability as it locks in rent and lease terms for the duration.
+   - **Month-to-month lease** provides more flexibility for either the landlord or tenant to change or end the tenancy with notice.
+
+4. **Termination**:
+   - **Fixed-term lease** ends when the lease expires; it can be extended through a new lease agreement.
+   - **Month-to-month lease** can be terminated by either party by providing notice before the month ends.
+
+These differences affect the predictability of costs, the ease of moving, and the security of the tenant's housing situation.
+
+Turn 3 Token Usage:
+  Input Tokens (this turn): 764
+  Output Tokens (this turn): 313
+  Total Tokens (this turn): 1077
+
+You: 
+/stats (after turn 3):
+  Turn Count: 3
+  Cumulative Input Tokens: 1282
+  Cumulative Output Tokens: 987
+  Cumulative Total Tokens: 2269
+  Serialized Conversation History Length: 4609 chars
+
+You: 
+================================================================================
+
+TURN 4
+
+================================================================================
+
+User: What factors typically affect the monthly rent for an apartment?
+
+Assistant: The monthly rent for an apartment is influenced by several factors, which can be categorized into property-specific, location-specific, and market-related factors:
+
+1. **Size and Layout**: The larger the apartment and the more rooms it has, the higher the rent. Different layouts (like having a separate dining area or multiple bathrooms) can also affect rent.
+
+2. **Condition and Amenities**: The level of maintenance, cleanliness, and upgrades (like new appliances, hardwood floors, or a modern kitchen) can increase rent. Amenities such as a gym, pool, 24-hour concierge, or parking also play a significant role.
+
+3. **Location**: Proximity to city centers, public transportation, schools, shopping centers, and other amenities can significantly impact rent. Rentals in prime locations tend to be more expensive.
+
+4. **Neighborhood Safety and Reputation**: Safe neighborhoods with low crime rates often command higher rents due to the increased demand.
+
+5. **Market Trends**: The overall real estate market conditions can affect rental prices. In a seller's market, rents might be higher due to increased demand.
+
+6. **Building Age and Architecture**: Modern buildings or those with unique architectural features might have higher rents. Age of the building can also be a factor, as older buildings might require more maintenance and renovations.
+
+7. **Supply and Demand**: The number of available apartments versus the number of tenants looking for housing can drive rental prices. In areas with a shortage of available housing, rents tend to be higher.
+
+8. **Seasonal Factors**: Rental markets can vary by season. For example, rents might be higher during peak rental seasons like summer or right after graduation seasons.
+
+9. **Lease Term and Type**: Shorter lease terms might offer flexibility but could come with higher rents. Fixed-term leases might offer lower rates than month-to-month agreements.
+
+10. **Incentives**: Landlords might offer incentives like reduced rent for signing a longer-term lease, which can influence the initial rent amount.
+
+Understanding these factors can help in making informed decisions when looking for or renting an apartment.
+
+Turn 4 Token Usage:
+  Input Tokens (this turn): 1094
+  Output Tokens (this turn): 541
+  Total Tokens (this turn): 1635
+
+You: 
+================================================================================
+
+TURN 5
+
+================================================================================
+
+User: What are common red flags renters should watch for in a listing?
+
+Assistant: When reviewing rental listings, renters should be cautious of several common red flags that might indicate potential issues with the property or the situation:
+
+1. **Inconsistent Information**: If the listing does not provide clear, consistent information about the property, such as square footage, number of bedrooms, or essential details like the presence of appliances, this could be a sign of an unreliable listing or a misleading description.
+
+2. **Poorly Cared-for Property**: Look for signs of neglect or poor maintenance, such as peeling paint, broken windows, or damaged floors. These can indicate that the landlord may not handle maintenance issues effectively.
+
+3. **High Rent for the Area**: If the rent quoted seems significantly higher than other comparable properties in the same area, it might suggest that the property has major issues not disclosed in the listing, or that the property management is overpricing.
+
+4. **Quick Move-in Dates**: Requests for immediate or extremely short notice move-ins can be a red flag. A legitimate landlord would usually require reasonable time for background checks and move-in preparations.
+
+5. **Requests for Large Security Deposits**: Generally, a security deposit should cover typical wear and tear and does not necessarily correlate with the value of the property. Requests for unusually large deposits or multiple deposits might indicate financial instability or the need for significant repairs.
+
+6. **Sudden Availability**: If a property becomes available suddenly and seems too good to be true, it might be a sign of issues with the previous tenant or problems with the property.
+
+7. **No Contact Information**: A lack of contact information or a professional landlord profile can suggest that the property might be managed poorly or that the landlord is less reliable.
+
+8. **Pressure Tactics**: If the landlord or the listing indicates that the property will be rented out quickly or that there is strong competition for the property, this could lead to rushed decision-making or potentially unfair demands.
+
+9. **Legal Issues**: Mention of ongoing legal issues or disputes can indicate that the property is involved in litigation, which could affect your rights as a tenant.
+
+10. **Lack of Professional Photography**: Poor or unprofessional-quality photos can suggest that the property or the landlord might not be presenting the property in the best light, hiding potential issues or deficiencies.
+
+It's important to thoroughly vet any rental listing and possibly conduct follow-up questions or visits to confirm the accuracy of the information and address any concerns.
+
+Turn 5 Token Usage:
+  Input Tokens (this turn): 1652
+  Output Tokens (this turn): 659
+  Total Tokens (this turn): 2311
+
+You: 
+/stats (after turn 5):
+  Turn Count: 5
+  Cumulative Input Tokens: 4028
+  Cumulative Output Tokens: 2187
+  Cumulative Total Tokens: 6215
+  Serialized Conversation History Length: 9726 chars
+
+You: 
+================================================================================
+
+FINAL SUMMARY
+
+================================================================================
+
+Conversation complete.
+Total Turns: 5
+Total Input Tokens: 4028
+Total Output Tokens: 2187
+Total Tokens Used: 6215
+Serialized Conversation History Length: 9726 chars

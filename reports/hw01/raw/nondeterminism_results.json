@@ -1,34 +1,34 @@
 [
   {
     "tags": [
-      "Spacious 2BR",
-      "Downtown San Jose",
-      "Pet-friendly"
+      "SpaciousApartment",
+      "CityViews",
+      "FlexibleLease"
     ],
-    "summary": "Renovated 2BR apartment in downtown San Jose with balcony, city views, pet-friendly, and various building amenities.",
-    "latency_ms": 6481.457948684692,
+    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, flexible lease, pet-friendly, and move-in special.",
+    "latency_ms": 5591.146945953369,
     "temperature": 0.7,
     "run": 1
   },
   {
     "tags": [
-      "Spacious 2BR",
+      "Spacious 2BR Apartment",
       "Downtown San Jose",
-      "Renovated Apartment"
+      "Pet-friendly"
     ],
-    "summary": "Luxury 2-bedroom apartment in downtown San Jose with balcony, city views, and 50% off first month rent, featuring a fitness center, rooftop garden, and 24/7",
-    "latency_ms": 5091.3190841674805,
+    "summary": "Renovated 2BR in downtown San Jose with city views, building amenities, pet-friendly policy, flexible lease terms, and a move-in special.",
+    "latency_ms": 4104.81595993042,
     "temperature": 0.7,
     "run": 2
   },
   {
     "tags": [
-      "Spacious 2BR Apartment",
+      "Spacious 2BR",
       "Downtown San Jose",
-      "City Views"
+      "Move-in Special"
     ],
-    "summary": "Luxury 2-bedroom apartment in downtown San Jose with city views, building amenities, rooftop garden, and a move-in special.",
-    "latency_ms": 3917.5970554351807,
+    "summary": "A renovated 2-bedroom apartment in downtown San Jose with city views, gym, garden, and flexible lease. Offers a 50% discount on the first month and",
+    "latency_ms": 4013.8649940490723,
     "temperature": 0.7,
     "run": 3
   },
@@ -36,34 +36,78 @@
     "tags": [
       "Spacious 2BR Apartment",
       "Downtown San Jose",
-      "Pet-friendly"
+      "City Views"
     ],
-    "summary": "Luxury 2-bedroom apartment in downtown San Jose with balcony, gym, garden, security, nearby amenities, flexible lease, pet-friendly, and move-in special.",
-    "latency_ms": 4576.287031173706,
+    "summary": "Luxury move-in special on a spacious 2BR in downtown San Jose, featuring city views, building amenities, and pet-friendly policy.",
+    "latency_ms": 3664.381980895996,
     "temperature": 0.7,
     "run": 4
   },
   {
     "tags": [
-      "2BR Apartment",
+      "Spacious 2BR",
       "Downtown San Jose",
-      "Move-in Special"
+      "Renovated"
     ],
-    "summary": "Spacious 2BR apartment in downtown San Jose with amenities like a fitness center and rooftop garden, near transit, restaurants, and shopping, pet-friendly, move-in special offers",
-    "latency_ms": 4452.0628452301025,
+    "summary": "Move-in to this renovated 2BR in downtown San Jose, featuring a balcony, city views, amenities, and a flexible lease with a first month's rent discount.",
+    "latency_ms": 5019.001245498657,
     "temperature": 0.7,
     "run": 5
   },
   {
     "tags": [
-      "Spacious 2BR Apartment",
+      "Spacious 2BR",
       "Downtown San Jose",
-      "High-end Amenities"
+      "Pet-friendly"
     ],
-    "summary": "Luxurious 2-bedroom apartment in downtown San Jose with city views, in-unit laundry, and pet-friendly policy, featuring a fitness center and rooftop garden.",
-    "latency_ms": 3804.7008514404297,
+    "summary": "Luxurious 2BR in downtown San Jose with city views, gym, garden, security, and flexible lease. Offers a first month 50% move-in special.",
+    "latency_ms": 4266.808032989502,
     "temperature": 0.7,
     "run": 6
+  },
+  {
+    "tags": [
+      "2BR Apartment",
+      "Downtown San Jose",
+      "Rooftop Garden"
+    ],
+    "summary": "Spacious, renovated 2BR in downtown San Jose with amenities, city views, pet-friendly, and special lease terms.",
+    "latency_ms": 3940.2058124542236,
+    "temperature": 0.7,
+    "run": 7
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Luxury 2-bedroom apartment in downtown San Jose with city views, building amenities, and flexible lease options, including a move-in special.",
+    "latency_ms": 4142.604827880859,
+    "temperature": 0.7,
+    "run": 8
+  },
+  {
+    "tags": [
+      "2BR Apartment",
+      "Downtown San Jose",
+      "Renovated"
+    ],
+    "summary": "Spacious, renovated 2BR in downtown San Jose with amenities, city views, near transit, restaurants, shopping, pet-friendly, and a move-in special.",
+    "latency_ms": 4659.384727478027,
+    "temperature": 0.7,
+    "run": 9
+  },
+  {
+    "tags": [
+      "Spacious 2-bedroom apartment",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Modern, pet-friendly 2-bedroom apartment in downtown San Jose with city views, amenities, and a special move-in offer.",
+    "latency_ms": 3913.6300086975098,
+    "temperature": 0.7,
+    "run": 10
   },
   {
     "tags": [
@@ -71,10 +115,10 @@
       "Downtown San Jose",
       "Pet-friendly"
     ],
-    "summary": "Renovated 2-bedroom apartment in downtown San Jose with city views, amenities, pet-friendliness, and proximity to public transit, restaurants, and shopping, offering flexible lease terms.",
-    "latency_ms": 5006.458759307861,
+    "summary": "Spacious 2BR in downtown San Jose with city views, amenities, security, flexible lease, and move-in special.",
+    "latency_ms": 4776.017189025879,
     "temperature": 0.7,
-    "run": 7
+    "run": 11
   },
   {
     "tags": [
@@ -82,32 +126,21 @@
       "Downtown San Jose",
       "City Views"
     ],
-    "summary": "Spacious, renovated 2-bedroom downtown San Jose apartment with city views, building amenities, pet-friendly policy, and flexible lease options.",
-    "latency_ms": 4788.721799850464,
+    "summary": "Spacious, renovated 2-bedroom apartment in downtown San Jose with city views, amenities, pet-friendly policy, and flexible lease options.",
+    "latency_ms": 4066.3821697235107,
     "temperature": 0.7,
-    "run": 8
+    "run": 12
   },
   {
     "tags": [
-      "Spacious 2BR Apartment",
+      "2BR Apartment",
       "Downtown San Jose",
-      "Pet-friendly"
+      "Renovated"
     ],
-    "summary": "Luxury, pet-friendly 2BR in downtown San Jose with amenities like a fitness center, rooftop garden, and city views.",
-    "latency_ms": 4065.5219554901123,
+    "summary": "Spacious, renovated 2BR in downtown San Jose offers city views, amenities, and flexible lease with a move-in special.",
+    "latency_ms": 4311.4330768585205,
     "temperature": 0.7,
-    "run": 9
-  },
-  {
-    "tags": [
-      "Spacious 2-bedroom",
-      "Downtown San Jose",
-      "Move-in Special"
-    ],
-    "summary": "Renovated 2-bedroom apartment in downtown San Jose with city views, building amenities, 24/7 security, and a move-in special.",
-    "latency_ms": 4700.247049331665,
-    "temperature": 0.7,
-    "run": 10
+    "run": 13
   },
   {
     "tags": [
@@ -115,21 +148,54 @@
       "Downtown San Jose",
       "Pet-friendly"
     ],
-    "summary": "Spacious 2BR in downtown San Jose with modern amenities, pet-friendly, flexible lease, near transit, restaurants, and shopping.",
-    "latency_ms": 4315.486907958984,
+    "summary": "Luxury 2BR apartment in downtown San Jose with city views, premium amenities, and a special offer on the first month's rent.",
+    "latency_ms": 4501.158952713013,
     "temperature": 0.7,
-    "run": 11
+    "run": 14
   },
   {
     "tags": [
-      "Spacious 2BR Apartment",
+      "Spacious 2BR",
       "Downtown San Jose",
       "Pet-friendly"
     ],
-    "summary": "Renovated 2-bedroom apartment in downtown San Jose with city views, building amenities, flexible lease options, and a move-in special.",
-    "latency_ms": 4160.766839981079,
+    "summary": "Spacious 2-bedroom apartment in downtown San Jose with city views, gym, garden, flexible lease, and move-in special.",
+    "latency_ms": 4601.0119915008545,
     "temperature": 0.7,
-    "run": 12
+    "run": 15
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, and a move-in special.",
+    "latency_ms": 3666.2840843200684,
+    "temperature": 0.7,
+    "run": 16
+  },
+  {
+    "tags": [
+      "2BR Apartment",
+      "Downtown San Jose",
+      "Move-in Special"
+    ],
+    "summary": "Spacious, renovated 2-bedroom apartment in downtown San Jose with city views, pet-friendly policy, building amenities, and flexible lease terms. Move-in special: first month 50% off.",
+    "latency_ms": 4752.515077590942,
+    "temperature": 0.7,
+    "run": 17
+  },
+  {
+    "tags": [
+      "2BR Apartment",
+      "Downtown San Jose",
+      "City Views"
+    ],
+    "summary": "Spacious 2BR in downtown San Jose with amenities, city views, and a move-in special offering 1st month 50% off, pet-friendly, flexible lease.",
+    "latency_ms": 5232.132911682129,
+    "temperature": 0.7,
+    "run": 18
   },
   {
     "tags": [
@@ -137,305 +203,239 @@
       "Downtown San Jose",
       "Move-in Special"
     ],
-    "summary": "Modern 2-bedroom apartment in downtown San Jose with amenities, near transit, restaurants, shopping, offering a move-in special and flexible lease.",
-    "latency_ms": 4176.9118309021,
+    "summary": "2-bedroom, 1-bathroom condo in downtown San Jose with renovated features, gym, garden, 24/7 security, and flexible lease, offering a 50% off move-in special.",
+    "latency_ms": 4383.143901824951,
     "temperature": 0.7,
+    "run": 19
+  },
+  {
+    "tags": [
+      "2BR Apartment",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Spacious, renovated 2BR downtown San Jose apartment with city views, amenities, flexible lease terms, and a move-in special.",
+    "latency_ms": 4239.631175994873,
+    "temperature": 0.7,
+    "run": 20
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 4149.138927459717,
+    "temperature": 0.0,
+    "run": 1
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3949.899911880493,
+    "temperature": 0.0,
+    "run": 2
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3962.6810550689697,
+    "temperature": 0.0,
+    "run": 3
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3950.5531787872314,
+    "temperature": 0.0,
+    "run": 4
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3960.505962371826,
+    "temperature": 0.0,
+    "run": 5
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3953.315019607544,
+    "temperature": 0.0,
+    "run": 6
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3945.909023284912,
+    "temperature": 0.0,
+    "run": 7
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3961.404800415039,
+    "temperature": 0.0,
+    "run": 8
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 4032.4079990386963,
+    "temperature": 0.0,
+    "run": 9
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3893.696069717407,
+    "temperature": 0.0,
+    "run": 10
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3843.353748321533,
+    "temperature": 0.0,
+    "run": 11
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3861.4120483398438,
+    "temperature": 0.0,
+    "run": 12
+  },
+  {
+    "tags": [
+      "Spacious 2BR",
+      "Downtown San Jose",
+      "Pet-friendly"
+    ],
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3848.737955093384,
+    "temperature": 0.0,
     "run": 13
   },
   {
     "tags": [
-      "2BR Apartment",
+      "Spacious 2BR",
       "Downtown San Jose",
       "Pet-friendly"
     ],
-    "summary": "Spacious, renovated 2-bedroom downtown San Jose apartment with city views, amenities, and flexible lease options.",
-    "latency_ms": 3969.562768936157,
-    "temperature": 0.7,
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3843.4948921203613,
+    "temperature": 0.0,
     "run": 14
   },
   {
     "tags": [
-      "2BR Apartment",
+      "Spacious 2BR",
       "Downtown San Jose",
-      "City Views"
+      "Pet-friendly"
     ],
-    "summary": "Spacious, renovated 2-bedroom downtown apartment with city views, building perks, and flexible lease offering first month's rent at 50% off, pet-friendly.",
-    "latency_ms": 4746.158123016357,
-    "temperature": 0.7,
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3858.780860900879,
+    "temperature": 0.0,
     "run": 15
   },
   {
     "tags": [
-      "Spacious 2BR Apartment",
+      "Spacious 2BR",
       "Downtown San Jose",
       "Pet-friendly"
     ],
-    "summary": "Luxurious renovated 2BR in downtown San Jose with city views, amenities, pet-friendly, flexible lease & move-in special.",
-    "latency_ms": 4074.180841445923,
-    "temperature": 0.7,
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3843.559980392456,
+    "temperature": 0.0,
     "run": 16
   },
   {
     "tags": [
-      "Spacious 2BR Apartment",
+      "Spacious 2BR",
       "Downtown San Jose",
       "Pet-friendly"
     ],
-    "summary": "Renovated 2BR in downtown San Jose with balcony, views, amenities, and flexible lease.",
-    "latency_ms": 3707.9811096191406,
-    "temperature": 0.7,
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3864.42494392395,
+    "temperature": 0.0,
     "run": 17
   },
   {
     "tags": [
       "Spacious 2BR",
       "Downtown San Jose",
-      "City Views"
-    ],
-    "summary": "Spacious 2BR in downtown San Jose with city views, in-unit laundry, building amenities, and special move-in offer.",
-    "latency_ms": 4007.697105407715,
-    "temperature": 0.7,
-    "run": 18
-  },
-  {
-    "tags": [
-      "2BR Apartment",
-      "Downtown San Jose",
-      "Spacious"
-    ],
-    "summary": "Spacious, renovated 2-bedroom apartment in downtown San Jose with city views, building amenities, move-in special, and flexible lease terms.",
-    "latency_ms": 4419.701099395752,
-    "temperature": 0.7,
-    "run": 19
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
       "Pet-friendly"
     ],
-    "summary": "Downtown San Jose's spacious 2BR apartment with city views, amenities, and flexible lease, offering a 50% move-in special.",
-    "latency_ms": 4197.544097900391,
-    "temperature": 0.7,
-    "run": 20
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3750.8699893951416,
-    "temperature": 0.0,
-    "run": 1
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3684.103012084961,
-    "temperature": 0.0,
-    "run": 2
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3641.594171524048,
-    "temperature": 0.0,
-    "run": 3
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3636.2743377685547,
-    "temperature": 0.0,
-    "run": 4
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3644.775152206421,
-    "temperature": 0.0,
-    "run": 5
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3718.7438011169434,
-    "temperature": 0.0,
-    "run": 6
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3646.1141109466553,
-    "temperature": 0.0,
-    "run": 7
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3727.6558876037598,
-    "temperature": 0.0,
-    "run": 8
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3684.5529079437256,
-    "temperature": 0.0,
-    "run": 9
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3764.708995819092,
-    "temperature": 0.0,
-    "run": 10
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3643.488883972168,
-    "temperature": 0.0,
-    "run": 11
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3760.41316986084,
-    "temperature": 0.0,
-    "run": 12
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3693.4142112731934,
-    "temperature": 0.0,
-    "run": 13
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3727.721929550171,
-    "temperature": 0.0,
-    "run": 14
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3749.5877742767334,
-    "temperature": 0.0,
-    "run": 15
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3660.4230403900146,
-    "temperature": 0.0,
-    "run": 16
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3678.126811981201,
-    "temperature": 0.0,
-    "run": 17
-  },
-  {
-    "tags": [
-      "Spacious 2BR Apartment",
-      "Downtown San Jose",
-      "Pet-friendly"
-    ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3753.2386779785156,
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3850.322961807251,
     "temperature": 0.0,
     "run": 18
   },
   {
     "tags": [
-      "Spacious 2BR Apartment",
+      "Spacious 2BR",
       "Downtown San Jose",
       "Pet-friendly"
     ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3709.7530364990234,
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3855.9999465942383,
     "temperature": 0.0,
     "run": 19
   },
   {
     "tags": [
-      "Spacious 2BR Apartment",
+      "Spacious 2BR",
       "Downtown San Jose",
       "Pet-friendly"
     ],
-    "summary": "Renovated 2BR in downtown San Jose with city views, amenities, and a special offer.",
-    "latency_ms": 3705.7039737701416,
+    "summary": "Renovated 2BR apartment in downtown San Jose with city views, amenities, flexible lease, and a move-in special.",
+    "latency_ms": 3860.4648113250732,
     "temperature": 0.0,
     "run": 20
   }

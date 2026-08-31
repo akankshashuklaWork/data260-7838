@@ -23,5 +23,55 @@ Stop the local container when finished:
 docker stop s7838-rental-housing
 ```
 
-Parts 2–4 commands will be added after those implementations are complete.
-The current `report.pdf` is explicitly marked as a draft and must be replaced after all homework parts and screenshots are complete.
+## Part 2: Agentic AI pipeline
+
+Requires Ollama running locally with the qwen2:7b model pulled.
+
+```bash
+ollama serve
+ollama pull qwen2:7b
+```
+
+In another terminal:
+
+```bash
+cd code
+python3.11 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python agents_demo.py
+```
+
+This prints the Planner output, Reviewer output, Finalizer step, and final published JSON (exactly 3 tags, summary of at most 25 words) to the console.
+
+## Part 3: Non-determinism testing
+
+Uses the same venv and Ollama setup as Part 2. The fixed test input is saved at
+reports/hw01/cases/nondeterminism_input.json and must not be changed between runs.
+
+```bash
+cd code
+source venv/bin/activate
+python run_nondeterminism_tests.py
+python analyze_nondeterminism.py
+```
+
+The first command runs agents_demo.py 40 times (20 at temperature 0.7, 20 at temperature 0.0)
+against the fixed input and saves every result to reports/hw01/raw/nondeterminism_results.json.
+The second command computes the distinct-tag-set and latency statistics and writes
+reports/hw01/METRICS.md.
+
+## Part 4: Model client and token accounting
+
+Uses the same venv and Ollama setup as Part 2/3.
+
+```bash
+cd code
+source venv/bin/activate
+python hw1_client.py
+```
+
+This starts an interactive session. Type a message and press Enter to chat; type /stats
+to print turn count, cumulative token counts, and the serialized conversation-history
+length without calling the model; type /exit to quit and print the final cumulative
+summary.

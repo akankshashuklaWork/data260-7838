@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Part 3: Analyze non-determinism results
-Computes metrics and generates METRICS.md
-"""
+"""Part 3: turn nondeterminism_results.json into the METRICS.md tables."""
 
 import json
 from pathlib import Path
@@ -10,38 +7,28 @@ from collections import Counter
 from statistics import median, quantiles
 
 def analyze_temperature(results: list, temperature: float) -> dict:
-    """Analyze results for a specific temperature."""
     temp_results = [r for r in results if r["temperature"] == temperature]
 
     if not temp_results:
         return {}
 
-    # Extract tags
     all_tags = [r["tags"] for r in temp_results]
-
-    # Convert to tag sets for comparison
     tag_sets = [tuple(sorted(tags)) for tags in all_tags]
     distinct_tag_sets = len(set(tag_sets))
 
-    # Count tag occurrences
     tag_counts = Counter()
     for tags in all_tags:
         for tag in tags:
             tag_counts[tag] += 1
 
-    # Tags appearing in all 20 runs
     tags_in_all = [tag for tag, count in tag_counts.items() if count == 20]
-
-    # Tags appearing in exactly 1 run
     tags_in_one = [tag for tag, count in tag_counts.items() if count == 1]
 
-    # Calculate latency stats (in ms)
     latencies = sorted([r["latency_ms"] for r in temp_results])
     p50 = median(latencies)
-    # For p95 and p99, use quantiles
     quantile_results = quantiles(latencies, n=100)
-    p95 = quantile_results[94]  # 95th percentile (index 94 for 100 points)
-    p99 = quantile_results[98]  # 99th percentile (index 98 for 100 points)
+    p95 = quantile_results[94]  # 95th percentile
+    p99 = quantile_results[98]  # 99th percentile
 
     # Two real, distinct example tag sets actually produced at this temperature,
     # used to illustrate what two different users might genuinely see.
@@ -68,7 +55,6 @@ def analyze_temperature(results: list, temperature: float) -> dict:
     }
 
 def main():
-    """Analyze results and generate METRICS.md."""
     results_file = Path("../reports/hw01/raw/nondeterminism_results.json")
 
     if not results_file.exists():
@@ -76,17 +62,14 @@ def main():
         print("Run: python run_nondeterminism_tests.py")
         return
 
-    # Load results
     with open(results_file, "r") as f:
         results = json.load(f)
 
     print(f"Loaded {len(results)} results")
 
-    # Analyze each temperature
     analysis_07 = analyze_temperature(results, 0.7)
     analysis_00 = analyze_temperature(results, 0.0)
 
-    # Generate METRICS.md
     metrics_file = Path("../reports/hw01/METRICS.md")
     metrics_file.parent.mkdir(parents=True, exist_ok=True)
 

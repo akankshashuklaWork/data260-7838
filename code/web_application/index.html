@@ -1,32 +1,31 @@
-<!-- The DOCTYPE declaration tells the browser that this document uses HTML5 -->
 <!DOCTYPE html>
-<!-- The html tag is the root element. The lang attribute describes the page language -->
 <html lang="en">
-<!-- The head contains page information that is not displayed as the main content -->
 <head>
-  <!-- UTF-8 supports common letters, symbols, and punctuation -->
   <meta charset="UTF-8">
-  <!-- The viewport setting makes the layout work properly on phones and tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Submit a rental housing listing.">
-  <!-- The title appears in the browser tab. -->
   <title>HW1-Akanksha</title>
-  <!-- The link tag loads the page styles from an external CSS file -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<!-- The body contains everything displayed on the page -->
 <body>
-  <!-- main identifies the primary content of this page -->
   <main>
-    <!-- h1 is the largest heading and names the assigned domain entity -->
     <h1>Rental Housing Listing</h1>
-    <p class="intro">Enter the property information below. All fields are required.</p>
+    <p class="intro">Browse and manage rental listings. All fields are required when adding or updating a listing.</p>
 
-    <!-- The form collects all information needed for one rental listing -->
+    <section class="toolbar" aria-labelledby="searchHeading">
+      <h2 id="searchHeading">Find a listing</h2>
+      <form id="searchForm" class="search-form">
+        <label for="searchInput">Search by title or location</label>
+        <div class="search-controls">
+          <input id="searchInput" type="search" placeholder="e.g., San Jose or Willow Glen">
+          <button type="submit">Search</button>
+          <button type="button" id="clearSearch" class="secondary-button">Clear</button>
+        </div>
+      </form>
+    </section>
+
     <form id="rentalListingForm">
-      <!-- A label is connected to its input through matching for and id values -->
       <label for="propertyTitle">Property title *</label>
-      <!-- autofocus places the cursor in this required primary field when the page loads -->
       <input
         type="text"
         id="propertyTitle"
@@ -37,7 +36,6 @@
       >
 
       <label for="propertyLocation">Property location *</label>
-      <!-- This required text input stores the entity's secondary field -->
       <input
         type="text"
         id="propertyLocation"
@@ -47,7 +45,6 @@
       >
 
       <label for="submitterEmail">Submitter email *</label>
-      <!-- type=email lets the browser check that the value resembles an email address -->
       <input
         type="email"
         id="submitterEmail"
@@ -57,7 +54,6 @@
       >
 
       <label for="propertyDescription">Property description *</label>
-      <!-- textarea is used for longer, multi-line property information -->
       <textarea
         id="propertyDescription"
         name="propertyDescription"
@@ -68,7 +64,6 @@
       <p id="characterCount" class="help-text" aria-live="polite">0 characters</p>
 
       <label for="propertyCategory">Property category *</label>
-      <!-- select creates a dropdown menu; each option is one allowed category -->
       <select id="propertyCategory" name="propertyCategory" required>
         <option value="" selected disabled>Select a category</option>
         <option value="Apartment">Apartment</option>
@@ -77,28 +72,29 @@
         <option value="Townhouse">Townhouse</option>
       </select>
 
-      <!-- The checkbox records whether the user accepts the terms and conditions -->
       <div class="terms-row">
         <input type="checkbox" id="termsAccepted" name="termsAccepted" value="agreed">
         <label for="termsAccepted">I agree to the terms and conditions.</label>
       </div>
 
-      <!-- A submit button triggers the form's JavaScript submit event -->
-      <button type="submit">Publish Rental Listing</button>
-      <!-- role=status and aria-live allow assistive technology to announce updates -->
+      <div class="form-actions">
+        <button type="submit">Add Rental Listing</button>
+        <button type="button" id="updateListing" class="secondary-button">Update Listing ID 1</button>
+      </div>
       <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
     </form>
 
-    <!-- Valid listings are added to this list after the simulated save succeeds -->
     <section aria-labelledby="submissionsHeading">
       <h2 id="submissionsHeading">Successful submissions</h2>
-      <ul id="listingSubmissions">
-        <li id="emptyState" class="empty-state">No listings submitted yet.</li>
+      <p id="loadingState" class="loading-state" role="status" aria-live="polite">Loading listings…</p>
+      <p id="errorState" class="error-state" role="alert" hidden>We could not load the listings. Please try again.</p>
+      <ul id="listingSubmissions" hidden>
+        <li id="emptyState" class="empty-state">No listings match your search.</li>
       </ul>
+      <button type="button" id="deleteHighest" class="danger-button">Delete Highest-ID Listing</button>
     </section>
   </main>
 
-  <!-- The script is placed at the end so the HTML elements exist before JavaScript uses them -->
   <script src="script.js"></script>
 </body>
 </html>

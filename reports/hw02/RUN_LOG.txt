@@ -1,0 +1,41 @@
+HW2 Part 4 Run Log
+
+Timestamp (UTC): 2026-09-12T07:10:31Z
+Repository: data260-7838
+Model: qwen2:7b via local Ollama and src/model_client.py
+
+Command: python code/test_stateful_agent_graph.py
+Result: PASS: Pydantic validation retry and Reviewer correction loop -> END
+
+Command: python code/run_hw2_experiments.py
+Result: Wrote schema_validation_results.json, ceiling_comparison_results.json, and adversarial_results.json
+Runs: 30 schema-validation + 20 ceiling-2 + 20 ceiling-10 + 5 adversarial = 75 total
+
+Command: python code/analyze_hw2_experiments.py
+Result: Wrote reports/hw02/METRICS.md
+
+Observed results:
+- Schema validation: 30 valid first attempts, 0 retries, 0 abandoned.
+- Turn ceiling 2: 0/20 completed; 20/20 abandoned at ceiling.
+- Turn ceiling 10: 20/20 completed.
+- Adversarial input: 0/5 completed; 5/5 abandoned at ceiling.
+
+---
+
+Report screenshot runs (Part 1-4 report.docx), same repository/model as above.
+
+Timestamp (UTC): 2026-09-14T06:50:11Z
+Command: python code/test_stateful_agent_graph.py
+Result: PASS: Pydantic validation retry and Reviewer correction loop -> END
+
+Timestamp (UTC): 2026-09-14T06:50:11Z
+Command: python code/stateful_agent_graph.py --input reports/hw02/cases/schema_input.json
+Result: Supervisor -> Planner -> Supervisor -> Reviewer -> Supervisor -> END, approved on the first attempt, turn_count=3 (6.5s wall time)
+
+Timestamp (UTC): 2026-09-14T06:50:30Z
+Command: python code/demo_correction_loop.py   (reviewer_node temporarily wrapped to force has_issues=True, per Step 6)
+Result: Supervisor kept routing back to Planner for 3 attempts until max_turns=6 was reached; reverted immediately after the demo run.
+
+Timestamp (UTC): 2026-09-14T06:50:42Z
+Command: python code/analyze_hw2_experiments.py
+Result: Wrote reports/hw02/METRICS.md (regenerated from the existing raw/*.json above; output unchanged, confirmed via git diff)

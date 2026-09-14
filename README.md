@@ -1,4 +1,4 @@
-# DATA 260 Homework 1
+# DATA 260 Homework 2
 
 Rental Housing Listings - Akanksha Shukla
 
@@ -34,7 +34,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Part 1: Web Form
+## HW1 and HW2 Web Application
 
 Created a web form for submitting rental property listings, with client-side validation and JSON handling in JavaScript.
 
@@ -42,9 +42,17 @@ Files: `code/web_application/`
 
 How to run:
 
+Start the FastAPI application locally:
+
 ```bash
-open code/web_application/index.html
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r code/requirements.txt
+cd code/web_application
+uvicorn app:app --host 127.0.0.1 --port 8638
 ```
+
+Open http://localhost:8638 in a browser. Add, update, and delete operations return HTTP 303 redirects to the home page, which reloads the updated record list. Search filters by property title or location.
 
 Run the automated tests:
 
@@ -55,13 +63,43 @@ node code/web_application/tests/run-tests.js
 Build and run with Docker:
 
 ```bash
-docker build -f code/Dockerfile -t hw1-rental-listings:1.0 .
-docker run --detach --name s7838-rental-housing --publish 8638:80 hw1-rental-listings:1.0
+docker build -f code/Dockerfile -t hw2-rental-listings .
+docker run --rm --publish 8638:8638 hw2-rental-listings
 ```
 
 Open http://localhost:8638 in a browser.
 
-## Part 2: Agentic AI Pipeline
+## FastAPI Endpoints
+
+| Method | Endpoint | Behavior |
+|---|---|---|
+| GET | `/api/listings` | List all records |
+| GET | `/api/listings?search=San Jose` | Search title or location |
+| POST | `/api/listings` | Add a record and redirect to `/` |
+| PUT | `/api/listings/1` | Update record ID 1 and redirect to `/` |
+| DELETE | `/api/listings/highest` | Delete highest ID and redirect to `/` |
+
+## Part 3: Stateful Agent Graph
+
+The stateful Planner/Reviewer graph is implemented in `code/stateful_agent_graph.py`.
+It follows the required Supervisor flow: a missing proposal routes to Planner, an
+existing proposal routes to Reviewer, Reviewer issues route back through Supervisor
+to Planner, and an approved review ends the graph. All model calls use the HW1
+`src/model_client.py` adapter with the documented `qwen2:7b` local model.
+
+Run the graph with:
+
+```bash
+python code/stateful_agent_graph.py
+```
+
+Run the offline routing and correction-loop check with:
+
+```bash
+python code/test_stateful_agent_graph.py
+```
+
+## HW1 Part 2: Agentic AI Pipeline
 
 A Planner -> Reviewer -> Finalizer pipeline that reads a listing's title and content and produces exactly 3 tags and a summary (at most 25 words) as JSON.
 

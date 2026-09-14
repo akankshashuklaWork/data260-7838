@@ -1,0 +1,41 @@
+# HW2 Reproducible Runs
+
+Install dependencies from the repository root:
+
+```bash
+python3 -m pip install -r code/requirements.txt
+```
+
+Start Ollama and make sure the documented local model is available:
+
+```bash
+ollama serve
+ollama pull qwen2:7b
+```
+
+Run the offline graph check:
+
+```bash
+python code/test_stateful_agent_graph.py
+```
+
+Run one real invocation of the graph (streams each node's output):
+
+```bash
+python code/stateful_agent_graph.py --input reports/hw02/cases/schema_input.json
+```
+
+Reproduce the Part 3 Step 6 self-correction loop (reviewer_node forced to always report an issue, so the Supervisor keeps routing back to the Planner until the turn ceiling):
+
+```bash
+python code/demo_correction_loop.py
+```
+
+Run Part 4 experiments:
+
+```bash
+python code/run_hw2_experiments.py
+python code/analyze_hw2_experiments.py
+```
+
+The frozen inputs are in `reports/hw02/cases/`; raw results are written to `reports/hw02/raw/`.

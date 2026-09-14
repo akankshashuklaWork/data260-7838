@@ -1,16 +1,9 @@
-# Use a small Nginx image to serve the static web application.
-FROM nginx:alpine
+FROM python:3.12-slim
 
-# Remove the sample website included with Nginx.
-RUN rm -rf /usr/share/nginx/html/*
+WORKDIR /app
+COPY code/requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+COPY code/web_application ./web_application
 
-# Copy only the shared web application into the image.
-COPY code/web_application/index.html /usr/share/nginx/html/index.html
-COPY code/web_application/styles.css /usr/share/nginx/html/styles.css
-COPY code/web_application/script.js /usr/share/nginx/html/script.js
-
-# Nginx listens on port 80 inside the container.
-EXPOSE 80
-
-# Keep Nginx running in the foreground.
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 8638
+CMD ["uvicorn", "web_application.app:app", "--host", "0.0.0.0", "--port", "8638"]

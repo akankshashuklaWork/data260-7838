@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
-"""
-Part 4: Model Client Demo with Token Accounting
-Interactive CLI. Type messages to chat; type /stats for token usage stats;
-type /exit to quit and see the final cumulative summary.
-"""
+"""Part 4: interactive chat over ModelClient. Type /stats for token usage,
+/exit to quit and print the cumulative summary."""
 
 import os
 import sys
@@ -61,7 +58,6 @@ def run_conversation():
         print_separator()
         print(f"User: {user_input}")
 
-        # Build messages (history + new message)
         messages = [{'role': 'system', 'content': system_prompt}]
 
         for msg in client.get_history():
@@ -90,7 +86,6 @@ def run_conversation():
             turn_num -= 1
             continue
 
-    # On exit: cumulative summary
     print_separator()
     print("FINAL SUMMARY")
     print_separator()

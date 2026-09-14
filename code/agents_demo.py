@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
-"""
-Part 2: Agentic AI - Planner → Reviewer → Finalizer Flow
-Domain: Rental Housing Listings (DOMAIN_ID 6)
-Uses Ollama with local LLM to generate tags and summary
-"""
+"""Part 2: Planner -> Reviewer -> Finalizer agents for the rental housing domain,
+talking to a local Ollama model."""
 
 import json
 import sys
@@ -12,8 +9,7 @@ from typing import Optional
 from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
 
-# Configuration
-MODEL_NAME = "qwen2:7b"  # or qwen3:8b if hardware supports
+MODEL_NAME = "qwen2:7b"  # swap for qwen3:8b if your hardware can run it
 OLLAMA_BASE_URL = "http://localhost:11434"
 TEMPERATURE = 0.7
 
@@ -36,10 +32,7 @@ def create_reviewer_agent(temperature: float = TEMPERATURE) -> ChatOllama:
     )
 
 def planner_step(title: str, content: str, temperature: float = TEMPERATURE, verbose: bool = True) -> dict:
-    """
-    Planner Agent: Generates initial tags and summary from title and content.
-    Returns a JSON object with tags and summary.
-    """
+    """Generate the first draft of tags and a summary from the title and content."""
     planner = create_planner_agent(temperature)
 
     system_prompt = SystemMessage(content="""You are a content analyst. Analyze the given title and content to generate:
@@ -77,10 +70,7 @@ Analyze this and generate 3 tags and a summary. Output ONLY valid JSON, no other
         return {"tags": [], "summary": "", "reasoning": "Failed to parse"}
 
 def reviewer_step(title: str, content: str, planner_output: dict, temperature: float = TEMPERATURE, verbose: bool = True) -> dict:
-    """
-    Reviewer Agent: Reviews and potentially improves the Planner's tags and summary.
-    Returns a JSON object indicating changes made.
-    """
+    """Check the Planner's tags and summary and improve them if needed."""
     reviewer = create_reviewer_agent(temperature)
 
     system_prompt = SystemMessage(content="""You are a quality reviewer. Review the tags and summary provided by the Planner:
@@ -126,26 +116,22 @@ Review these. Output ONLY valid JSON with improved tags/summary if needed.""")
         return planner_output
 
 def finalizer_step(planner_output: dict, reviewer_output: dict, verbose: bool = True) -> dict:
-    """
-    Finalizer: Combines Planner and Reviewer outputs into final JSON.
-    Ensures exactly 3 tags and ≤25 word summary.
-    """
+    """Pick the Reviewer's output if it actually changed something, else the Planner's,
+    and trim it down to exactly 3 tags and a 25-word summary."""
     if verbose:
         print("\n" + "="*80)
         print("FINALIZER STEP:")
         print("="*80)
 
-    # Use Reviewer output if it changed something meaningful, otherwise use Planner
     if reviewer_output.get("changed", False) and reviewer_output.get("tags"):
-        final_tags = reviewer_output["tags"][:3]  # Ensure exactly 3
+        final_tags = reviewer_output["tags"][:3]
         final_summary = reviewer_output["summary"]
         source = "Reviewer"
     else:
-        final_tags = planner_output["tags"][:3]  # Ensure exactly 3
+        final_tags = planner_output["tags"][:3]
         final_summary = planner_output["summary"]
         source = "Planner"
 
-    # Validate summary length
     word_count = len(final_summary.split())
     if word_count > 25:
         final_summary = " ".join(final_summary.split()[:25])
@@ -169,22 +155,12 @@ def run_pipeline(title: str, content: str, temperature: float = TEMPERATURE, ver
     return final_result
 
 def main():
-    """
-    Main execution.
-
-    Default mode (no arguments): runs the demo pipeline on the fixed example
-    Rental Housing listing and prints each stage verbosely, as used for Part 2.
-
-    Test mode: python agents_demo.py <input_json_path> <temperature>
-    Loads {"title": ..., "content": ...} from input_json_path, runs the same
-    pipeline once at the given temperature, and prints ONLY a single-line JSON
-    object {"tags": [...], "summary": ..., "latency_ms": ...} to stdout - used
-    by run_nondeterminism_tests.py for the Part 3 non-determinism experiment.
-    """
+    """No arguments: run the demo pipeline on the fixed example listing, verbose (Part 2).
+    Two arguments (input_json_path temperature): run once quietly and print a single-line
+    JSON result, which is what run_nondeterminism_tests.py calls for the Part 3 experiment."""
     args = sys.argv[1:]
 
     if len(args) >= 2:
-        # Test mode: quiet, single-line JSON output for automated scripting.
         input_path = args[0]
         temperature = float(args[1])
 
@@ -204,7 +180,6 @@ def main():
         }))
         return final_result
 
-    # Default demo mode (Part 2): Example input (Rental Housing domain)
     title = "Spacious 2BR Apartment in Downtown San Jose"
     content = """This beautifully renovated 2-bedroom, 1-bathroom apartment is located in the heart of downtown San Jose.
     Features include hardwood floors, high ceilings, in-unit washer/dryer, and a large balcony with city views.

@@ -1,0 +1,2066 @@
+{
+  "2": [
+    {
+      "run": 1,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2364.88,
+      "planner_proposal": {
+        "tags": [
+          "two-bedroom",
+          "San Jose",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose with parking, garden, and adaptable lease terms."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "two-bedroom",
+              "San Jose",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose with parking, garden, and adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 40,
+          "total_tokens": 181
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2694.11,
+      "planner_proposal": {
+        "tags": [
+          "San Jose Rental",
+          "Two-bedroom",
+          "Flexible Lease"
+        ],
+        "summary": "Bright two-bedroom home near transit, featuring parking, a shared garden, and adaptable lease options in San Jose."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose Rental",
+              "Two-bedroom",
+              "Flexible Lease"
+            ],
+            "summary": "Bright two-bedroom home near transit, featuring parking, a shared garden, and adaptable lease options in San Jose."
+          },
+          "input_tokens": 141,
+          "output_tokens": 49,
+          "total_tokens": 190
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2786.77,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose location",
+          "Flexible lease"
+        ],
+        "summary": "Spacious two-bedroom home in San Jose with convenient transit access, parking, and a shared garden."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose location",
+              "Flexible lease"
+            ],
+            "summary": "Spacious two-bedroom home in San Jose with convenient transit access, parking, and a shared garden."
+          },
+          "input_tokens": 141,
+          "output_tokens": 47,
+          "total_tokens": 188
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 4,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2711.26,
+      "planner_proposal": {
+        "tags": [
+          "San Jose",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home near public transit in San Jose, featuring parking, a shared garden, and adaptable lease terms."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home near public transit in San Jose, featuring parking, a shared garden, and adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 48,
+          "total_tokens": 189
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 5,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2463.64,
+      "planner_proposal": {
+        "tags": [
+          "San Jose",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose, near public transit, with parking & shared garden."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose, near public transit, with parking & shared garden."
+          },
+          "input_tokens": 141,
+          "output_tokens": 40,
+          "total_tokens": 181
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 6,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2689.09,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose location",
+          "Flexible lease"
+        ],
+        "summary": "Enjoy a bright two-bedroom home in San Jose, offering ease of public transit access, parking, and a shared garden."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose location",
+              "Flexible lease"
+            ],
+            "summary": "Enjoy a bright two-bedroom home in San Jose, offering ease of public transit access, parking, and a shared garden."
+          },
+          "input_tokens": 141,
+          "output_tokens": 51,
+          "total_tokens": 192
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 7,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2614.23,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose location",
+          "Flexible lease"
+        ],
+        "summary": "Sunlit two-bedroom home in San Jose, featuring parking, a shared garden, and adaptable lease options."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose location",
+              "Flexible lease"
+            ],
+            "summary": "Sunlit two-bedroom home in San Jose, featuring parking, a shared garden, and adaptable lease options."
+          },
+          "input_tokens": 141,
+          "output_tokens": 48,
+          "total_tokens": 189
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 8,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2634.44,
+      "planner_proposal": {
+        "tags": [
+          "Bright 2-bedroom",
+          "San Jose location",
+          "Flexible lease"
+        ],
+        "summary": "Spacious two-bedroom rental in San Jose, featuring a shared garden, parking, and adaptable lease terms."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright 2-bedroom",
+              "San Jose location",
+              "Flexible lease"
+            ],
+            "summary": "Spacious two-bedroom rental in San Jose, featuring a shared garden, parking, and adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 48,
+          "total_tokens": 189
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 9,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2862.68,
+      "planner_proposal": {
+        "tags": [
+          "Bright 2-bedroom",
+          "San Jose location",
+          "Flexible lease"
+        ],
+        "summary": "Sunlit 2-bedroom home in San Jose, near transit, featuring parking, a shared garden, and adaptable lease terms."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright 2-bedroom",
+              "San Jose location",
+              "Flexible lease"
+            ],
+            "summary": "Sunlit 2-bedroom home in San Jose, near transit, featuring parking, a shared garden, and adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 50,
+          "total_tokens": 191
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 10,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2288.69,
+      "planner_proposal": {
+        "tags": [
+          "San Jose",
+          "two-bedroom",
+          "parking"
+        ],
+        "summary": "Bright two-bedroom home in San Jose with parking, shared garden, and flexible lease terms."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose",
+              "two-bedroom",
+              "parking"
+            ],
+            "summary": "Bright two-bedroom home in San Jose with parking, shared garden, and flexible lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 39,
+          "total_tokens": 180
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 11,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2559.25,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose location",
+          "Flexible lease"
+        ],
+        "summary": "Sunlit two-bedroom home in San Jose, close to public transit, featuring parking and a shared garden."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose location",
+              "Flexible lease"
+            ],
+            "summary": "Sunlit two-bedroom home in San Jose, close to public transit, featuring parking and a shared garden."
+          },
+          "input_tokens": 141,
+          "output_tokens": 48,
+          "total_tokens": 189
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 12,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2459.76,
+      "planner_proposal": {
+        "tags": [
+          "San Jose",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose with parking, a shared garden, and flexible lease terms near public transit."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose with parking, a shared garden, and flexible lease terms near public transit."
+          },
+          "input_tokens": 141,
+          "output_tokens": 47,
+          "total_tokens": 188
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 13,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2783.86,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose rental",
+          "Flexible lease"
+        ],
+        "summary": "Sunlit two-bedroom home in San Jose, offering parking, a shared garden, and adaptable lease options near public transit."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose rental",
+              "Flexible lease"
+            ],
+            "summary": "Sunlit two-bedroom home in San Jose, offering parking, a shared garden, and adaptable lease options near public transit."
+          },
+          "input_tokens": 141,
+          "output_tokens": 52,
+          "total_tokens": 193
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 14,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2491.73,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose rental",
+          "Flexible lease"
+        ],
+        "summary": "Sunlit two-bedroom home in San Jose, close to transit, featuring parking and a shared garden."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose rental",
+              "Flexible lease"
+            ],
+            "summary": "Sunlit two-bedroom home in San Jose, close to transit, featuring parking and a shared garden."
+          },
+          "input_tokens": 141,
+          "output_tokens": 45,
+          "total_tokens": 186
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 15,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2790.67,
+      "planner_proposal": {
+        "tags": [
+          "Bright Home",
+          "San Jose Location",
+          "Flexible Lease"
+        ],
+        "summary": "Two-bedroom rental in Willow Glen, San Jose, offering natural light, shared garden, parking, and adaptable lease terms."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright Home",
+              "San Jose Location",
+              "Flexible Lease"
+            ],
+            "summary": "Two-bedroom rental in Willow Glen, San Jose, offering natural light, shared garden, parking, and adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 51,
+          "total_tokens": 192
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 16,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2568.03,
+      "planner_proposal": {
+        "tags": [
+          "San Jose rental",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose with parking, garden, and adaptable lease options near public transit."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose rental",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose with parking, garden, and adaptable lease options near public transit."
+          },
+          "input_tokens": 141,
+          "output_tokens": 47,
+          "total_tokens": 188
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 17,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2643.0,
+      "planner_proposal": {
+        "tags": [
+          "Bright Home",
+          "San Jose Rental",
+          "Flexible Lease"
+        ],
+        "summary": "Spacious two-bedroom home in San Jose, featuring a shared garden, parking, and adaptable lease options."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright Home",
+              "San Jose Rental",
+              "Flexible Lease"
+            ],
+            "summary": "Spacious two-bedroom home in San Jose, featuring a shared garden, parking, and adaptable lease options."
+          },
+          "input_tokens": 141,
+          "output_tokens": 46,
+          "total_tokens": 187
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 18,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2890.13,
+      "planner_proposal": {
+        "tags": [
+          "San Jose Rental",
+          "Two-bedroom Home",
+          "Flexible Lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose, near public transit, with parking, a shared garden, and adaptable lease options."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose Rental",
+              "Two-bedroom Home",
+              "Flexible Lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose, near public transit, with parking, a shared garden, and adaptable lease options."
+          },
+          "input_tokens": 141,
+          "output_tokens": 51,
+          "total_tokens": 192
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 19,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2608.98,
+      "planner_proposal": {
+        "tags": [
+          "San Jose",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose with parking, garden, and adaptable lease terms."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose with parking, garden, and adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 40,
+          "total_tokens": 181
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    },
+    {
+      "run": 20,
+      "max_turns": 2,
+      "outcome": "abandoned_at_ceiling",
+      "completed": false,
+      "planner_attempts": 1,
+      "turn_count": 2,
+      "latency_ms": 2918.14,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose location",
+          "Flexible lease"
+        ],
+        "summary": "Sunlit two-bedroom home in San Jose, close to public transit, featuring parking, a shared garden, and adaptable lease terms."
+      },
+      "reviewer_feedback": {},
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose location",
+              "Flexible lease"
+            ],
+            "summary": "Sunlit two-bedroom home in San Jose, close to public transit, featuring parking, a shared garden, and adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 54,
+          "total_tokens": 195
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        }
+      ]
+    }
+  ],
+  "10": [
+    {
+      "run": 1,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 6613.3,
+      "planner_proposal": {
+        "tags": [
+          "San Jose rental",
+          "two-bedroom home",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose with parking, garden access, and adaptable lease terms."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The proposal is clear and concise, aligning well with the title and content provided. It effectively highlights the key features of the rental property: location, bedroom count, parking availability, garden access, and flexible lease terms.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose rental",
+              "two-bedroom home",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose with parking, garden access, and adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 44,
+          "total_tokens": 185
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The proposal is clear and concise, aligning well with the title and content provided. It effectively highlights the key features of the rental property: location, bedroom count, parking availability, garden access, and flexible lease terms.",
+            "approved": true
+          },
+          "input_tokens": 151,
+          "output_tokens": 75,
+          "total_tokens": 226
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 7262.58,
+      "planner_proposal": {
+        "tags": [
+          "San Jose",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose with parking, garden access, and adaptable lease terms."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The title 'Willow Glen two-bedroom rental' could be simplified to 'San Jose two-bedroom rental' to directly incorporate the location tag. The summary 'Bright two-bedroom home in San Jose with parking, garden access, and adaptable lease terms.' is clear and concise, effectively communicating the key features of the property.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose with parking, garden access, and adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 41,
+          "total_tokens": 182
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The title 'Willow Glen two-bedroom rental' could be simplified to 'San Jose two-bedroom rental' to directly incorporate the location tag. The summary 'Bright two-bedroom home in San Jose with parking, garden access, and adaptable lease terms.' is clear and concise, effectively communicating the key features of the property.",
+            "approved": true
+          },
+          "input_tokens": 148,
+          "output_tokens": 97,
+          "total_tokens": 245
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 6214.59,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose location",
+          "Flexible lease"
+        ],
+        "summary": "Sunlit two-bedroom home in San Jose, close to public transit, featuring parking and a shared garden."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The provided proposal is clear and concise, effectively summarizing the key features of the rental listing. It includes relevant tags and highlights the location, natural light, proximity to public transit, parking, and shared garden. No significant issues were identified.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose location",
+              "Flexible lease"
+            ],
+            "summary": "Sunlit two-bedroom home in San Jose, close to public transit, featuring parking and a shared garden."
+          },
+          "input_tokens": 141,
+          "output_tokens": 48,
+          "total_tokens": 189
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The provided proposal is clear and concise, effectively summarizing the key features of the rental listing. It includes relevant tags and highlights the location, natural light, proximity to public transit, parking, and shared garden. No significant issues were identified.",
+            "approved": true
+          },
+          "input_tokens": 154,
+          "output_tokens": 84,
+          "total_tokens": 238
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 4,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 6791.04,
+      "planner_proposal": {
+        "tags": [
+          "Bright Home",
+          "San Jose",
+          "Flexible Lease"
+        ],
+        "summary": "Spacious two-bedroom rental in Willow Glen, San Jose, offering parking, a shared garden, and adaptable lease terms."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The title 'Willow Glen two-bedroom rental' succinctly captures the essence of the listing. The content highlights key features and the task is clearly outlined in the Planner proposal. The proposal tags are relevant and the summary effectively summarizes the listing's main benefits.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright Home",
+              "San Jose",
+              "Flexible Lease"
+            ],
+            "summary": "Spacious two-bedroom rental in Willow Glen, San Jose, offering parking, a shared garden, and adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 47,
+          "total_tokens": 188
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The title 'Willow Glen two-bedroom rental' succinctly captures the essence of the listing. The content highlights key features and the task is clearly outlined in the Planner proposal. The proposal tags are relevant and the summary effectively summarizes the listing's main benefits.",
+            "approved": true
+          },
+          "input_tokens": 154,
+          "output_tokens": 84,
+          "total_tokens": 238
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 5,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 5712.83,
+      "planner_proposal": {
+        "tags": [
+          "San Jose",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose, near public transit, with parking & shared garden."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The Planner proposal is clear and aligns well with the title and content. It effectively highlights the location, bedroom size, and key amenities. There is no need for improvement.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose, near public transit, with parking & shared garden."
+          },
+          "input_tokens": 141,
+          "output_tokens": 40,
+          "total_tokens": 181
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The Planner proposal is clear and aligns well with the title and content. It effectively highlights the location, bedroom size, and key amenities. There is no need for improvement.",
+            "approved": true
+          },
+          "input_tokens": 147,
+          "output_tokens": 60,
+          "total_tokens": 207
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 6,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 6223.72,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose location",
+          "Flexible lease"
+        ],
+        "summary": "Enjoy a bright two-bedroom home in San Jose with convenient public transit access, parking, and a shared garden."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The Planner proposal is clear and concise. It effectively captures the key features of the rental listing, including location, property size, and accessibility. The summary provides a good overview and entices potential renters.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose location",
+              "Flexible lease"
+            ],
+            "summary": "Enjoy a bright two-bedroom home in San Jose with convenient public transit access, parking, and a shared garden."
+          },
+          "input_tokens": 141,
+          "output_tokens": 51,
+          "total_tokens": 192
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The Planner proposal is clear and concise. It effectively captures the key features of the rental listing, including location, property size, and accessibility. The summary provides a good overview and entices potential renters.",
+            "approved": true
+          },
+          "input_tokens": 157,
+          "output_tokens": 72,
+          "total_tokens": 229
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 7,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 5428.08,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose rental",
+          "Flexible lease"
+        ],
+        "summary": "Enjoy a bright two-bedroom home in San Jose with parking, a shared garden, and adaptable lease terms near public transit."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The title, content, and task are aligned. The Planner proposal effectively summarizes the key features of the rental listing.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose rental",
+              "Flexible lease"
+            ],
+            "summary": "Enjoy a bright two-bedroom home in San Jose with parking, a shared garden, and adaptable lease terms near public transit."
+          },
+          "input_tokens": 141,
+          "output_tokens": 52,
+          "total_tokens": 193
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The title, content, and task are aligned. The Planner proposal effectively summarizes the key features of the rental listing.",
+            "approved": true
+          },
+          "input_tokens": 159,
+          "output_tokens": 47,
+          "total_tokens": 206
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 8,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 6296.87,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose location",
+          "Flexible lease"
+        ],
+        "summary": "Sunlit two-bedroom rental in San Jose, close to public transit, offering parking, a shared garden, and adaptable lease terms."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The Planner proposal is clear, concise, and directly reflects the content of the rental listing. It includes all the relevant features such as brightness, location, and lease flexibility. There are no significant issues or omissions.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose location",
+              "Flexible lease"
+            ],
+            "summary": "Sunlit two-bedroom rental in San Jose, close to public transit, offering parking, a shared garden, and adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 54,
+          "total_tokens": 195
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The Planner proposal is clear, concise, and directly reflects the content of the rental listing. It includes all the relevant features such as brightness, location, and lease flexibility. There are no significant issues or omissions.",
+            "approved": true
+          },
+          "input_tokens": 161,
+          "output_tokens": 74,
+          "total_tokens": 235
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 9,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 7676.18,
+      "planner_proposal": {
+        "tags": [
+          "San Jose",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose with parking, garden, and flexible lease terms."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The title 'Willow Glen two-bedroom rental' and the content 'Bright two-bedroom home in San Jose near public transit, with parking, a shared garden, and flexible lease terms.' together provide a clear and descriptive title and content that align with the task 'Create a useful rental-listing proposal'. The Planner proposal tags are relevant and summarize the key features of the rental property accurately.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose with parking, garden, and flexible lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 39,
+          "total_tokens": 180
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The title 'Willow Glen two-bedroom rental' and the content 'Bright two-bedroom home in San Jose near public transit, with parking, a shared garden, and flexible lease terms.' together provide a clear and descriptive title and content that align with the task 'Create a useful rental-listing proposal'. The Planner proposal tags are relevant and summarize the key features of the rental property accurately.",
+            "approved": true
+          },
+          "input_tokens": 146,
+          "output_tokens": 117,
+          "total_tokens": 263
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 10,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 5528.18,
+      "planner_proposal": {
+        "tags": [
+          "San Jose",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose with parking, garden access, and adaptable lease terms near public transit."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The Planner proposal is clear, concise, and relevant to the title and content. It includes all necessary tags and effectively summarizes the key features of the rental listing.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose with parking, garden access, and adaptable lease terms near public transit."
+          },
+          "input_tokens": 141,
+          "output_tokens": 46,
+          "total_tokens": 187
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The Planner proposal is clear, concise, and relevant to the title and content. It includes all necessary tags and effectively summarizes the key features of the rental listing.",
+            "approved": true
+          },
+          "input_tokens": 153,
+          "output_tokens": 59,
+          "total_tokens": 212
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 11,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 7965.01,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose rental",
+          "Flexible lease"
+        ],
+        "summary": "Spacious two-bedroom home in San Jose, featuring a shared garden, parking, and adaptable lease options near public transit."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The title, content, and task provided are aligned. The Planner proposal effectively summarizes the key aspects of the rental listing, including its location, features, and flexibility in lease terms. It uses clear and concise language, which helps potential tenants understand the offering at a glance.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose rental",
+              "Flexible lease"
+            ],
+            "summary": "Spacious two-bedroom home in San Jose, featuring a shared garden, parking, and adaptable lease options near public transit."
+          },
+          "input_tokens": 141,
+          "output_tokens": 53,
+          "total_tokens": 194
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The title, content, and task provided are aligned. The Planner proposal effectively summarizes the key aspects of the rental listing, including its location, features, and flexibility in lease terms. It uses clear and concise language, which helps potential tenants understand the offering at a glance.",
+            "approved": true
+          },
+          "input_tokens": 160,
+          "output_tokens": 91,
+          "total_tokens": 251
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 12,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 7153.83,
+      "planner_proposal": {
+        "tags": [
+          "San Jose rental",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home near transit, including parking and a shared garden in San Jose."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The proposal aligns well with the title and content. It effectively summarizes the key features of the rental property, such as its location, bedroom count, and included amenities like parking and a shared garden. The use of 'tags' helps potential renters quickly identify the listing's relevance to their needs.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose rental",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home near transit, including parking and a shared garden in San Jose."
+          },
+          "input_tokens": 141,
+          "output_tokens": 42,
+          "total_tokens": 183
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The proposal aligns well with the title and content. It effectively summarizes the key features of the rental property, such as its location, bedroom count, and included amenities like parking and a shared garden. The use of 'tags' helps potential renters quickly identify the listing's relevance to their needs.",
+            "approved": true
+          },
+          "input_tokens": 149,
+          "output_tokens": 93,
+          "total_tokens": 242
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 13,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 5601.15,
+      "planner_proposal": {
+        "tags": [
+          "San Jose",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose, near transit, with parking & shared garden."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The proposal is clear and aligned with the title and content. It effectively highlights the key features of the rental property, such as its location, size, and available amenities.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose, near transit, with parking & shared garden."
+          },
+          "input_tokens": 141,
+          "output_tokens": 39,
+          "total_tokens": 180
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The proposal is clear and aligned with the title and content. It effectively highlights the key features of the rental property, such as its location, size, and available amenities.",
+            "approved": true
+          },
+          "input_tokens": 145,
+          "output_tokens": 61,
+          "total_tokens": 206
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 14,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 5646.94,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose rental",
+          "Flexible lease"
+        ],
+        "summary": "Spacious two-bedroom home in San Jose, featuring public transit access, parking, and a shared garden."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The proposal is clear and concise. It effectively captures the key features of the rental property. The tags and summary provide a good overview for potential renters.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose rental",
+              "Flexible lease"
+            ],
+            "summary": "Spacious two-bedroom home in San Jose, featuring public transit access, parking, and a shared garden."
+          },
+          "input_tokens": 141,
+          "output_tokens": 47,
+          "total_tokens": 188
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The proposal is clear and concise. It effectively captures the key features of the rental property. The tags and summary provide a good overview for potential renters.",
+            "approved": true
+          },
+          "input_tokens": 154,
+          "output_tokens": 57,
+          "total_tokens": 211
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 15,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 5440.94,
+      "planner_proposal": {
+        "tags": [
+          "San Jose Rental",
+          "Two-bedroom",
+          "Garden Access"
+        ],
+        "summary": "Bright two-bedroom home in San Jose with parking, shared garden, and flexible lease terms."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The title, content, and task match well. The proposal uses relevant tags, provides a concise summary, and highlights the key features of the rental property.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose Rental",
+              "Two-bedroom",
+              "Garden Access"
+            ],
+            "summary": "Bright two-bedroom home in San Jose with parking, shared garden, and flexible lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 43,
+          "total_tokens": 184
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The title, content, and task match well. The proposal uses relevant tags, provides a concise summary, and highlights the key features of the rental property.",
+            "approved": true
+          },
+          "input_tokens": 149,
+          "output_tokens": 55,
+          "total_tokens": 204
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 16,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 6236.05,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose location",
+          "Flexible lease"
+        ],
+        "summary": "Spacious two-bedroom rental in San Jose, featuring natural light, parking, a shared garden, and adaptable lease terms."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The title, content, and task align well. The Planner's proposal effectively summarizes the key features of the rental listing, emphasizing its location, natural lighting, parking, shared garden, and flexible lease terms.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose location",
+              "Flexible lease"
+            ],
+            "summary": "Spacious two-bedroom rental in San Jose, featuring natural light, parking, a shared garden, and adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 52,
+          "total_tokens": 193
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The title, content, and task align well. The Planner's proposal effectively summarizes the key features of the rental listing, emphasizing its location, natural lighting, parking, shared garden, and flexible lease terms.",
+            "approved": true
+          },
+          "input_tokens": 159,
+          "output_tokens": 70,
+          "total_tokens": 229
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 17,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 5105.5,
+      "planner_proposal": {
+        "tags": [
+          "San Jose rental",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose, near transit, with parking, garden, & flexible lease."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The proposal effectively captures the essence of the rental listing, including key features and location. It is concise and includes relevant tags for visibility.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose rental",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose, near transit, with parking, garden, & flexible lease."
+          },
+          "input_tokens": 141,
+          "output_tokens": 43,
+          "total_tokens": 184
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The proposal effectively captures the essence of the rental listing, including key features and location. It is concise and includes relevant tags for visibility.",
+            "approved": true
+          },
+          "input_tokens": 150,
+          "output_tokens": 56,
+          "total_tokens": 206
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 18,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 5467.43,
+      "planner_proposal": {
+        "tags": [
+          "San Jose Rental",
+          "Two-bedroom",
+          "Public Transit"
+        ],
+        "summary": "Bright two-bedroom home in San Jose with parking, garden access, and flexible lease options."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The title, content, and task description are aligned. The planner's proposal effectively summarizes the key features of the rental listing. No issues found.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose Rental",
+              "Two-bedroom",
+              "Public Transit"
+            ],
+            "summary": "Bright two-bedroom home in San Jose with parking, garden access, and flexible lease options."
+          },
+          "input_tokens": 141,
+          "output_tokens": 43,
+          "total_tokens": 184
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The title, content, and task description are aligned. The planner's proposal effectively summarizes the key features of the rental listing. No issues found.",
+            "approved": true
+          },
+          "input_tokens": 150,
+          "output_tokens": 54,
+          "total_tokens": 204
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 19,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 7358.72,
+      "planner_proposal": {
+        "tags": [
+          "Bright two-bedroom",
+          "San Jose rental",
+          "Flexible lease"
+        ],
+        "summary": "Sunlit two-bedroom home in San Jose, offering parking & access to a shared garden, with adaptable lease terms."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The provided Planner proposal is clear and concise, aligning well with the title and content of the rental housing listing. It effectively communicates the key features of the property, such as its location, number of bedrooms, and flexible lease options, as well as additional amenities like parking and access to a shared garden.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "Bright two-bedroom",
+              "San Jose rental",
+              "Flexible lease"
+            ],
+            "summary": "Sunlit two-bedroom home in San Jose, offering parking & access to a shared garden, with adaptable lease terms."
+          },
+          "input_tokens": 141,
+          "output_tokens": 50,
+          "total_tokens": 191
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The provided Planner proposal is clear and concise, aligning well with the title and content of the rental housing listing. It effectively communicates the key features of the property, such as its location, number of bedrooms, and flexible lease options, as well as additional amenities like parking and access to a shared garden.",
+            "approved": true
+          },
+          "input_tokens": 156,
+          "output_tokens": 96,
+          "total_tokens": 252
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    },
+    {
+      "run": 20,
+      "max_turns": 10,
+      "outcome": "valid_first_attempt",
+      "completed": true,
+      "planner_attempts": 1,
+      "turn_count": 3,
+      "latency_ms": 5688.68,
+      "planner_proposal": {
+        "tags": [
+          "San Jose",
+          "two-bedroom",
+          "flexible lease"
+        ],
+        "summary": "Bright two-bedroom home in San Jose with parking, shared garden, and adaptable lease options near public transit."
+      },
+      "reviewer_feedback": {
+        "has_issues": false,
+        "feedback": "The provided Planner proposal closely aligns with the title, content, and task. It effectively summarizes the key features of the rental listing and includes relevant tags.",
+        "approved": true
+      },
+      "trace": [
+        {
+          "node": "supervisor",
+          "turn_count": 1
+        },
+        {
+          "node": "planner",
+          "output": {
+            "tags": [
+              "San Jose",
+              "two-bedroom",
+              "flexible lease"
+            ],
+            "summary": "Bright two-bedroom home in San Jose with parking, shared garden, and adaptable lease options near public transit."
+          },
+          "input_tokens": 141,
+          "output_tokens": 47,
+          "total_tokens": 188
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 2
+        },
+        {
+          "node": "reviewer",
+          "output": {
+            "has_issues": false,
+            "feedback": "The provided Planner proposal closely aligns with the title, content, and task. It effectively summarizes the key features of the rental listing and includes relevant tags.",
+            "approved": true
+          },
+          "input_tokens": 154,
+          "output_tokens": 58,
+          "total_tokens": 212
+        },
+        {
+          "node": "supervisor",
+          "turn_count": 3
+        }
+      ]
+    }
+  ]
+}

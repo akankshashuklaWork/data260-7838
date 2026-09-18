@@ -1,0 +1,35 @@
+{
+  "corpus_name": "Rental Housing Public Documents",
+  "domain_id": 6,
+  "snapshot_date": "2026-09-18",
+  "corpus_directory": "data/hw03/corpus",
+  "file_count": 5,
+  "total_bytes": 10496158,
+  "files": [
+    {
+      "filename": "california_fair_housing_fact_sheet_2022.pdf",
+      "byte_size": 783534,
+      "sha256": "a914cf46949363f6254a18df512b6cb92f4d5e43f28688314a7d8abf01fb641a"
+    },
+    {
+      "filename": "california_landlord_tenant_guide_2026.pdf",
+      "byte_size": 3952345,
+      "sha256": "ed177b2b2c05f17f64eabe9a7a7ac4909103900cec1cfc53100c07c1d7a1688f"
+    },
+    {
+      "filename": "hud_fair_housing_act_guide.pdf",
+      "byte_size": 5468378,
+      "sha256": "03467e13022a3a2b3a0c99b2def6b419949bc93cbdca0d5f3e91077168c16fd2"
+    },
+    {
+      "filename": "san_jose_apartment_rent_ordinance_fact_sheet.pdf",
+      "byte_size": 153264,
+      "sha256": "d6e41d4da7ec0c84ef94b3d924dfafc6c83f16ef5b275c4306ee99a8126444c9"
+    },
+    {
+      "filename": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+      "byte_size": 138637,
+      "sha256": "90e9a52da93d108ce7396b261217eb9d17d1e307c21f9af589c35caece2b26d1"
+    }
+  ]
+}

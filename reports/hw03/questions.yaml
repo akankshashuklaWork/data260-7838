@@ -1,0 +1,36 @@
+domain_id: 6
+domain: "Rental housing"
+created_date: "2026-09-18"
+corpus_manifest: "reports/hw03/CORPUS_MANIFEST.json"
+top_k: 5
+
+questions:
+  - id: "q1"
+    question: "Under the San Jose Apartment Rent Ordinance, what is the maximum regular rent increase and how often may it occur?"
+    expected_answer: "The ordinance generally limits regular rent increases to 5 percent, once during a 12-month period."
+    expected_source: "san_jose_apartment_rent_ordinance_fact_sheet.pdf"
+    unique_source: true
+
+  - id: "q2"
+    question: "How many just causes for terminating a tenancy are listed under the San Jose Tenant Protection Ordinance?"
+    expected_answer: "The ordinance lists 13 just causes for terminating a tenancy."
+    expected_source: "san_jose_tenant_protection_ordinance_fact_sheet.pdf"
+    unique_source: true
+
+  - id: "q3"
+    question: "Within how many days after a California tenant moves out must a landlord return the remaining security deposit and provide an itemized statement of deductions?"
+    expected_answer: "The landlord must return the remaining deposit and provide the itemized statement within 21 days after the tenant moves out."
+    expected_source: "california_landlord_tenant_guide_2026.pdf"
+    unique_source: true
+
+  - id: "q4"
+    question: "Does California fair housing law protect tenants from discrimination based on source of income, and what advertisement is given as an example?"
+    expected_answer: "Yes. Source of income is protected, and an advertisement such as No Section 8 is given as an example of unlawful discrimination."
+    expected_source: "california_fair_housing_fact_sheet_2022.pdf"
+    unique_source: false
+
+  - id: "q5"
+    question: "How long after an alleged housing-discrimination violation may a person file a complaint with HUD?"
+    expected_answer: "A person may file a HUD complaint within one year after the alleged violation occurred or ended."
+    expected_source: "hud_fair_housing_act_guide.pdf"
+    unique_source: false

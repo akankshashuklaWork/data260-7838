@@ -1,4 +1,4 @@
-# DATA 260 Homework 3
+# DATA 260 Homework 1 to 3
 
 Rental Housing Listings - Akanksha Shukla
 
@@ -35,16 +35,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## HW1 through HW3 Web Application
+## HW3
 
-Created a web form for submitting rental property listings, with client-side validation and JSON handling in JavaScript.
+### Part 1: FastAPI Authentication with Bootstrap
 
-Files: `code/web_application/`
+Login, logout, a session-protected dashboard, and Bootstrap pages, in `code/web_application/auth.py` and `code/web_application/templates/`.
 
-How to run:
-
-Start the FastAPI application locally. Set a private session-signing secret and,
-optionally, override the demonstration login credentials:
+How to run (Python 3.11 or 3.12). Set a private session-signing secret and, optionally, override the demonstration login credentials:
 
 ```bash
 python3.12 -m venv .venv
@@ -57,39 +54,7 @@ cd code
 uvicorn web_application.app:app --host 127.0.0.1 --port 8638
 ```
 
-Open http://localhost:8638 in a browser. The HW3 home, login, dashboard, and
-logout routes use a signed session cookie with `Secure`, `HttpOnly`, and
-`SameSite=Lax`. The dashboard is protected, and sessions expire after 15 idle
-minutes. The cumulative listing interface is available at
-http://localhost:8638/listings.
-
-Run the automated tests:
-
-```bash
-node code/web_application/tests/run-tests.js
-python code/test_auth.py
-```
-
-Build and run with Docker:
-
-```bash
-docker build -f code/Dockerfile -t hw2-rental-listings .
-docker run --rm --publish 8638:8638 hw2-rental-listings
-```
-
-Open http://localhost:8638 in a browser.
-
-## FastAPI Endpoints
-
-| Method | Endpoint | Behavior |
-|---|---|---|
-| GET | `/api/listings` | List all records |
-| GET | `/api/listings?search=San Jose` | Search title or location |
-| POST | `/api/listings` | Add a record and redirect to `/listings` |
-| PUT | `/api/listings/1` | Update record ID 1 and redirect to `/listings` |
-| DELETE | `/api/listings/highest` | Delete highest ID and redirect to `/listings` |
-
-## HW3 Authentication Routes
+Open http://localhost:8638. Sessions use a signed cookie with `Secure`, `HttpOnly`, and `SameSite=Lax`, are also tracked on the server, and expire after 15 idle minutes. The listing interface from HW2 is at http://localhost:8638/listings.
 
 | Method | Endpoint | Behavior |
 |---|---|---|
@@ -99,74 +64,13 @@ Open http://localhost:8638 in a browser.
 | GET | `/logout` | Clear the session and redirect to the home page |
 | GET | `/listings` | Open the cumulative rental listing interface |
 
-## HW2 Part 3: Stateful Agent Graph
-
-The stateful Planner/Reviewer graph is implemented in `code/stateful_agent_graph.py`.
-It follows the required Supervisor flow: a missing proposal routes to Planner, an
-existing proposal routes to Reviewer, Reviewer issues route back through Supervisor
-to Planner, and an approved review ends the graph. All model calls use the HW1
-`src/model_client.py` adapter with the documented `qwen2:7b` local model.
-
-Run the graph with:
+Run the authentication checks:
 
 ```bash
-python code/stateful_agent_graph.py
+python code/test_auth.py
 ```
 
-Run the offline routing and correction-loop check with:
-
-```bash
-python code/test_stateful_agent_graph.py
-```
-
-## HW1 Part 2: Agentic AI Pipeline
-
-A Planner -> Reviewer -> Finalizer pipeline that reads a listing's title and content and produces exactly 3 tags and a summary (at most 25 words) as JSON.
-
-Files: `code/agents_demo.py`
-
-How to run:
-
-```bash
-cd code
-source venv/bin/activate
-python agents_demo.py
-```
-
-## HW1 Part 3: Non-Determinism Testing
-
-Runs the Part 2 pipeline 40 times on one fixed input (20 runs at temperature 0.7, 20 at temperature 0.0) and reports how consistent the output is at each temperature.
-
-Files: `code/run_nondeterminism_tests.py`, `code/analyze_nondeterminism.py`
-
-How to run:
-
-```bash
-cd code
-source venv/bin/activate
-python run_nondeterminism_tests.py
-python analyze_nondeterminism.py
-```
-
-Results: `reports/hw01/METRICS.md`
-
-## HW1 Part 4: Model Client and Token Accounting
-
-A reusable model-adapter class (`ModelClient.complete(messages, tools=None)`) and an interactive command-line chat client that prints token usage after every turn.
-
-Files: `src/model_client.py`, `code/hw1_client.py`
-
-How to run:
-
-```bash
-cd code
-source venv/bin/activate
-python hw1_client.py
-```
-
-Type a message and press Enter to chat. Type `/stats` to see turn count and cumulative token usage. Type `/exit` to quit.
-
-## HW3 Part 2: Retrieval-Only RAG Chunking Comparison
+### Part 2: Retrieval-Only RAG Chunking Comparison
 
 Compares three LlamaIndex chunking techniques (token, semantic, sentence-window) on a rental housing corpus. Each technique gets its own in-memory `VectorStoreIndex`. Only retrieval is measured, so no model writes or grades answers.
 
@@ -194,6 +98,121 @@ Results (`reports/hw03/METRICS.md`):
 | Sentence window | 3851 | 131.09 | 0.7727 | 0.7147 | 0.60 |
 
 Raw per-question output is in `reports/hw03/raw/`.
+
+## HW2
+
+### Parts 1 and 2: Responsive Listing Page and FastAPI Backend
+
+The HW1 listing form is styled to stay usable at 375px, with loading, empty, and error states. A FastAPI backend on port 8638 adds, updates, deletes, and searches listings.
+
+Files: `code/web_application/` (`app.py`, `index.html`, `script.js`, `styles.css`)
+
+| Method | Endpoint | Behavior |
+|---|---|---|
+| GET | `/api/listings` | List all records |
+| GET | `/api/listings?search=San Jose` | Search title or location |
+| POST | `/api/listings` | Add a record and redirect to `/listings` |
+| PUT | `/api/listings/1` | Update record ID 1 and redirect to `/listings` |
+| DELETE | `/api/listings/highest` | Delete highest ID and redirect to `/listings` |
+
+Run the browser application checks:
+
+```bash
+node code/web_application/tests/run-tests.js
+```
+
+Build and run with Docker:
+
+```bash
+docker build -f code/Dockerfile -t hw2-rental-listings .
+docker run --rm --publish 8638:8638 hw2-rental-listings
+```
+
+Open http://localhost:8638 in a browser.
+
+### Part 3: Stateful Agent Graph
+
+The stateful Planner/Reviewer graph is implemented in `code/stateful_agent_graph.py`.
+It follows the required Supervisor flow: a missing proposal routes to Planner, an
+existing proposal routes to Reviewer, Reviewer issues route back through Supervisor
+to Planner, and an approved review ends the graph. All model calls use the HW1
+`src/model_client.py` adapter with the documented `qwen2:7b` local model.
+
+Run the graph with:
+
+```bash
+python code/stateful_agent_graph.py
+```
+
+Run the offline routing and correction-loop check with:
+
+```bash
+python code/test_stateful_agent_graph.py
+```
+
+Part 4 (Pydantic output validation, turn-ceiling comparison, adversarial input) experiments:
+
+```bash
+python code/run_hw2_experiments.py
+python code/analyze_hw2_experiments.py
+```
+
+Results: `reports/hw02/METRICS.md`
+
+## HW1
+
+### Part 1: Web Form
+
+A form for submitting rental property listings, with client-side validation and JSON handling in JavaScript.
+
+Files: `code/web_application/index.html`, `code/web_application/script.js`
+
+### Part 2: Agentic AI Pipeline
+
+A Planner -> Reviewer -> Finalizer pipeline that reads a listing's title and content and produces exactly 3 tags and a summary (at most 25 words) as JSON.
+
+Files: `code/agents_demo.py`
+
+How to run:
+
+```bash
+cd code
+source venv/bin/activate
+python agents_demo.py
+```
+
+### Part 3: Non-Determinism Testing
+
+Runs the Part 2 pipeline 40 times on one fixed input (20 runs at temperature 0.7, 20 at temperature 0.0) and reports how consistent the output is at each temperature.
+
+Files: `code/run_nondeterminism_tests.py`, `code/analyze_nondeterminism.py`
+
+How to run:
+
+```bash
+cd code
+source venv/bin/activate
+python run_nondeterminism_tests.py
+python analyze_nondeterminism.py
+```
+
+Results: `reports/hw01/METRICS.md`
+
+### Part 4: Model Client and Token Accounting
+
+A reusable model-adapter class (`ModelClient.complete(messages, tools=None)`) and an interactive command-line chat client that prints token usage after every turn.
+
+Files: `src/model_client.py`, `code/hw1_client.py`
+
+How to run:
+
+```bash
+cd code
+source venv/bin/activate
+python hw1_client.py
+```
+
+Type a message and press Enter to chat. Type `/stats` to see turn count and cumulative token usage. Type `/exit` to quit.
 
 ## Reports
 

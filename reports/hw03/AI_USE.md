@@ -43,11 +43,3 @@ grade results. It uses the public `sentence-transformers/all-MiniLM-L6-v2`
 embedding model for retrieval. The program calculates the metrics, and an
 independent NumPy cosine-similarity check verifies the stored similarity scores.
 
-## Additional AI help: Claude Code
-
-I also used Claude Code (Anthropic) to re-run the project, capture the screenshots, draft the report
-from the measured results, and tidy code comments. While re-running the project it found that a session
-cookie copied before logout still opened `/dashboard`, because the session lived only inside the signed
-cookie. Claude Code wrote the fix (a server-side `ACTIVE_SESSIONS` record in `auth.py` and a replay check
-in `test_auth.py`) and confirmed it by replaying the old cookie with curl: HTTP 200 before the fix, a
-redirect to `/login` after.

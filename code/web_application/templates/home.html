@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Rental Housing Portal{% endblock %}
+
+{% block content %}
+<section class="hero-panel mx-auto">
+  <p class="text-uppercase fw-semibold text-success-emphasis mb-2">DATA 260 Rental Housing</p>
+  <h1 class="display-5 fw-bold">Find and manage rental housing listings</h1>
+  <p class="lead text-secondary mt-3">
+    Use the secure portal to access your dashboard and continue to the rental listing application.
+  </p>
+  <div class="d-flex flex-wrap gap-2 mt-4">
+    {% if user %}
+      <a class="btn btn-success btn-lg" href="/dashboard">Open dashboard</a>
+      <a class="btn btn-outline-secondary btn-lg" href="/logout">Log out</a>
+    {% else %}
+      <a class="btn btn-success btn-lg" href="/login">Log in</a>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

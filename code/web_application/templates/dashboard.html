@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | Rental Housing Portal{% endblock %}
+
+{% block content %}
+<div class="row g-4 align-items-stretch">
+  <div class="col-12">
+    <div class="card border-0 shadow-sm">
+      <div class="card-body p-4 p-md-5">
+        <p class="text-uppercase fw-semibold text-success-emphasis mb-2">Protected dashboard</p>
+        <h1 class="display-6 fw-bold">Welcome, {{ user }}</h1>
+        <p class="text-secondary mb-0">
+          You are signed in. Your session expires after {{ idle_timeout_minutes }} minutes of inactivity.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="card h-100 border-0 shadow-sm">
+      <div class="card-body p-4">
+        <h2 class="h4">Rental listings</h2>
+        <p class="text-secondary">Open the existing application to browse, search, add, update, or delete listings.</p>
+        <a class="btn btn-success" href="/listings">Manage listings</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="card h-100 border-0 shadow-sm">
+      <div class="card-body p-4">
+        <h2 class="h4">Session controls</h2>
+        <p class="text-secondary">End the current session when you finish using the portal.</p>
+        <a class="btn btn-outline-danger" href="/logout">Log out</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

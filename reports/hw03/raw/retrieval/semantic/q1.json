@@ -1,0 +1,103 @@
+{
+  "experiment": "HW3 Part 2 retrieval-only RAG",
+  "sid4": 7838,
+  "seed": 7838,
+  "domain_id": 6,
+  "domain": "Rental housing",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "technique": "semantic",
+  "chunk_count": 436,
+  "index_build_ms": 1828.014625,
+  "question_id": "q1",
+  "question": "Under the San Jose Apartment Rent Ordinance, what is the maximum regular rent increase and how often may it occur?",
+  "expected_answer": "The ordinance generally limits regular rent increases to 5 percent, once during a 12-month period.",
+  "expected_source": "san_jose_apartment_rent_ordinance_fact_sheet.pdf",
+  "unique_source": true,
+  "top_k": 5,
+  "latency_ms": 7.899166957940906,
+  "query_vector_shape": [
+    384
+  ],
+  "query_embedding_dimension": 384,
+  "query_vector_first_8": [
+    0.047086,
+    -0.035558,
+    0.015228,
+    0.032642,
+    -0.047288,
+    0.05325,
+    -0.068995,
+    0.021777
+  ],
+  "document_vectors_shape": [
+    5,
+    384
+  ],
+  "results": [
+    {
+      "rank": 1,
+      "source_file": "san_jose_apartment_rent_ordinance_fact_sheet.pdf",
+      "page_label": "1",
+      "chunk_sha256": "79879461742e159ce449c51dc0d4c23ea007c63ee361db01b5abc40768c5b40e",
+      "store_score": 0.7095814852186493,
+      "independent_cosine": 0.7095813751220703,
+      "chunk_length_chars": 2020,
+      "preview": "APARTMENT RENT ORDINANCE FACT SHEET ABOUT THE ORDINANCE The Apartment Rent Ordinance (ARO) may be found in San José Municipal Code (SJMC) Chapter 17.23, Parts 1",
+      "chunk_text": "APARTMENT RENT ORDINANCE \nFACT SHEET \nABOUT THE ORDINANCE \nThe Apartment Rent Ordinance (ARO) may be found in San José Municipal Code (SJMC) Chapter 17.23, Parts 1-9. The ARO covers \nmost rental apartments built before September 7, 1979, limits rent increases to 5% once every 12 months, and allows landlords to \nreceive a fair return.   All ARO properties must post a City-approved notice indicating that the ARO applies to the units contained within \nthe property and posted in a conspicuous location within each building that has one or more ARO units.   \nThe above is not a complete list of ARO covered and uncovered units. To see if your building is covered under the ARO, call 408-975-4480.   \nARO SUMMARY \nThe actual amount paid by the tenant at the commencement of tenancy is the “Initial Rent Rate.” Rent can be increased ONLY for the \nfollowing reasons: \nThe ARO allows the Landlord to collect certain fees. The charges must be listed as a separate line item and are not rent: \nCovered Buildings Include \n(SJMC Section 17.23.167 (A)): \nBuildings Not Covered Include: \n Apartments, with three or more units, built or rented on or \nbefore September 7, 1979 \n Units with rent that is fully or partially paid for by a \ngovernment subsidy (including Section 8), where the unit \nwas built or rented on or before September 7, 1979 \n Units built after September 7, 1979 \n Duplexes \n Single-family Condominiums \n Townhouses \n Single-family homes \n1. Annual Allowable Rent Increase \nA 5% annual increase is allowed under the ARO. A landlord may increase rent only once every 12 months provided that the \ntenant is given a written notice in accordance with Civil Code Section 827 (SJMC Section 17.23.310). \n2. Vacancy Decontrol \nWhen a unit covered by the ARO is vacated as a result of a tenant voluntarily leaving or a for cause termination ( See FAQ on the \nCity’s just cause eviction ordinance), the landlord may set the new initial rent for a new tenant at her/his discretion. (SJMC \nSection 17.23.300(A)) \n3. ",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 2,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "50",
+      "chunk_sha256": "e10e35cf5253562b1b324e84e64c5dfbb78f97f34947ef525feac2a8f8ffbd32",
+      "store_score": 0.6747061794664698,
+      "independent_cosine": 0.674706220626831,
+      "chunk_length_chars": 1006,
+      "preview": "How often can rent be raised? This depends on whether your rental unit is subject to local or state rent stabilization laws and the terms of your rental agreeme",
+      "chunk_text": "How often can rent be raised? \nThis depends on whether your rental unit is subject to local or state rent stabilization laws and \nthe terms of your rental agreement.  \nFor rental agreements with a fixed term (i.e., 6 months, 1 year, 2 years, etc.), the landlord \ncannot increase the rent during the rental term unless the rental agreement permits rent \nincreases. Rent may be increased if the rental agreement is renewed. \nFor rental agreements with periodic terms (e.g., week-to-week or month-to-month), properties \nsubject to the Tenant Protection Act require 30 days’ written notice prior to any proposed rent \nincrease. If the property is exempt from the State rent limit and no local rent stabilization \nordinances apply, the landlord must provide the tenant with either 30 days’ notice (if the rent \nincrease is 10 percent or less) or 90 days’ advanced written notice (if the rent increase is more than \n10 percent).186 Under these circumstances, there is no limit on how many times the landlord may ",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 3,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "142",
+      "chunk_sha256": "f9bf4d9b0bb746fe06d0ef390e8211ff1ed5ad3a8661431b9f9583f5f537ed1b",
+      "store_score": 0.67289216284861,
+      "independent_cosine": 0.6728923320770264,
+      "chunk_length_chars": 750,
+      "preview": "Code § 1950.6. The maximum fee is adjusted each year based on changes in the Consumer Price Index since January 1, 1998. As of December 2023, the maximum allowa",
+      "chunk_text": "Code § 1950.6. The maximum fee is adjusted each year based on changes in the Consumer Price Index since January \n1, 1998. As of December 2023, the maximum allowable fee is $62,02.  \n55 Civ. Code § 1950.6(c).  \n56 Civ. Code § 1950.6. \n57 California Apartment Association (https://caanet.org/kb/max-screening-fee/). \n58 Civ. Code § 1950.6(c)(1).  \n59 Civ. Code § 1950.6(f).  \n60 See Civ. Code § 1950.6(d); Civ. Code § 1950.6(e).  \n61 California Practice Guide, Landlord-Tenant, § 2:553.3 (Rutter Group 2021). \n62 Gov. Code § 12921(b). \n63 Cal. Code Regs. § 12060. \n64 Gov. Code §§ 12926(p), 12927(e) and 12955(a) and (d). Fair Employment and Housing Act, Gov. Code § 12900 and \nfollowing; and federal Fair Housing Act, 42 U.S.C. § 3601 and following. \n",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 4,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "46",
+      "chunk_sha256": "7becf83b49964def0f0fe439a2bf09f9138709daf8ce9327ed3f6482bfea7669",
+      "store_score": 0.6615944697320986,
+      "independent_cosine": 0.661594569683075,
+      "chunk_length_chars": 3126,
+      "preview": "40 Tenants, however, are not entitled to a credit for rent overcharges paid between March 15, 2019, and January 1, 2020. The law expires on January 1, 2030, unl",
+      "chunk_text": "40 \nTenants, however, are not entitled to a credit for rent overcharges paid between March 15, \n2019, and January 1, 2020. The law expires on January 1, 2030, unless extended. \nSome California cities have rent stabilization ordinances that limit or prohibit rent increases.172 \nEach jurisdiction’s ordinance is different. Local rent stabilization ordinances that were enacted \nbefore September 1, 2019, will take precedence over the statewide measure, regardless whether \nthe protections offered are stronger or weaker. Local ordinances enacted after that date take \nprecedence over the Tenant Protection Act only if they offer stronger protections. To the extent a \nlocal ordinance applies, some local ordinances specify procedures that a landlord must follow \nbefore increasing a tenant’s rent. \nSome cities have rent boards that have the power to approve or deny increases in rent. Other \ncity ordinances allow a certain percentage increase in rent each year. Under state law, all units are \nsubject to “vacancy decontrol.” This means that the landlord can re-rent a unit at the market rate \nwhen the tenant moves out voluntarily, abandons the unit, or when the landlord evicts a tenant \nbecause of a breach of the rental agreement, terminates the tenancy for nonpayment of rent or \nother allowed reasons. \nA rent stabilization ordinance may impact the landlord -tenant relationship in other important \nways besides those described herein. Find out if you live in a city or county with rent stabilization \nor other rental housing laws (see the list of cities and counties with rent stabilization in Appendix \n2). Contact your local housing officials or rent stabilization program for information. Most cities \nand counties post information about their rent stabilization ordinances on their website (for \nexample, information  about City of Los Angeles’ rent stabilization ordinance is available at \nhttps://hcidla.lacity.org/). \nAnother law that places limits on the amount a landlord can increase rent is Penal Code section \n396. This section covers the 30- day period following a state of emergency declared by the\nPresident, Governor, or local governing body vested with authority to make that declaration (i.e.,\nCity Council, Board of Supervisors, etc.) and prohibits a landlord from increasing rental prices to\nexisting or pros pective tenants by more than 10 p ercent.173 \nKnown as the “anti -price gouging”\nstatute, the protections set forth in this  statute are intended to prevent sellers of goods or\nproviders of services from charging exorbitant prices for necessities if a state of emergency is\ndeclared following a pandemic, wildfire, earthquake or other natural disaster. This rental increase\nprohibition does not apply if the landlord can prove that an increase of more than 10 percent is\ndirectly attributable to additional costs for repairs or additions beyond normal maintenance that\nwere amortized over the rental term that caused the rent to increase by more than 10 percent.\nLIVING IN THE RENTAL UNIT \nAs a tenant, you must take reasonable care of your rental unit and any common areas that you \nuse. ",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 5,
+      "source_file": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+      "page_label": "1",
+      "chunk_sha256": "4d3949cb008d00ae8c957621dab960abdf2936776a3832ff513b93743ea92227",
+      "store_score": 0.6606635189582372,
+      "independent_cosine": 0.6606636643409729,
+      "chunk_length_chars": 2211,
+      "preview": "D Rent Stabilization Program City of San José Housing Department 200 East Santa Clara St, 12th Floor, San José, CA 95113 408‐975‐4480 • www.sanjoseca.gov/rent •",
+      "chunk_text": "D \nRent Stabilization Program \nCity of San José Housing Department \n200 East Santa Clara St, 12th Floor, San José, CA 95113 \n408‐975‐4480   •   www.sanjoseca.gov/rent  •  RSP@sanjoseca.gov              v5/31/2018 \nTENANT PROTECTION ORDINANCE \nFACT SHEET \nABOUT THE ORDINANCE \nThe Tenant Protection Ordinance can be found in San José Municipal Code (SJMC) Chapter 17.23, Part 12, beginning with Section \n17.23.1200. The Ordinance provides substantive requirements for evicting tenants for tenants living in certain “covered” apartments, \nas listed below. The Ordinance eliminates no-cause notices to vacate. Additionally, all terminations of tenancy must be based on at \nleast one of the 13 just cause terminations listed in SJMC Section 17.23.1250(A) and described below. The Tenant Protection \nOrdinance went into effect June 16, 2017, and its protections are applied to all new and existing tenants.  \nTYPES OF BU ILDING S THAT JUST CAUSE APPLIES TO \n* “Rent Stabilized Units” means Rental Units that are subject to rent \nstabilization under the City’s Apartment Rent Ordinance, which includes \nunits in any Multiple Dwelling building and guesthouses built on or prior to \nSeptember 7, 1979. \n** “Unpermitted dwellings” means a structure or parts of a structure that are \nbeing rented as a home, residence, or sleeping place, where the use is not \nauthorized, permitted, or otherwise approved by the City. \nJUST CAUSE TERMINATIONS \nAll notices of terminations must be submitted to the Rent Stabilization Program online at www.sanjoseca.gov/rent. Landlords must \nsubmit copies of any notices of termination to the City, including: 3-day notices, 30-60-90 day notices, and Summons & Complaints. \nWith just cause protections, all notices of termination must be based on one of the reasons outlined in the Tenant Protection Ordinance \n(San José Municipal Code Section 17.23.1250): \nCovered \n Rent Stabilized Units* \n Rental Units in any Multiple Dwelling, except permitted \nhotels and motels \n Guest rooms in any Guesthouse \n Unpermitted Units** \nJust Cause Terminations \nCauses based on actions or inactions of the tenant \n1. Nonpayment of Rent \nFailure to pay Rent in accordance with the rental agreement. \n",
+      "window_preview": "",
+      "window_text": null
+    }
+  ]
+}

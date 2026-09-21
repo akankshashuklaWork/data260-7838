@@ -1,0 +1,28 @@
+:root {
+  --portal-green: #245c48;
+  --portal-green-dark: #194333;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.app-navbar {
+  background: var(--portal-green-dark);
+}
+
+.hero-panel {
+  max-width: 850px;
+  padding: clamp(2rem, 6vw, 5rem);
+  border: 1px solid #d9e2de;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 1rem 3rem rgba(25, 67, 51, 0.08);
+}
+
+.btn-success {
+  --bs-btn-bg: var(--portal-green);
+  --bs-btn-border-color: var(--portal-green);
+  --bs-btn-hover-bg: var(--portal-green-dark);
+  --bs-btn-hover-border-color: var(--portal-green-dark);
+}

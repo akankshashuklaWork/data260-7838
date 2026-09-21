@@ -1,0 +1,103 @@
+{
+  "experiment": "HW3 Part 2 retrieval-only RAG",
+  "sid4": 7838,
+  "seed": 7838,
+  "domain_id": 6,
+  "domain": "Rental housing",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "technique": "sentence_window",
+  "chunk_count": 3851,
+  "index_build_ms": 6358.667291,
+  "question_id": "q5",
+  "question": "How long after an alleged housing-discrimination violation may a person file a complaint with HUD?",
+  "expected_answer": "A person may file a HUD complaint within one year after the alleged violation occurred or ended.",
+  "expected_source": "hud_fair_housing_act_guide.pdf",
+  "unique_source": false,
+  "top_k": 5,
+  "latency_ms": 31.20087500428781,
+  "query_vector_shape": [
+    384
+  ],
+  "query_embedding_dimension": 384,
+  "query_vector_first_8": [
+    -0.025253,
+    0.034371,
+    0.036014,
+    0.051806,
+    0.025608,
+    -0.018958,
+    -0.076198,
+    -0.095183
+  ],
+  "document_vectors_shape": [
+    5,
+    384
+  ],
+  "results": [
+    {
+      "rank": 1,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "10",
+      "chunk_sha256": "9fb6211086eab5c4aabdbb7acbed21815d19a90578b04c80ec4793be2b43abdf",
+      "store_score": 0.8575174535859209,
+      "independent_cosine": 0.8575175404548645,
+      "chunk_length_chars": 145,
+      "preview": "You have one year after the alleged discrimination occurred or ended to file a complaint with HUD, but you should file it as soon as possible.",
+      "chunk_text": "You have one year after the alleged discrimination \noccurred or ended to file a complaint with HUD, but you should \nfile it as soon as possible.\n",
+      "window_preview": "The “housing for older persons” exemption does not protect senior housing facilities or communities from liability for housing discrimination based on race, col",
+      "window_text": "The “housing for older persons” exemption does not protect \nsenior housing facilities or communities from liability for housing \ndiscrimination based on race, color, religion, sex, disability, or \nnational origin.\n HUD is ready to help with any problem of housing discrimination. \n If you think your rights have been violated, you may file a \ncomplaint online, write a letter or telephone the HUD office \nnearest you.  You have one year after the alleged discrimination \noccurred or ended to file a complaint with HUD, but you should \nfile it as soon as possible.\n If You Think your Rights Have Been Violated\nWhat to Tell HUD:\n• Your name and address \n• The name and address of the person your complaint is against \n(the respondent) \n• The address or other identification of the housing involved \n• A short description of the alleged violation (the event that \ncaused you to believe your rights were violated) \n• The date(s) of the alleged violation.\n Where to Write or Call: File a complaint online, send a letter to the HUD \noffice nearest you, or if you wish, you may call that office directly.  Persons \nwho are deaf or hard of hearing and use a TTY, may call those offices \nthrough the toll-free Federal Information Relay Service at 1-800-877-8339.\n"
+    },
+    {
+      "rank": 2,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "15",
+      "chunk_sha256": "bffa3f95b44efe9dadbee47cce1515cb826c8985c3a5d00676eeb57d68263bfd",
+      "store_score": 0.7985085350418751,
+      "independent_cosine": 0.7985085248947144,
+      "chunk_length_chars": 218,
+      "preview": "The State or local public fair housing agency must start investigating your complaint within 30 days of HUD’s referral, or HUD may retrieve (“reactivate”) the c",
+      "chunk_text": "The State or local public fair housing agency must \nstart investigating your complaint within 30 days of HUD’s referral, \nor HUD may retrieve (“reactivate”) the complaint for investigation \nunder the Fair Housing Act.\n",
+      "window_preview": "Department of Justice to file suit against the respondent in Federal District Court to enforce the terms of the Agreement. Complaint Referrals to State or Local",
+      "window_text": "Department of Justice to file suit against the respondent in Federal \nDistrict Court to enforce the terms of the Agreement.\n Complaint Referrals to State or Local Public Fair Housing Agencies: \nIf HUD has certified that your State or local public fair housing \nagency enforces a civil rights law or ordinance that provides rights, \nremedies and protections that are “substantially equivalent” to \nthe Fair Housing Act, HUD must promptly refer your complaint to \nthat agency for investigation, and must promptly notify you of the \nreferral.  The State or local agency will investigate your complaint \nunder the “substantially equivalent” State or local civil rights law \nor ordinance.  The State or local public fair housing agency must \nstart investigating your complaint within 30 days of HUD’s referral, \nor HUD may retrieve (“reactivate”) the complaint for investigation \nunder the Fair Housing Act.\n What Happens If I’m Going to Lose My Housing \nThrough Eviction or Sale?\n If you need immediate help to stop or prevent a severe problem \ncaused by a Fair Housing Act violation, HUD may be able to assist \nyou as soon as you file a complaint.  HUD may authorize the U.S. \n"
+    },
+    {
+      "rank": 3,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "14",
+      "chunk_sha256": "6d2e45f035a183e476a27c3f31ef20598762343bd2733dca1f35dc6a22ed48da",
+      "store_score": 0.7179972666726693,
+      "independent_cosine": 0.7179973125457764,
+      "chunk_length_chars": 151,
+      "preview": "• Notify you and the respondent if HUD cannot complete its investigation within 100 days of filing your complaint, and provide reason for the delay.",
+      "chunk_text": "• Notify you and the respondent if HUD cannot complete its \ninvestigation within 100 days of filing your complaint, and \nprovide reason for the delay.\n",
+      "window_preview": "HUD will notify you in writing when your complaint is accepted for filing under the Fair Housing Act. HUD also will: • Notify the alleged violator (respondent) ",
+      "window_text": "HUD will notify you in writing when your complaint is accepted for \nfiling under the Fair Housing Act.  HUD also will:\n• Notify the alleged violator (respondent) of the filing of your \ncomplaint, and allow the respondent time to submit a written \nanswer to the complaint. \n • Investigate your complaint, and determine whether or not \nthere is reasonable cause to believe that the respondent \nviolated the Fair Housing Act. \n • Notify you and the respondent if HUD cannot complete its \ninvestigation within 100 days of filing your complaint, and \nprovide reason for the delay.\n Fair Housing Act Conciliation: During the complaint investigation, HUD \nis required to offer you and the respondent the opportunity to \n voluntarily resolve your complaint with a Conciliation Agreement. \n 10"
+    },
+    {
+      "rank": 4,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "29",
+      "chunk_sha256": "429667856e80c498483270fe28e101e18b7176ed4f5c45d28dfa67c1ab12effe",
+      "store_score": 0.715808817342245,
+      "independent_cosine": 0.7158088684082031,
+      "chunk_length_chars": 73,
+      "preview": "The time limits for filing housing discrimination complaints are short.",
+      "chunk_text": "The \ntime limits for filing housing discrimination complaints are short. ",
+      "window_preview": "You may consider hiring a private attorney to take legal action against a landlord who has discriminated against you. For the names of attorneys who specialize ",
+      "window_text": "You may consider hiring a private attorney to take legal action against\na landlord who has discriminated against you.  For the names of attorneys who specialize\nin housing discrimination cases, contact your county bar association or an attorney referral \nservice.\n You must act quickly if you believe that a landlord has unlawfully discriminated against you.  The \ntime limits for filing housing discrimination complaints are short.  For example, a complaint to the \nCRD must be filed within one year from the  date of the discriminatory act.  86 \nMake sure you \ndocument the unlawful discrimination when it occurs.  First, write down what happened, including \ndates and the names of those involved. "
+    },
+    {
+      "rank": 5,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "15",
+      "chunk_sha256": "6cfe31dcd8d0746b5b720903522e6d829facbc3b676ee80cf3d6ee6402cf44f7",
+      "store_score": 0.7156791568197085,
+      "independent_cosine": 0.7156791687011719,
+      "chunk_length_chars": 168,
+      "preview": "If you need immediate help to stop or prevent a severe problem caused by a Fair Housing Act violation, HUD may be able to assist you as soon as you file a compl",
+      "chunk_text": "If you need immediate help to stop or prevent a severe problem \ncaused by a Fair Housing Act violation, HUD may be able to assist \nyou as soon as you file a complaint. ",
+      "window_preview": "The State or local agency will investigate your complaint under the “substantially equivalent” State or local civil rights law or ordinance. The State or local ",
+      "window_text": "The State or local agency will investigate your complaint \nunder the “substantially equivalent” State or local civil rights law \nor ordinance.  The State or local public fair housing agency must \nstart investigating your complaint within 30 days of HUD’s referral, \nor HUD may retrieve (“reactivate”) the complaint for investigation \nunder the Fair Housing Act.\n What Happens If I’m Going to Lose My Housing \nThrough Eviction or Sale?\n If you need immediate help to stop or prevent a severe problem \ncaused by a Fair Housing Act violation, HUD may be able to assist \nyou as soon as you file a complaint.  HUD may authorize the U.S. \n Department of Justice to file a Motion in Federal District Court \nfor a Temporary Restraining Order (TRO) against the respondent, \nfollowed by a Preliminary Injunction pending the outcome of HUD’s \ninvestigation.  A Federal Judge may grant a TRO or a Preliminary \nInjunction against a respondent in cases where:\n11"
+    }
+  ]
+}

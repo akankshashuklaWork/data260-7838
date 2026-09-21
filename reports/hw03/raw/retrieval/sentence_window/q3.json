@@ -1,0 +1,103 @@
+{
+  "experiment": "HW3 Part 2 retrieval-only RAG",
+  "sid4": 7838,
+  "seed": 7838,
+  "domain_id": 6,
+  "domain": "Rental housing",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "technique": "sentence_window",
+  "chunk_count": 3851,
+  "index_build_ms": 6358.667291,
+  "question_id": "q3",
+  "question": "Within how many days after a California tenant moves out must a landlord return the remaining security deposit and provide an itemized statement of deductions?",
+  "expected_answer": "The landlord must return the remaining deposit and provide the itemized statement within 21 days after the tenant moves out.",
+  "expected_source": "california_landlord_tenant_guide_2026.pdf",
+  "unique_source": true,
+  "top_k": 5,
+  "latency_ms": 32.72845799801871,
+  "query_vector_shape": [
+    384
+  ],
+  "query_embedding_dimension": 384,
+  "query_vector_first_8": [
+    0.061082,
+    0.041844,
+    0.031854,
+    0.042787,
+    0.027388,
+    0.006589,
+    -0.010244,
+    -0.038945
+  ],
+  "document_vectors_shape": [
+    5,
+    384
+  ],
+  "results": [
+    {
+      "rank": 1,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "88",
+      "chunk_sha256": "cbd0186884a396f3feb20b469977ac9a206fdb91796130aec797d20a6c011f1c",
+      "store_score": 0.7608057309265845,
+      "independent_cosine": 0.7608057260513306,
+      "chunk_length_chars": 160,
+      "preview": "Twenty-one days after the tenancy ends, the landlord sends you an itemized statement of deductions, along with a refund of the rest of your security deposit.",
+      "chunk_text": "Twenty-one days \nafter the tenancy ends, the landlord sends you an itemized statement of deductions, along with a \nrefund of the rest of your security deposit. ",
+      "window_preview": "• Clean soap scum in bathtub. Suppose that you scrub the bathtub until it sparkles, but do not undertake any of the repairs or wash the windows. After you move ",
+      "window_text": "• Clean soap scum in bathtub.\n Suppose that you scrub the bathtub until it sparkles, but do not undertake any of the repairs or \nwash the windows.  After you move out, the landlord performs the final inspection.  Twenty-one days \nafter the tenancy ends, the landlord sends you an itemized statement of deductions, along with a \nrefund of the rest of your security deposit.  Suppose that the itemized statement lists deductions from \nyour security deposit for the costs of repairing the windowsill, the carpet and the door jamb, and for \nwashing the windows.  Has the landlord acted properly? \n Whether the landlord has acted properly depends on other facts. "
+    },
+    {
+      "rank": 2,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "84",
+      "chunk_sha256": "81cfa4e7344c5933c4f97d6be243cd1301773f58d8821a348a75c984aaf4bcd4",
+      "store_score": 0.759825966473465,
+      "independent_cosine": 0.7598259449005127,
+      "chunk_length_chars": 174,
+      "preview": "The landlord still must send you an itemized statement 21 calendar days or less after you move, along with a refund of any amounts not deducted from your securi",
+      "chunk_text": "The landlord still must send you an itemized statement 21 \ncalendar days or less after you move, along with a refund of any amounts not deducted from your \nsecurity deposit. ",
+      "window_preview": "If you have a rental agreement, you may waive this right no earlier than 60 days before the term ends. The waiver form given to you by the landlord must include",
+      "window_text": "If you have a rental agreement, you may waive this right no earlier than 60 days before the term \nends.  The waiver form given to you by the landlord must include the text of the security deposit \nlaw that describes your right to receive receipts.349 \nTenants should understand the consequences \nbefore agreeing to waive their right to such documentation. \n What if the repairs cost less than $125 or you waived your right to receive copies of invoices, \nreceipts and any good faith estimate?  The landlord still must send you an itemized statement 21 \ncalendar days or less after you move, along with a refund of any amounts not deducted from your \nsecurity deposit.  When you receive the itemized statement, you may decide that you want copies \nof the landlord’s invoices, receipts, and any good faith estimate.  You may request copies of these \ndocuments from the landlord within 14 calendar days after you receive the itemized statement.  It \nis best to make this request both orally and in writing. "
+    },
+    {
+      "rank": 3,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "82",
+      "chunk_sha256": "950080fb0cd670fb1f46a1c86859646b18232d8fb5098d288f1f0a55c890b36f",
+      "store_score": 0.7415773079356743,
+      "independent_cosine": 0.7415773868560791,
+      "chunk_length_chars": 309,
+      "preview": "The landlord also is required to take photographs of the unit within a reasonable time after those repairs or cleanings are completed.340 Under California law, ",
+      "chunk_text": "The landlord also is \nrequired to take photographs of the unit within a reasonable time after those repairs or cleanings \nare completed.340  \nUnder California law, your landlord has 21 days from the date that you moved out to  provide \none of the following: \n• Send you a full refund of your security deposit.",
+      "window_preview": "The security deposit cannot be used for repairing defects that existed in the unit before you moved in, for conditions caused by normal wear and tear during you",
+      "window_text": "The security deposit cannot be used for repairing defects that existed \nin the unit before you moved in, for conditions caused by normal wear and tear during your  \ntenancy or previous tenancies, or for cleaning a rental unit that is as clean as it was when you \nmoved in.338 \nA rental agreement can never state that a security deposit is “nonrefundable. ”339 \nA landlord also cannot withhold a tenant’s partial or full security deposit based solely on the \ntenant being a victim of domestic violence and/or terminating their lease early as described \npreviously. \n As of 2025, a landlord is required to take photographs of a rental unit within a reasonable time \nafter the tenant has returned possession of the unit to the landlord , but prior to any repairs or \ncleanings that the landlord plans to deduct from the tenant’s security deposit.  The landlord also is \nrequired to take photographs of the unit within a reasonable time after those repairs or cleanings \nare completed.340  \nUnder California law, your landlord has 21 days from the date that you moved out to  provide \none of the following: \n• Send you a full refund of your security deposit."
+    },
+    {
+      "rank": 4,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "42",
+      "chunk_sha256": "b03048538ad3ec2da72cbf353202f5384e28844dad20214168d90c1a818f3f55",
+      "store_score": 0.6937060379184041,
+      "independent_cosine": 0.6937060356140137,
+      "chunk_length_chars": 421,
+      "preview": "However, if you left the rental very dirty or damaged beyond normal wear and tear, for example, the landlord could keep an amount that is reasonably necessary t",
+      "chunk_text": "However, if you left the rental very dirty or damaged beyond normal wear \nand tear, for example, the landlord could keep an amount that is reasonably necessary to clean or \nrepair the rental  back to the condition  it was in at the beginning of the tenancy .147 \nDeductions \nfrom security deposits and the time p eriods when the landlord must notify the tenant of any \ndeductions are discussed in detail on pages 75-85. \n",
+      "window_preview": "36 A landlord cannot require that a se curity deposit be nonrefundable.146 However, when you move out of the rental, the law allows the landlord to keep all or ",
+      "window_text": "36 \nA landlord cannot require that a se curity deposit be nonrefundable.146 \nHowever, when you \nmove out of the rental, the law allows the landlord to keep all or part of the security deposit for \nthe following: \nYou owe rent; \n• You leave the rental less clean than when you moved  in; beginning January 1, 2025, a\nlandlord cannot use your security deposit for professional carpet cleaning or other\nprofessional cleaning services unless those services are necessary to return the rental to\nthe condition it was when you moved beyond normal wear and tear;\n• You damaged the rental beyond normal wear and tear;\n• You have made alterations and did not return the unit to the original condition; or\n• You fail to restore personal property (such as keys or furniture), other than because of\nnormal wear and tear.\n If none of these circumstances are present, the landlord must return the entire amount that \nyou paid as security.  However, if you left the rental very dirty or damaged beyond normal wear \nand tear, for example, the landlord could keep an amount that is reasonably necessary to clean or \nrepair the rental  back to the condition  it was in at the beginning of the tenancy .147 \nDeductions \nfrom security deposits and the time p eriods when the landlord must notify the tenant of any \ndeductions are discussed in detail on pages 75-85. \n Make sure that your rental agreement clearly states that you paid a security deposit to the \nlandlord and correctly states the amount that you paid.  Most landlords will give you a written \nreceipt for all amounts that you pay as a security deposit.  Keep a copy of both the receipt, if any, \nand your rental agreement in case of a dispute.148  As of 2025, a landlord cannot charge you a fee \nif you decide to pay your security deposit by check.149 Beginning January 1, 2026, landlords will be \nrequired to return security deposits by a digital payment method ( including electronic transfer \nsuch as Zelle, or online payment platforms through a property management website) if the tenant \npaid for their security deposit or made rental payments by a digital payment method , unless the \ntenant and landlord agree in writing to an alternative method.150  \nService Members \nOn or after April 1, 2025, if a landlord charges a service member a higher security deposit due \nto the service member’s credit history, credit score, housing history, or other factor related to the \nservice member’s tenancy, the landlord is required to provide the service member  a written \nstatement on or before the date the lease is signed which explains the reason(s) why a higher \nsecurity deposit is being charged as well as the amount of the security deposit.  "
+    },
+    {
+      "rank": 5,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "89",
+      "chunk_sha256": "c0f27b32d2f14d7af83be10153d1b44fde7cf5c90b1be59adb80bb70780f48ec",
+      "store_score": 0.6936502221174715,
+      "independent_cosine": 0.6936503052711487,
+      "chunk_length_chars": 594,
+      "preview": "The landlord has acted properly, as long as the amounts deducted are reasonably necessary for the repairs made.371 Both of these defects are more than normal we",
+      "chunk_text": "The landlord has acted properly, as long as the amounts deducted are reasonably necessary for \nthe repairs made.371 \nBoth of these defects are more than normal wear and tear, and the landlord \nis allowed to make deductions for defects that occur after the initial inspection, as well as for \ndefects that could not be discovered because of the presence of the tenant’s belongings.372 \n \nSuggested Approaches to Security Deposit Deductions \n \nCalifornia’s security deposit statute specifically allows the landlord to use a tenant’s security \ndeposit for the four purposes stated on pages 75-76. ",
+      "window_preview": "Neither defect was listed in the landlord’s itemized statement. Suppose that yo ur landlord nonetheless makes deductions from your security deposit to repair th",
+      "window_text": "Neither \ndefect was listed in the landlord’s itemized statement.  Suppose that yo ur landlord nonetheless \nmakes deductions from your security deposit to repair these defects.  Has the landlord acted \nproperly in this instance? \n The landlord has acted properly, as long as the amounts deducted are reasonably necessary for \nthe repairs made.371 \nBoth of these defects are more than normal wear and tear, and the landlord \nis allowed to make deductions for defects that occur after the initial inspection, as well as for \ndefects that could not be discovered because of the presence of the tenant’s belongings.372 \n \nSuggested Approaches to Security Deposit Deductions \n \nCalifornia’s security deposit statute specifically allows the landlord to use a tenant’s security \ndeposit for the four purposes stated on pages 75-76.  The statute limits the landlord’s deduction from \nthe security deposit to an amount that is “reasonably necessary” for the listed purposes.373 \nUnfortunately, the terms “reasonably necessary” and “normal wear and tear” are vague \nand mean different things to different people.  The following suggestions are offered as \npractical guides for dealing with security deposit issues.  While these suggestions are \nconsistent with the law, they are not necessarily the law in this area. \n"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "experiment": "HW3 Part 2 retrieval-only RAG",
+  "sid4": 7838,
+  "seed": 7838,
+  "domain_id": 6,
+  "domain": "Rental housing",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "technique": "sentence_window",
+  "chunk_count": 3851,
+  "index_build_ms": 6358.667291,
+  "question_id": "q1",
+  "question": "Under the San Jose Apartment Rent Ordinance, what is the maximum regular rent increase and how often may it occur?",
+  "expected_answer": "The ordinance generally limits regular rent increases to 5 percent, once during a 12-month period.",
+  "expected_source": "san_jose_apartment_rent_ordinance_fact_sheet.pdf",
+  "unique_source": true,
+  "top_k": 5,
+  "latency_ms": 32.17891696840525,
+  "query_vector_shape": [
+    384
+  ],
+  "query_embedding_dimension": 384,
+  "query_vector_first_8": [
+    0.047086,
+    -0.035558,
+    0.015228,
+    0.032642,
+    -0.047288,
+    0.05325,
+    -0.068995,
+    0.021777
+  ],
+  "document_vectors_shape": [
+    5,
+    384
+  ],
+  "results": [
+    {
+      "rank": 1,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "46",
+      "chunk_sha256": "955158e3fb03668e1ce72bab86f980f45149ad24037b49ddf1955a5bdb5eaf6b",
+      "store_score": 0.7309072829350723,
+      "independent_cosine": 0.7309073209762573,
+      "chunk_length_chars": 78,
+      "preview": "Other city ordinances allow a certain percentage increase in rent each year.",
+      "chunk_text": "Other \ncity ordinances allow a certain percentage increase in rent each year. ",
+      "window_preview": "Local ordinances enacted after that date take precedence over the Tenant Protection Act only if they offer stronger protections. To the extent a local ordinance",
+      "window_text": "Local ordinances enacted after that date take \nprecedence over the Tenant Protection Act only if they offer stronger protections.  To the extent a \nlocal ordinance applies, some local ordinances specify procedures that a landlord must follow \nbefore increasing a tenant’s rent. \n Some cities have rent boards that have the power to approve or deny increases in rent.  Other \ncity ordinances allow a certain percentage increase in rent each year.  Under state law, all units are \nsubject to “vacancy decontrol.”  This means that the landlord can re-rent a unit at the market rate \nwhen the tenant moves out voluntarily, abandons the unit, or when the landlord evicts a tenant \nbecause of a breach of the rental agreement, terminates the tenancy for nonpayment of rent or \nother allowed reasons. \n A rent stabilization ordinance may impact the landlord -tenant relationship in other important \nways besides those described herein. "
+    },
+    {
+      "rank": 2,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "50",
+      "chunk_sha256": "ec2bd6fe8140799b3bbb3c276ada314af0fdbd4cb0a5737866d5b499333b1cb4",
+      "store_score": 0.6872095469522547,
+      "independent_cosine": 0.6872096657752991,
+      "chunk_length_chars": 46,
+      "preview": "RENT INCREASES How much can rent be raised?",
+      "chunk_text": "RENT INCREASES \nHow much can rent be raised? \n",
+      "window_preview": "Local rent stabilization ordinances may also limit or prohibit increases in security deposits. The landlord must give you proper advance written notice of any i",
+      "window_text": "Local rent stabilization ordinances \nmay also limit or prohibit increases in security deposits. \n The landlord must give you proper advance written notice of any increase in the security \ndeposit (see “Proper Service of Notices,” pages 98-99). \n The landlord normally cannot require you to pay the security deposit increase in cash or by \nelectronic funds transfer, without offering other options (see pages 34-36). \n RENT INCREASES \nHow much can rent be raised? \n If you are covered by the Tenant Protection Act (State rent limits), which applies to a significant \npercentage of rental properties, the landlord can only raise rent in a 12-month period by 5% plus \nthe inflation rate or 10 percent, whichever is lower.  185 \nIf the rate of inflation exceeds 5%, the \nmaximum rent increase will be 10% for properties covered by the Act. \n  The rent limit does not apply to certain types of properties, as discussed on pages 73-74 of \nthis guide.  \n"
+    },
+    {
+      "rank": 3,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "98",
+      "chunk_sha256": "dd727bf332b13e055566cf05808f60d28ebcb1cb08dc675b1b26cc46000861ac",
+      "store_score": 0.6866438796489631,
+      "independent_cosine": 0.6866439580917358,
+      "chunk_length_chars": 66,
+      "preview": "92 “California law limits the amount your rent can be increased.",
+      "chunk_text": "92 \n“California law limits the amount your rent can be increased. ",
+      "window_preview": "92 “California law limits the amount your rent can be increased. See Section 1947.12 of the Civil Code for more information. California law also provides that a",
+      "window_text": "92 \n“California law limits the amount your rent can be increased.  See Section 1947.12 of the Civil \nCode for more information.  California law also provides that after all of the tenants have \ncontinuously and lawfully occupied the property for 12 months or more or at least one of the \ntenants has continuously and lawfully occupied the property for 24 months or more, a landlord \nmust provide a statement of cause in any notice to terminate a tenancy.  See Section 1946.2 of \nthe Civil Code for more information.” \n"
+    },
+    {
+      "rank": 4,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "36",
+      "chunk_sha256": "3512f32fb3787f94e1c482dad17b229844d59f2906256e0bf92d782619bfe0c0",
+      "store_score": 0.6779325216055115,
+      "independent_cosine": 0.6779325008392334,
+      "chunk_length_chars": 268,
+      "preview": "• As of January 1, 2020, most rental units are covered by the Tenant Protection Act which places a cap on annual rent increases equal to 5% plus inflation, or 1",
+      "chunk_text": "• As of January 1, 2020, most rental units are covered by the Tenant Protection Act which\nplaces a cap on annual rent increases equal to 5% plus inflation, or 10%, whichever is\nlower, and no more than two rental increases within a 1 2-month period (see page 39 -\n40). ",
+      "window_preview": "For more information on reasonable accommodations, review: https://www.justice.gov/sites/default/files/crt/legacy/2010/12/14/joint_statement_ra.pdf and https://",
+      "window_text": "For more information on reasonable accommodations, review: \nhttps://www.justice.gov/sites/default/files/crt/legacy/2010/12/14/joint_statement_ra.pdf and \nhttps://www.hud.gov/sites/documents/reasonable_modifications_mar08.pdf. \n TENANT’S BASIC LEGAL RIGHTS \nTenants have basic legal rights that are always present, no matter what the rental agreement \nstates.  These rights include all of the following: \n• Limits on the amount of the security deposit that the landlord can require you to pay (see\npages 34-36).\n • As of January 1, 2020, most rental units are covered by the Tenant Protection Act which\nplaces a cap on annual rent increases equal to 5% plus inflation, or 10%, whichever is\nlower, and no more than two rental increases within a 1 2-month period (see page 39 -\n40).  119 Tenants living in cities with rent stabilization programs might have additional rent\nprotections available to them.  See Appendix 2 in this guidebook for a comprehensive list\nof California cities and counties with rent stabilization protections."
+    },
+    {
+      "rank": 5,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "31",
+      "chunk_sha256": "6014152522017496ce1fbdeba0ec0fa962be69a1be20ffc70081988ab7ee8034",
+      "store_score": 0.6753898051758692,
+      "independent_cosine": 0.67538982629776,
+      "chunk_length_chars": 171,
+      "preview": "Even if the rental agreement allows for rent increases, the rental agreement should specify a limit on how much and how often the rent can be raised (see pages ",
+      "chunk_text": "Even if the rental agreement allows for \nrent increases, the rental agreement should specify a limit on how much and how often the rent \ncan be raised  (see pages 45-47). ",
+      "window_preview": "25 the security of a long- term agreement at a known cost. Even if the rental agreement allows for rent increases, the rental agreement should specify a limit o",
+      "window_text": "25 \nthe security of a long- term agreement at a known cost.  Even if the rental agreement allows for \nrent increases, the rental agreement should specify a limit on how much and how often the rent \ncan be raised  (see pages 45-47).  One disadvantage of a fixed -term tenancy is that the rental \nagreement may be more difficult to break, especially if another tenant cannot be found to take \nover your tenancy, if you need to move before the end of the fixed -term.  If you move before the \nfixed-term ends, you could be liable for the rent for the rest of the  term or until such time as the \nlandlord rents the unit to a new tenant.93 \nPeriodic tenancies are tenancies that continue for successive periods until the landlord or \ntenant gives the other party proper notification that they want to end the tenancy.  Examples of \nperiodic tenancies are tenancies that run from week to week or month to month. "
+    }
+  ]
+}

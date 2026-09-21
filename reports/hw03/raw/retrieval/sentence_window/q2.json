@@ -1,0 +1,103 @@
+{
+  "experiment": "HW3 Part 2 retrieval-only RAG",
+  "sid4": 7838,
+  "seed": 7838,
+  "domain_id": 6,
+  "domain": "Rental housing",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "technique": "sentence_window",
+  "chunk_count": 3851,
+  "index_build_ms": 6358.667291,
+  "question_id": "q2",
+  "question": "How many just causes for terminating a tenancy are listed under the San Jose Tenant Protection Ordinance?",
+  "expected_answer": "The ordinance lists 13 just causes for terminating a tenancy.",
+  "expected_source": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+  "unique_source": true,
+  "top_k": 5,
+  "latency_ms": 31.52958396822214,
+  "query_vector_shape": [
+    384
+  ],
+  "query_embedding_dimension": 384,
+  "query_vector_first_8": [
+    0.075144,
+    -0.021081,
+    0.039593,
+    0.011845,
+    0.049324,
+    0.06625,
+    -0.045131,
+    -0.037403
+  ],
+  "document_vectors_shape": [
+    5,
+    384
+  ],
+  "results": [
+    {
+      "rank": 1,
+      "source_file": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+      "page_label": "1",
+      "chunk_sha256": "7029f4bd9919d3c5195bf8d1c275993dc1e6aaac2fd3fffb7a572d1e698963e7",
+      "store_score": 0.7224347254229013,
+      "independent_cosine": 0.7224346995353699,
+      "chunk_length_chars": 433,
+      "preview": "With just cause protections, all notices of termination must be based on one of the reasons outlined in the Tenant Protection Ordinance (San José Municipal Code",
+      "chunk_text": "With just cause protections, all notices of termination must be based on one of the reasons outlined in the Tenant Protection Ordinance \n(San José Municipal Code Section 17.23.1250): \nCovered \n Rent Stabilized Units* \n Rental Units in any Multiple Dwelling, except permitted \nhotels and motels \n Guest rooms in any Guesthouse \n Unpermitted Units** \nJust Cause Terminations \nCauses based on actions or inactions of the tenant \n1. ",
+      "window_preview": "** “Unpermitted dwellings” means a structure or parts of a structure that are being rented as a home, residence, or sleeping place, where the use is not authori",
+      "window_text": "** “Unpermitted dwellings” means a structure or parts of a structure that are \nbeing rented as a home, residence, or sleeping place, where the use is not \nauthorized, permitted, or otherwise approved by the City. \n JUST CAUSE TERMINATIONS \nAll notices of terminations must be submitted to the Rent Stabilization Program online at www.sanjoseca.gov/rent.  Landlords must \nsubmit copies of any notices of termination to the City, including: 3-day notices, 30-60-90 day notices, and Summons & Complaints. \n With just cause protections, all notices of termination must be based on one of the reasons outlined in the Tenant Protection Ordinance \n(San José Municipal Code Section 17.23.1250): \nCovered \n Rent Stabilized Units* \n Rental Units in any Multiple Dwelling, except permitted \nhotels and motels \n Guest rooms in any Guesthouse \n Unpermitted Units** \nJust Cause Terminations \nCauses based on actions or inactions of the tenant \n1.  Nonpayment of Rent \nFailure to pay Rent in accordance with the rental agreement. \n 2.  Material or Habitual Violation of the Tenancy \nAfter a written notice to a tenant to cure a material violation of the lease, the tenant fails to cure such violation within a \nreasonable time after receiving notice; or, the tenant commits habitual violations of the rental agreement. \n"
+    },
+    {
+      "rank": 2,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "136",
+      "chunk_sha256": "ff15228647c101a7cdc57abbb568680b371d5c7fce59e0ef338829b51e9d1b60",
+      "store_score": 0.6748639154346747,
+      "independent_cosine": 0.674863874912262,
+      "chunk_length_chars": 326,
+      "preview": "California law also provides that after all of the tenants have continuously and lawfully occupied the property for 12 months or more or at least one of the ten",
+      "chunk_text": "California law also provides that after all of the tenants have continuously \nand lawfully occupied the property for 12 months or more or at least one of the tenants has \ncontinuously and lawfully occupied the property for 24 months or more, a landlord must provide \na statement of cause in any notice to terminate a tenancy. ",
+      "window_preview": "SIGNATURE OF OWNER OR OWNER'S AGENT: DATED: RENT CAP AND STATEMENT OF CAUSE TO TERMINATE TENANCY NOTICE Civil Code Section 1946.2 (This notice must be printed i",
+      "window_text": "SIGNATURE OF OWNER OR OWNER'S AGENT:    \nDATED:      \n \nRENT CAP AND STATEMENT OF CAUSE TO TERMINATE TENANCY NOTICE \nCivil Code Section 1946.2 (This notice must be printed in at least 12-point font.)  \n “California law limits the amount your rent can be increased.  See Section 1947.12 of the Civil Code \nfor more information.  California law also provides that after all of the tenants have continuously \nand lawfully occupied the property for 12 months or more or at least one of the tenants has \ncontinuously and lawfully occupied the property for 24 months or more, a landlord must provide \na statement of cause in any notice to terminate a tenancy.  See Section 1946.2 of the Civil Code for \nmore information.” "
+    },
+    {
+      "rank": 3,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "98",
+      "chunk_sha256": "4023d47ffb6bc833f8fe978e7a070d1fff8e434b82957f70b3a431fc020a1815",
+      "store_score": 0.6748639096874762,
+      "independent_cosine": 0.674863874912262,
+      "chunk_length_chars": 326,
+      "preview": "California law also provides that after all of the tenants have continuously and lawfully occupied the property for 12 months or more or at least one of the ten",
+      "chunk_text": "California law also provides that after all of the tenants have \ncontinuously and lawfully occupied the property for 12 months or more or at least one of the \ntenants has continuously and lawfully occupied the property for 24 months or more, a landlord \nmust provide a statement of cause in any notice to terminate a tenancy. ",
+      "window_preview": "92 “California law limits the amount your rent can be increased. See Section 1947.12 of the Civil Code for more information. California law also provides that a",
+      "window_text": "92 \n“California law limits the amount your rent can be increased.  See Section 1947.12 of the Civil \nCode for more information.  California law also provides that after all of the tenants have \ncontinuously and lawfully occupied the property for 12 months or more or at least one of the \ntenants has continuously and lawfully occupied the property for 24 months or more, a landlord \nmust provide a statement of cause in any notice to terminate a tenancy.  See Section 1946.2 of \nthe Civil Code for more information.” \n The sections of the Tenant Protection Act relevant to just cause evictions are summarized \nbelow.  The sections relevant to rent increases are summarized starting on page 45. \n"
+    },
+    {
+      "rank": 4,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "80",
+      "chunk_sha256": "636d9f74d8c5f9b27da023ce33b1198fac1707ef7376039ce0db6c3310d72fcd",
+      "store_score": 0.6705037242255298,
+      "independent_cosine": 0.6705037355422974,
+      "chunk_length_chars": 242,
+      "preview": "326 Even if the tenant is not at fault, the landlord can terminate the tenancy if the landlord has just cause, such as the property will be demolished, substant",
+      "chunk_text": "326 Even if the tenant is not at fault, the landlord can terminate the \ntenancy if the landlord has just cause, such as the property will be demolished, substantially \nremodeled, or occupied by the landlord or his or her close family member. ",
+      "window_preview": "74 or threatened victim as good cause for the landlord to terminate the tenancy or occupancy rights of the victim.320 To terminate the tenancy of a tenant who p",
+      "window_text": "74 \nor threatened victim as good cause for the landlord to terminate the tenancy or occupancy rights \nof the victim.320 \nTo terminate the tenancy of a tenant who participates in the Section 8 Housing Choice Voucher \nprogram, the landlord must first give the tenant the applicable three -day or 90- day notice of \ntermination under California law 321  \n(see pages 95- 98), and the landlord must give the public \nhousing agency a copy of the notice at the same time.322 \nIf the landlord simply decides not to renew \nthe rental agreement, or decides to terminate the HAP (housing assistance payment) contract, the \nlandlord must give the tenant 90 days’ advance written notice of the termination date, to occur on \nor after the expiration date of a rental agreement for a fixed-term.323 \nIf the tenant does not move \nout by the end of the 90 days, the landlord must follow California law to evict the tenant.324\nLikewise, if a landlord has served a 3-day type of notice for a violation that either is not corrected \nor is for those limited violations that cannot be corrected, and the tenant has also not quit the \npremises, the landlord must follow California law to evict the tenant.325\nIf the tenancy is protected by local just cause for eviction laws or the 2019 Tenant Protection Act, \nthe landlord must have a valid reason justifying “cause” to terminate the tenancy, such as t he \ntenant’s failure to pay rent.  326 Even if the tenant is not at fault, the landlord can terminate the \ntenancy if the landlord has just cause, such as the property will be demolished, substantially \nremodeled, or occupied by the landlord or his or her close family member.  However, in situations \nwhere the tenant is not at fault, but the landlord has just cause to terminate, the landlord will often \nbe obligated to pay the tenant relocation assistance—either equal to one month’s rent under the \nTenant Protection Act or different relocation assistance amounts un der applicable local \nordinances.327 \nIf you live in government financed or subsidized housing, or in an area with rent control, check \nwith your local housing officials or a housing counseling agency to see if any special rules apply in \nyour situation. \n TENANT PROTECTION ACT OF 2019 \nThe Tenant Protection Act of 2019 (“Tenant Protection Act”) establishes limitations on rent \nincreases and requires just cause for terminating certain tenancies.  The Act established Civil Code \nsections 1946.2 (just cause) and 1947.12 (rent limitations). "
+    },
+    {
+      "rank": 5,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "80",
+      "chunk_sha256": "4c9082459471f9e5f04416ae270806e31ef7fece52547ebcc106352b257ff4e8",
+      "store_score": 0.6634746948994387,
+      "independent_cosine": 0.6634747385978699,
+      "chunk_length_chars": 369,
+      "preview": "The Tenant Protection Act is complex and the following serves as an overview and summary of the just cause standard for termination of tenancy.328 Generally, pr",
+      "chunk_text": "The Tenant Protection Act is complex  \nand the following serves as an overview and summary of the just cause standard for termination \nof tenancy.328  \nGenerally, properties covered by the just cause requirement are rental units in complexes with \ntwo or more units and the complex is at least 15 years old and are not already covered by local just \ncause protections. ",
+      "window_preview": "However, in situations where the tenant is not at fault, but the landlord has just cause to terminate, the landlord will often be obligated to pay the tenant re",
+      "window_text": "However, in situations \nwhere the tenant is not at fault, but the landlord has just cause to terminate, the landlord will often \nbe obligated to pay the tenant relocation assistance—either equal to one month’s rent under the \nTenant Protection Act or different relocation assistance amounts un der applicable local \nordinances.327 \nIf you live in government financed or subsidized housing, or in an area with rent control, check \nwith your local housing officials or a housing counseling agency to see if any special rules apply in \nyour situation. \n TENANT PROTECTION ACT OF 2019 \nThe Tenant Protection Act of 2019 (“Tenant Protection Act”) establishes limitations on rent \nincreases and requires just cause for terminating certain tenancies.  The Act established Civil Code \nsections 1946.2 (just cause) and 1947.12 (rent limitations).  The Tenant Protection Act is complex  \nand the following serves as an overview and summary of the just cause standard for termination \nof tenancy.328  \nGenerally, properties covered by the just cause requirement are rental units in complexes with \ntwo or more units and the complex is at least 15 years old and are not already covered by local just \ncause protections.  Regardless of age, a duplex in which the owner occupies a unit is exempt, as are \nmany, but not all, single -family homes and condominiums.  Tenants in single -family homes and \ncondominiums that qualify  for exemption must be notified of the exemption with a specified \nwritten notice or rental agreement term in order for the landlord to actually be exempt.  \n The law specifies two types of just cause s that a landlord can cite as grounds for terminating a \ntenancy. "
+    }
+  ]
+}

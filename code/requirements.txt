@@ -2,5 +2,21 @@ langchain>=0.1.0
 langchain-ollama>=0.1.0
 ollama>=0.1.0
 fastapi>=0.115.0
+httpx>=0.27.0
 uvicorn[standard]>=0.30.0
 langgraph>=0.2.0
+itsdangerous>=2.2.0
+jinja2>=3.1.0
+python-multipart>=0.0.9
+
+# HW3 Part 2 retrieval-only RAG
+llama-index==0.14.24
+llama-index-embeddings-huggingface==0.8.0
+llama-index-readers-file==0.7.0
+sentence-transformers==6.1.0
+faiss-cpu==1.15.1
+numpy==2.4.6
+pandas==2.3.3
+pypdf==6.19.0
+PyYAML==6.0.3
+cryptography==50.0.1

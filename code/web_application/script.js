@@ -120,7 +120,7 @@ const sendListing = async (method, url, message) => {
   console.log("Updated parsed object:", updatedParsedObject);
   console.log("Successful submission count:", submissionCount);
   await saveListingToServer(method, url, updatedParsedObject);
-  window.location.assign("/");
+  window.location.assign("/listings");
   form.reset();
   characterCount.textContent = "0 characters";
   setStatus(message);
@@ -163,7 +163,7 @@ const handleDelete = async function () {
   try {
     const response = await fetch("/api/listings/highest", { method: "DELETE" });
     if (!response.ok) throw new Error("No listing could be deleted.");
-    window.location.assign("/");
+    window.location.assign("/listings");
   } catch (error) {
     setStatus(error.message, true);
   }

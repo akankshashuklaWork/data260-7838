@@ -1,4 +1,4 @@
-# DATA 260 Homework 2
+# DATA 260 Homework 3
 
 Rental Housing Listings - Akanksha Shukla
 
@@ -34,7 +34,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## HW1 and HW2 Web Application
+## HW1 through HW3 Web Application
 
 Created a web form for submitting rental property listings, with client-side validation and JSON handling in JavaScript.
 
@@ -42,22 +42,31 @@ Files: `code/web_application/`
 
 How to run:
 
-Start the FastAPI application locally:
+Start the FastAPI application locally. Set a private session-signing secret and,
+optionally, override the demonstration login credentials:
 
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -r code/requirements.txt
-cd code/web_application
-uvicorn app:app --host 127.0.0.1 --port 8638
+export SESSION_SECRET_KEY="replace-with-a-long-random-value"
+export APP_LOGIN_USERNAME="akanksha"
+export APP_LOGIN_PASSWORD="data260"
+cd code
+uvicorn web_application.app:app --host 127.0.0.1 --port 8638
 ```
 
-Open http://localhost:8638 in a browser. Add, update, and delete operations return HTTP 303 redirects to the home page, which reloads the updated record list. Search filters by property title or location.
+Open http://localhost:8638 in a browser. The HW3 home, login, dashboard, and
+logout routes use a signed session cookie with `Secure`, `HttpOnly`, and
+`SameSite=Lax`. The dashboard is protected, and sessions expire after 15 idle
+minutes. The cumulative listing interface is available at
+http://localhost:8638/listings.
 
 Run the automated tests:
 
 ```bash
 node code/web_application/tests/run-tests.js
+python code/test_auth.py
 ```
 
 Build and run with Docker:
@@ -77,7 +86,17 @@ Open http://localhost:8638 in a browser.
 | GET | `/api/listings?search=San Jose` | Search title or location |
 | POST | `/api/listings` | Add a record and redirect to `/` |
 | PUT | `/api/listings/1` | Update record ID 1 and redirect to `/` |
-| DELETE | `/api/listings/highest` | Delete highest ID and redirect to `/` |
+| DELETE | `/api/listings/highest` | Delete highest ID and redirect to `/listings` |
+
+## HW3 Authentication Routes
+
+| Method | Endpoint | Behavior |
+|---|---|---|
+| GET | `/` | Show the domain welcome page and session-aware navigation |
+| GET/POST | `/login` | Show and process the Bootstrap login form |
+| GET | `/dashboard` | Show the protected user dashboard |
+| GET | `/logout` | Clear the session and redirect to login |
+| GET | `/listings` | Open the cumulative rental listing interface |
 
 ## Part 3: Stateful Agent Graph
 

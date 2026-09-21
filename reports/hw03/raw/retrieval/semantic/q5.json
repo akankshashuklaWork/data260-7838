@@ -1,0 +1,103 @@
+{
+  "experiment": "HW3 Part 2 retrieval-only RAG",
+  "sid4": 7838,
+  "seed": 7838,
+  "domain_id": 6,
+  "domain": "Rental housing",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "technique": "semantic",
+  "chunk_count": 436,
+  "index_build_ms": 1828.014625,
+  "question_id": "q5",
+  "question": "How long after an alleged housing-discrimination violation may a person file a complaint with HUD?",
+  "expected_answer": "A person may file a HUD complaint within one year after the alleged violation occurred or ended.",
+  "expected_source": "hud_fair_housing_act_guide.pdf",
+  "unique_source": false,
+  "top_k": 5,
+  "latency_ms": 7.009666005615145,
+  "query_vector_shape": [
+    384
+  ],
+  "query_embedding_dimension": 384,
+  "query_vector_first_8": [
+    -0.025253,
+    0.034371,
+    0.036014,
+    0.051806,
+    0.025608,
+    -0.018958,
+    -0.076198,
+    -0.095183
+  ],
+  "document_vectors_shape": [
+    5,
+    384
+  ],
+  "results": [
+    {
+      "rank": 1,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "18",
+      "chunk_sha256": "5e828b9285109da24d7470185e45fe5c030b238a7d7b9773bd59f43d6a219c60",
+      "store_score": 0.8024862249456242,
+      "independent_cosine": 0.8024862408638,
+      "chunk_length_chars": 981,
+      "preview": "In Addition You May File a Private Lawsuit: You may file a private civil lawsuit without first filing a complaint with HUD. You must file your lawsuit within tw",
+      "chunk_text": "In Addition\nYou May File a Private Lawsuit: You may file a private civil lawsuit without \nfirst filing a complaint with HUD. You must file your lawsuit within \ntwo (2) years of the most recent date of alleged discriminatory \naction.\n \n If you do file a complaint with HUD and even if HUD dismisses \nyour complaint, the Fair Housing Act gives you the right to file a \nprivate civil lawsuit against the respondent(s) in Federal District \nCourt. The time during which HUD was processing your complaint \nis not counted in the 2-year filing period. You must file your lawsuit \nat your own expense; however, if you cannot afford an attorney, \nthe Court may appoint one for you.\n Even if HUD is still processing your complaint, you may file a \nprivate civil lawsuit against the respondent, unless (1) you have \nalready signed a HUD Conciliation Agreement to resolve your \nHUD complaint; or (2) a HUD Administrative Law Judge has \ncommenced an Administrative Hearing for your complaint.\n14",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 2,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "10",
+      "chunk_sha256": "af504476d6f4b28954a0877732890f62b95e036d81ade61d699681455ff9dc7a",
+      "store_score": 0.7705506724794502,
+      "independent_cosine": 0.7705507874488831,
+      "chunk_length_chars": 1050,
+      "preview": "If you think your rights have been violated, you may file a complaint online, write a letter or telephone the HUD office nearest you. You have one year after th",
+      "chunk_text": "If you think your rights have been violated, you may file a \ncomplaint online, write a letter or telephone the HUD office \nnearest you. You have one year after the alleged discrimination \noccurred or ended to file a complaint with HUD, but you should \nfile it as soon as possible.\nIf You Think your Rights Have Been Violated\nWhat to Tell HUD:\n• Your name and address \n• The name and address of the person your complaint is against \n(the respondent) \n• The address or other identification of the housing involved \n• A short description of the alleged violation (the event that \ncaused you to believe your rights were violated) \n• The date(s) of the alleged violation.\nWhere to Write or Call: File a complaint online, send a letter to the HUD \noffice nearest you, or if you wish, you may call that office directly. Persons \nwho are deaf or hard of hearing and use a TTY, may call those offices \nthrough the toll-free Federal Information Relay Service at 1-800-877-8339.\nFor Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island \nand Vermont:\n6",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 3,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "14",
+      "chunk_sha256": "da2eeb21174f31778d55188c4aa1f8d497930046a0ceda615c81059b05030b08",
+      "store_score": 0.7529607923724191,
+      "independent_cosine": 0.7529608011245728,
+      "chunk_length_chars": 676,
+      "preview": "HUD also will: • Notify the alleged violator (respondent) of the filing of your complaint, and allow the respondent time to submit a written answer to the compl",
+      "chunk_text": "HUD also will:\n• Notify the alleged violator (respondent) of the filing of your \ncomplaint, and allow the respondent time to submit a written \nanswer to the complaint. \n• Investigate your complaint, and determine whether or not \nthere is reasonable cause to believe that the respondent \nviolated the Fair Housing Act. \n• Notify you and the respondent if HUD cannot complete its \ninvestigation within 100 days of filing your complaint, and \nprovide reason for the delay.\nFair Housing Act Conciliation: During the complaint investigation, HUD \nis required to offer you and the respondent the opportunity to \n voluntarily resolve your complaint with a Conciliation Agreement. \n10",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 4,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "29",
+      "chunk_sha256": "77bb16adcda55cc6df59a96c4e38c0793e413e08a92c16215777cc9eff2d7f2b",
+      "store_score": 0.6998623270521159,
+      "independent_cosine": 0.6998623609542847,
+      "chunk_length_chars": 1334,
+      "preview": "23 status. To contact HUD, look in the governmental section of the phone book under United States Government Offices, or go to www.hud.gov. • Legal aid organiza",
+      "chunk_text": "23 \nstatus. To contact HUD, look in the governmental section of the phone book under United \nStates Government Offices, or go to www.hud.gov. \n• Legal aid organizations provide free legal advice, representation, and other legal services\nin noncriminal cases to economically disadvantaged persons. Legal aid organizations are\nlocated throughout the state. Look in the business or commercial section of the phone\nbook under Attorneys or go to  https://lawhelpca.org. The Legal Aid Association of\nCalifornia also maintains a directory of legal aid organizations  at www.laaconline.org, as\ndoes California’s Business, Consumer Services and Housing Agency  a t\nhttps://housing.ca.gov.tenant/resources.html.\n• Private attorneys. You may consider hiring a private attorney to take legal action against\na landlord who has discriminated against you. For the names of attorneys who specialize\nin housing discrimination cases, contact your county bar association or an attorney referral \nservice.\nYou must act quickly if you believe that a landlord has unlawfully discriminated against you. The \ntime limits for filing housing discrimination complaints are short. For example, a complaint to the \nCRD must be filed within one year from the  date of the discriminatory act. 86 \nMake sure you \ndocument the unlawful discrimination when it occurs. ",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 5,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "15",
+      "chunk_sha256": "ba0ace7d3102f85f1fe483b6074809991e1cfb0faf43ea74bfe3e9b2fda5e6e2",
+      "store_score": 0.6972290410126155,
+      "independent_cosine": 0.6972291469573975,
+      "chunk_length_chars": 1760,
+      "preview": "FAIR HOUSING Equal Opportunity for All A Conciliation Agreement provides individual relief to you, and protects the public interest by deterring future discrimi",
+      "chunk_text": "FAIR HOUSING\n Equal Opportunity for All\n A Conciliation Agreement provides individual relief to you, and \nprotects the public interest by deterring future discrimination by \nthe respondent. Once you and the respondent sign a Conciliation \nAgreement, and HUD approves the Agreement, HUD will cease \ninvestigating your complaint. If you believe that the respondent \nhas violated breached your Conciliation Agreement, you should \npromptly notify the HUD Office that investigated your complaint. If \nHUD determines that there is reasonable cause to believe that the\nrespondent violated the Agreement, HUD will ask the U.S. \nDepartment of Justice to file suit against the respondent in Federal \nDistrict Court to enforce the terms of the Agreement.\nComplaint Referrals to State or Local Public Fair Housing Agencies: \nIf HUD has certified that your State or local public fair housing \nagency enforces a civil rights law or ordinance that provides rights, \nremedies and protections that are “substantially equivalent” to \nthe Fair Housing Act, HUD must promptly refer your complaint to \nthat agency for investigation, and must promptly notify you of the \nreferral. The State or local agency will investigate your complaint \nunder the “substantially equivalent” State or local civil rights law \nor ordinance. The State or local public fair housing agency must \nstart investigating your complaint within 30 days of HUD’s referral, \nor HUD may retrieve (“reactivate”) the complaint for investigation \nunder the Fair Housing Act.\nWhat Happens If I’m Going to Lose My Housing \nThrough Eviction or Sale?\nIf you need immediate help to stop or prevent a severe problem \ncaused by a Fair Housing Act violation, HUD may be able to assist \nyou as soon as you file a complaint. ",
+      "window_preview": "",
+      "window_text": null
+    }
+  ]
+}

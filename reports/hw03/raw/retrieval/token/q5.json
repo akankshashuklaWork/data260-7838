@@ -1,0 +1,103 @@
+{
+  "experiment": "HW3 Part 2 retrieval-only RAG",
+  "sid4": 7838,
+  "seed": 7838,
+  "domain_id": 6,
+  "domain": "Rental housing",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "technique": "token",
+  "chunk_count": 337,
+  "index_build_ms": 1668.142042,
+  "question_id": "q5",
+  "question": "How long after an alleged housing-discrimination violation may a person file a complaint with HUD?",
+  "expected_answer": "A person may file a HUD complaint within one year after the alleged violation occurred or ended.",
+  "expected_source": "hud_fair_housing_act_guide.pdf",
+  "unique_source": false,
+  "top_k": 5,
+  "latency_ms": 6.313542020507157,
+  "query_vector_shape": [
+    384
+  ],
+  "query_embedding_dimension": 384,
+  "query_vector_first_8": [
+    -0.025253,
+    0.034371,
+    0.036014,
+    0.051806,
+    0.025608,
+    -0.018958,
+    -0.076198,
+    -0.095183
+  ],
+  "document_vectors_shape": [
+    5,
+    384
+  ],
+  "results": [
+    {
+      "rank": 1,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "10",
+      "chunk_sha256": "00e77f77c4af7b46b813c7f445ff6168547cafd4517e20a4775cb58193dee837",
+      "store_score": 0.7423875748474559,
+      "independent_cosine": 0.742387592792511,
+      "chunk_length_chars": 1632,
+      "preview": "FAIR HOUSING Equal Opportunity for All • the facility or community must publish and adhere to policies and procedures that demonstrate the intent to operate as ",
+      "chunk_text": "FAIR HOUSING\n Equal Opportunity for All\n• the facility or community must publish and adhere to policies \nand procedures that demonstrate the intent to operate as “55 \nor older” housing; and \n• the facility or community must comply with HUD’s regulatory \nrequirements for age verification of residents.\nThe “housing for older persons” exemption does not protect \nsenior housing facilities or communities from liability for housing \ndiscrimination based on race, color, religion, sex, disability, or \nnational origin.\nHUD is ready to help with any problem of housing discrimination. \nIf you think your rights have been violated, you may file a \ncomplaint online, write a letter or telephone the HUD office \nnearest you. You have one year after the alleged discrimination \noccurred or ended to file a complaint with HUD, but you should \nfile it as soon as possible.\nIf You Think your Rights Have Been Violated\nWhat to Tell HUD:\n• Your name and address \n• The name and address of the person your complaint is against \n(the respondent) \n• The address or other identification of the housing involved \n• A short description of the alleged violation (the event that \ncaused you to believe your rights were violated) \n• The date(s) of the alleged violation.\nWhere to Write or Call: File a complaint online, send a letter to the HUD \noffice nearest you, or if you wish, you may call that office directly. Persons \nwho are deaf or hard of hearing and use a TTY, may call those offices \nthrough the toll-free Federal Information Relay Service at 1-800-877-8339.\nFor Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island \nand Vermont:\n6",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 2,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "16",
+      "chunk_sha256": "ecddeec15fb3cefc7816cf80b9efba984ecf5d8f0e85993eb5921b12d06ec80e",
+      "store_score": 0.7389788908166687,
+      "independent_cosine": 0.738978922367096,
+      "chunk_length_chars": 2034,
+      "preview": "FAIR HOUSING Equal Opportunity for All • Irreparable (irreversible) harm or injury to housing rights is likely to occur without HUD’s intervention; and • There ",
+      "chunk_text": "FAIR HOUSING\n Equal Opportunity for All\n• Irreparable (irreversible) harm or injury to housing rights is \nlikely to occur without HUD’s intervention; and \n• There is substantial evidence that the respondent has violated \nthe Fair Housing Act.\nExample: An owner agrees to sell a house, but, after discovering that the \nbuyers are black, pulls the house off the market, then promptly \nlists it for sale again. The buyers file a discrimination complaint \nwith HUD. HUD may authorize the U.S. Department of Justice to \nseek an injunction in Federal District Court to prevent the owner \nfrom selling the house to anyone else until HUD investigates the \ncomplaint.\nWhat Happens After A Complaint Investigation?\nDetermination of Reasonable Cause, Charge of Discrimination, and \nElection: When your complaint investigation is complete, HUD \nwill prepare a Final Investigative Report summarizing the evidence \ngathered during the investigation. If HUD determines that there is \nreasonable cause to believe that the respondent(s) discriminated \nagainst you, HUD will issue a Determination of Reasonable \nCause and a Charge of Discrimination against the respondent(s). \nYou and the respondent(s) have twenty (20) days after receiving \nnotice of the Charge to decide whether to have your case heard \nby a HUD Administrative Law Judge (ALJ) or to have a civil trial in \nFederal District Court.\nHUD Administrative Law Judge Hearing: If neither you nor the \nrespondent elects to have a Federal civil trial before the 20-day \nElection Period expires, HUD will promptly schedule a Hearing for \nyour case before a HUD ALJ. The ALJ Hearing will be conducted \nin the locality where the discrimination allegedly occurred. During \nthe ALJ Hearing, you and the respondent(s) have the right to \nappear in person, to be represented by legal counsel, to present \nevidence, to cross-examine witnesses and to request subpoenas \nin aid of discovery of evidence. HUD attorneys will represent you \nduring the ALJ Hearing at no cost to you; however, you may also \n12",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 3,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "18",
+      "chunk_sha256": "24cbc8d273dc2f5d6fbea2745a0cfb98111657aa67eb2d39b29d682d1f3249a2",
+      "store_score": 0.7150386551346944,
+      "independent_cosine": 0.7150387167930603,
+      "chunk_length_chars": 1832,
+      "preview": "FAIR HOUSING Equal Opportunity for All Determination of No Reasonable Cause and Dismissal: If HUD finds that there is no reasonable cause to believe that the re",
+      "chunk_text": "FAIR HOUSING\n Equal Opportunity for All\nDetermination of No Reasonable Cause and Dismissal: If HUD \nfinds that there is no reasonable cause to believe that the \nrespondent(s) violated the Act, HUD will dismiss your complaint \nwith a Determination of No Reasonable Cause. HUD will notify \nyou and the respondent(s) of the dismissal by mail, and you may \nrequest a copy of the Final Investigative Report.\nReconsiderations of No Reasonable Cause Determinations: The Fair \nHousing Act provides no formal appeal process for complaints \ndismissed by HUD. However, if your complaint is dismissed with \na Determination of No Reasonable Cause, you may submit a \nwritten request for a reconsideration review to: Director, FHEO \nOffice of Enforcement, U.S. Department of Housing and Urban \nDevelopment, 451 7th Street, SW, Room 5206, Washington, DC \n20410-2000.\nIn Addition\nYou May File a Private Lawsuit: You may file a private civil lawsuit without \nfirst filing a complaint with HUD. You must file your lawsuit within \ntwo (2) years of the most recent date of alleged discriminatory \naction.\n \n If you do file a complaint with HUD and even if HUD dismisses \nyour complaint, the Fair Housing Act gives you the right to file a \nprivate civil lawsuit against the respondent(s) in Federal District \nCourt. The time during which HUD was processing your complaint \nis not counted in the 2-year filing period. You must file your lawsuit \nat your own expense; however, if you cannot afford an attorney, \nthe Court may appoint one for you.\n Even if HUD is still processing your complaint, you may file a \nprivate civil lawsuit against the respondent, unless (1) you have \nalready signed a HUD Conciliation Agreement to resolve your \nHUD complaint; or (2) a HUD Administrative Law Judge has \ncommenced an Administrative Hearing for your complaint.\n14",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 4,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "29",
+      "chunk_sha256": "b3f73bf215bb45a7d5fe5ce3492a448565d3585f95ed3a8d505df759a6726659",
+      "store_score": 0.6998623270521159,
+      "independent_cosine": 0.6998623609542847,
+      "chunk_length_chars": 2349,
+      "preview": "23 status. To contact HUD, look in the governmental section of the phone book under United States Government Offices, or go to www.hud.gov. • Legal aid organiza",
+      "chunk_text": "23 \nstatus. To contact HUD, look in the governmental section of the phone book under United \nStates Government Offices, or go to www.hud.gov. \n• Legal aid organizations provide free legal advice, representation, and other legal services\nin noncriminal cases to economically disadvantaged persons. Legal aid organizations are\nlocated throughout the state. Look in the business or commercial section of the phone\nbook under Attorneys or go to  https://lawhelpca.org. The Legal Aid Association of\nCalifornia also maintains a directory of legal aid organizations  at www.laaconline.org, as\ndoes California’s Business, Consumer Services and Housing Agency  a t\nhttps://housing.ca.gov.tenant/resources.html.\n• Private attorneys. You may consider hiring a private attorney to take legal action against\na landlord who has discriminated against you. For the names of attorneys who specialize\nin housing discrimination cases, contact your county bar association or an attorney referral \nservice.\nYou must act quickly if you believe that a landlord has unlawfully discriminated against you. The \ntime limits for filing housing discrimination complaints are short. For example, a complaint to the \nCRD must be filed within one year from the  date of the discriminatory act. 86 \nMake sure you \ndocument the unlawful discrimination when it occurs. First, write down what happened, including \ndates and the names of those involved. Then, contact one of the resources listed above for advice \nand help. \nBEFORE YOU AGREE TO RENT \nBefore you decide on a rental unit, there are several other points to consider. For example: Is \nan oral rental agreement legally binding? What are the differences betwee n a lease and a rental \nagreement? What are some of the advantages and disadvantages of each? This section answers \nthese and other questions. \nRENTAL AGREEMENTS AND LEASES \nGeneral information \nBefore you rent a rental unit, you and the landlord must enter into a rental agreement or lease. \nA \"lease\" generally refers to a written agreement while a \"rental agreement\" generally includes \nboth oral and written agreement. However, these terms are synonymous and can be used \ninterchangeably. For purposes of this guide, the term \"rental agreement\" is used to describe both \na \"rental agreement\" and a \"lease.\" \nThe tenant’s right to use and possess the landlord’s",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 5,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "15",
+      "chunk_sha256": "764394819d172f83c9a063873b7fde80708b1a5cdb77e5932d129f329c26d5b0",
+      "store_score": 0.6972290410126155,
+      "independent_cosine": 0.6972291469573975,
+      "chunk_length_chars": 2101,
+      "preview": "FAIR HOUSING Equal Opportunity for All A Conciliation Agreement provides individual relief to you, and protects the public interest by deterring future discrimi",
+      "chunk_text": "FAIR HOUSING\n Equal Opportunity for All\n A Conciliation Agreement provides individual relief to you, and \nprotects the public interest by deterring future discrimination by \nthe respondent. Once you and the respondent sign a Conciliation \nAgreement, and HUD approves the Agreement, HUD will cease \ninvestigating your complaint. If you believe that the respondent \nhas violated breached your Conciliation Agreement, you should \npromptly notify the HUD Office that investigated your complaint. If \nHUD determines that there is reasonable cause to believe that the\nrespondent violated the Agreement, HUD will ask the U.S. \nDepartment of Justice to file suit against the respondent in Federal \nDistrict Court to enforce the terms of the Agreement.\nComplaint Referrals to State or Local Public Fair Housing Agencies: \nIf HUD has certified that your State or local public fair housing \nagency enforces a civil rights law or ordinance that provides rights, \nremedies and protections that are “substantially equivalent” to \nthe Fair Housing Act, HUD must promptly refer your complaint to \nthat agency for investigation, and must promptly notify you of the \nreferral. The State or local agency will investigate your complaint \nunder the “substantially equivalent” State or local civil rights law \nor ordinance. The State or local public fair housing agency must \nstart investigating your complaint within 30 days of HUD’s referral, \nor HUD may retrieve (“reactivate”) the complaint for investigation \nunder the Fair Housing Act.\nWhat Happens If I’m Going to Lose My Housing \nThrough Eviction or Sale?\nIf you need immediate help to stop or prevent a severe problem \ncaused by a Fair Housing Act violation, HUD may be able to assist \nyou as soon as you file a complaint. HUD may authorize the U.S. \nDepartment of Justice to file a Motion in Federal District Court \nfor a Temporary Restraining Order (TRO) against the respondent, \nfollowed by a Preliminary Injunction pending the outcome of HUD’s \ninvestigation. A Federal Judge may grant a TRO or a Preliminary \nInjunction against a respondent in cases where:\n11",
+      "window_preview": "",
+      "window_text": null
+    }
+  ]
+}

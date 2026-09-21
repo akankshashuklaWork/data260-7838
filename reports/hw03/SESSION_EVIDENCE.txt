@@ -1,0 +1,29 @@
+DATA 260 HW3 Part 1 - session security evidence
+Collected: 2026-09-18 PDT
+Application: http://127.0.0.1:8638
+
+1. Valid login response
+
+HTTP/1.1 303 See Other
+location: /dashboard
+vary: Cookie
+set-cookie: s7838_session=<REDACTED_SIGNED_SESSION>; path=/; Max-Age=3600; httponly; samesite=lax; secure
+
+Verified cookie attributes:
+- Secure
+- HttpOnly
+- SameSite=Lax
+
+2. Logout invalidation
+
+After POST /logout, a new request using the old session cookie for /dashboard
+was redirected to /login. Screenshot: 06_logged_out_dashboard_rejected.png
+
+3. Idle-timeout invalidation
+
+For a quick, reproducible evidence run, the application was started with
+SESSION_IDLE_TIMEOUT_SECONDS=1. After the session became idle, a request using
+the original cookie for /dashboard was redirected to /login?expired=true.
+Screenshot: 07_expired_session_rejected.png
+
+The normal application default remains 900 seconds (15 minutes).

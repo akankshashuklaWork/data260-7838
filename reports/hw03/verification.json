@@ -1,0 +1,679 @@
+{
+  "sid4": 7838,
+  "seed": 7838,
+  "domain_id": 6,
+  "all_checks_passed": true,
+  "check_count": 166,
+  "maximum_store_cosine_delta": 1.8287165282071527e-07,
+  "chunk_counts": {
+    "token": 337,
+    "semantic": 436,
+    "sentence_window": 3851
+  },
+  "checks": [
+    {
+      "check": "domain ID is 6",
+      "passed": true
+    },
+    {
+      "check": "manifest contains five PDFs",
+      "passed": true
+    },
+    {
+      "check": "corpus exceeds the 200 KB minimum",
+      "passed": true
+    },
+    {
+      "check": "five retrieval questions exist",
+      "passed": true
+    },
+    {
+      "check": "question IDs are q1 through q5",
+      "passed": true
+    },
+    {
+      "check": "at least two questions are marked unique-source",
+      "passed": true
+    },
+    {
+      "check": "top_k is 5",
+      "passed": true
+    },
+    {
+      "check": "15 per-question/per-technique retrieval files exist",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q1') has five results",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q1') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q1') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q1') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q1') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q1') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q1') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q1') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q1') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q1') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q2') has five results",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q2') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q2') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q2') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q2') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q2') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q2') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q2') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q2') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q2') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q3') has five results",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q3') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q3') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q3') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q3') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q3') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q3') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q3') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q3') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q3') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q4') has five results",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q4') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q4') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q4') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q4') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q4') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q4') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q4') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q4') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q4') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q5') has five results",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q5') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q5') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q5') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q5') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q5') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q5') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q5') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q5') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('semantic', 'q5') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q1') has five results",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q1') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q1') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q1') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q1') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q1') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q1') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q1') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q1') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q1') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q2') has five results",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q2') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q2') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q2') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q2') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q2') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q2') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q2') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q2') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q2') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q3') has five results",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q3') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q3') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q3') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q3') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q3') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q3') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q3') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q3') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q3') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q4') has five results",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q4') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q4') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q4') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q4') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q4') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q4') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q4') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q4') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q4') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q5') has five results",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q5') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q5') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q5') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q5') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q5') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q5') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q5') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q5') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('sentence_window', 'q5') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q1') has five results",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q1') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q1') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q1') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q1') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q1') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q1') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q1') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q1') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q1') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q2') has five results",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q2') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q2') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q2') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q2') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q2') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q2') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q2') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q2') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q2') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q3') has five results",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q3') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q3') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q3') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q3') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q3') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q3') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q3') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q3') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q3') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q4') has five results",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q4') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q4') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q4') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q4') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q4') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q4') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q4') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q4') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q4') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q5') has five results",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q5') query vector shape is [384]",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q5') document vector shape is [5, 384]",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q5') uses the configured public embedding model",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q5') contains no generated answer",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q5') rank 1 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q5') rank 2 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q5') rank 3 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q5') rank 4 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "('token', 'q5') rank 5 has a chunk hash",
+      "passed": true
+    },
+    {
+      "check": "all five questions exist for all three techniques",
+      "passed": true
+    },
+    {
+      "check": "store and independent cosine scores agree within 1e-5",
+      "passed": true
+    },
+    {
+      "check": "chunk summary contains all three techniques",
+      "passed": true
+    },
+    {
+      "check": "every technique produced non-empty chunks",
+      "passed": true
+    },
+    {
+      "check": "aggregate metrics contain three techniques",
+      "passed": true
+    },
+    {
+      "check": "per-question metrics contain 15 rows",
+      "passed": true
+    },
+    {
+      "check": "sentence-window q1 misses its expected source at top 5",
+      "passed": true
+    },
+    {
+      "check": "sentence-window q1 rank-1 text omits the expected answer",
+      "passed": true
+    }
+  ]
+}

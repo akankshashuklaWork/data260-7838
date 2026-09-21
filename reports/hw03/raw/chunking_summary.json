@@ -1,0 +1,26 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "techniques": [
+    {
+      "technique": "token",
+      "chunks": 337,
+      "avg_chunk_length_chars": 1598.85,
+      "min_chunk_length_chars": 5,
+      "max_chunk_length_chars": 3073
+    },
+    {
+      "technique": "semantic",
+      "chunks": 436,
+      "avg_chunk_length_chars": 1157.87,
+      "min_chunk_length_chars": 2,
+      "max_chunk_length_chars": 4185
+    },
+    {
+      "technique": "sentence_window",
+      "chunks": 3851,
+      "avg_chunk_length_chars": 131.09,
+      "min_chunk_length_chars": 1,
+      "max_chunk_length_chars": 3769
+    }
+  ]
+}

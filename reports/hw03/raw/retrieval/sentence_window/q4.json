@@ -1,0 +1,103 @@
+{
+  "experiment": "HW3 Part 2 retrieval-only RAG",
+  "sid4": 7838,
+  "seed": 7838,
+  "domain_id": 6,
+  "domain": "Rental housing",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "technique": "sentence_window",
+  "chunk_count": 3851,
+  "index_build_ms": 6358.667291,
+  "question_id": "q4",
+  "question": "Does California fair housing law protect tenants from discrimination based on source of income, and what advertisement is given as an example?",
+  "expected_answer": "Yes. Source of income is protected, and an advertisement such as No Section 8 is given as an example of unlawful discrimination.",
+  "expected_source": "california_fair_housing_fact_sheet_2022.pdf",
+  "unique_source": false,
+  "top_k": 5,
+  "latency_ms": 32.971874985378236,
+  "query_vector_shape": [
+    384
+  ],
+  "query_embedding_dimension": 384,
+  "query_vector_first_8": [
+    -0.00074,
+    0.03234,
+    -0.020156,
+    0.007184,
+    0.03274,
+    0.031442,
+    0.012201,
+    -0.10141
+  ],
+  "document_vectors_shape": [
+    5,
+    384
+  ],
+  "results": [
+    {
+      "rank": 1,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "18",
+      "chunk_sha256": "07753b8704328d9bc4e48efbfc17aa2c4937680a14f492e27f78af8c11965e21",
+      "store_score": 0.7915941719578277,
+      "independent_cosine": 0.7915942668914795,
+      "chunk_length_chars": 292,
+      "preview": "NOTE: Because California’s fair housing law prohibits discrimination on the basis of source of income, tenants who will pay some or all of the rent from other t",
+      "chunk_text": "NOTE: Because California’s fair housing law prohibits discrimination on the basis of source of \nincome, tenants who will pay some or all of the rent from other than employment income must \nbe given the opportunity to provide verification of their income from tho se non-employment \nsources. \n",
+      "window_preview": "A rental application is different from a rental agreement (see pages 24-26). The rental application is like a job or credit application that the landlord will u",
+      "window_text": "A rental \napplication is different from a rental agreement (see pages 24-26).  The rental application is like a \njob or credit application that the landlord will use to decide whether to rent to you. \n A rental application usually asks for the following information: \n• The names, addresses, and telephone numbers of your current and past employers.\n NOTE: Because California’s fair housing law prohibits discrimination on the basis of source of \nincome, tenants who will pay some or all of the rent from other than employment income must \nbe given the opportunity to provide verification of their income from tho se non-employment \nsources. \n • The names, addresses, and telephone numbers of your current and past landlords.\n • The names, addresses, and telephone numbers of people whom you want to use as\nreferences.\n • Criminal history information (see page 12)."
+    },
+    {
+      "rank": 2,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "117",
+      "chunk_sha256": "aa46296a5f3f0bf707bab59cb6bb2575e52bcaca70f8cfe78e07588df45bf639",
+      "store_score": 0.713392391999405,
+      "independent_cosine": 0.7133924961090088,
+      "chunk_length_chars": 649,
+      "preview": "Retaliatory discrimination A landlord, managing agent, real estate broker, or salesperson violates California’s Fair Employment and Housing Act and the federal ",
+      "chunk_text": "Retaliatory discrimination \nA landlord, managing agent, real estate broker, or salesperson violates California’s Fair \nEmployment and Housing Act and the federal Fair Housing Act by harassing, evicting, or otherwise \ndiscriminating against a person in the sale or renting of housing when the “dominant purpose” is \nto retaliate against a person who has done any of the following:503\n• Opposed practices that are discriminatory and unlawful under either Act;\n• Told the police about a landlord’s discriminatory or unlawful behavior; or\n• Aided or encouraged a person to exercise rights protected by California laws prohibiting\nhousing discrimination.",
+      "window_preview": "In addition to actual damages, the anti-retaliation law provides for up to $2,000 in statutory damages for each actual or attempted retaliatory act by the landl",
+      "window_text": "In addition to actual damages, the anti-retaliation law provides \nfor up to $2,000 in statutory damages for each actual or attempted retaliatory act by the landlord. \n If you feel that your landlord has retaliated against you because of action you properly  took \nagainst your landlord, talk with an attorney or legal aid organization.  An attorney also may be able \nto advise you about other defenses. \n Retaliatory discrimination \nA landlord, managing agent, real estate broker, or salesperson violates California’s Fair \nEmployment and Housing Act and the federal Fair Housing Act by harassing, evicting, or otherwise \ndiscriminating against a person in the sale or renting of housing when the “dominant purpose” is \nto retaliate against a person who has done any of the following:503\n• Opposed practices that are discriminatory and unlawful under either Act;\n• Told the police about a landlord’s discriminatory or unlawful behavior; or\n• Aided or encouraged a person to exercise rights protected by California laws prohibiting\nhousing discrimination."
+    },
+    {
+      "rank": 3,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "6",
+      "chunk_sha256": "cc95a3e842fb105be536b1b1006a8a070e6e554d0957cdf9ccb3e9d21d832f16",
+      "store_score": 0.6899637000103106,
+      "independent_cosine": 0.6899638175964355,
+      "chunk_length_chars": 578,
+      "preview": "This prohibition against discriminatory advertising applies to single-family and owner-occupied housing that is otherwise exempt from the Fair Housing Act • Ref",
+      "chunk_text": "This prohibition \nagainst discriminatory advertising applies to single-family and \nowner-occupied housing that is otherwise exempt from the \nFair Housing Act \n• Refuse to provide homeowners insurance coverage for a \ndwelling because of the race, color, religion, sex, disability, \nfamilial status, or national origin of the owner and/or occupants \nof a dwelling \n• Discriminate in the terms or conditions of homeowners \ninsurance coverage because of the race, color, religion, sex, \ndisability, familial status, or national origin of the owner and/or \noccupants of a dwelling \n2",
+      "window_preview": "have moved, or are about to move into the neighborhood (blockbusting) or • Deny any person access to, membership or participation in, any organization, facility",
+      "window_text": "have moved, or are about to move into the neighborhood \n(blockbusting) or \n• Deny any person access to, membership or participation \nin, any organization, facility or service (such as a multiple \nlisting service) related to the sale or rental of dwellings, or \ndiscriminate against any person in the terms or conditions of \nsuch access, membership or participation.\n In Mortgage Lending:  No one may take any of the following actions \nbased on race, color, religion, sex, disability, familial status, or \nnational origin: \n• Refuse to make a mortgage loan \n• Refuse to provide information regarding loans \n• Impose different terms or conditions on a loan, such as \ndifferent interest rates, points, or fees \n• Discriminate in appraising property \n• Refuse to purchase a loan or \n• Set different terms or conditions for purchasing a loan.\n • In addition, it is a violation of the Fair Housing Act to:\n• Threaten, coerce, intimidate or interfere with anyone exercising \na fair housing right or assisting others who exercise the right \n• Make, print, or publish any statement, in connection with the \nsale or rental of a dwelling, which indicates a preference, \nlimitation, or discrimination based on race, color, religion, sex, \ndisability, familial status, or national origin.  This prohibition \nagainst discriminatory advertising applies to single-family and \nowner-occupied housing that is otherwise exempt from the \nFair Housing Act \n• Refuse to provide homeowners insurance coverage for a \ndwelling because of the race, color, religion, sex, disability, \nfamilial status, or national origin of the owner and/or occupants \nof a dwelling \n• Discriminate in the terms or conditions of homeowners \ninsurance coverage because of the race, color, religion, sex, \ndisability, familial status, or national origin of the owner and/or \noccupants of a dwelling \n2"
+    },
+    {
+      "rank": 4,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "26",
+      "chunk_sha256": "e34e0789347053649bc5e16cf32d8eba7a7e14474e7f72e6c0b0eb69a5c7c646",
+      "store_score": 0.6787200529529321,
+      "independent_cosine": 0.678720235824585,
+      "chunk_length_chars": 261,
+      "preview": "61 Indeed, the California Legislature has declared that the opportunity to seek, obtain, and hold housing free of unlawful discrimination is a civil right prote",
+      "chunk_text": "61 \nIndeed, \nthe California Legislature has declared that the opportunity to seek, obtain, and hold housing free \nof unlawful discrimination is a civil right protected under the United States and California \nConstitutions.62\nDiscrimination can take many forms. ",
+      "window_preview": "20 • Military or veteran status • Age Discrimination on the basis of specified personal char acteristics, is also prohibited. 61 Indeed, the California Legislat",
+      "window_text": "20 \n• Military or veteran status\n• Age\nDiscrimination on the basis of specified personal char acteristics, is also prohibited.  61 \nIndeed, \nthe California Legislature has declared that the opportunity to seek, obtain, and hold housing free \nof unlawful discrimination is a civil right protected under the United States and California \nConstitutions.62\nDiscrimination can take many forms.  Discrimination may mean treating a person or people \ndifferently because of a particular protected characteristic.  Examples of different treatment could \nbe a landlord failing to make repairs for tenants of a specific ethnicity or singling out tenants over \na certain age for eviction.  Discrimination also includes actions that were not meant to be \ndiscriminatory, but that harm protected groups.63 For example, having very strict rules against how \nmany people can live in a housing unit may result in excluding many families with children. \n"
+    },
+    {
+      "rank": 5,
+      "source_file": "hud_fair_housing_act_guide.pdf",
+      "page_label": "6",
+      "chunk_sha256": "03aa47f1921a9d0a4ad14539ffbb2144c666e2b8785b82c170037b87398aebf5",
+      "store_score": 0.673329657241454,
+      "independent_cosine": 0.6733297109603882,
+      "chunk_length_chars": 437,
+      "preview": "• In addition, it is a violation of the Fair Housing Act to: • Threaten, coerce, intimidate or interfere with anyone exercising a fair housing right or assistin",
+      "chunk_text": "• In addition, it is a violation of the Fair Housing Act to:\n• Threaten, coerce, intimidate or interfere with anyone exercising \na fair housing right or assisting others who exercise the right \n• Make, print, or publish any statement, in connection with the \nsale or rental of a dwelling, which indicates a preference, \nlimitation, or discrimination based on race, color, religion, sex, \ndisability, familial status, or national origin. ",
+      "window_preview": "FAIR HOUSING Equal Opportunity for All • For profit, persuade, or try to persuade homeowners to sell or rent dwellings by suggesting that people of a particular",
+      "window_text": "FAIR HOUSING\n Equal Opportunity for All\n• For profit, persuade, or try to persuade homeowners to sell or \nrent dwellings by suggesting that people of a particular race, \netc.  have moved, or are about to move into the neighborhood \n(blockbusting) or \n• Deny any person access to, membership or participation \nin, any organization, facility or service (such as a multiple \nlisting service) related to the sale or rental of dwellings, or \ndiscriminate against any person in the terms or conditions of \nsuch access, membership or participation.\n In Mortgage Lending:  No one may take any of the following actions \nbased on race, color, religion, sex, disability, familial status, or \nnational origin: \n• Refuse to make a mortgage loan \n• Refuse to provide information regarding loans \n• Impose different terms or conditions on a loan, such as \ndifferent interest rates, points, or fees \n• Discriminate in appraising property \n• Refuse to purchase a loan or \n• Set different terms or conditions for purchasing a loan.\n • In addition, it is a violation of the Fair Housing Act to:\n• Threaten, coerce, intimidate or interfere with anyone exercising \na fair housing right or assisting others who exercise the right \n• Make, print, or publish any statement, in connection with the \nsale or rental of a dwelling, which indicates a preference, \nlimitation, or discrimination based on race, color, religion, sex, \ndisability, familial status, or national origin.  This prohibition \nagainst discriminatory advertising applies to single-family and \nowner-occupied housing that is otherwise exempt from the \nFair Housing Act \n• Refuse to provide homeowners insurance coverage for a \ndwelling because of the race, color, religion, sex, disability, \nfamilial status, or national origin of the owner and/or occupants \nof a dwelling \n• Discriminate in the terms or conditions of homeowners \ninsurance coverage because of the race, color, religion, sex, \ndisability, familial status, or national origin of the owner and/or \noccupants of a dwelling \n2"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+DATA 260 Homework 3 Run Log
+Repository: data260-7838
+SID4: 7838
+PORT_BASE: 8638
+
+[2026-09-18 01:37 PDT] Implemented the separate FastAPI authentication router,
+Bootstrap templates, secure session-cookie configuration, protected dashboard,
+logout, and 15-minute idle timeout.
+
+[2026-09-18 01:37 PDT] Command: node code/web_application/tests/run-tests.js
+Result: PASS - all existing HW1/HW2 browser application checks passed.
+
+[2026-09-18 01:37 PDT] Command: python code/test_auth.py
+Result: PASS - home, invalid login, valid login, Secure/HttpOnly/SameSite=Lax,
+protected dashboard, idle expiry, logout, and post-logout rejection checks passed.
+
+[2026-09-18 01:37 PDT] Visual check: desktop and 375px-wide layouts inspected.
+Result: PASS - home, invalid-login alert, and protected dashboard rendered cleanly.
+
+[2026-09-18 01:44 PDT] Part 1 evidence collection completed against the running
+application at http://127.0.0.1:8638.
+Result: PASS - captured home, login, invalid credentials, authenticated dashboard,
+logout confirmation, post-logout rejection, and idle-timeout rejection.
+
+[2026-09-18 01:44 PDT] Session cookie response header inspected after a valid login.
+Result: PASS - Max-Age=3600; HttpOnly; SameSite=Lax; Secure were present. The signed
+cookie value is redacted in the stored evidence.
+
+[2026-09-18 01:45 PDT] Idle-timeout evidence run with
+SESSION_IDLE_TIMEOUT_SECONDS=1 (production default remains 900 seconds).
+Result: PASS - attempting to reuse the dashboard session redirected to
+/login?expired=true.
+
+[2026-09-18 17:10 PDT] Command: HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+PYTHONPATH=code .venv-hw3/bin/python -m hw3_rag.run_experiment
+Result: PASS - built three in-memory indexes and saved 15 retrieval-only JSON
+records (five questions by three chunking techniques).
+
+[2026-09-18 17:13 PDT] Command: HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+PYTHONPATH=code .venv-hw3/bin/python -m hw3_rag.metrics
+Result: PASS - generated chunking statistics, aggregate/per-question metrics,
+and independently verified vector-store scores against NumPy cosine similarity.
+
+[2026-09-21 00:29 PDT] Final verification
+Command: HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONPATH=code
+.venv-hw3/bin/python -m hw3_rag.verify
+Output:
+PASS: 166 checks; maximum score delta=1.82871652821e-07
+Wrote /Users/akanksha/Documents/HW2/data260-7838/reports/hw03/verification.json
+Result: PASS - verified the corpus manifest, five-question configuration, all
+15 retrieval result files, vector shapes, public embedding-model identifier,
+chunk hashes, cosine-score agreement, chunking summary, metrics files, and the
+documented sentence-window q1 retrieval failure.

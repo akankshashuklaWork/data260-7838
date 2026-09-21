@@ -1,0 +1,103 @@
+{
+  "experiment": "HW3 Part 2 retrieval-only RAG",
+  "sid4": 7838,
+  "seed": 7838,
+  "domain_id": 6,
+  "domain": "Rental housing",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "technique": "token",
+  "chunk_count": 337,
+  "index_build_ms": 1668.142042,
+  "question_id": "q2",
+  "question": "How many just causes for terminating a tenancy are listed under the San Jose Tenant Protection Ordinance?",
+  "expected_answer": "The ordinance lists 13 just causes for terminating a tenancy.",
+  "expected_source": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+  "unique_source": true,
+  "top_k": 5,
+  "latency_ms": 6.612083001527935,
+  "query_vector_shape": [
+    384
+  ],
+  "query_embedding_dimension": 384,
+  "query_vector_first_8": [
+    0.075144,
+    -0.021081,
+    0.039593,
+    0.011845,
+    0.049324,
+    0.06625,
+    -0.045131,
+    -0.037403
+  ],
+  "document_vectors_shape": [
+    5,
+    384
+  ],
+  "results": [
+    {
+      "rank": 1,
+      "source_file": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+      "page_label": "1",
+      "chunk_sha256": "044ca1ea6498c1c1c77f4a10f962d9930ffafb5b593d2c777502dc01e8d43afd",
+      "store_score": 0.7518563522809576,
+      "independent_cosine": 0.7518563866615295,
+      "chunk_length_chars": 2219,
+      "preview": "notices, 30-60-90 day notices, and Summons & Complaints. With just cause protections, all notices of termination must be based on one of the reasons outlined in",
+      "chunk_text": "notices, 30-60-90 day notices, and Summons & Complaints. \nWith just cause protections, all notices of termination must be based on one of the reasons outlined in the Tenant Protection Ordinance \n(San José Municipal Code Section 17.23.1250): \nCovered \n Rent Stabilized Units* \n Rental Units in any Multiple Dwelling, except permitted \nhotels and motels \n Guest rooms in any Guesthouse \n Unpermitted Units** \nJust Cause Terminations \nCauses based on actions or inactions of the tenant \n1. Nonpayment of Rent \nFailure to pay Rent in accordance with the rental agreement. \n2. Material or Habitual Violation of the Tenancy \nAfter a written notice to a tenant to cure a material violation of the lease, the tenant fails to cure such violation within a \nreasonable time after receiving notice; or, the tenant commits habitual violations of the rental agreement. \nCertain violations can never be considered a material or habitual violation of the lease: 1) an obligation to surrender possession; \n2) an obligation to limit occupancy when the additional tenant is: a) dependent/foster child; b) minor in tenant’s care; c) spouse; \nd) domestic partner; e) parent; so long as the total number of adult Tenants in the unit does not exceed the greater of either the \nmaximum number of individuals authorize in the rental agreement or two adults per bedroom. \n3. Substantial Damage to the Apartment \nThe tenant, after written notice to cease and a reasonable time to cure, causes substantial damage beyond normal wear and \ntear to the Rental Unit, common area, or rental complex, and refuses, after written notice, to pay the reasonable costs of \nrepairing such damage and to cease engaging in the conduct identified in the notice.  \n4. Refusal to Agree to a Like or New Rental Agreement \nThe tenant refuses to agree to a new substantially identical rental agreement after th e expiration of the prior rental agreement.  \n5. Nuisance Behavior  \nAfter receiving a written notice to cease, the tenant continues to cause nuisance (including a violation of state or federal law) \nthat destroys the peace or safety of the landlord or other tenants.   \n6. Refusing Access to the Apartment \nAfter receiving a written notice to cease and",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 2,
+      "source_file": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+      "page_label": "1",
+      "chunk_sha256": "434aca0693b14a92db0c9ab03320dc88eb69f57c73192e978afb412f1d4d236a",
+      "store_score": 0.7496106975761406,
+      "independent_cosine": 0.7496107220649719,
+      "chunk_length_chars": 1857,
+      "preview": "D Rent Stabilization Program City of San José Housing Department 200 East Santa Clara St, 12th Floor, San José, CA 95113 408‐975‐4480 • www.sanjoseca.gov/rent •",
+      "chunk_text": "D \nRent Stabilization Program \nCity of San José Housing Department \n200 East Santa Clara St, 12th Floor, San José, CA 95113 \n408‐975‐4480   •   www.sanjoseca.gov/rent  •  RSP@sanjoseca.gov              v5/31/2018 \nTENANT PROTECTION ORDINANCE \nFACT SHEET \nABOUT THE ORDINANCE \nThe Tenant Protection Ordinance can be found in San José Municipal Code (SJMC) Chapter 17.23, Part 12, beginning with Section \n17.23.1200. The Ordinance provides substantive requirements for evicting tenants for tenants living in certain “covered” apartments, \nas listed below. The Ordinance eliminates no-cause notices to vacate. Additionally, all terminations of tenancy must be based on at \nleast one of the 13 just cause terminations listed in SJMC Section 17.23.1250(A) and described below. The Tenant Protection \nOrdinance went into effect June 16, 2017, and its protections are applied to all new and existing tenants.  \nTYPES OF BU ILDING S THAT JUST CAUSE APPLIES TO \n* “Rent Stabilized Units” means Rental Units that are subject to rent \nstabilization under the City’s Apartment Rent Ordinance, which includes \nunits in any Multiple Dwelling building and guesthouses built on or prior to \nSeptember 7, 1979. \n** “Unpermitted dwellings” means a structure or parts of a structure that are \nbeing rented as a home, residence, or sleeping place, where the use is not \nauthorized, permitted, or otherwise approved by the City. \nJUST CAUSE TERMINATIONS \nAll notices of terminations must be submitted to the Rent Stabilization Program online at www.sanjoseca.gov/rent. Landlords must \nsubmit copies of any notices of termination to the City, including: 3-day notices, 30-60-90 day notices, and Summons & Complaints. \nWith just cause protections, all notices of termination must be based on one of the reasons outlined in the Tenant Protection Ordinance \n(San José Municipal Code",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 3,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "98",
+      "chunk_sha256": "1660e75bd27fb107cdb5e03c156c188f85acb2d9dd4beb53b467c8bef613280a",
+      "store_score": 0.6450662755199327,
+      "independent_cosine": 0.6450663805007935,
+      "chunk_length_chars": 2292,
+      "preview": "92 “California law limits the amount your rent can be increased. See Section 1947.12 of the Civil Code for more information. California law also provides that a",
+      "chunk_text": "92 \n“California law limits the amount your rent can be increased. See Section 1947.12 of the Civil \nCode for more information. California law also provides that after all of the tenants have \ncontinuously and lawfully occupied the property for 12 months or more or at least one of the \ntenants has continuously and lawfully occupied the property for 24 months or more, a landlord \nmust provide a statement of cause in any notice to terminate a tenancy. See Section 1946.2 of \nthe Civil Code for more information.” \nThe sections of the Tenant Protection Act relevant to just cause evictions are summarized \nbelow. The sections relevant to rent increases are summarized starting on page 45. \nA landlord’s ability to terminate the tenancy and evict the tenant is based on whether or not \ntheir rental unit is subject to local just cause for eviction laws or the state’s Tenant Protection Act. \nIf a rental unit is subject to both local and state just cause for eviction laws, the Tenant Protection \nAct’s just cause protections do not apply if the local ordinance was adopted on or before \nSeptember 1, 2019, or it was adopted or amended after September 1, 2019 and provides stronger \nprotections to the tenant. 412 \nThe Tenant Protection Act’s just cause protections apply statewide \nand cover rental units where the tenant has resided at the unit for more than 12 months or 24 \nmonths if an additional adult tenant was added to the rental agreement less than 12 months \nago.413 Certain types of housing units are exempt from the Tenant Protection Act, including:  \n• transient and tourist hotel occupancy;\n• housing ac\ncommodations in a nonprofit hospital,  religious facility, extended care \nfacil\nity \nor licensed residential care facility for the elderly;\n• dormitories \nowned and operated by  an institution of higher education or a school for \ngrades kindergarten through 12th grade;\n• housing accommodati\nons in which the tenant shares bedroom or kitchen facilities  \nwith t\nhe owner who maintains their principal residence at the property;\n• single\n-family owner-occupied r esidences;\n• a duplex\n in which the owner occupied one of the units as the owner’s principal place \nof residence\n at the beginning of the tenancy and continues to occupy that unit;\n• housing t\nhat has been issued",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 4,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "80",
+      "chunk_sha256": "4d185f0107ed162bfa7217c16f964293710a16f496018f899a602c4ad8f9eba5",
+      "store_score": 0.6286179330728991,
+      "independent_cosine": 0.6286179423332214,
+      "chunk_length_chars": 2241,
+      "preview": "74 or threatened victim as good cause for the landlord to terminate the tenancy or occupancy rights of the victim.320 To terminate the tenancy of a tenant who p",
+      "chunk_text": "74 \nor threatened victim as good cause for the landlord to terminate the tenancy or occupancy rights \nof the victim.320 \nTo terminate the tenancy of a tenant who participates in the Section 8 Housing Choice Voucher \nprogram, the landlord must first give the tenant the applicable three -day or 90- day notice of \ntermination under California law 321  \n(see pages 95- 98), and the landlord must give the public \nhousing agency a copy of the notice at the same time.322 \nIf the landlord simply decides not to renew \nthe rental agreement, or decides to terminate the HAP (housing assistance payment) contract, the \nlandlord must give the tenant 90 days’ advance written notice of the termination date, to occur on \nor after the expiration date of a rental agreement for a fixed-term.323 \nIf the tenant does not move \nout by the end of the 90 days, the landlord must follow California law to evict the tenant.324\nLikewise, if a landlord has served a 3-day type of notice for a violation that either is not corrected \nor is for those limited violations that cannot be corrected, and the tenant has also not quit the \npremises, the landlord must follow California law to evict the tenant.325\nIf the tenancy is protected by local just cause for eviction laws or the 2019 Tenant Protection Act, \nthe landlord must have a valid reason justifying “cause” to terminate the tenancy, such as t he \ntenant’s failure to pay rent. 326 Even if the tenant is not at fault, the landlord can terminate the \ntenancy if the landlord has just cause, such as the property will be demolished, substantially \nremodeled, or occupied by the landlord or his or her close family member. However, in situations \nwhere the tenant is not at fault, but the landlord has just cause to terminate, the landlord will often \nbe obligated to pay the tenant relocation assistance—either equal to one month’s rent under the \nTenant Protection Act or different relocation assistance amounts un der applicable local \nordinances.327 \nIf you live in government financed or subsidized housing, or in an area with rent control, check \nwith your local housing officials or a housing counseling agency to see if any special rules apply in \nyour situation. \nTENANT PROTECTION ACT OF 2019 \nThe",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 5,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "146",
+      "chunk_sha256": "a8052ee584df0f93cdacbc542d1a4975014355dc5d7ec608c704250cca85e516",
+      "store_score": 0.6154115628738605,
+      "independent_cosine": 0.6154115796089172,
+      "chunk_length_chars": 439,
+      "preview": "196 Civ. Code § 1940.5(f). 197 Civ. Code §§ 1954(b) and 1954(d)(1). 198 Civ. Code § 1954(d) - (e). 199 Civ. Code § 1954(d)(1). 200 Ibid. 201 Civ. Code § 1954(d)",
+      "chunk_text": "196 Civ. Code § 1940.5(f). \n197 Civ. Code §§ 1954(b) and 1954(d)(1). \n198 Civ. Code § 1954(d) - (e). \n199 Civ. Code § 1954(d)(1). \n200 Ibid. \n201 Civ. Code § 1954(d)(2); Moskovitz et al., California Landlord-Tenant Practice, § 3.3 (Cont.Ed.Bar 2021). \n202 Civ. Code § 1954(b). \n203 Civ. Code § 1954(d)(2). \n204 Civ. Code § 1954(c). \n205 Civ. Code § 1940.2(a)(4). \n206 Civ. Code § 1940.2(b). \n207 Civ. Code § 1995.260. \n208 Civ. Code § 822.",
+      "window_preview": "",
+      "window_text": null
+    }
+  ]
+}

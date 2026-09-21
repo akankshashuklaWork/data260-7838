@@ -1,0 +1,32 @@
+Set-Cookie evidence (value hidden):
+HTTP/1.1 303 See Other
+date: Mon, 21 Sep 2026 08:03:48 GMT
+server: uvicorn
+content-length: 0
+location: /dashboard
+vary: Cookie
+set-cookie: s7838_session=<signed value hidden>; path=/; Max-Age=3600; httponly; samesite=lax; secure
+
+Logout replay check (port 8638):
+$ curl -m 8 -s -c jar.txt -o /dev/null -w "HTTP %{http_code}  redirect: %{redirect_url}\n" -d "username=akanksha&password=****" http://127.0.0.1:8638/login
+HTTP 303  redirect: http://127.0.0.1:8638/dashboard
+$ cp jar.txt old.txt
+
+$ curl -m 8 -s -b jar.txt -c jar.txt -o /dev/null -w "HTTP %{http_code}  redirect: %{redirect_url}\n" http://127.0.0.1:8638/dashboard
+HTTP 200  redirect:
+$ curl -m 8 -s -b jar.txt -c jar.txt -o /dev/null -w "HTTP %{http_code}  redirect: %{redirect_url}\n" http://127.0.0.1:8638/logout
+HTTP 303  redirect: http://127.0.0.1:8638/
+$ curl -m 8 -s -b jar.txt -o /dev/null -w "HTTP %{http_code}  redirect: %{redirect_url}\n" http://127.0.0.1:8638/dashboard
+HTTP 303  redirect: http://127.0.0.1:8638/login
+$ curl -m 8 -s -b old.txt -o /dev/null -w "HTTP %{http_code}  redirect: %{redirect_url}\n" http://127.0.0.1:8638/dashboard
+HTTP 303  redirect: http://127.0.0.1:8638/login
+
+Idle timeout check (port 8639, SESSION_IDLE_TIMEOUT_SECONDS=3):
+$ curl -m 8 -s -c jar2.txt -o /dev/null -w "HTTP %{http_code}  redirect: %{redirect_url}\n" -d "username=akanksha&password=****" http://127.0.0.1:8639/login
+HTTP 303  redirect: http://127.0.0.1:8639/dashboard
+$ curl -m 8 -s -b jar2.txt -c jar2.txt -o /dev/null -w "HTTP %{http_code}  redirect: %{redirect_url}\n" http://127.0.0.1:8639/dashboard
+HTTP 200  redirect:
+$ sleep 5
+
+$ curl -m 8 -s -b jar2.txt -o /dev/null -w "HTTP %{http_code}  redirect: %{redirect_url}\n" http://127.0.0.1:8639/dashboard
+HTTP 303  redirect: http://127.0.0.1:8639/login?expired=true

@@ -1,0 +1,51 @@
+HW3 setup and reproducible verification
+
+Run all commands from the repository root unless a step says otherwise.
+
+1. Create and activate Python 3.11 or 3.12 virtual environment.
+2. Install dependencies:
+
+   pip install -r code/requirements.txt
+
+3. Set runtime values:
+
+   export SESSION_SECRET_KEY="replace-with-a-long-random-value"
+   export APP_LOGIN_USERNAME="akanksha"
+   export APP_LOGIN_PASSWORD="data260"
+
+4. Start the application from the repository root:
+
+   cd code
+   uvicorn web_application.app:app --host 127.0.0.1 --port 8638
+
+5. Open http://localhost:8638.
+
+6. Run the authentication checks from the repository root:
+
+   python code/test_auth.py
+
+7. Run the retrieval-only RAG experiment:
+
+   PYTHONPATH=code python -m hw3_rag.run_experiment
+
+   If the embedding model is already cached and the computer is offline, use:
+
+   HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONPATH=code python -m hw3_rag.run_experiment
+
+8. Calculate the aggregate and per-question metrics:
+
+   PYTHONPATH=code python -m hw3_rag.metrics
+
+9. Run the Part 2 evidence self-check:
+
+   PYTHONPATH=code python -m hw3_rag.verify
+
+Expected Part 2 outputs:
+
+- 15 JSON files under reports/hw03/raw/retrieval/
+- reports/hw03/raw/chunking_summary.json
+- reports/hw03/METRICS.json
+- reports/hw03/METRICS.csv
+- reports/hw03/METRICS_PER_QUESTION.csv
+- reports/hw03/METRICS.md
+- reports/hw03/verification.json

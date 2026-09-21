@@ -1,0 +1,103 @@
+{
+  "experiment": "HW3 Part 2 retrieval-only RAG",
+  "sid4": 7838,
+  "seed": 7838,
+  "domain_id": 6,
+  "domain": "Rental housing",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "technique": "token",
+  "chunk_count": 337,
+  "index_build_ms": 1668.142042,
+  "question_id": "q4",
+  "question": "Does California fair housing law protect tenants from discrimination based on source of income, and what advertisement is given as an example?",
+  "expected_answer": "Yes. Source of income is protected, and an advertisement such as No Section 8 is given as an example of unlawful discrimination.",
+  "expected_source": "california_fair_housing_fact_sheet_2022.pdf",
+  "unique_source": false,
+  "top_k": 5,
+  "latency_ms": 6.673249998129904,
+  "query_vector_shape": [
+    384
+  ],
+  "query_embedding_dimension": 384,
+  "query_vector_first_8": [
+    -0.00074,
+    0.03234,
+    -0.020156,
+    0.007184,
+    0.03274,
+    0.031442,
+    0.012201,
+    -0.10141
+  ],
+  "document_vectors_shape": [
+    5,
+    384
+  ],
+  "results": [
+    {
+      "rank": 1,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "28",
+      "chunk_sha256": "7124f6c8534000187de4259aa67726d114ae22b3d168e66b1b3dbd6761a2bb98",
+      "store_score": 0.6761650504205748,
+      "independent_cosine": 0.6761651635169983,
+      "chunk_length_chars": 2399,
+      "preview": "22 whether they have children. No law allows advertisement for such preferences. Resolving housing discrimination problems If you are a victim of housing discri",
+      "chunk_text": "22 \nwhether they have children. No law allows advertisement for such preferences. \nResolving housing discrimination problems \nIf you are a victim of housing discrimination (for example, if a landlord refuses to rent to you \nbecause of your race or national origin), you may have several legal remedies, including: \n• Recovery of out-of-pocket losses.\n• An injunction prohibiting the unlawful practice.\n• Access to housing that you were denied.\n• Damages for emotional distress.\n• Civil penalties or punitive damages.\n• Attorney’s fees.\nSometimes, a court may order the landlord to take specific action to stop unlawful \ndiscrimination. For example, the landlord may be ordered to advertise vacancies in minority or \nlocal newspapers, or place fair housing posters in the rental office. \nA number of resources are available to help resolve housing discrimination problems: \n• Local fair housing organizations (often known as fair housing councils). Look in the\nbusiness or commercial section of the phone book, use online resources or dial 4 -1-1 for\ndirectory assistance to find a local organization to assist you. The National Fair Housing\nAlliance maintains an interactive map of local organizations that advocate for fair housing\nat https://nationalfairhousing.org/member-directory/.\n• Landlords may look for local California apartment association chapters. Look in the\nbusiness or commercial section of the phone book. The California Apartment Association\nmaintains a list of local apartment association chapters at www.caanet.org.\n• Local government agencies. Look in the governmental section of the phone book under\nCity or County Government Offices, search your city and county website  for fair housing\ninformation, call the offices of local elected officials (for example, you r city council\nrepresentative or your county supervisor), or dial 4-1-1 for directory assistance.\n• The California Civil Rights Department  (CRD) investigates housing discrimination\ncomplaints (but not other kinds of landlord -tenant problems). CRD enforces the Fair\nEmployment and Housing Act. If you feel that you have been the subject of housing\ndiscrimination, contact CRD . CRD’s Enforcement Unit can be reached at (800) 884 -1684\nTTY (800) 700 -2320. You can learn about CRD’s complaint process at\nhttps://calcivilrights.ca.gov/complaintprocess/.\n• The U.S. Department of Housing and Urban Development (HUD)",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 2,
+      "source_file": "california_fair_housing_fact_sheet_2022.pdf",
+      "page_label": "2",
+      "chunk_sha256": "eb31d76219514daf45c670664edf171aeadcd11c6be62cb9976e0ecfdafce6f5",
+      "store_score": 0.6371312716578285,
+      "independent_cosine": 0.6371313333511353,
+      "chunk_length_chars": 2086,
+      "preview": "FAIR HOUSING FACT SHEET CRD-H03P-ENG / November 2022 EXAMPLES OF HOUSING DISCRIMINATION WHEN BASED ON A PROTECTED CHARACTERISTIC LISTED ABOVE, THE FOLLOWING EXA",
+      "chunk_text": "FAIR \nHOUSING \nFACT SHEET\nCRD-H03P-ENG  /  November 2022\nEXAMPLES OF HOUSING \nDISCRIMINATION\nWHEN BASED ON A PROTECTED \nCHARACTERISTIC LISTED ABOVE, THE \nFOLLOWING EXAMPLES OF HOUSING \nDISCRIMINATION VIOLATE THE LAW:\n• Refusal to sell, rent, or lease an apartment, \nhouse, or other housing accommodation\n• Representation that a housing \naccommodation is not available for \ninspection, sale, or rental when that \naccommodation is in fact available\n• Denial of a home loan or homeowner’s \ninsurance\n• Provision of inferior terms, conditions, \nprivileges, facilities, or services in connection \nwith a housing accommodation\n• Sexual harassment involving unwanted  \nsexual advances or requiring sexual favors  \nfor housing rights or privileges\n• Cancellation or termination of a sale or \nrental agreement\n• Refusal to permit, at the disabled tenant’s \nexpense, reasonable modifications when \nnecessary to accommodate a disability\n• Refusal to make reasonable changes in \nhousing rules, policies, practices, or services \nwhere necessary to afford a person with \ndisabilities equal opportunity to use and \nenjoy a dwelling\n• Having a policy that prohibits persons with \na criminal record from renting or living in a \nhousing unit no matter the circumstances\n• Advertising or stating a preference for or \nagainst tenants with certain sources of \nincome, such as: “No section 8.”\nYOU ARE PROTECTED FROM \nDISCRIMINATION AND HARASSMENT \nIN THE RENTING, LEASING, OR \nPURCHASE OF HOUSING\nCIVIL REMEDIES\nIF A HOUSING PROVIDER VIOLATES THE FEHA, \nTHE REMEDIES MAY INCLUDE:\n1. Making previously denied housing available\n2. Compensation for losses and emotional distress\n3. Training and policy changes to prevent future \ndiscrimination\n4. Other actions to eliminate the effects of \ndiscrimination\nZONING AND LAND USE\nIt is illegal for cities, counties, or other local \ngovernment agencies to make zoning or land-use \ndecisions or policies that unlawfully discriminate \nagainst you based on the categories listed above.\nIf you think you have been a victim of \ndiscrimination, please contact CRD.\nTO FILE",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 3,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "26",
+      "chunk_sha256": "80383bfa6c500150097778a1ecba7b85e277b22c233345f9a63bc8751c5633a5",
+      "store_score": 0.6369401182630221,
+      "independent_cosine": 0.6369401812553406,
+      "chunk_length_chars": 2459,
+      "preview": "20 • Military or veteran status • Age Discrimination on the basis of specified personal char acteristics, is also prohibited. 61 Indeed, the California Legislat",
+      "chunk_text": "20 \n• Military or veteran status\n• Age\nDiscrimination on the basis of specified personal char acteristics, is also prohibited. 61 \nIndeed, \nthe California Legislature has declared that the opportunity to seek, obtain, and hold housing free \nof unlawful discrimination is a civil right protected under the United States and California \nConstitutions.62\nDiscrimination can take many forms. Discrimination may mean treating a person or people \ndifferently because of a particular protected characteristic. Examples of different treatment could \nbe a landlord failing to make repairs for tenants of a specific ethnicity or singling out tenants over \na certain age for eviction. Discrimination also includes actions that were not meant to be \ndiscriminatory, but that harm protected groups.63 For example, having very strict rules against how \nmany people can live in a housing unit may result in excluding many families with children. \nUnder California law, it is unlawful for a landlord, managing agent, real estate broker, or \nsalesperson to discriminate against or harass a person because they are a member of or appear to \nbe a member of a  protected class.64 \nCalifornia law also prohibits discrimination based on any of \nthe following: \n• A person’s personal characteristics, such as a person’s physical appearance or other\ncharacteristics that may be termed as ‘arbitrary’ discrimination;65\n• A perception of a person’s protected class or a perception that a person is associated with\nanother person who may be a member of protected class; or66\n• Having or planning to have a family childcare home.67\nThere are several other state laws that prohibit landlords from enforcing improper local rules, \nregulations or policies. A landlord cannot apply rules, regulations or policies to unmarried couples \nor couples who are registered domestic partners that do not apply to married couples. 68 \nFor \nexample, if a landlord allows married couples to combine their incomes to qualify for a unit, the \nlandlord must also allow people who are unmarried (i.e., domestic partners, s ame-sex couples, \nroommates, etc.) to combine their income to qualify on the same basis as married couples. \nLandlords cannot apply local rules, regulations or policies that penalize tenants for contact with \nlaw enforcement.69 For example, local governments cannot require landlords to perform criminal \nbackground checks on prospective tenants. Neither can they require landlords to",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 4,
+      "source_file": "california_landlord_tenant_guide_2026.pdf",
+      "page_label": "27",
+      "chunk_sha256": "4114f3194f59d3918c2d3973732d7046fd4021010f8f4c2cb45f898bcd379e29",
+      "store_score": 0.6235123010543207,
+      "independent_cosine": 0.6235123872756958,
+      "chunk_length_chars": 1579,
+      "preview": "These laws are subject to the limited exceptions described below.81 Limited exceptions for single rooms and roommates If the owner of an owner-occupied, single-",
+      "chunk_text": "These laws are subject to the limited exceptions described \nbelow.81\nLimited exceptions for single rooms and roommates \nIf the owner of an owner-occupied, single-family home rents out a single room in his/her home \nto a roommate or boarder, and there are no other roommates or boarders paying rent to live in \nthe household, with a limited exception, the owner is not subject to the California Fair Employment \nand Housing Act or the federal Fair Housing Act. 82 \nThe exception is that the owner cannot make \noral or writte n statements, or use notices or advertisements which indicate any preference, \nlimitation, or discrimination based on race, color, religion, sex, gender, gender identity, gender \nexpression, sexual orientation, marital status, national origin, ancestry, familial status, source of \nincome, disability, veteran or military status, or genetic information.83 \nFurther, the owner cannot \ndiscriminate on the basis of age, medical condition, citizenship, primary language, immigration \nstatus, mental or physical disability or personal characteristics, such as a person’s physical \nappearance or other characteristics that may be termed as ‘arbitrary’ discrimination.84\nA person in a single-family dwelling who advertises for a roommate or a boarder may express \na preference on the basis of sex, if living areas (such as the kitchen, living room, or bathroom) will \nbe shared by the roommate.85 \nThis provision of the law does not permit a person to advertise for \na roommate regarding other preferences such as their religion, whether they are in college, or",
+      "window_preview": "",
+      "window_text": null
+    },
+    {
+      "rank": 5,
+      "source_file": "california_fair_housing_fact_sheet_2022.pdf",
+      "page_label": "1",
+      "chunk_sha256": "fb178602b82fcc5e641d32c39f39621996bdf686d57a45b793ecf6e1346b90e0",
+      "store_score": 0.6224049117493952,
+      "independent_cosine": 0.622404932975769,
+      "chunk_length_chars": 1674,
+      "preview": "a a a FAIR HOUSING FACT SHEET YOU ARE PROTECTED UNDER CALIFORNIA LAW Laws enforced by the Civil Rights Department (CRD) protect you from illegal discrimination ",
+      "chunk_text": "a\na\na\nFAIR\nHOUSING \nFACT SHEET\nYOU ARE PROTECTED \nUNDER CALIFORNIA LAW\nLaws enforced by the Civil Rights Department \n(CRD) protect you from illegal discrimination and \nharassment in housing based on:\n• Race\n• Color\n• National origin (including language use\nrestrictions)\n• Ancestry\n• Religion\n• Sex\n• Gender\n• Gender identity\n• Gender expression\n• Sexual orientation\n• Marital status\n• Military or veteran status\n• Familial status (households with children\nunder age 18 or individuals who are pregnant)\n• Source of income\n• Disability (mental and physical)\n• Genetic information\n• Age*\n• Citizenship*\n• Primary language*\n• Immigration status*\n*Covered under the Unruh Civil Rights Act, which applies\nto most housing accommodations in California. All other\ncharacteristics are covered under the Fair Employment\nand Housing Act.\nWHAT CRD DOES\n1. Enforce the Fair Employment and Housing\nAct (FEHA), the Unruh Civil Rights Act, the\nRalph Civil Rights Act, the Disabled Person’s\nAct, and the California Trafficking Victims\nProtection Act\n2. Investigate harassment, discrimination,\nretaliation, bias-motivated violence, and\nhuman trafficking complaints\n3. Help landlords and tenants resolve\ncomplaints involving alleged violations\nof the laws enforced by CRD\n4. Prosecute in court violations of California’s\ncivil rights laws\n5. Educate Californians about their civil rights\nWHO MUST COMPLY WITH \nCALIFORNIA’S FAIR HOUSING LAWS\n• Landlords\n• Property management companies\n•\n•\nHomeowners associations\nPublic housing authorities\n• Real estate agents\n• Home sellers\n• Property insurers\n• Builders\n• Mortgage lenders\n• Tenant screening companies\n• Consumer reporting agencies\n• Others",
+      "window_preview": "",
+      "window_text": null
+    }
+  ]
+}

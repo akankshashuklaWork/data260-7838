@@ -1,4 +1,5 @@
 .DS_Store
+.venv-hw3/
 __pycache__/
 *.py[cod]
 .venv/

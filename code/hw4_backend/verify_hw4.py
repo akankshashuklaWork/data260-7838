@@ -13,8 +13,22 @@ def main():
     except Exception as exc:
         checks.append({"name": "FastAPI health endpoint", "passed": False, "error": str(exc)})
     checks.append({"name": "required backend package exists", "passed": (ROOT / "code/hw4_backend/main.py").exists()})
-    result = {"homework": 4, "SID4": 7838, "commit_hash": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(), "SEED": 7838, "VERIFY_SEED": VERIFY_SEED, "checks": checks, "passed": all(c["passed"] for c in checks)}
-    target = ROOT / "reports/hw04/verification.json"; target.parent.mkdir(parents=True, exist_ok=True); target.write_text(json.dumps(result, indent=2) + "\n")
-    print(json.dumps(result, indent=2)); sys.exit(0 if result["passed"] else 1)
+    commit_hash = subprocess.check_output(
+        ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
+    ).strip()
+    result = {
+        "homework": 4,
+        "SID4": 7838,
+        "commit_hash": commit_hash,
+        "SEED": 7838,
+        "VERIFY_SEED": VERIFY_SEED,
+        "checks": checks,
+        "passed": all(check["passed"] for check in checks),
+    }
+    target = ROOT / "reports/hw04/verification.json"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(json.dumps(result, indent=2) + "\n")
+    print(json.dumps(result, indent=2))
+    sys.exit(0 if result["passed"] else 1)
 
 if __name__ == "__main__": main()

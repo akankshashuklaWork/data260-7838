@@ -274,3 +274,25 @@ $ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw4_back
   "passed": true
 }
 exit_code=0
+
+[2026-09-28T06:14:36+00:00] Run HW4 verification after creating the hw4 tag
+$ .venv/bin/python -m hw4_backend.verify_hw4
+{
+  "homework": 4,
+  "SID4": 7838,
+  "commit_hash": "445fe19d1652fde45569b9b2cb99f7d7643a8fdf",
+  "SEED": 7838,
+  "VERIFY_SEED": 267838,
+  "checks": [
+    {
+      "name": "FastAPI health endpoint",
+      "passed": true
+    },
+    {
+      "name": "required backend package exists",
+      "passed": true
+    }
+  ],
+  "passed": true
+}
+exit_code=0

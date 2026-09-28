@@ -10,8 +10,14 @@ def hash_password(password: str) -> str:
 def verify_password(password: str, encoded: str) -> bool:
     try:
         algorithm, rounds, salt_hex, digest_hex = encoded.split("$")
-        if algorithm != "pbkdf2_sha256": return False
-        digest = hashlib.pbkdf2_hmac("sha256", password.encode(), bytes.fromhex(salt_hex), int(rounds))
+        if algorithm != "pbkdf2_sha256":
+            return False
+        digest = hashlib.pbkdf2_hmac(
+            "sha256",
+            password.encode(),
+            bytes.fromhex(salt_hex),
+            int(rounds),
+        )
         return hmac.compare_digest(digest.hex(), digest_hex)
     except (ValueError, TypeError):
         return False

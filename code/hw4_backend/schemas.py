@@ -17,8 +17,12 @@ class ListingBase(BaseModel):
     property_category: str = Field(pattern="^(Apartment|House|Condo|Townhouse)$")
     terms_accepted: bool = True
 
-class ListingCreate(ListingBase): pass
-class ListingUpdate(ListingBase): pass
+class ListingCreate(ListingBase):
+    """Fields accepted when a listing is created."""
+
+
+class ListingUpdate(ListingBase):
+    """Fields accepted when a listing is updated."""
 
 class AmenityOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)

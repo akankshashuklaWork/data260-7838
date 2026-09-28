@@ -1,1 +1,101 @@
-body{font-family:system-ui;margin:0;background:#f4f6fb;color:#172033}main{max-width:1100px;margin:auto;padding:24px}header,.login{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:#fff;padding:18px;border-radius:12px;margin-bottom:16px}header a:first-child{font-weight:800;font-size:1.25rem;margin-right:auto}a{color:#185abd}button{padding:9px 14px;border:0;border-radius:7px;background:#185abd;color:#fff;cursor:pointer}input,select,textarea{display:block;width:100%;padding:9px;margin-top:5px;border:1px solid #ccd3df;border-radius:6px;box-sizing:border-box}.login input{width:180px}.login span{color:#b42318}.form{max-width:680px;background:#fff;padding:20px;border-radius:12px;display:grid;gap:14px}.form label{font-weight:600}textarea{min-height:100px}table{width:100%;background:#fff;border-collapse:collapse;border-radius:12px;overflow:hidden}th,td{padding:13px;border-bottom:1px solid #e5e8ee;text-align:left}section{background:#fff;padding:24px;border-radius:12px}
+body {
+  margin: 0;
+  background: #f4f6fb;
+  color: #172033;
+  font-family: system-ui;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+}
+
+header,
+.login {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  padding: 18px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+header a:first-child {
+  margin-right: auto;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+a {
+  color: #185abd;
+}
+
+button {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 7px;
+  background: #185abd;
+  color: #fff;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 5px;
+  padding: 9px;
+  border: 1px solid #ccd3df;
+  border-radius: 6px;
+}
+
+.login input {
+  width: 180px;
+}
+
+.login span {
+  color: #b42318;
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+  max-width: 680px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.form label {
+  font-weight: 600;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+table {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-collapse: collapse;
+  border-radius: 12px;
+}
+
+th,
+td {
+  padding: 13px;
+  border-bottom: 1px solid #e5e8ee;
+  text-align: left;
+}
+
+section {
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+}

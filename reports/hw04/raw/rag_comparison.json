@@ -1,0 +1,220 @@
+[
+  {
+    "question": 1,
+    "question_text": "What is the purpose of the San Jose tenant protection ordinance?",
+    "no_rag": "The San Jose tenant protection ordinance is designed to provide additional protections and rights for tenants in the city of San Jose, California. The specific purpose of the ordinance is to ensure that tenants are treated fairly and have access to adequate housing, while also promoting stability and security for both tenants and landlords. \n\nSome of the key purposes of the San Jose tenant protection ordinance include:\n\n1. Rent control: The ordinance establishes limits on how much landlords can increase rent, providing stability for tenants and preventing sudden, large rent increases.\n\n2. Eviction protections: The ordinance includes various provisions that make it more difficult for landlords to evict tenants, including requirements for adequate notice, just cause for eviction, and mediation to resolve disputes.\n\n3. Anti-displacement measures: The ordinance aims to prevent tenants from being forced out of their homes due to factors such as gentrification, by limiting evictions and ensuring that tenants have access to legal representation.\n\n4. Health and safety: The ordinance requires landlords to maintain habitable conditions and provides tenants with the right to a safe and healthy living environment.\n\n5. Tenant rights education: The ordinance also includes provisions aimed at educating tenants about their rights and responsibilities, helping to empower them to advocate for themselves and understand the protections provided by the ordinance.\n\nOverall, the San Jose tenant protection ordinance seeks to create a fair and stable housing market for tenants by balancing the interests of landlords and tenants, promoting social equity, and ensuring access to safe and affordable housing for all residents.",
+    "basic_rag": "The Tenant Protection Ordinance in San Jose, California, aims to provide protections for tenants living in certain apartments, particularly those subject to rent stabilization under the City's Apartment Rent Ordinance. These protections are designed to eliminate no-cause notices to vacate and require that all terminations of tenancy must be based on at least one of the 13 just cause terminations listed in the ordinance. This includes provisions against anti-retaliation, especially concerning the disclosure or threat of disclosure of tenants' immigration or citizenship status by landlords, with specific prohibitions against actions such as threatening to bring actions for recovery of possession, causing tenants to quit involuntarily, serving notices to quit or termination, reducing housing services, or reporting or threatening to report tenants to immigration authorities. The ordinance applies to \"Rent Stabilized Units,\" which include rental units subject to rent stabilization under the City's Apartment Rent Ordinance, units in any Multiple Dwelling building and guesthouses built on or prior to September 7, 1979, and unpermitted dwellings. This legislation provides tenants with a framework for understanding just cause terminations and protections against retaliatory actions by landlords, among other provisions aimed at ensuring fair treatment and security for tenants in San Jose.",
+    "context_rag": "[Source 1] The purpose of the San Jose tenant protection ordinance is to provide tenants in certain \"covered\" apartments with substantive requirements for evicting them, eliminating no-cause notices to vacate, and requiring all terminations of tenancy to be based on at least one of the 13 just cause terminations listed in SJMC Section 17.23.1250(A). The ordinance went into effect on June 16, 2017, and its protections are applied to all new and existing tenants.",
+    "context_rag_by_k": {
+      "1": "[Source 1] The purpose of the San Jose tenant protection ordinance is to provide substantive requirements for evicting tenants for those living in \"covered\" apartments, which includes Rent Stabilized Units and Unpermitted dwellings. This ordinance eliminates no-cause notices to vacate and mandates that all terminations of tenancy must be based on at least one of the 13 just cause terminations listed in SJMC Section 17.23.1250(A). The protections under this ordinance apply to both new and existing tenants. The Tenant Protection Ordinance went into effect on June 16, 2017.",
+      "3": "[Source 1] The purpose of the San Jose tenant protection ordinance is to provide tenants in certain \"covered\" apartments with substantive requirements for evicting them, eliminating no-cause notices to vacate, and requiring all terminations of tenancy to be based on at least one of the 13 just cause terminations listed in SJMC Section 17.23.1250(A). The ordinance went into effect on June 16, 2017, and its protections are applied to all new and existing tenants.",
+      "5": "The purpose of the San Jose Tenant Protection Ordinance is to provide substantive requirements for evicting tenants for those living in certain \"covered\" apartments, as listed below. It eliminates no-cause notices to vacate and ensures that all terminations of tenancy must be based on at least one of the 13 just cause terminations listed in SJMC Section 17.23.1250(A) and described below. This ordinance went into effect on June 16, 2017, and its protections are applied to all new and existing tenants. [Source 1]"
+    },
+    "selected_sources_by_k": {
+      "1": [
+        {
+          "source": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+          "chunk_id": "san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0333"
+        }
+      ],
+      "3": [
+        {
+          "source": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+          "chunk_id": "san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0333"
+        }
+      ],
+      "5": [
+        {
+          "source": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+          "chunk_id": "san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0333"
+        }
+      ]
+    }
+  },
+  {
+    "question": 2,
+    "question_text": "What notice and relocation requirements apply to a covered termination?",
+    "no_rag": "A \"covered termination\" typically refers to the termination of employment for an employee who is covered under specific laws or regulations, such as those protecting employees' rights in the workplace. The notice and relocation requirements that apply to a covered termination vary widely depending on the context and the laws in question. Here are a few examples of the different types of notice and relocation requirements that might apply:\n\n### 1. **Employment Contracts**\n- **Notice Period:** If the termination is related to an employment contract, the notice period specified in the contract must be followed. This period can range from a few days to several months, depending on the agreement.\n- **Reasons for Termination:** The reasons for the termination must comply with any clauses in the contract regarding the valid grounds for termination.\n\n### 2. **Worker's Rights under Labor Law**\n- **Notice Period:** Many jurisdictions require employers to provide a notice period before termination. This period can be fixed or based on the employee's length of service.\n- **Reasons for Termination:** Termination must adhere to the legal restrictions regarding discriminatory practices and must not occur without just cause unless explicitly allowed by law.\n\n### 3. **Collective Bargaining Agreements (CBA)**\n- **Notice Period:** CBAs often include provisions for notice periods that must be given to the union and/or to the affected employees before a termination can occur.\n- **Reasons for Termination:** The termination must comply with any restrictions outlined in the CBA regarding layoffs, mass dismissals, etc.\n\n### 4. **Fair Employment Practices**\n- **Notice Period:** While there may not be a specific notice period in federal law, some states require employers to provide notice before making certain types of employment decisions, such as layoffs or mass layoffs.\n- **Reasons for Termination:** Employers must avoid discriminatory practices and comply with anti-discrimination laws.\n\n### 5. **Restrictive Covenants and Intellectual Property**\n- **Notice Period:** If the termination involves restrictions on employment, such as non-compete clauses, the employer might need to provide notice regarding the restrictions.\n- **Reasons for Termination:** Termination cannot be retaliatory or related to the employee's exercising their rights under such agreements.\n\n### 6. **Relocation**\n- **Relocation Requirements:** When it comes to relocation, employers might be required to provide relocation assistance if the move is work-related and falls under certain conditions, such as transfers that are part of a restructuring or layoffs.\n- **Notification:** Employees must be notified well in advance of any relocation plan, allowing them time to plan and adjust to the new location.\n\n### General Considerations:\n- **Documentation:** Keeping detailed records of all notices and communications related to termination is crucial for compliance and legal purposes.\n- **Consultation:** Employers should consult with legal counsel to ensure compliance with all applicable laws and regulations when dealing with terminations, especially in complex scenarios involving multiple laws or contracts.\n\nAlways consult with legal experts to ensure compliance with local laws and regulations, as the specifics can vary significantly by jurisdiction.",
+    "basic_rag": "If the tenancy is protected by local just cause for eviction laws or the 2019 Tenant Protection Act, the landlord must have a valid reason justifying “cause” to terminate the tenancy, such as the tenant’s failure to pay rent. Even if the tenant is not at fault, the landlord can terminate the tenancy if the landlord has just cause, such as the property will be demolished, substantially remodeled, or occupied by the landlord or his or her close family member. However, in situations where the tenant is not at fault, but the landlord has just cause to terminate, the landlord will often be obligated to pay the tenant relocation assistance—either equal to one month’s rent under the Tenant Protection Act or different relocation assistance amounts under applicable local ordinances.",
+    "context_rag": "A landlord must provide a tenant with a notice of termination based on just cause, which includes reasons such as nonpayment of rent, material or habitual violation of the tenancy, substantial damage to the apartment, refusal to agree to a new rental agreement, or nuisance behavior. If the landlord decides not to renew the rental agreement or terminate the Housing Assistance Payment (HAP) contract for a Section 8 Housing Choice Voucher program, they must give the tenant a 90-day advance written notice. If the tenant does not move out by the end of the 90 days, the landlord must follow California law to evict the tenant. In San José, the just cause protections apply to rent-stabilized units, rental units in any multiple dwelling, guest rooms in any guesthouse, and unpermitted units. The notices of termination must be based on reasons outlined in the Tenant Protection Ordinance, such as non-payment of rent, material or habitual violation of the lease, substantial damage to the apartment, refusal to agree to a new rental agreement, or nuisance behavior that disrupts the peace or safety of others.\n\n[Source 1]",
+    "context_rag_by_k": {
+      "1": "For covered terminations under California law, the landlord must provide a three-day notice for violations that are not corrected or for those limited violations that cannot be corrected. If the tenant fails to address these issues or leave the premises, the landlord must follow California law to evict the tenant. In cases where the landlord decides not to renew the rental agreement or terminate the Housing Assistance Payment (HAP) contract, the landlord must provide a 90-day advance written notice. If the tenant does not vacate by the end of the 90 days, the landlord must follow California law to evict the tenant. The landlord is obligated to pay relocation assistance to the tenant if the termination is justified by just cause and the tenant is not at fault. The amount of relocation assistance is either equal to one month's rent under the Tenant Protection Act or according to different amounts under applicable local ordinances. This applies especially to tenants living in government-financed or subsidized housing or in areas with rent control, for whom additional rules might apply. [Source 1]",
+      "3": "A landlord must provide a tenant with a notice of termination based on just cause, which includes reasons such as nonpayment of rent, material or habitual violation of the tenancy, substantial damage to the apartment, refusal to agree to a new rental agreement, or nuisance behavior. If the landlord decides not to renew the rental agreement or terminate the Housing Assistance Payment (HAP) contract for a Section 8 Housing Choice Voucher program, they must give the tenant a 90-day advance written notice. If the tenant does not move out by the end of the 90 days, the landlord must follow California law to evict the tenant. In San José, the just cause protections apply to rent-stabilized units, rental units in any multiple dwelling, guest rooms in any guesthouse, and unpermitted units. The notices of termination must be based on reasons outlined in the Tenant Protection Ordinance, such as non-payment of rent, material or habitual violation of the lease, substantial damage to the apartment, refusal to agree to a new rental agreement, or nuisance behavior that disrupts the peace or safety of others.\n\n[Source 1]",
+      "5": "[Source 1] For covered terminations, landlords must provide notice based on just cause, which includes reasons such as nonpayment of rent, material or habitual violation of the tenancy, substantial damage to the apartment, refusal to agree to a new rental agreement, and nuisance behavior. Landlords must also provide tenants with relocation assistance, which amounts to one month's rent under the Tenant Protection Act or amounts specified by applicable local ordinances. This applies when the landlord has just cause for termination but the tenant is not at fault."
+    },
+    "selected_sources_by_k": {
+      "1": [
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0151"
+        }
+      ],
+      "3": [
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0151"
+        },
+        {
+          "source": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+          "chunk_id": "san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0334"
+        },
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0184"
+        }
+      ],
+      "5": [
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0151"
+        },
+        {
+          "source": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+          "chunk_id": "san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0334"
+        },
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0184"
+        },
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0188"
+        },
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0146"
+        }
+      ]
+    }
+  },
+  {
+    "question": 3,
+    "question_text": "How do the San Jose rent and tenant protection rules differ?",
+    "no_rag": "San Jose, California has implemented a number of rent and tenant protection rules to safeguard the rights of tenants and ensure fair treatment in the rental market. These rules are designed to provide protections against unlawful evictions, maintain reasonable rental rates, and ensure the safety and habitability of rental properties. The specific rules may vary over time, but here are some key points that differentiate San Jose's regulations from others:\n\n1. **Just Cause Evictions**: In San Jose, landlords must provide a \"just cause\" for eviction, which can include reasons such as non-payment of rent, damage to the property, or violation of lease terms. The eviction notice must meet specific requirements regarding timing and content.\n\n2. **Rent Control**: San Jose has implemented rent control policies that limit the amount landlords can increase rent for tenants in buildings that are subject to these rules. These policies aim to stabilize rents and protect tenants from sudden, excessive price hikes.\n\n3. **Tenant Notification**: Landlords must give tenants proper notice before increasing rent or initiating an eviction process. This includes providing written notifications detailing the specific issue that triggered the rent increase or the reason for eviction.\n\n4. **Housing Stabilization**: San Jose's housing stabilization policies are designed to address concerns related to the overall stability and sustainability of the rental market. These can include measures to ensure that landlords are maintaining properties to a certain standard and that tenants are aware of their rights and responsibilities.\n\n5. **Legal Assistance**: San Jose offers resources and legal assistance to tenants who may need help navigating eviction proceedings or disputes with landlords. This can include access to free legal clinics and information on where to seek additional support.\n\n6. **Right to Repair**: Tenants in San Jose have the right to receive necessary repairs to their housing, which must be completed in a reasonable time frame. Landlords are required to address issues that affect health, safety, and the structural integrity of the property.\n\n7. **Housing Discrimination**: San Jose enforces strict laws against housing discrimination, ensuring that all tenants are treated fairly regardless of their race, gender, national origin, religion, disability, familial status, or other protected characteristics.\n\n8. **Eviction Moratoriums**: During specific times, such as during a public health emergency, San Jose may implement eviction moratoriums to protect tenants from losing their homes due to non-payment of rent.\n\nThese rules are designed to strike a balance between the interests of landlords and tenants, promoting a fair and stable rental market. It's important for both landlords and tenants to understand these regulations to ensure compliance and protect their rights.",
+    "basic_rag": "The San Jose rent and tenant protection rules differ in several aspects:\n\n1. **Rent Stabilization Program**: This program applies to specific units such as \"Rent Stabilized Units\" (those subject to rent stabilization under the City’s Apartment Rent Ordinance) and \"Unpermitted dwellings\". Rent stabilization rules provide requirements for evictions and limit rent increases for tenants living in these specified units.\n\n2. **Tenant Protection Ordinance**: This provides substantive requirements for evicting tenants living in certain “covered” apartments and eliminates no-cause notices to vacate. All terminations of tenancy must be based on one of the 13 just cause terminations listed in the ordinance.\n\n3. **Just Cause Terminations**: These are specific reasons landlords must provide when issuing notices to terminate a tenancy. This ensures that evictions are based on valid, justifiable reasons rather than without cause.\n\n4. **California Law on Rent Increases**: California law limits the amount your rent can be increased and requires landlords to provide a statement of cause in any notice to terminate a tenancy after tenants have continuously and lawfully occupied the property for certain durations.\n\n5. **Apartment Rent Ordinance (ARO)**: This ordinance applies to most rental apartments built before September 7, 1979, limits rent increases to 5% annually, and allows landlords to receive a fair return.\n\n6. **Local and State Law Interplay**: If a rental unit is subject to both local and state just cause for eviction laws, the Tenant Protection Act’s just cause protections might not apply depending on the date the local ordinance was adopted.\n\n7. **Coverage of Units**: Units covered under rent stabilization include those in multiple dwelling buildings and guesthouses built on or prior to September 7, 1979. The ARO covers specific types of buildings built or rented on or before September 7, 1979, but excludes newer buildings, duplexes, single-family homes, etc.\n\nThese distinctions highlight the local San Jose rules' focus on protecting tenants against arbitrary evictions and controlling rent increases, while also maintaining landlord rights and ensuring a fair market balance.",
+    "context_rag": "[Source 1] The San Jose Tenant Protection Ordinance specifically addresses evictions, requiring that all terminations must be based on at least one of the 13 just cause terminations listed in SJMC Section 17.23.1250(A). It also eliminates no-cause notices to vacate. This ordinance applies to \"Rent Stabilized Units\", which include units in any Multiple Dwelling building and guesthouses built on or prior to September 7, 1979. The protections under this ordinance are applied to all new and existing tenants.\n\nIn contrast, the Apartment Rent Ordinance focuses on rent increases, allowing landlords to receive a fair return but limiting rent increases to 5% once every 12 months. This ordinance covers most rental apartments built before September 7, 1979. It does not address eviction processes but does include provisions for rent increases and landlord rights regarding fee collections.\n\nTherefore, while the Tenant Protection Ordinance targets eviction and no-cause notices, the Apartment Rent Ordinance targets rent increases and fair return for landlords.",
+    "context_rag_by_k": {
+      "1": "[Source 1] The San Jose rent and tenant protection rules differ primarily by eliminating no-cause notices to vacate and requiring all terminations of tenancy to be based on at least one of the 13 just cause terminations listed in SJMC Section 17.23.1250(A). This is outlined in San José Municipal Code (SJMC) Chapter 17.23, Part 12, beginning with Section 17.23.1200. The protections apply to both new and existing tenants, affecting \"Rent Stabilized Units\" (Rental Units subject to rent stabilization under the City’s Apartment Rent Ordinance) and \"Unpermitted dwellings\" (structures or parts of structures rented as homes, residences, or sleeping places without authorization, permitting, or approval by the City). Tenants can learn more and submit notices online at www.sanjoseca.gov/rent.",
+      "3": "[Source 1] The San Jose Tenant Protection Ordinance specifically addresses evictions, requiring that all terminations must be based on at least one of the 13 just cause terminations listed in SJMC Section 17.23.1250(A). It also eliminates no-cause notices to vacate. This ordinance applies to \"Rent Stabilized Units\", which include units in any Multiple Dwelling building and guesthouses built on or prior to September 7, 1979. The protections under this ordinance are applied to all new and existing tenants.\n\nIn contrast, the Apartment Rent Ordinance focuses on rent increases, allowing landlords to receive a fair return but limiting rent increases to 5% once every 12 months. This ordinance covers most rental apartments built before September 7, 1979. It does not address eviction processes but does include provisions for rent increases and landlord rights regarding fee collections.\n\nTherefore, while the Tenant Protection Ordinance targets eviction and no-cause notices, the Apartment Rent Ordinance targets rent increases and fair return for landlords.",
+      "5": "[Source 1] The San Jose rent and tenant protection rules differ in several aspects:\n\n1. **Rent Stabilization Program**: San Jose's Rent Stabilization Program applies to \"Rent Stabilized Units\" - those subject to rent stabilization under the City's Apartment Rent Ordinance, which includes units in any Multiple Dwelling building and guesthouses built on or prior to September 7, 1979.\n\n2. **Just Cause Evictions**: Under the Tenant Protection Ordinance, all notices of termination must be based on at least one of the 13 just cause terminations listed in SJMC Section 17.23.1250(A). This eliminates no-cause notices to vacate.\n\n3. **Rent Increases**: The Apartment Rent Ordinance (ARO) allows for a 5% annual increase in rent. This applies to buildings with three or more units built or rented on or before September 7, 1979.\n\n4. **Exemptions**: Some types of housing units are exempt from the ARO, including transient and tourist hotel occupancy, housing accommodations in certain facilities, dormitories owned by educational institutions, single-family owner-occupied residences, and duplexes where the owner occupied one of the units as the owner’s principal place of residence.\n\nThese rules ensure that tenants in covered units have more protection against eviction and have limitations on rent increases, while landlords have regulations on when they can increase rent and the reasons for eviction."
+    },
+    "selected_sources_by_k": {
+      "1": [
+        {
+          "source": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+          "chunk_id": "san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0333"
+        }
+      ],
+      "3": [
+        {
+          "source": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+          "chunk_id": "san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0333"
+        },
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0185"
+        },
+        {
+          "source": "san_jose_apartment_rent_ordinance_fact_sheet.pdf",
+          "chunk_id": "san_jose_apartment_rent_ordinance_fact_sheet.pdf::chunk-0328"
+        }
+      ],
+      "5": [
+        {
+          "source": "san_jose_tenant_protection_ordinance_fact_sheet.pdf",
+          "chunk_id": "san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0333"
+        },
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0185"
+        },
+        {
+          "source": "san_jose_apartment_rent_ordinance_fact_sheet.pdf",
+          "chunk_id": "san_jose_apartment_rent_ordinance_fact_sheet.pdf::chunk-0328"
+        },
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0284"
+        },
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0263"
+        }
+      ]
+    }
+  },
+  {
+    "question": 4,
+    "question_text": "What does just cause mean in the provided documents?",
+    "no_rag": "In the context of employment law, \"just cause\" typically refers to a valid reason that justifies the employer's decision to terminate an employee's employment. This concept is often used in \"for cause\" or \"cause\" dismissal scenarios, as opposed to \"without just cause\" or \"without cause\" terminations.\n\nJust cause could include:\n\n1. **Misconduct**: This includes actions like theft, dishonesty, or violent behavior towards others in the workplace.\n2. **Tribunal Findings**: If an employee has been found guilty of harassment, discrimination, or other workplace violations by an external tribunal or regulatory body.\n3. **Incompetence**: If an employee is unable to perform their job duties effectively despite training and reasonable opportunities to improve.\n4. **Failure to follow policies**: Non-compliance with company policies and procedures that are in place to ensure a safe and productive work environment.\n5. **Serious infractions**: Any actions that significantly harm the company's interests, such as unauthorized use of company resources or damaging company property.\n\nThe specifics of what constitutes \"just cause\" can vary greatly depending on the jurisdiction, employment laws, and the collective agreements or employment contracts in place. It's important for both employers and employees to understand these details to ensure fair and legal handling of employment termination processes.",
+    "basic_rag": "Just cause, in the context of the provided documents, refers to the reasons a landlord may have to terminate a tenancy or evict a tenant without being in violation of the law. It includes both \"at-fault just cause\" and \"no-fault just cause\" scenarios. \n\nAt-fault just cause includes:\n1. Failure to pay rent.\n2. Breaching a material term of the rental agreement, often allowing the violation to go uncorrected after written notice to correct.\n3. Subletting or assigning the property in violation of the rental agreement.\n4. Refusing to renew a rental agreement on similar terms to an expiring one.\n5. Refusing to allow the owner to enter the property when authorized.\n6. Maintaining a nuisance or committing waste on the property.\n7. Using the property for criminal or unlawful purposes.\n8. Failure of an employee or agent to vacate housing provided in connection with their duties following termination from those duties.\n9. Failing to deliver possession of the property after providing the tenant with written notice or agreement to do so.\n\nNo-fault just cause includes:\n1. Removing the unit from the rental market.\n2. The owner's intent to occupy the unit for themselves or their family members, with certain exceptions for mobilehome leases.\n3. The owner complying with an ordinance or government order to vacate the premises.\n4. The owner's intent to demolish or substantially remodel the premises.\n\nIn both cases, if the cause for eviction can be cured, the owner is required to give the tenant notice and an opportunity to resolve the problem. If the violation is not resolved, a three-day notice terminating the tenancy may be served. No-fault terminations require the landlord to either pay the tenant one month’s rent to assist with relocation or forgive their last month’s rent.",
+    "context_rag": "Just cause in the provided documents refers to the reason a landlord can legally terminate a tenancy or evict a tenant without being subject to the restrictions of the Tenant Protection Act. This includes \"at-fault just cause,\" which encompasses failure to pay rent, breaching a material term of the rental agreement, engaging in criminal activity, committing nuisance or waste, or the tenant's refusal to execute a written extension or renewal of the rental agreement with the same or similar provisions as the original agreement. The documents define these conditions as the grounds for eviction that do not require \"just cause\" under the Tenant Protection Act. [Source 1]",
+    "context_rag_by_k": {
+      "1": "In the provided documents, just cause refers to either \"at-fault just cause\" or \"no-fault just cause\" under the Tenant Protection Act. \"At-fault just cause\" includes reasons such as failure to pay rent, breaching a material term of the rental agreement, engaging in criminal activity, committing nuisance or waste, or refusing to execute a written extension or renewal of the rental agreement under similar terms to the original agreement after its expiration. [Source 1]",
+      "3": "Just cause in the provided documents refers to the reason a landlord can legally terminate a tenancy or evict a tenant without being subject to the restrictions of the Tenant Protection Act. This includes \"at-fault just cause,\" which encompasses failure to pay rent, breaching a material term of the rental agreement, engaging in criminal activity, committing nuisance or waste, or the tenant's refusal to execute a written extension or renewal of the rental agreement with the same or similar provisions as the original agreement. The documents define these conditions as the grounds for eviction that do not require \"just cause\" under the Tenant Protection Act. [Source 1]",
+      "5": "Just cause, as defined in the Tenant Protection Act according to the provided documents, includes \"at-fault just cause\" and \"no-fault just cause.\" \"At-fault just cause\" includes failures to pay rent, breaches of a material term of the rental agreement, engaging in criminal activity or committing nuisance or waste at the rental unit, and the tenant's refusal to execute a written extension or renewal of the rental agreement with the same or similar provisions as the original agreement after the expiration of the agreement. [Source 1]"
+    },
+    "selected_sources_by_k": {
+      "1": [
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0186"
+        }
+      ],
+      "3": [
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0186"
+        },
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0213"
+        }
+      ],
+      "5": [
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0186"
+        },
+        {
+          "source": "california_landlord_tenant_guide_2026.pdf",
+          "chunk_id": "california_landlord_tenant_guide_2026.pdf::chunk-0213"
+        }
+      ]
+    }
+  },
+  {
+    "question": 5,
+    "question_text": "What is the current federal student-loan interest rate?",
+    "no_rag": "As an AI developed by Alibaba Cloud, I don't have real-time data capabilities and thus can't provide current federal student-loan interest rates. However, you can find the most recent rates on the official website of the U.S. Department of Education or the Federal Student Aid website. These websites provide up-to-date information on federal student loan interest rates.",
+    "basic_rag": "The provided context does not answer the question about the current federal student-loan interest rate, as it focuses on laws and regulations related to rental properties, security deposits, and tenant notifications.",
+    "context_rag": "I cannot answer this question from the provided documents",
+    "context_rag_by_k": {
+      "1": "I cannot answer this question from the provided documents",
+      "3": "I cannot answer this question from the provided documents",
+      "5": "I cannot answer this question from the provided documents"
+    },
+    "selected_sources_by_k": {
+      "1": [],
+      "3": [],
+      "5": []
+    }
+  },
+  {
+    "question": 6,
+    "question_text": "Who will win tomorrow's baseball game?",
+    "no_rag": "As an AI, I don't have real-time capabilities to predict future events or outcomes of specific games. Factors determining the winner of a baseball game can include team performance, player skills, game strategies, and even weather conditions. For the most accurate prediction, you should look at the current stats of both teams, the pitchers scheduled to play, and any recent performances of key players. You can also consult sports news or expert predictions if available.",
+    "basic_rag": "The context provided does not answer the question about who will win tomorrow's baseball game. The context is focused on non-payment of rent and eviction processes, which is insufficient to address a question about a future baseball game outcome.",
+    "context_rag": "I cannot answer this question from the provided documents",
+    "context_rag_by_k": {
+      "1": "I cannot answer this question from the provided documents",
+      "3": "I cannot answer this question from the provided documents",
+      "5": "I cannot answer this question from the provided documents"
+    },
+    "selected_sources_by_k": {
+      "1": [],
+      "3": [],
+      "5": []
+    }
+  }
+]

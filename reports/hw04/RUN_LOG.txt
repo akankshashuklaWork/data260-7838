@@ -1,0 +1,276 @@
+HW4 Run Log
+
+These are timestamped outputs from the final local HW4 verification run.
+Timestamps are UTC. The API server was already running on port 8638.
+
+[2026-09-28T06:07:43+00:00] Seed deterministic database
+$ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw4_backend.seed_hw4
+seeded listings=5000 related_rows=200 seed=7838
+exit_code=0
+
+[2026-09-28T06:07:44+00:00] Check API health
+$ curl -sS http://127.0.0.1:8638/health
+{"status":"ok"}
+exit_code=0
+
+[2026-09-28T06:07:44+00:00] Run N plus One measurements
+$ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw4_backend.measure_n_plus_one
+10 naive sql=11 p50=5.739 p95=10.774 p99=11.384
+10 fixed sql=1 p50=2.352 p95=2.849 p99=3.149
+50 naive sql=51 p50=16.642 p95=18.352 p99=18.709
+50 fixed sql=1 p50=3.895 p95=4.443 p99=4.613
+200 naive sql=201 p50=57.885 p95=62.236 p99=72.541
+200 fixed sql=1 p50=9.273 p95=10.344 p99=11.138
+exit_code=0
+
+[2026-09-28T06:07:47+00:00] Run grounded RAG experiment
+$ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw4_rag.rag
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 13037.98it/s]
+2026-09-27 23:08:00,655 - INFO - Loading faiss.
+2026-09-27 23:08:00,679 - INFO - Successfully loaded faiss.
+2026-09-27 23:08:07,197 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:08:15,219 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:08:19,039 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:08:21,150 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:08:23,567 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:08:35,525 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:08:41,152 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:08:46,488 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:08:52,680 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:08:56,483 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:09:06,428 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:09:17,040 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:09:20,752 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:09:27,284 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:09:35,448 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:09:40,606 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:09:50,495 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:09:53,164 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:09:56,783 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:09:58,929 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:10:00,384 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:10:03,565 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:10:05,348 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-27 23:10:09,197 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+
+Q1: What is the purpose of the San Jose tenant protection ordinance?
+  [1] san_jose_tenant_protection_ordinance_fact_sheet.pdf san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0333 score=0.7327
+D 
+Rent Stabilization Program 
+City of San José Housing Department 
+200 East Santa Clara St, 12th Floor, San José, CA 95113 
+408‐975‐4480   •   www.sanjoseca.gov/rent  •  RSP@sanjoseca.gov              v5/31/2018 
+TENANT PROTECTION ORDINANCE 
+FACT SHEET 
+ABOUT THE ORDINANCE 
+The Tenant Protection Ordinance can be found in San José Municipal Code (SJMC) Chapter 17.23, Part 12, beginning with Section 
+17.23.1200. The Ordinance provides substantive requirements for evicting tenants for tenants livi
+  [2] san_jose_tenant_protection_ordinance_fact_sheet.pdf san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0336 score=0.6163
+ANTI-RETALIATION INCLUDING IMMIGRATION STATUS 
+Landlords may not disclose or threaten to disclose tenants' immigration or citizenship status to authorities for the intent of retaliation 
+(Effective June 15, 2018). A landlord may not:   
+• Threaten to bring an action to recover possession,  
+• Cause the tenant to quit the rental unit involuntarily, 
+• Serve any notice to quit or Notice of Termination,  
+• Reduce any housing services,  
+• Report or threaten to report the tenant, tenant household, 
+  [3] san_jose_tenant_protection_ordinance_fact_sheet.pdf san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0334 score=0.6157
+any notices of termination to the City, including: 3-day notices, 30-60-90 day notices, and Summons & Complaints. 
+With just cause protections, all notices of termination must be based on one of the reasons outlined in the Tenant Protection Ordinance 
+(San José Municipal Code Section 17.23.1250): 
+Covered 
+ Rent Stabilized Units* 
+ Rental Units in any Multiple Dwelling, except permitted 
+hotels and motels 
+ Guest rooms in any Guesthouse 
+ Unpermitted Units** 
+Just Cause Terminations 
+Causes 
+
+Q2: What notice and relocation requirements apply to a covered termination?
+  [1] california_landlord_tenant_guide_2026.pdf california_landlord_tenant_guide_2026.pdf::chunk-0151 score=0.5004
+74 
+or threatened victim as good cause for the landlord to terminate the tenancy or occupancy rights 
+of the victim.320 
+To terminate the tenancy of a tenant who participates in the Section 8 Housing Choice Voucher 
+program, the landlord must first give the tenant the applicable three -day or 90- day notice of 
+termination under California law 321  
+(see pages 95- 98), and the landlord must give the public 
+housing agency a copy of the notice at the same time.322 
+If the landlord simply decides 
+  [2] san_jose_tenant_protection_ordinance_fact_sheet.pdf san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0334 score=0.4910
+any notices of termination to the City, including: 3-day notices, 30-60-90 day notices, and Summons & Complaints. 
+With just cause protections, all notices of termination must be based on one of the reasons outlined in the Tenant Protection Ordinance 
+(San José Municipal Code Section 17.23.1250): 
+Covered 
+ Rent Stabilized Units* 
+ Rental Units in any Multiple Dwelling, except permitted 
+hotels and motels 
+ Guest rooms in any Guesthouse 
+ Unpermitted Units** 
+Just Cause Terminations 
+Causes 
+  [3] california_landlord_tenant_guide_2026.pdf california_landlord_tenant_guide_2026.pdf::chunk-0184 score=0.4899
+if you’re not present.) Be sure to 
+get a copy of the signed form after each inspection. 
+See additional suggestions regarding the inventory checklist on page 131, and “Refunds of 
+Security Deposits,” pages 75-78. 
+TERMINATIONS AND EVICTIONS 
+COVID-19 RELIEF  FOR EVICTIONS: While state processes/procedures return ed to their pre -
+state of emergency status, emergency assistance by local jurisdictions may have continued beyond 
+that date. For more information about the availability of local relie
+
+Q3: How do the San Jose rent and tenant protection rules differ?
+  [1] san_jose_tenant_protection_ordinance_fact_sheet.pdf san_jose_tenant_protection_ordinance_fact_sheet.pdf::chunk-0333 score=0.7424
+D 
+Rent Stabilization Program 
+City of San José Housing Department 
+200 East Santa Clara St, 12th Floor, San José, CA 95113 
+408‐975‐4480   •   www.sanjoseca.gov/rent  •  RSP@sanjoseca.gov              v5/31/2018 
+TENANT PROTECTION ORDINANCE 
+FACT SHEET 
+ABOUT THE ORDINANCE 
+The Tenant Protection Ordinance can be found in San José Municipal Code (SJMC) Chapter 17.23, Part 12, beginning with Section 
+17.23.1200. The Ordinance provides substantive requirements for evicting tenants for tenants livi
+  [2] california_landlord_tenant_guide_2026.pdf california_landlord_tenant_guide_2026.pdf::chunk-0185 score=0.6632
+92 
+“California law limits the amount your rent can be increased. See Section 1947.12 of the Civil 
+Code for more information. California law also provides that after all of the tenants have 
+continuously and lawfully occupied the property for 12 months or more or at least one of the 
+tenants has continuously and lawfully occupied the property for 24 months or more, a landlord 
+must provide a statement of cause in any notice to terminate a tenancy. See Section 1946.2 of 
+the Civil Code for more 
+  [3] san_jose_apartment_rent_ordinance_fact_sheet.pdf san_jose_apartment_rent_ordinance_fact_sheet.pdf::chunk-0328 score=0.6498
+APARTMENT RENT ORDINANCE 
+FACT SHEET 
+ABOUT THE ORDINANCE 
+The Apartment Rent Ordinance (ARO) may be found in San José Municipal Code (SJMC) Chapter 17.23, Parts 1-9. The ARO covers 
+most rental apartments built before September 7, 1979, limits rent increases to 5% once every 12 months, and allows landlords to 
+receive a fair return.   All ARO properties must post a City-approved notice indicating that the ARO applies to the units contained within 
+the property and posted in a conspicuous locati
+
+Q4: What does just cause mean in the provided documents?
+  [1] california_landlord_tenant_guide_2026.pdf california_landlord_tenant_guide_2026.pdf::chunk-0186 score=0.4160
+principal residence at the property;
+• single
+-family owner-occupied r esidences;
+• a duplex
+ in which the owner occupied one of the units as the owner’s principal place 
+of residence
+ at the beginning of the tenancy and continues to occupy that unit;
+• housing t
+hat has been issued a certificate of occupancy within the previous 15 years; 
+or
+• residential real property that is alienable separate from the title to any other dwelling 
+unit provided that the landlord has  notified the tenants that
+  [2] california_landlord_tenant_guide_2026.pdf california_landlord_tenant_guide_2026.pdf::chunk-0213 score=0.3588
+106 
+Discovery in Unlawful Detainer Cases 
+Parties to a lawsuit, including an unlawful detainer (eviction) lawsuit are entitled to conduct 
+discovery to learn about another party’s facts, defenses or the bases for their legal positions. Any 
+party may avail him/herself of any one or all four of the available discovery vehicles, which consist 
+of written interrogatories,468 
+requests for production of documents,469 
+requests for admissions, 470
+and depositions 471 
+of another party to the lawsuit
+  [3] california_landlord_tenant_guide_2026.pdf california_landlord_tenant_guide_2026.pdf::chunk-0153 score=0.3531
+75 
+At fault cause can be any of the following: 
+• failure to pay rent;
+• violating a material term of the rental agreement, often allowing the violation to go
+uncorrected after written notice to correct;
+• subletting or assigning the property in violation of the rental agreement;
+• refusing to renew a rental agreement on similar terms to an expiring one;
+• refusing to allow the owner to enter the property when authorized;
+• maintaining a nuisance or committing waste on the property;
+• using the
+
+Q5: What is the current federal student-loan interest rate?
+  [1] california_landlord_tenant_guide_2026.pdf california_landlord_tenant_guide_2026.pdf::chunk-0280 score=0.2753
+Advance disclosure of the amount of the service charge is a nearly universal practice, but is not 
+explicitly required by Section 1719. The landlord cannot collect both a dishonored check fee and a service charge. The 
+landlord loses the right to collect the service charge if the landlord seeks the treble damages that are authorized by the “bad 
+check” law. (Civ. Code § 1719). 
+184 Civ. Code § 1942.4. 
+185 Civ. Code § 1947.12(a). The inflation rate is defined in the Act as “the percentage change
+  [2] california_landlord_tenant_guide_2026.pdf california_landlord_tenant_guide_2026.pdf::chunk-0075 score=0.2259
+the security deposit (see pages 1 7-18).144 
+The application 
+screening fee is intended to cover the cost of obtaining information about you, such as checking 
+your personal references and obtaining your credit report (see pages 1 7-18). The application 
+screening fee is not part of the security deposit and is not refundable as part of the security deposit. 
+However, any other fee charged by the landlord at the beginning of the tenancy to cover the 
+landlord’s costs of processing a new tenant is
+  [3] california_landlord_tenant_guide_2026.pdf california_landlord_tenant_guide_2026.pdf::chunk-0097 score=0.2060
+5 percent in a 
+month-to-month rental effective on October 1 must make sure tha t notice of the increase is 
+delivered to the tenant personally by September 1 or mailed to the tenant by August 27. 
+However, a landlord can make the increase effective at any time in the month if proper advance 
+notice is given. 
+If the increase in the rent becomes effective in the middle of the rental period, the landlord is 
+entitled to receive the increased rent for only the last half of the rental period. For e
+
+Q6: Who will win tomorrow's baseball game?
+  [1] california_landlord_tenant_guide_2026.pdf california_landlord_tenant_guide_2026.pdf::chunk-0195 score=0.1285
+97 
+non-payment. If you get such an agreement,  be sure to get it in writing with the landlord’s 
+signature. Your failure to later pay and/or quit as agreed will likely still be grounds for the landlord 
+to begin an eviction action at court. 
+Remember the landlord is not obligated to make any such agreement, however they may see it as 
+a more practical resolution than having to actually evict you. 
+If you decide to pay the rent that is due, it is recommended that you call the landlord or the 
+la
+  [2] hud_fair_housing_act_guide.pdf hud_fair_housing_act_guide.pdf::chunk-0314 score=0.1208
+FAIR HOUSING
+ Equal Opportunity for All
+BOSTON REGIONAL OFFICE
+(Complaints_office_01@hud.gov)
+U.S. Department of Housing and Urban Development
+Thomas P. O’Neill Jr. Federal Building
+10 Causeway Street, Room 321
+Boston, MA 02222-1092
+Telephone (617) 994-8300 or 1-800-827-5005
+Fax (617) 565-7313 * TTY (617) 565-5453
+For New Jersey, New York, Puerto Rico and the U.S. Virgin Islands:
+NEW YORK REGIONAL OFFICE
+(Complaints_office_02@hud.gov)
+U.S. Department of Housing and Urban Development
+26 Federal P
+  [3] california_landlord_tenant_guide_2026.pdf california_landlord_tenant_guide_2026.pdf::chunk-0207 score=0.1161
+103 
+for unpaid rent, damages and court costs. A default judgment means that you lose the case and 
+will be evicted. 
+The Clerk of Court will ask you to pay a filing fee for each answering defendant named in the 
+landlord’s complaint when they file a written response. As of January 1, 2024, the filing fee 
+typically is about $370 per answering defendant (but can be as high as $450), but it may be waived 
+based on income or hardship (see discussion on page 99).461
+After you file your written answ
+
+Saved HW4 RAG artifacts to /Users/akanksha/Documents/HW2/data260-7838-github/reports/hw04/raw
+exit_code=0
+
+[2026-09-28T06:10:09+00:00] Run HW4 verification
+$ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw4_backend.verify_hw4
+{
+  "homework": 4,
+  "SID4": 7838,
+  "commit_hash": "8ba6261431d66856a20a9ae524f36891c500eadd",
+  "SEED": 7838,
+  "VERIFY_SEED": 267838,
+  "checks": [
+    {
+      "name": "FastAPI health endpoint",
+      "passed": true
+    },
+    {
+      "name": "required backend package exists",
+      "passed": true
+    }
+  ],
+  "passed": true
+}
+exit_code=0

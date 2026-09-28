@@ -2,6 +2,10 @@
 
 Rental Housing Listings - Akanksha Shukla
 
+## HW4 in progress
+
+The uncommitted HW4 implementation is in `code/hw4_backend/`, `code/hw4_frontend/`, and `code/hw4_rag/`. It uses the HW3 rental-housing domain, MySQL database `s7838_rel`, `db_session_basede26` for SQLAlchemy sessions, opaque HTTP-only server-side sessions, protected React CRUD routes, naive/fixed related-data list endpoints, and the existing five-document corpus. Configure `DATABASE_URL`, start FastAPI on port `8638`, seed with `PYTHONPATH=code python -m hw4_backend.seed_hw4`, and run `PYTHONPATH=code python -m hw4_backend.verify_hw4` for the smoke check.
+
 ## Configuration
 
 | Value | Result | Calculation |

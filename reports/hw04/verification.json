@@ -1,0 +1,18 @@
+{
+  "homework": 4,
+  "SID4": 7838,
+  "commit_hash": "8ba6261431d66856a20a9ae524f36891c500eadd",
+  "SEED": 7838,
+  "VERIFY_SEED": 267838,
+  "checks": [
+    {
+      "name": "FastAPI health endpoint",
+      "passed": true
+    },
+    {
+      "name": "required backend package exists",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

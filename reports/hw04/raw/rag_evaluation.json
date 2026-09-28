@@ -1,0 +1,368 @@
+[
+  {
+    "question": 1,
+    "question_text": "What is the purpose of the San Jose tenant protection ordinance?",
+    "expected_refusal": false,
+    "retrieval_by_k": {
+      "1": {
+        "raw_chunk_count": 1,
+        "selected_chunk_count": 1,
+        "selected_sources": [
+          "san_jose_tenant_protection_ordinance_fact_sheet.pdf"
+        ],
+        "correct_retrieval": true
+      },
+      "3": {
+        "raw_chunk_count": 3,
+        "selected_chunk_count": 1,
+        "selected_sources": [
+          "san_jose_tenant_protection_ordinance_fact_sheet.pdf"
+        ],
+        "correct_retrieval": true
+      },
+      "5": {
+        "raw_chunk_count": 5,
+        "selected_chunk_count": 1,
+        "selected_sources": [
+          "san_jose_tenant_protection_ordinance_fact_sheet.pdf"
+        ],
+        "correct_retrieval": true
+      }
+    },
+    "configurations": {
+      "no_rag": {
+        "correct_answer": true,
+        "grounded": false,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      },
+      "basic_rag": {
+        "correct_answer": true,
+        "grounded": true,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      },
+      "context_rag": {
+        "correct_answer": true,
+        "grounded": true,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      }
+    },
+    "evaluation_note": "correct_answer uses required-term checks; grounded is an automatic format/evidence proxy and should be reviewed with the saved answers.",
+    "refusal_by_k": {
+      "1": false,
+      "3": false,
+      "5": false
+    },
+    "refusal_pass_by_k": {
+      "1": true,
+      "3": true,
+      "5": true
+    }
+  },
+  {
+    "question": 2,
+    "question_text": "What notice and relocation requirements apply to a covered termination?",
+    "expected_refusal": false,
+    "retrieval_by_k": {
+      "1": {
+        "raw_chunk_count": 1,
+        "selected_chunk_count": 1,
+        "selected_sources": [
+          "california_landlord_tenant_guide_2026.pdf"
+        ],
+        "correct_retrieval": false
+      },
+      "3": {
+        "raw_chunk_count": 3,
+        "selected_chunk_count": 3,
+        "selected_sources": [
+          "california_landlord_tenant_guide_2026.pdf",
+          "san_jose_tenant_protection_ordinance_fact_sheet.pdf"
+        ],
+        "correct_retrieval": true
+      },
+      "5": {
+        "raw_chunk_count": 5,
+        "selected_chunk_count": 5,
+        "selected_sources": [
+          "california_landlord_tenant_guide_2026.pdf",
+          "san_jose_tenant_protection_ordinance_fact_sheet.pdf"
+        ],
+        "correct_retrieval": true
+      }
+    },
+    "configurations": {
+      "no_rag": {
+        "correct_answer": true,
+        "grounded": false,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      },
+      "basic_rag": {
+        "correct_answer": false,
+        "grounded": false,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      },
+      "context_rag": {
+        "correct_answer": false,
+        "grounded": true,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      }
+    },
+    "evaluation_note": "correct_answer uses required-term checks; grounded is an automatic format/evidence proxy and should be reviewed with the saved answers.",
+    "refusal_by_k": {
+      "1": false,
+      "3": false,
+      "5": false
+    },
+    "refusal_pass_by_k": {
+      "1": true,
+      "3": true,
+      "5": true
+    }
+  },
+  {
+    "question": 3,
+    "question_text": "How do the San Jose rent and tenant protection rules differ?",
+    "expected_refusal": false,
+    "retrieval_by_k": {
+      "1": {
+        "raw_chunk_count": 1,
+        "selected_chunk_count": 1,
+        "selected_sources": [
+          "san_jose_tenant_protection_ordinance_fact_sheet.pdf"
+        ],
+        "correct_retrieval": false
+      },
+      "3": {
+        "raw_chunk_count": 3,
+        "selected_chunk_count": 3,
+        "selected_sources": [
+          "california_landlord_tenant_guide_2026.pdf",
+          "san_jose_apartment_rent_ordinance_fact_sheet.pdf",
+          "san_jose_tenant_protection_ordinance_fact_sheet.pdf"
+        ],
+        "correct_retrieval": true
+      },
+      "5": {
+        "raw_chunk_count": 5,
+        "selected_chunk_count": 5,
+        "selected_sources": [
+          "california_landlord_tenant_guide_2026.pdf",
+          "san_jose_apartment_rent_ordinance_fact_sheet.pdf",
+          "san_jose_tenant_protection_ordinance_fact_sheet.pdf"
+        ],
+        "correct_retrieval": true
+      }
+    },
+    "configurations": {
+      "no_rag": {
+        "correct_answer": true,
+        "grounded": false,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      },
+      "basic_rag": {
+        "correct_answer": true,
+        "grounded": true,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      },
+      "context_rag": {
+        "correct_answer": true,
+        "grounded": true,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      }
+    },
+    "evaluation_note": "correct_answer uses required-term checks; grounded is an automatic format/evidence proxy and should be reviewed with the saved answers.",
+    "refusal_by_k": {
+      "1": false,
+      "3": false,
+      "5": false
+    },
+    "refusal_pass_by_k": {
+      "1": true,
+      "3": true,
+      "5": true
+    }
+  },
+  {
+    "question": 4,
+    "question_text": "What does just cause mean in the provided documents?",
+    "expected_refusal": false,
+    "retrieval_by_k": {
+      "1": {
+        "raw_chunk_count": 1,
+        "selected_chunk_count": 1,
+        "selected_sources": [
+          "california_landlord_tenant_guide_2026.pdf"
+        ],
+        "correct_retrieval": true
+      },
+      "3": {
+        "raw_chunk_count": 3,
+        "selected_chunk_count": 2,
+        "selected_sources": [
+          "california_landlord_tenant_guide_2026.pdf"
+        ],
+        "correct_retrieval": true
+      },
+      "5": {
+        "raw_chunk_count": 5,
+        "selected_chunk_count": 2,
+        "selected_sources": [
+          "california_landlord_tenant_guide_2026.pdf"
+        ],
+        "correct_retrieval": true
+      }
+    },
+    "configurations": {
+      "no_rag": {
+        "correct_answer": true,
+        "grounded": false,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      },
+      "basic_rag": {
+        "correct_answer": true,
+        "grounded": true,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      },
+      "context_rag": {
+        "correct_answer": true,
+        "grounded": true,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      }
+    },
+    "evaluation_note": "correct_answer uses required-term checks; grounded is an automatic format/evidence proxy and should be reviewed with the saved answers.",
+    "refusal_by_k": {
+      "1": false,
+      "3": false,
+      "5": false
+    },
+    "refusal_pass_by_k": {
+      "1": true,
+      "3": true,
+      "5": true
+    }
+  },
+  {
+    "question": 5,
+    "question_text": "What is the current federal student-loan interest rate?",
+    "expected_refusal": true,
+    "retrieval_by_k": {
+      "1": {
+        "raw_chunk_count": 1,
+        "selected_chunk_count": 0,
+        "selected_sources": [],
+        "correct_retrieval": true
+      },
+      "3": {
+        "raw_chunk_count": 3,
+        "selected_chunk_count": 0,
+        "selected_sources": [],
+        "correct_retrieval": true
+      },
+      "5": {
+        "raw_chunk_count": 5,
+        "selected_chunk_count": 0,
+        "selected_sources": [],
+        "correct_retrieval": true
+      }
+    },
+    "configurations": {
+      "no_rag": {
+        "correct_answer": false,
+        "grounded": false,
+        "refused_when_needed": false,
+        "citation_compliant": true
+      },
+      "basic_rag": {
+        "correct_answer": false,
+        "grounded": false,
+        "refused_when_needed": false,
+        "citation_compliant": true
+      },
+      "context_rag": {
+        "correct_answer": true,
+        "grounded": true,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      }
+    },
+    "evaluation_note": "correct_answer uses required-term checks; grounded is an automatic format/evidence proxy and should be reviewed with the saved answers.",
+    "refusal_by_k": {
+      "1": true,
+      "3": true,
+      "5": true
+    },
+    "refusal_pass_by_k": {
+      "1": true,
+      "3": true,
+      "5": true
+    }
+  },
+  {
+    "question": 6,
+    "question_text": "Who will win tomorrow's baseball game?",
+    "expected_refusal": true,
+    "retrieval_by_k": {
+      "1": {
+        "raw_chunk_count": 1,
+        "selected_chunk_count": 0,
+        "selected_sources": [],
+        "correct_retrieval": true
+      },
+      "3": {
+        "raw_chunk_count": 3,
+        "selected_chunk_count": 0,
+        "selected_sources": [],
+        "correct_retrieval": true
+      },
+      "5": {
+        "raw_chunk_count": 5,
+        "selected_chunk_count": 0,
+        "selected_sources": [],
+        "correct_retrieval": true
+      }
+    },
+    "configurations": {
+      "no_rag": {
+        "correct_answer": false,
+        "grounded": false,
+        "refused_when_needed": false,
+        "citation_compliant": true
+      },
+      "basic_rag": {
+        "correct_answer": false,
+        "grounded": false,
+        "refused_when_needed": false,
+        "citation_compliant": true
+      },
+      "context_rag": {
+        "correct_answer": true,
+        "grounded": true,
+        "refused_when_needed": true,
+        "citation_compliant": true
+      }
+    },
+    "evaluation_note": "correct_answer uses required-term checks; grounded is an automatic format/evidence proxy and should be reviewed with the saved answers.",
+    "refusal_by_k": {
+      "1": true,
+      "3": true,
+      "5": true
+    },
+    "refusal_pass_by_k": {
+      "1": true,
+      "3": true,
+      "5": true
+    }
+  }
+]

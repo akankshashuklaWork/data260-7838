@@ -1,0 +1,1442 @@
+[
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 1,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 8.495582966133952
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 2,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 7.622124976478517
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 3,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 8.34241695702076
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 4,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 10.62958303373307
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 5,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 10.773957939818501
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 6,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 8.502707933075726
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 7,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 7.109292084351182
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 8,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 7.50670803245157
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 9,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 7.597667048685253
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 10,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 8.941042004153132
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 11,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 7.95587501488626
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 12,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 9.938416071236134
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 13,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 11.383833014406264
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 14,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.820750026032329
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 15,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.745999980717897
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 16,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.668457946740091
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 17,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.182958906516433
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 18,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.144333001226187
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 19,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.510375020094216
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 20,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.59449999127537
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 21,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.353834014385939
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 22,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.090999999083579
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 23,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.486708017997444
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 24,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.148250027559698
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 25,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.153500009328127
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 26,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.320708965882659
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 27,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.026041995733976
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 28,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.194084020331502
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 29,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.212082993239164
+  },
+  {
+    "page_size": 10,
+    "version": "naive",
+    "request": 30,
+    "status": 200,
+    "sql_statements": 11,
+    "latency_ms": 5.73183293454349
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 1,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.1489579705521464
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 2,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.6847090339288116
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 3,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.346875029616058
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 4,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.46245798189193
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 5,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.4067499907687306
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 6,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.3746249498799443
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 7,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.23370804451406
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 8,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.313625067472458
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 9,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.384208026342094
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 10,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.276540966704488
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 11,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.2567909909412265
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 12,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.3620830615982413
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 13,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.2269999608397484
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 14,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.313958015292883
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 15,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.243917086161673
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 16,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.2938749752938747
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 17,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.48216709587723
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 18,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.623707987368107
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 19,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.4419999681413174
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 20,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.3805421078577638
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 21,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.2914590081200004
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 22,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.3640829604119062
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 23,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.8491669800132513
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 24,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.6050839805975556
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 25,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.357124933041632
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 26,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.3429590510204434
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 27,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.2561249788850546
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 28,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.2860829485580325
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 29,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.2872500121593475
+  },
+  {
+    "page_size": 10,
+    "version": "fixed",
+    "request": 30,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 2.3211248917505145
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 1,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 18.70949997100979
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 2,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 18.35174998268485
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 3,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 17.09854102227837
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 4,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.26204198691994
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 5,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 15.439042006619275
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 6,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 17.047000001184642
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 7,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 15.902083017863333
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 8,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 15.873374999500811
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 9,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 15.97754203248769
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 10,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.358792083337903
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 11,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 15.99770796019584
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 12,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.623875009827316
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 13,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 15.942374942824244
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 14,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.660292050801218
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 15,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.970666009001434
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 16,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.936916974373162
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 17,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.49599999655038
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 18,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.773374984040856
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 19,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.76333392970264
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 20,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.532624955289066
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 21,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.45825000014156
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 22,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.89074991736561
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 23,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.9639999512583
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 24,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 17.644334002397954
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 25,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.800333047285676
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 26,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.81979198474437
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 27,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.17116597481072
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 28,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.172042000107467
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 29,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.604832955636084
+  },
+  {
+    "page_size": 50,
+    "version": "naive",
+    "request": 30,
+    "status": 200,
+    "sql_statements": 51,
+    "latency_ms": 16.742250067181885
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 1,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 4.443292040377855
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 2,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 4.21258294954896
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 3,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.8523339899256825
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 4,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.7774579832330346
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 5,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.7053750129416585
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 6,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.8532910402864218
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 7,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.8183339638635516
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 8,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.862874931655824
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 9,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 4.027334041893482
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 10,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.9045839803293347
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 11,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 4.054917022585869
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 12,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 4.199250019155443
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 13,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.79595800768584
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 14,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.6871249321848154
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 15,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.900957992300391
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 16,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.893958986736834
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 17,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.793667070567608
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 18,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.864291007630527
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 19,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 4.613458993844688
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 20,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.8968330482020974
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 21,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 4.17933298740536
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 22,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 4.068540991283953
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 23,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 4.004542017355561
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 24,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 4.104207968339324
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 25,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.951124963350594
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 26,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.6329999566078186
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 27,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.738749888725579
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 28,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.794916090555489
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 29,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.6308750277385116
+  },
+  {
+    "page_size": 50,
+    "version": "fixed",
+    "request": 30,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 3.973292070440948
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 1,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 58.35304094944149
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 2,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.480207993648946
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 3,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 58.146624942310154
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 4,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 59.861957910470665
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 5,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 58.674999978393316
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 6,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.82524996902794
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 7,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.24933301098645
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 8,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.483207900077105
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 9,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.541207992471755
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 10,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.03995795920491
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 11,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 58.11541702132672
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 12,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 58.292250032536685
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 13,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 58.78004198893905
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 14,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 58.17908304743469
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 15,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.945665903389454
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 16,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.11450008675456
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 17,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.06474999897182
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 18,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.463083998300135
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 19,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 58.012417051941156
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 20,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.275415980257094
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 21,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 60.8944590203464
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 22,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 62.23587493877858
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 23,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 58.821459067985415
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 24,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.52300005406141
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 25,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.505707954987884
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 26,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 72.5405840203166
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 27,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.567166979424655
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 28,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.254333049058914
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 29,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 57.52799997571856
+  },
+  {
+    "page_size": 200,
+    "version": "naive",
+    "request": 30,
+    "status": 200,
+    "sql_statements": 201,
+    "latency_ms": 58.37683309800923
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 1,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 10.181540972553194
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 2,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 10.023917071521282
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 3,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.514792007394135
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 4,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.737083921208978
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 5,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.871333022601902
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 6,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.27441706880927
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 7,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 8.937207981944084
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 8,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 8.975957985967398
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 9,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.271999937482178
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 10,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.031624998897314
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 11,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 8.696791948750615
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 12,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 8.707124972715974
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 13,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.105750010348856
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 14,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.030915913172066
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 15,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.07512498088181
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 16,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.285875014029443
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 17,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.13045892957598
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 18,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.250124916434288
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 19,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.184750029817224
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 20,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 10.048749973066151
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 21,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.416374959982932
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 22,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 8.927582995966077
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 23,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.210332995280623
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 24,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.801625041291118
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 25,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 10.34379203338176
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 26,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 9.125957963988185
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 27,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 10.05758298560977
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 28,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 11.138458037748933
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 29,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 10.317458072677255
+  },
+  {
+    "page_size": 200,
+    "version": "fixed",
+    "request": 30,
+    "status": 200,
+    "sql_statements": 1,
+    "latency_ms": 10.249041952192783
+  }
+]

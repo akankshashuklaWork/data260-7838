@@ -1,0 +1,130 @@
+{
+  "domain_server": {
+    "tool_count": 3,
+    "calls": [
+      {
+        "tool": "search",
+        "inputs": {
+          "query": "San Jose",
+          "limit": 2
+        },
+        "output": {
+          "data": [
+            {
+              "available_units": 1,
+              "id": 1,
+              "listing_code": "SJ-100",
+              "owner_id": 1,
+              "property_category": "House",
+              "property_location": "San Jose",
+              "property_title": "Willow Glen Cottage"
+            },
+            {
+              "available_units": 2,
+              "id": 2,
+              "listing_code": "SJ-101",
+              "owner_id": 1,
+              "property_category": "Apartment",
+              "property_location": "San Jose",
+              "property_title": "Downtown Apartment"
+            }
+          ],
+          "error": null,
+          "ok": true
+        }
+      },
+      {
+        "tool": "detail",
+        "inputs": {
+          "listing_id": 1
+        },
+        "output": {
+          "data": {
+            "available_units": 1,
+            "id": 1,
+            "listing_code": "SJ-100",
+            "owner": {
+              "email": "maya@example.com",
+              "first_name": "Maya",
+              "id": 1,
+              "last_name": "Chen"
+            },
+            "owner_id": 1,
+            "property_category": "House",
+            "property_location": "San Jose",
+            "property_title": "Willow Glen Cottage"
+          },
+          "error": null,
+          "ok": true
+        }
+      },
+      {
+        "tool": "aggregate",
+        "inputs": {
+          "owner_id": 1
+        },
+        "output": {
+          "data": {
+            "listing_count": 2,
+            "listing_ids": [
+              1,
+              2
+            ],
+            "owner": {
+              "email": "maya@example.com",
+              "first_name": "Maya",
+              "id": 1,
+              "last_name": "Chen"
+            },
+            "total_available_units": 3
+          },
+          "error": null,
+          "ok": true
+        }
+      },
+      {
+        "tool": "search",
+        "inputs": {
+          "query": "",
+          "limit": 2
+        },
+        "output": {
+          "data": null,
+          "error": "query must be a non-empty string of at least 2 characters",
+          "ok": false
+        }
+      },
+      {
+        "tool": "detail",
+        "inputs": {
+          "listing_id": 0
+        },
+        "output": {
+          "data": null,
+          "error": "listing_id must be a positive integer",
+          "ok": false
+        }
+      },
+      {
+        "tool": "aggregate",
+        "inputs": {
+          "owner_id": 0
+        },
+        "output": {
+          "data": null,
+          "error": "owner_id must be a positive integer",
+          "ok": false
+        }
+      }
+    ]
+  },
+  "meals_server": {
+    "tools": [
+      "search_meals_by_name",
+      "meals_by_ingredient",
+      "random_meal",
+      "meal_details"
+    ],
+    "network_calls": "run with mcp dev and Inspector"
+  }
+}

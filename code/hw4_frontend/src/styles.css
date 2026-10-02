@@ -99,3 +99,9 @@ section {
   background: #fff;
   border-radius: 12px;
 }
+
+.panel-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.panel-heading p { margin-top: -8px; color: #5b6575; }
+.notice { padding: 12px 16px; background: #e9f7ef; color: #176b3a; border-radius: 8px; }
+.error { color: #b42318; }
+.danger { background: #b42318; }

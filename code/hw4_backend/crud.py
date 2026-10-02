@@ -1,7 +1,7 @@
 from sqlalchemy import select
 from sqlalchemy.orm import Session, joinedload
-from .models import ListingAmenity, RentalHousingListing, User
-from .schemas import ListingCreate, ListingUpdate
+from .models import ListingAmenity, PropertyOwner, RentalHousingListing, User
+from .schemas import ListingCreate, ListingUpdate, OwnerCreate, OwnerUpdate
 from .security import hash_password
 
 def create_user(db: Session, name: str, email: str, password: str) -> User:
@@ -12,14 +12,73 @@ def create_user(db: Session, name: str, email: str, password: str) -> User:
     return row
 
 def create_listing(db: Session, payload: ListingCreate) -> RentalHousingListing:
+    if not db.get(PropertyOwner, payload.owner_id):
+        raise ValueError("Owner not found for owner_id")
     row = RentalHousingListing(**payload.model_dump())
     db.add(row)
     db.commit()
     db.refresh(row)
     return row
 
+
+def create_owner(db: Session, payload: OwnerCreate) -> PropertyOwner:
+    row = PropertyOwner(**payload.model_dump())
+    db.add(row)
+    db.commit()
+    db.refresh(row)
+    return row
+
+
+def list_owners(db: Session, offset: int, limit: int) -> list[PropertyOwner]:
+    return db.scalars(select(PropertyOwner).order_by(PropertyOwner.id).offset(offset).limit(limit)).all()
+
+
+def get_owner(db: Session, owner_id: int) -> PropertyOwner | None:
+    return db.get(PropertyOwner, owner_id)
+
+
+def update_owner(db: Session, owner_id: int, payload: OwnerUpdate) -> PropertyOwner | None:
+    row = get_owner(db, owner_id)
+    if not row:
+        return None
+    for key, value in payload.model_dump(exclude_unset=True).items():
+        setattr(row, key, value)
+    db.commit()
+    db.refresh(row)
+    return row
+
+
+def delete_owner(db: Session, owner_id: int) -> PropertyOwner | None:
+    row = get_owner(db, owner_id)
+    if not row:
+        return None
+    if db.scalar(select(RentalHousingListing.id).where(RentalHousingListing.owner_id == owner_id).limit(1)):
+        raise ValueError("Cannot delete owner with associated listings")
+    db.delete(row)
+    db.commit()
+    return row
+
 def get_listing(db: Session, listing_id: int) -> RentalHousingListing | None:
     return db.get(RentalHousingListing, listing_id)
+
+
+def list_listings(db: Session, offset: int, limit: int) -> list[RentalHousingListing]:
+    statement = (
+        select(RentalHousingListing)
+        .options(joinedload(RentalHousingListing.owner), joinedload(RentalHousingListing.related_rows))
+        .order_by(RentalHousingListing.id)
+        .offset(offset)
+        .limit(limit)
+    )
+    return db.scalars(statement).unique().all()
+
+
+def listings_by_owner(db: Session, owner_id: int) -> list[RentalHousingListing]:
+    if not get_owner(db, owner_id):
+        raise ValueError("Owner not found")
+    return db.scalars(
+        select(RentalHousingListing).where(RentalHousingListing.owner_id == owner_id).order_by(RentalHousingListing.id)
+    ).all()
 
 def update_listing(
     db: Session, listing_id: int, payload: ListingUpdate
@@ -28,7 +87,10 @@ def update_listing(
     if not row:
         return None
 
-    for key, value in payload.model_dump().items():
+    data = payload.model_dump()
+    if not db.get(PropertyOwner, data["owner_id"]):
+        raise ValueError("Owner not found for owner_id")
+    for key, value in data.items():
         setattr(row, key, value)
 
     db.commit()

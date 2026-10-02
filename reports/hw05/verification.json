@@ -1,0 +1,35 @@
+{
+  "homework": 5,
+  "SID4": 7838,
+  "PORT_BASE": 8638,
+  "PREFIX": "s7838",
+  "DOMAIN_ID": 6,
+  "commit_hash": "923ef0872f69743045cb66ed9c3f293c8d4c6ba5",
+  "model": "qwen2:7b",
+  "SEED": 7838,
+  "VERIFY_SEED": 267838,
+  "checks": [
+    {
+      "name": "offline Part 4\u20135 tests",
+      "passed": true,
+      "detail": "PASS search valid\nPASS search invalid schema\nPASS detail valid\nPASS detail invalid schema\nPASS aggregate valid\nPASS aggregate invalid schema\nPASS safety rule allowed\nPASS safety rule blocked\nPASS agent max steps offline\nSUMMARY 9/9 tests passed\n"
+    },
+    {
+      "name": "150 fault-injection records",
+      "passed": true
+    },
+    {
+      "name": "SQLite API relationship smoke",
+      "passed": true
+    },
+    {
+      "name": "MCP server source files",
+      "passed": true
+    },
+    {
+      "name": "Redux client source files",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

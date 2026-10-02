@@ -1,6 +1,41 @@
-# DATA 260 Homework 1 to 4
+# DATA 260 Homework 1 to 5
 
 Rental Housing Listings - Akanksha Shukla
+
+## HW5: Related Listings, Redux, MCP Tools, Retries, and a Safe Agent
+
+HW5 extends the existing rental-housing service in `code/hw4_backend/`. The
+related entity is `PropertyOwner`; listings now have a unique listing code,
+available-unit count, owner foreign key, and timestamps. CRUD routes for both
+entities include pagination, validation, unique-field conflict handling, and
+the relationship query at `/owners/{owner_id}/listings`.
+
+The Redux Toolkit client is in `code/hw4_frontend/`. Its listing slice has
+Axios thunks for fetch/create/update/delete, and the Home/Create/Update views
+read and mutate the Redux state.
+
+The MCP and agent implementation is in `code/hw5_mcp/` and `code/hw5_agent/`:
+
+- `meals_server.py` provides the four TheMealDB tools over STDIO.
+- `domain_server.py` provides exactly `search`, `detail`, and `aggregate` over
+  the rental domain using the shared `{ok, data, error}` envelope.
+- `run_hw5_fault_injection.py` produces 150 deterministic retry records.
+- `run_hw5_tests.py` runs the offline Part 4/5 assertions.
+- `verify_hw5.py` writes `reports/hw05/verification.json`.
+
+Run the offline checks from the repository root:
+
+```bash
+PYTHONPATH=code python code/run_hw5_tests.py
+PYTHONPATH=code python code/run_hw5_fault_injection.py
+PYTHONPATH=code python code/run_hw5_mcp_smoke.py
+PYTHONPATH=code python code/verify_hw5.py
+```
+
+After installing `mcp[cli]`, run either server with `mcp dev
+code/hw5_mcp/meals_server.py` or `mcp dev code/hw5_mcp/domain_server.py`.
+The four live Ollama scenarios use `code/run_hw5_agent_scenarios.py` with the
+local `qwen2:7b` model.
 
 ## HW4: Full-Stack CRUD, Database Performance, and Grounded RAG
 

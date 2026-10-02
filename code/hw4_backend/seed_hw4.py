@@ -2,7 +2,7 @@
 import random
 from sqlalchemy import delete
 from .database import Base, SessionLocal, engine
-from .models import ListingAmenity, RentalHousingListing
+from .models import ListingAmenity, PropertyOwner, RentalHousingListing
 
 SEED = 7838
 
@@ -13,11 +13,23 @@ def main():
     try:
         db.execute(delete(ListingAmenity))
         db.execute(delete(RentalHousingListing))
+        db.execute(delete(PropertyOwner))
         db.commit()
+        owners = [
+            PropertyOwner(
+                first_name=f"Owner{i + 1}",
+                last_name="Housing",
+                email=f"owner{i + 1}@example.com",
+            )
+            for i in range(20)
+        ]
+        db.add_all(owners)
+        db.flush()
         rows = []
         for i in range(5000):
             rows.append(
                 RentalHousingListing(
+                    listing_code=f"HW4-{i + 1:05d}",
                     property_title=f"Seed listing {i + 1}",
                     property_location=f"San Jose neighborhood {i % 20}",
                     submitter_email=f"seed{i}@example.com",
@@ -29,6 +41,8 @@ def main():
                         ["Apartment", "House", "Condo", "Townhouse"]
                     ),
                     terms_accepted=True,
+                    available_units=(i % 4) + 1,
+                    owner_id=owners[i % len(owners)].id,
                 )
             )
         db.add_all(rows)
@@ -42,7 +56,7 @@ def main():
                 )
             )
         db.commit()
-        print(f"seeded listings={len(rows)} related_rows=200 seed={SEED}")
+        print(f"seeded owners={len(owners)} listings={len(rows)} related_rows=200 seed={SEED}")
     finally: db.close()
 
 if __name__ == "__main__": main()

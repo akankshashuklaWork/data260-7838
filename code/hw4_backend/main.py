@@ -1,11 +1,14 @@
-from fastapi import Depends, FastAPI, HTTPException, Request, Response
+from fastapi import Depends, FastAPI, HTTPException, Query, Request, Response, status
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 from . import crud, models
 from .database import Base, engine, get_db
-from .schemas import ListingCreate, ListingOut, ListingUpdate, LoginRequest, UserCreate
+from .schemas import (
+    ListingCreate, ListingOut, ListingUpdate, LoginRequest, OwnerCreate, OwnerOut,
+    OwnerUpdate, UserCreate,
+)
 from .security import verify_password
 from .session_crud import create_session, delete_session, get_session
 
@@ -77,14 +80,78 @@ def add_listing(
     db: Session = Depends(get_db),
     _=Depends(require_session),
 ):
-    return crud.create_listing(db, payload)
+    try:
+        return crud.create_listing(db, payload)
+    except ValueError as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Listing code must be unique")
 
 @app.get("/listings", response_model=list[ListingOut])
 def list_listings(
     db: Session = Depends(get_db),
     _=Depends(require_session),
+    skip: int = Query(0, ge=0),
+    limit: int = Query(50, ge=1, le=200),
 ):
-    return crud.list_fixed(db, 0, 200)
+    return crud.list_listings(db, skip, limit)
+
+
+@app.post("/owners", response_model=OwnerOut, status_code=status.HTTP_201_CREATED)
+def add_owner(payload: OwnerCreate, db: Session = Depends(get_db), _=Depends(require_session)):
+    try:
+        return crud.create_owner(db, payload)
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Owner email must be unique")
+
+
+@app.get("/owners", response_model=list[OwnerOut])
+def get_owners(
+    db: Session = Depends(get_db), _=Depends(require_session),
+    skip: int = Query(0, ge=0), limit: int = Query(50, ge=1, le=200),
+):
+    return crud.list_owners(db, skip, limit)
+
+
+@app.get("/owners/{owner_id}", response_model=OwnerOut)
+def get_owner(owner_id: int, db: Session = Depends(get_db), _=Depends(require_session)):
+    row = crud.get_owner(db, owner_id)
+    if not row:
+        raise HTTPException(status_code=404, detail="Owner not found")
+    return row
+
+
+@app.put("/owners/{owner_id}", response_model=OwnerOut)
+def edit_owner(owner_id: int, payload: OwnerUpdate, db: Session = Depends(get_db), _=Depends(require_session)):
+    try:
+        row = crud.update_owner(db, owner_id, payload)
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Owner email must be unique")
+    if not row:
+        raise HTTPException(status_code=404, detail="Owner not found")
+    return row
+
+
+@app.delete("/owners/{owner_id}", status_code=status.HTTP_204_NO_CONTENT)
+def remove_owner(owner_id: int, db: Session = Depends(get_db), _=Depends(require_session)):
+    try:
+        row = crud.delete_owner(db, owner_id)
+    except ValueError as exc:
+        raise HTTPException(status_code=409, detail=str(exc))
+    if not row:
+        raise HTTPException(status_code=404, detail="Owner not found")
+    return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
+@app.get("/owners/{owner_id}/listings", response_model=list[ListingOut])
+def get_owner_listings(owner_id: int, db: Session = Depends(get_db), _=Depends(require_session)):
+    try:
+        return crud.listings_by_owner(db, owner_id)
+    except ValueError as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
 
 @app.get("/listings/{listing_id}", response_model=ListingOut)
 def read_listing(listing_id: int, db: Session = Depends(get_db), _=Depends(require_session)):
@@ -100,7 +167,13 @@ def edit_listing(
     db: Session = Depends(get_db),
     _=Depends(require_session),
 ):
-    row = crud.update_listing(db, listing_id, payload)
+    try:
+        row = crud.update_listing(db, listing_id, payload)
+    except ValueError as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
+    except IntegrityError:
+        db.rollback()
+        raise HTTPException(status_code=409, detail="Listing code must be unique")
     if not row:
         raise HTTPException(status_code=404, detail="Listing not found")
     return row

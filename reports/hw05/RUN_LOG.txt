@@ -1,0 +1,9 @@
+DATA 260 Homework 5 Run Log
+
+[2026-10-02] Python compileall: PASS
+[2026-10-02] Offline HW5 test runner: 9/9 PASS
+[2026-10-02] Retry fault injection: 150 records generated at rates 0%, 20%, and 50%
+[2026-10-02] MCP domain smoke outputs generated for 3 valid and 3 invalid calls
+[2026-10-02] SQLite API smoke: owner/listing CRUD, relationship query, and restricted delete PASS
+[2026-10-02] Frontend npm offline install could not fetch uncached Redux packages; package.json and package-lock.json were updated from the supplied DATA236_Demo5 dependency set
+

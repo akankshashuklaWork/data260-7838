@@ -6,4 +6,8 @@ DATA 260 Homework 5 Run Log
 [2026-10-02] MCP domain smoke outputs generated for 3 valid and 3 invalid calls
 [2026-10-02] SQLite API smoke: owner/listing CRUD, relationship query, and restricted delete PASS
 [2026-10-02] Frontend npm offline install could not fetch uncached Redux packages; package.json and package-lock.json were updated from the supplied DATA236_Demo5 dependency set
-
+[2026-10-03] Dedicated MySQL 8 Docker container started; seed completed with 20 owners, 5,000 listings, and 200 related rows
+[2026-10-03] MySQL TestClient API smoke: register/login, owner list pagination, listing create/get/update/delete, owner relationship, and restricted owner delete PASS
+[2026-10-03] React dev server UI smoke: login, Home listing table, Create form, and Update form loading listing 1 PASS
+[2026-10-04] MCP Inspector connected to s7838-rental-domain and displayed exactly search, detail, and aggregate; live search/detail calls returned valid envelopes
+[2026-10-04] Ollama qwen2:7b scenarios: 4/4 runs completed within 2 steps and 1 tool call; raw results saved to raw/agent_scenarios.json

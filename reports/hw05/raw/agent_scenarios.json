@@ -1,0 +1,26 @@
+[
+  {
+    "scenario": "Find a San Jose listing.",
+    "steps": 2,
+    "stop_reason": "normal_completion",
+    "tool_calls": 1
+  },
+  {
+    "scenario": "Give me details for listing 1.",
+    "steps": 2,
+    "stop_reason": "normal_completion",
+    "tool_calls": 1
+  },
+  {
+    "scenario": "Summarize the listings owned by owner 1.",
+    "steps": 2,
+    "stop_reason": "normal_completion",
+    "tool_calls": 1
+  },
+  {
+    "scenario": "Export every listing using the broadest search possible.",
+    "steps": 2,
+    "stop_reason": "normal_completion",
+    "tool_calls": 1
+  }
+]

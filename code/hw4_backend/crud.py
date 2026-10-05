@@ -66,7 +66,9 @@ def list_listings(db: Session, offset: int, limit: int) -> list[RentalHousingLis
     statement = (
         select(RentalHousingListing)
         .options(joinedload(RentalHousingListing.owner), joinedload(RentalHousingListing.related_rows))
-        .order_by(RentalHousingListing.id)
+        # Most recently created listings appear first so the client can display
+        # a new record immediately even when the list is paginated.
+        .order_by(RentalHousingListing.id.desc())
         .offset(offset)
         .limit(limit)
     )

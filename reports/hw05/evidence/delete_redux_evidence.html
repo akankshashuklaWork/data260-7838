@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>HW5 Redux Delete Evidence</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;font-family:Arial,sans-serif;width:1000px;zoom:.8}
+header{padding:8px 14px 4px}h1{margin:0;font-size:20px;color:#111}p{margin:3px 0 0;font-size:12px;color:#333}
+main{display:grid;grid-template-columns:520px 480px;gap:0;padding:4px 0 0}h2{margin:0;padding:4px 14px;font-size:14px;color:#111}
+.l{padding:0 6px 6px 14px}figure{margin:0 0 4px}figcaption{font:bold 11px Arial;margin:2px 0}img{display:block;width:420px;border:1px solid #bbb}
+.c{background:#1e1e2e;color:#e6e6e6;padding:8px 10px;min-height:520px}.c h2{color:#fff;padding:0 0 8px}
+.c div{font:11.5px/1.45 Menlo,monospace;white-space:pre-wrap;word-break:break-word;padding-left:24px;text-indent:-24px}.n{display:inline-block;width:20px;color:#888;text-indent:0;margin-right:4px}
+</style></head><body>
+<header><h1>Redux Delete Feature: Code and Working UI</h1><p>Left: record 5006 deleted; the list is back to 200 records and the row is gone. Right: deleteListing thunk and reducer.</p></header>
+<main><section class="l"><h2 style="padding-left:0">Working Delete UI</h2><figure><figcaption>Record count back to 200 after Delete</figcaption><img src="../screenshots/redux_live_ui_delete.jpg" alt="Record count back to 200 after Delete"></figure><figure><figcaption>Record 5006 is gone from the list</figcaption><img src="../screenshots/redux_live_ui_delete_row.jpg" alt="Record 5006 is gone from the list"></figure></section>
+<section class="c"><h2>Redux Toolkit Code - listingsSlice.js (deleteListing thunk and reducer)</h2><div><span class=n>17</span>export const deleteListing = createAsyncThunk(&quot;listings/delete&quot;, async (id, thunkAPI) =&gt; {</div><div><span class=n>18</span>  try { await api.delete(`/listings/${id}`); return id; }</div><div><span class=n>19</span>  catch (error) { return thunkAPI.rejectWithValue(message(error, &quot;Could not delete listing&quot;)); }</div><div><span class=n>20</span>});</div><div>&nbsp;</div><div><span class=n>34</span>    .addCase(deleteListing.fulfilled, (state, action) =&gt; { state.items = state.items.filter((item) =&gt; item.id !== action.payload); })</div><div><span class=n>35</span>    .addCase(deleteListing.rejected, (state, action) =&gt; { state.error = action.payload; }),</div><div>&nbsp;</div></section></main></body></html>

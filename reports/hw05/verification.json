@@ -4,7 +4,7 @@
   "PORT_BASE": 8638,
   "PREFIX": "s7838",
   "DOMAIN_ID": 6,
-  "commit_hash": "923ef0872f69743045cb66ed9c3f293c8d4c6ba5",
+  "commit_hash": "55708f7afa2294a2005ff50903162eca99002efe",
   "model": "qwen2:7b",
   "SEED": 7838,
   "VERIFY_SEED": 267838,
@@ -29,6 +29,21 @@
     {
       "name": "Redux client source files",
       "passed": true
+    },
+    {
+      "name": "MySQL Docker API smoke",
+      "passed": true,
+      "detail": "20 owners and 5,000 listings seeded; CRUD, relationship, pagination, and restricted owner delete passed"
+    },
+    {
+      "name": "MCP Inspector live tools",
+      "passed": true,
+      "detail": "Connected server exposed exactly search, detail, and aggregate; live search and detail calls passed"
+    },
+    {
+      "name": "Ollama live scenarios",
+      "passed": true,
+      "detail": "4 scenarios completed with qwen2:7b; raw results saved to raw/agent_scenarios.json"
     }
   ],
   "passed": true

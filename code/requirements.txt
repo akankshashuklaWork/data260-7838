@@ -28,4 +28,5 @@ PyYAML==6.0.3
 cryptography==50.0.1
 
 # HW5 MCP servers and local tool harness
-mcp[cli]>=1.9.0
+mcp[cli]>=1.9.0,<2
+reportlab>=4.0

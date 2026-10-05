@@ -1,0 +1,28 @@
+DATA 260 Homework 5 MySQL Schema Evidence
+
+Database: s7838_rel
+Container: hw5-mysql (MySQL 8.0)
+Seed result: 20 property owners and 5,000 rental listings.
+
+Tables:
+- listing_amenities
+- property_owners
+- rental_housing_listings
+- sessions
+- users
+
+Required HW5 relationship:
+property_owners.id is referenced by rental_housing_listings.owner_id.
+The owner email column is unique. The listing_code column is unique.
+
+Important listing columns:
+id, listing_code, property_title, property_location, submitter_email,
+property_description, property_category, terms_accepted, available_units,
+owner_id, created_at, updated_at
+
+Row counts:
+property_owners: 20
+rental_housing_listings: 5000
+
+The database smoke test also verified the owner relationship endpoint and that
+an owner with related listings cannot be deleted.

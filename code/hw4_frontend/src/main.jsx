@@ -29,8 +29,10 @@ function ListingForm({ owners, initial = blank, onSubmit, buttonText }) {
 
 function Home({ owners }) {
   const dispatch = useDispatch(); const { items, loading, error } = useSelector((state) => state.listings);
-  useEffect(() => { dispatch(fetchListings()); }, [dispatch]);
-  return <section className="panel"><div className="panel-heading"><div><h2>Home</h2><p>All rental listings from Redux state.</p></div><button onClick={() => dispatch(fetchListings())}>Refresh</button></div>{loading && <p>Loading…</p>}{error && <p className="error">{error}</p>}<table><thead><tr><th>ID</th><th>Code</th><th>Title</th><th>Location</th><th>Owner</th><th>Units</th><th>Delete</th></tr></thead><tbody>{items.map((item) => <tr key={item.id}><td>{item.id}</td><td>{item.listing_code}</td><td>{item.property_title}</td><td>{item.property_location}</td><td>{owners.find((o) => o.id === item.owner_id)?.email || item.owner_id}</td><td>{item.available_units}</td><td><button className="danger" onClick={() => dispatch(deleteListing(item.id))}>Delete</button></td></tr>)}{!items.length && !loading && <tr><td colSpan="7">No listings found.</td></tr>}</tbody></table></section>;
+  // Load the initial Home list once.  Later Create, Update, and Delete actions
+  // already update Redux state, so returning Home does not replace that state.
+  useEffect(() => { if (!items.length) dispatch(fetchListings()); }, [dispatch, items.length]);
+  return <section className="panel"><div className="panel-heading"><div><h2>Home</h2><p>All rental listings from Redux state. Current records loaded: {items.length}.</p></div><button onClick={() => dispatch(fetchListings())}>Refresh</button></div>{loading && <p>Loading…</p>}{error && <p className="error">{error}</p>}<table><thead><tr><th>ID</th><th>Code</th><th>Title</th><th>Location</th><th>Owner</th><th>Units</th><th>Delete</th></tr></thead><tbody>{items.map((item) => <tr key={item.id}><td>{item.id}</td><td>{item.listing_code}</td><td>{item.property_title}</td><td>{item.property_location}</td><td>{owners.find((o) => o.id === item.owner_id)?.email || item.owner_id}</td><td>{item.available_units}</td><td><button className="danger" onClick={() => dispatch(deleteListing(item.id))}>Delete</button></td></tr>)}{!items.length && !loading && <tr><td colSpan="7">No listings found.</td></tr>}</tbody></table></section>;
 }
 
 function App() {

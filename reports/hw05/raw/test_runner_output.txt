@@ -1,0 +1,10 @@
+PASS search valid
+PASS search invalid schema
+PASS detail valid
+PASS detail invalid schema
+PASS aggregate valid
+PASS aggregate invalid schema
+PASS safety rule allowed
+PASS safety rule blocked
+PASS agent max steps offline
+SUMMARY 9/9 tests passed

@@ -1,0 +1,38 @@
+{
+  "settings": [
+    {
+      "name": "short_term_n_4",
+      "mean_prompt_tokens_per_turn": 1644.6333333333334,
+      "mean_completion_tokens_per_turn": 108,
+      "mean_latency_ms": 2317.3193333333334,
+      "mean_probe_quality": 4.6,
+      "cost_for_10000_30_turn_conversations": 655.39
+    },
+    {
+      "name": "short_term_n_12",
+      "mean_prompt_tokens_per_turn": 1908.8333333333333,
+      "mean_completion_tokens_per_turn": 82.96666666666667,
+      "mean_latency_ms": 2527.908,
+      "mean_probe_quality": 5,
+      "cost_for_10000_30_turn_conversations": 697.1
+    },
+    {
+      "name": "short_term_n_30",
+      "mean_prompt_tokens_per_turn": 2007.6333333333334,
+      "mean_completion_tokens_per_turn": 44.53333333333333,
+      "mean_latency_ms": 2430.648333333333,
+      "mean_probe_quality": 5,
+      "cost_for_10000_30_turn_conversations": 669.0899999999999
+    },
+    {
+      "name": "summary_first_eviction",
+      "mean_prompt_tokens_per_turn": 1526.2333333333333,
+      "mean_completion_tokens_per_turn": 47.06666666666667,
+      "mean_latency_ms": 1287.8496666666667,
+      "mean_probe_quality": 5,
+      "cost_for_10000_30_turn_conversations": 528.47
+    }
+  ],
+  "best_setting": "summary_first_eviction",
+  "worst_setting": "short_term_n_12"
+}

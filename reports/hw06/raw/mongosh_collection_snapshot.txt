@@ -1,0 +1,16 @@
+$ mongosh s7838_doc --quiet --eval '<collection snapshot>'
+{
+  "database": "s7838_doc",
+  "collections": [
+    "episodes",
+    "messages",
+    "rental_listings",
+    "summaries"
+  ],
+  "counts": {
+    "rental_listings": 0,
+    "messages": 282,
+    "summaries": 40,
+    "episodes": 141
+  }
+}

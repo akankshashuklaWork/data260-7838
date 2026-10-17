@@ -1,0 +1,3 @@
+Akanksha Shukla | HW6 file-memory command demo
+Command: /compact
+Result: Compacted MEMORY.md from 55 to 39 non-comment lines (17 duplicate facts merged; 3 contradictions resolved explicitly).

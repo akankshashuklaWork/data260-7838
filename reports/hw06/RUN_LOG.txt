@@ -1,0 +1,26 @@
+DATA 260 Homework 6 Run Log
+Akanksha Shukla | HW6 memory experiment started 2026-10-17T06:34:51Z
+Model: qwen2:7b via local Ollama through src/model_client.py
+Database: s7838_doc | Seed: 7838 | Verify seed: 267838
+Running short_term_n_4 with SHORT_TERM_N=4 and policy=none
+Completed short_term_n_4: prompt=1644.63, latency=2317.32 ms, quality=4.60
+Akanksha Shukla | HW6 memory experiment started 2026-10-17T06:37:08Z
+Model: qwen2:7b via local Ollama through src/model_client.py
+Database: s7838_doc | Seed: 7838 | Verify seed: 267838
+Running short_term_n_12 with SHORT_TERM_N=12 and policy=none
+Completed short_term_n_12: prompt=1908.83, latency=2527.91 ms, quality=5.00
+Akanksha Shukla | HW6 memory experiment started 2026-10-17T06:38:50Z
+Model: qwen2:7b via local Ollama through src/model_client.py
+Database: s7838_doc | Seed: 7838 | Verify seed: 267838
+Running short_term_n_30 with SHORT_TERM_N=30 and policy=none
+Completed short_term_n_30: prompt=2007.63, latency=2430.65 ms, quality=5.00
+Akanksha Shukla | HW6 memory experiment started 2026-10-17T06:41:26Z
+Model: qwen2:7b via local Ollama through src/model_client.py
+Database: s7838_doc | Seed: 7838 | Verify seed: 267838
+Running summary_first_eviction with SHORT_TERM_N=12 and policy=summary_first_eviction
+Completed summary_first_eviction: prompt=1526.23, latency=1287.85 ms, quality=5.00
+Wrote reports/hw06/raw/*.json and reports/hw06/METRICS.md
+[2026-10-17T06:45:37Z] /compact evidence: Compacted MEMORY.md from 55 to 39 non-comment lines (17 duplicate facts merged; 3 contradictions resolved explicitly).
+[2026-10-17T06:46:05Z] make verify-hw06: PASS
+[2026-10-17T06:53:13Z] make verify-hw06: PASS
+[2026-10-17T07:05:37Z] make verify-hw06: PASS

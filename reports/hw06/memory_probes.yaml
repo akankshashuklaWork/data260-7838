@@ -1,0 +1,54 @@
+probes:
+  - id: p1_budget
+    question: What monthly budget did I give you?
+    expected_answer_criteria:
+      - "2,800"
+    rubric:
+      5: States the exact $2,800 monthly budget.
+      4: States the budget with a minor wording or formatting difference.
+      3: Identifies a budget but gives an imprecise amount.
+      2: Gives a housing preference but no usable budget.
+      1: Does not answer from the conversation.
+  - id: p2_bedrooms
+    question: How many bedrooms do I need?
+    expected_answer_criteria:
+      - "two"
+      - "bedroom"
+    rubric:
+      5: States the exact two-bedroom requirement.
+      4: Clearly identifies two bedrooms with minor extra text.
+      3: Identifies bedrooms but not the required number.
+      2: Gives another home feature instead.
+      1: Does not answer from the conversation.
+  - id: p3_area
+    question: Which neighborhood did I prefer?
+    expected_answer_criteria:
+      - "Willow Glen"
+    rubric:
+      5: Names Willow Glen exactly.
+      4: Names Willow Glen with a minor spelling or formatting difference.
+      3: Names San Jose but not the neighborhood.
+      2: Gives an unrelated location detail.
+      1: Does not answer from the conversation.
+  - id: p4_pets
+    question: What is my pet policy preference?
+    expected_answer_criteria:
+      - "cat"
+      - "pet"
+    rubric:
+      5: Identifies that one indoor cat must be permitted.
+      4: Clearly recognizes the pet requirement without the count.
+      3: Mentions pets but gives an uncertain policy.
+      2: Gives another amenity preference.
+      1: Does not answer from the conversation.
+  - id: p5_move_in
+    question: When do I want to move in?
+    expected_answer_criteria:
+      - "November"
+      - "1"
+    rubric:
+      5: States the November 1 target.
+      4: States November with a minor date omission.
+      3: Identifies a near-term move without the date.
+      2: Gives another timeline detail.
+      1: Does not answer from the conversation.

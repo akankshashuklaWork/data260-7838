@@ -1,6 +1,33 @@
-# DATA 260 Homework 1 to 5
+# DATA 260 Homework 1 to 6
 
 Rental Housing Listings - Akanksha Shukla
+
+## HW6: MongoDB Documents and Long-Term Memory
+
+HW6 adds a MongoDB version of the Rental Housing Listings application and two
+complementary memory systems. The FastAPI service in `code/hw6_memory/`
+stores rental-listing documents and conversation messages, summaries, and
+episodic facts in the local `s7838_doc` database. The same service supports
+CRUD endpoints, `/api/chat`, `/api/memory/{user_id}`, and
+`/api/aggregate/{user_id}`.
+
+The memory experiment compares short-term windows of 4, 12, and 30 messages
+with a summary-first eviction policy. `AGENT.md` and `memory/MEMORY.md`
+provide the file-based long-term memory instructions and the `/memory`,
+`/compact`, `/dream`, and `/help` commands.
+
+Start local MongoDB and run the HW6 commands from the repository root:
+
+```bash
+docker compose up -d mongodb
+make run-hw06
+make verify-hw06
+make experiment-hw06
+make file-memory-demo-hw06
+```
+
+HW6 reports, verification results, fixed probes, experiment metrics, and raw
+per-turn exports are in `reports/hw06/`.
 
 ## HW5: Related Listings, Redux, MCP Tools, Retries, and a Safe Agent
 

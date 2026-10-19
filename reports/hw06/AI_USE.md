@@ -1,6 +1,6 @@
 # AI Use Record
 
-AI assistance was used as a coding and editing aid for this homework. I reviewed, ran, and verified the resulting code and evidence locally.
+AI assistance was used as an aid for this homework. I reviewed, ran, and verified the resulting code and evidence locally.
 
 1. **Question:** How can a FastAPI service structure MongoDB configuration, Pydantic schemas, and route modules without duplicating the existing project?
    **How it was used:** I used the suggested separation of concerns to organize the HW6 modules under `code/hw6_memory/`, then adapted it to the repository's existing `code/` layout.

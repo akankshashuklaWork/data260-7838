@@ -119,7 +119,7 @@ def _table(rows: list[list[str]], widths: list[float], styles: dict[str, Paragra
     table.setStyle(
         TableStyle(
             [
-                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#e5e7eb")),
+                ("BACKGROUND", (0, 0), (-1, 0), colors.white),
                 ("TEXTCOLOR", (0, 0), (-1, 0), colors.black),
                 ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
                 ("GRID", (0, 0), (-1, -1), 0.35, colors.HexColor("#9ca3af")),

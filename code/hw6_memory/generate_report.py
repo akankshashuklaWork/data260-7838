@@ -97,7 +97,7 @@ def _styles() -> dict[str, ParagraphStyle]:
         "body": ParagraphStyle("hw6_body", parent=base["BodyText"], fontName="Helvetica", fontSize=11, leading=14, spaceAfter=6),
         "small": ParagraphStyle("hw6_small", parent=base["BodyText"], fontName="Helvetica", fontSize=8.5, leading=10.5),
         "center": ParagraphStyle("hw6_center", parent=base["BodyText"], fontName="Helvetica", fontSize=11, leading=14, alignment=TA_CENTER),
-        "caption": ParagraphStyle("hw6_caption", parent=base["BodyText"], fontName="Helvetica-Oblique", fontSize=8.5, leading=10.5, textColor=colors.HexColor("#475569"), spaceBefore=2, spaceAfter=8),
+        "caption": ParagraphStyle("hw6_caption", parent=base["BodyText"], fontName="Helvetica", fontSize=8.5, leading=10.5, textColor=colors.HexColor("#475569"), spaceBefore=2, spaceAfter=8),
         "code": ParagraphStyle("hw6_code", fontName="Courier", fontSize=7.2, leading=9.0, leftIndent=4, rightIndent=4, spaceBefore=3, spaceAfter=5),
     }
 
@@ -133,17 +133,6 @@ def _table(rows: list[list[str]], widths: list[float], styles: dict[str, Paragra
         )
     )
     return table
-
-
-def _footer(canvas, document) -> None:  # type: ignore[no-untyped-def]
-    canvas.saveState()
-    canvas.setStrokeColor(colors.HexColor("#9fb3c8"))
-    canvas.line(0.65 * inch, 0.48 * inch, 7.85 * inch, 0.48 * inch)
-    canvas.setFont("Helvetica", 8)
-    canvas.setFillColor(colors.HexColor("#475569"))
-    canvas.drawString(0.65 * inch, 0.31 * inch, "Akanksha Shukla | DATA 260 Homework 6")
-    canvas.drawRightString(7.85 * inch, 0.31 * inch, f"Page {document.page}")
-    canvas.restoreState()
 
 
 def build_report() -> None:
@@ -238,9 +227,8 @@ def build_report() -> None:
             ),
             Paragraph("Part 1 - MongoDB Rental Listings CRUD", styles["heading"]),
             Paragraph(
-                "A document-oriented rental-listing view was added to the required MongoDB database. "
-                "The validator requires a 1-100 character property title and availability datetime, records created/updated timestamps, and enforces status/category enums. "
-                "The FastAPI router provides create, list, get-one, update, and delete operations with JSON CORS and validation/error status codes.",
+                "This view stores rental listings as MongoDB documents. The validator requires a 1-100 character property title and an availability datetime, adds created/updated timestamps, and limits the status and category values. "
+                "The FastAPI router supports create, list, get-one, update, and delete operations with JSON CORS and clear validation/error responses.",
                 styles["body"],
             ),
             Paragraph("Code snippet", styles["subheading"]),
@@ -249,12 +237,12 @@ def build_report() -> None:
                 styles,
             ),
             Paragraph("Output screenshot", styles["subheading"]),
-            _screenshot(crud_shot, "Figure 1. Automated cURL-equivalent HTTP smoke-test results; the test deletes its temporary listing.", styles),
+            _screenshot(crud_shot, "Figure 1. API smoke-test results. The temporary listing is deleted at the end of the test.", styles),
             PageBreak(),
             Paragraph("Part 1 - MongoDB Validator and Collection Evidence", styles["heading"]),
             Paragraph(
-                "The strict rental_listings validator enforces the required fields, optional description, two enum fields, dates, and timestamps. "
-                "The same schema initializer creates the messages, summaries, and episodes collections and their query-supporting indexes.",
+                "The rental_listings validator enforces the required fields, optional description, two enum fields, dates, and timestamps. "
+                "The initializer also creates the messages, summaries, and episodes collections and their indexes.",
                 styles["body"],
             ),
             Paragraph("Code snippet", styles["subheading"]),
@@ -263,12 +251,12 @@ def build_report() -> None:
                 styles,
             ),
             Paragraph("Output screenshot", styles["subheading"]),
-            _screenshot(mongo_shot, "Figure 2. Live mongosh collection snapshot for s7838_doc; the validator and indexes are defined in code/hw6_memory/db.py.", styles),
+            _screenshot(mongo_shot, "Figure 2. Live mongosh collection snapshot for s7838_doc. The validator and indexes are in code/hw6_memory/db.py.", styles),
             PageBreak(),
             Paragraph("Part 2 - Conversation Memory in MongoDB", styles["heading"]),
             Paragraph(
-                "POST /api/chat persists each user/assistant message, builds a prompt from short-term context, session and lifetime summaries, and cosine-ranked episodic facts, then returns the reply and memory evidence. "
-                "GET /api/memory/{user_id} exposes the stored messages, newest summaries, and episodes; GET /api/aggregate/{user_id} returns daily message counts and recent summaries.",
+                "POST /api/chat saves each user and assistant message, builds a prompt from recent context, summaries, and relevant episodic facts, and returns the reply with memory evidence. "
+                "GET /api/memory/{user_id} returns the stored messages, summaries, and episodes. GET /api/aggregate/{user_id} returns daily message counts and recent summaries.",
                 styles["body"],
             ),
             Paragraph(
@@ -282,7 +270,7 @@ def build_report() -> None:
                 styles,
             ),
             Paragraph("Output screenshot", styles["subheading"]),
-            _screenshot(chat_shot, "Figure 3. Representative recorded chat turn, token record, memory inspection, aggregate, and MongoDB collection evidence.", styles),
+            _screenshot(chat_shot, "Figure 3. Chat response, token record, memory inspection, and aggregate results from the test run.", styles),
             Paragraph("Memory/probe evidence", styles["subheading"]),
             _table(
                 [["Fixed probe", "Expected criterion"], ["Monthly budget", "$2,800"], ["Bedrooms", "two bedrooms"], ["Neighborhood", "Willow Glen"], ["Pet policy", "one indoor cat allowed"], ["Move-in", "November 1"]],
@@ -292,9 +280,9 @@ def build_report() -> None:
             PageBreak(),
             Paragraph("Part 3 - Token, Latency, and Cost Experiment", styles["heading"]),
             Paragraph(
-                "The live local-Qwen run used 30 fixed conversation messages plus five fixed probes in a fresh session for each setting. "
-                "Every turn logs input/output token estimates, component token estimates, latency, policy, context size, and episodic retrieval count. "
-                "Raw per-setting JSON/JSONL and the combined CSV are retained in reports/hw06/raw/.",
+                "I ran 30 fixed conversation messages and five fixed probes in a fresh session for each setting using local Qwen. "
+                "Each turn logs token estimates, component estimates, latency, policy, context size, and episodic retrieval count. "
+                "The raw JSON, JSONL, and CSV files are saved in reports/hw06/raw/.",
                 styles["body"],
             ),
             Paragraph("Code snippet", styles["subheading"]),
@@ -303,7 +291,7 @@ def build_report() -> None:
                 styles,
             ),
             Paragraph("Output screenshot", styles["subheading"]),
-            _screenshot(metrics_shot, "Figure 4. Live experiment completion summary using local Qwen2:7b.", styles),
+            _screenshot(metrics_shot, "Figure 4. Local Qwen2:7b experiment summary.", styles),
             Paragraph("Metrics and cost model", styles["subheading"]),
             _table(
                 [["Setting", "Prompt", "Completion", "Latency ms", "Quality", "10K cost"]]
@@ -328,8 +316,8 @@ def build_report() -> None:
             PageBreak(),
             Paragraph("Part 4 - File-Based Long-Term Memory", styles["heading"]),
             Paragraph(
-                "AGENT.md now has durable project, stack, coding, testing, memory-handling, and prohibited-action instructions. "
-                "MEMORY.md is loaded into the system prompt. Consolidation runs when the Markdown memory exceeds 40 non-comment lines or is older than 24 hours; /memory, /compact, /dream, and /help are implemented.",
+                "AGENT.md includes project, stack, coding, testing, memory-handling, and prohibited-action instructions. "
+                "MEMORY.md is loaded into the system prompt. Consolidation runs when the file exceeds 40 non-comment lines or is older than 24 hours; /memory, /compact, /dream, and /help are available.",
                 styles["body"],
             ),
             Paragraph("Code snippet", styles["subheading"]),
@@ -338,7 +326,7 @@ def build_report() -> None:
                 styles,
             ),
             Paragraph("Output screenshot", styles["subheading"]),
-            _screenshot(compact_shot, "Figure 5. Actual /compact run against a temporary copy of the original 55-line memory file.", styles),
+            _screenshot(compact_shot, "Figure 5. /compact run using a temporary copy of the original 55-line memory file.", styles),
             Paragraph("MongoDB conversation memory compared with Markdown file memory", styles["subheading"]),
             _table(
                 [
@@ -353,12 +341,12 @@ def build_report() -> None:
             PageBreak(),
             Paragraph("Verification and Submission Checklist", styles["heading"]),
             Paragraph(
-                "The objective self-check starts the FastAPI service, checks configuration, exercises CRUD and error responses, exercises chat/memory/aggregate endpoints, and tests the 55-line consolidation result. "
-                "It uses an isolated deterministic smoke-test adapter so the verification does not consume a model call; the recorded experiment uses local Qwen2:7b.",
+                "I ran the verification script after the implementation was complete. It starts the FastAPI service, checks the configuration, exercises CRUD and error responses, exercises the chat/memory/aggregate endpoints, and tests the 55-line consolidation result. "
+                "The smoke test uses a deterministic adapter so it does not consume a model call; the recorded experiment uses local Qwen2:7b.",
                 styles["body"],
             ),
             Paragraph("Output screenshot", styles["subheading"]),
-            _screenshot(verify_shot, "Figure 6. Final objective verification report: all checks passed.", styles),
+            _screenshot(verify_shot, "Figure 6. Final verification result: all checks passed.", styles),
             _table(
                 [
                     ["Requirement", "Evidence / status"],
@@ -381,7 +369,7 @@ def build_report() -> None:
             topMargin=0.6 * inch, bottomMargin=0.65 * inch, title="DATA 260 Homework 6",
             author=USERNAME,
         )
-        document.build(story, onFirstPage=_footer, onLaterPages=_footer)
+        document.build(story)
     # Both locations are required by the assignment: the standard report name and the named submission copy.
     if OUTPUTS[0].read_bytes() != OUTPUTS[1].read_bytes():
         shutil.copy2(OUTPUTS[0], OUTPUTS[1])

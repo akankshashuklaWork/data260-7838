@@ -119,12 +119,12 @@ def _table(rows: list[list[str]], widths: list[float], styles: dict[str, Paragra
     table.setStyle(
         TableStyle(
             [
-                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#1f4e78")),
-                ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#e5e7eb")),
+                ("TEXTCOLOR", (0, 0), (-1, 0), colors.black),
                 ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
-                ("GRID", (0, 0), (-1, -1), 0.35, colors.HexColor("#9fb3c8")),
+                ("GRID", (0, 0), (-1, -1), 0.35, colors.HexColor("#9ca3af")),
                 ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#edf4fb")]),
+                ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white]),
                 ("LEFTPADDING", (0, 0), (-1, -1), 5),
                 ("RIGHTPADDING", (0, 0), (-1, -1), 5),
                 ("TOPPADDING", (0, 0), (-1, -1), 4),

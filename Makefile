@@ -11,3 +11,15 @@ file-memory-demo-hw06:
 
 experiment-hw06:
 	PYTHONPATH=code $(PYTHON) -m hw6_memory.experiment $(ARGS)
+
+run-hw07:
+	PYTHONPATH=code $(PYTHON) -m uvicorn hw7.bike_ui:app --host 127.0.0.1 --port 8638
+
+verify-hw07:
+	PYTHONPATH=code $(PYTHON) -m hw7.verify_hw7
+
+report-hw07:
+	PYTHONPATH=code $(PYTHON) -m hw7.generate_report
+
+run-log-hw07:
+	PYTHONPATH=code $(PYTHON) -m hw7.run_log

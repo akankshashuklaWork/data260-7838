@@ -1,15 +1,19 @@
 from sqlalchemy import select
 from sqlalchemy.orm import Session, joinedload
+
 from .models import ListingAmenity, PropertyOwner, RentalHousingListing, User
 from .schemas import ListingCreate, ListingUpdate, OwnerCreate, OwnerUpdate
 from .security import hash_password
 
-def create_user(db: Session, name: str, email: str, password: str) -> User:
-    row = User(name=name, email=email, password_hash=hash_password(password))
+
+def create_user(db: Session, username: str, password: str, role: str = "reader") -> User:
+    """Store a username, PBKDF2 hash, and one of the HW7 application roles."""
+    row = User(username=username, password_hash=hash_password(password), role=role)
     db.add(row)
     db.commit()
     db.refresh(row)
     return row
+
 
 def create_listing(db: Session, payload: ListingCreate) -> RentalHousingListing:
     if not db.get(PropertyOwner, payload.owner_id):
@@ -30,7 +34,9 @@ def create_owner(db: Session, payload: OwnerCreate) -> PropertyOwner:
 
 
 def list_owners(db: Session, offset: int, limit: int) -> list[PropertyOwner]:
-    return db.scalars(select(PropertyOwner).order_by(PropertyOwner.id).offset(offset).limit(limit)).all()
+    return db.scalars(
+        select(PropertyOwner).order_by(PropertyOwner.id).offset(offset).limit(limit)
+    ).all()
 
 
 def get_owner(db: Session, owner_id: int) -> PropertyOwner | None:
@@ -52,11 +58,14 @@ def delete_owner(db: Session, owner_id: int) -> PropertyOwner | None:
     row = get_owner(db, owner_id)
     if not row:
         return None
-    if db.scalar(select(RentalHousingListing.id).where(RentalHousingListing.owner_id == owner_id).limit(1)):
+    if db.scalar(
+        select(RentalHousingListing.id).where(RentalHousingListing.owner_id == owner_id).limit(1)
+    ):
         raise ValueError("Cannot delete owner with associated listings")
     db.delete(row)
     db.commit()
     return row
+
 
 def get_listing(db: Session, listing_id: int) -> RentalHousingListing | None:
     return db.get(RentalHousingListing, listing_id)
@@ -65,7 +74,9 @@ def get_listing(db: Session, listing_id: int) -> RentalHousingListing | None:
 def list_listings(db: Session, offset: int, limit: int) -> list[RentalHousingListing]:
     statement = (
         select(RentalHousingListing)
-        .options(joinedload(RentalHousingListing.owner), joinedload(RentalHousingListing.related_rows))
+        .options(
+            joinedload(RentalHousingListing.owner), joinedload(RentalHousingListing.related_rows)
+        )
         # Most recently created listings appear first so the client can display
         # a new record immediately even when the list is paginated.
         .order_by(RentalHousingListing.id.desc())
@@ -79,8 +90,11 @@ def listings_by_owner(db: Session, owner_id: int) -> list[RentalHousingListing]:
     if not get_owner(db, owner_id):
         raise ValueError("Owner not found")
     return db.scalars(
-        select(RentalHousingListing).where(RentalHousingListing.owner_id == owner_id).order_by(RentalHousingListing.id)
+        select(RentalHousingListing)
+        .where(RentalHousingListing.owner_id == owner_id)
+        .order_by(RentalHousingListing.id)
     ).all()
+
 
 def update_listing(
     db: Session, listing_id: int, payload: ListingUpdate
@@ -99,6 +113,7 @@ def update_listing(
     db.refresh(row)
     return row
 
+
 def delete_listing(db: Session, listing_id: int) -> RentalHousingListing | None:
     row = get_listing(db, listing_id)
     if not row:
@@ -108,16 +123,15 @@ def delete_listing(db: Session, listing_id: int) -> RentalHousingListing | None:
     db.commit()
     return row
 
-def list_naive(
-    db: Session, offset: int, limit: int
-) -> list[RentalHousingListing]:
+
+def list_naive(db: Session, offset: int, limit: int) -> list[RentalHousingListing]:
     rows = db.scalars(select(RentalHousingListing).offset(offset).limit(limit)).all()
-    for row in rows: row.related_rows
+    for row in rows:
+        row.related_rows
     return rows
 
-def list_fixed(
-    db: Session, offset: int, limit: int
-) -> list[RentalHousingListing]:
+
+def list_fixed(db: Session, offset: int, limit: int) -> list[RentalHousingListing]:
     statement = (
         select(RentalHousingListing)
         .options(joinedload(RentalHousingListing.related_rows))
@@ -125,6 +139,7 @@ def list_fixed(
         .limit(limit)
     )
     return db.scalars(statement).unique().all()
+
 
 def add_amenity(db: Session, listing_id: int, amenity: str):
     row = ListingAmenity(listing_id=listing_id, amenity=amenity)

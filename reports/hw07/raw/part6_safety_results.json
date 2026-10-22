@@ -1,0 +1,83 @@
+{
+  "integration": {
+    "glob": {
+      "ok": true,
+      "files": [
+        "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-e_1j349y/app.py",
+        "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-e_1j349y/config.py",
+        "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-e_1j349y/worker.py"
+      ]
+    },
+    "search": {
+      "ok": true,
+      "matches": [
+        {
+          "path": "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-e_1j349y/app.py",
+          "line": 1,
+          "text": "DEBUG = True"
+        },
+        {
+          "path": "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-e_1j349y/config.py",
+          "line": 1,
+          "text": "DEBUG = False"
+        },
+        {
+          "path": "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-e_1j349y/worker.py",
+          "line": 2,
+          "text": "    return 'DEBUG worker'"
+        }
+      ]
+    },
+    "read": {
+      "ok": true,
+      "path": "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-e_1j349y/app.py",
+      "content": "DEBUG = True\nprint('app')",
+      "truncated": false
+    }
+  },
+  "allowed_tests": [
+    {
+      "name": "safe_read",
+      "passed": true
+    },
+    {
+      "name": "safe_write",
+      "passed": true
+    },
+    {
+      "name": "safe_edit",
+      "passed": true
+    },
+    {
+      "name": "safe_glob",
+      "passed": true
+    },
+    {
+      "name": "safe_bash",
+      "passed": true
+    }
+  ],
+  "blocked_tests": [
+    {
+      "command": "rm -rf .",
+      "passed": true
+    },
+    {
+      "command": "sudo ls",
+      "passed": true
+    },
+    {
+      "command": "chmod 777 app.py",
+      "passed": true
+    },
+    {
+      "command": "dd if=/dev/zero of=/dev/disk9",
+      "passed": true
+    },
+    {
+      "command": "echo x > /dev/disk9",
+      "passed": true
+    }
+  ],
+  "false_allow_fixed": "Raw-device redirection is explicitly matched and now requires confirmation."
+}

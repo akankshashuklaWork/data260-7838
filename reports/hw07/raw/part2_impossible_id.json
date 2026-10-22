@@ -1,0 +1,29 @@
+{
+  "user_input": "Give details for listing 999.",
+  "final": "Listing 999 was not found.",
+  "stop_reason": "success",
+  "tool_calls": 1,
+  "repairs": 0,
+  "initial_well_formed": true,
+  "latency_ms": 0.01,
+  "trace": [
+    {
+      "step": 1,
+      "kind": "tool",
+      "tool": "detail",
+      "inputs": {
+        "listing_id": 999
+      },
+      "result": {
+        "data": null,
+        "error": "Listing not found",
+        "ok": false
+      }
+    },
+    {
+      "step": 2,
+      "kind": "final",
+      "answer": "Listing 999 was not found."
+    }
+  ]
+}

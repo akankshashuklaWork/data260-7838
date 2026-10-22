@@ -1,0 +1,6 @@
+Source: https://citibikenyc.com/plans-and-pricing
+Access date: 2026-10-22
+Citi Bike: $239/year. Bike unlocks: free. Ride times: 45 min. Ebike prices: $0.27/min.
+Single Ride: $4.99 for 30 mins. Bike unlocks: $4.99. Ebike prices: $0.41/min. Ride times: 30 min.
+Single rides include one classic bike ride up to 30 minutes. $0.41/min for every minute thereafter.
+Annual members get unlimited 45-minute rides on classic bikes; longer classic rides have extra-time charges.

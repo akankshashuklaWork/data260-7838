@@ -1,6 +1,32 @@
-# DATA 260 Homework 1 to 6
+# DATA 260 Homework 1 to 7
 
 Rental Housing Listings - Akanksha Shukla
+
+## HW7: JWT Authorization, Tool Agents, and Safe Local Tools
+
+HW7 migrates the shared Rental Housing API to JWT Bearer authentication with
+reader, writer, and moderator roles. The implementation preserves PBKDF2
+password hashing, validates token signatures and expiration, and protects the
+existing listing and owner routes with role-specific dependencies.
+
+The remaining HW7 code is in `code/hw7/`: a bounded rental-domain agent and
+Reflexion evaluation, a Citi Bike membership advisor with a constrained SQL and
+pricing boundary, prompt-injection fixtures, and sandboxed file/shell tools.
+The self-check uses fresh SQLite and temporary-file fixtures only; it does not
+modify the local MySQL or MongoDB application data.
+
+Run the reproducible checks from the repository root:
+
+```bash
+source .venv/bin/activate
+make verify-hw07
+make run-log-hw07
+make report-hw07
+```
+
+The submission materials are in `reports/hw07/`, including the PDF report,
+full run log, raw per-attempt results, pricing snapshot, metrics, and AI-use
+record.
 
 ## HW6: MongoDB Documents and Long-Term Memory
 

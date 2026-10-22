@@ -1,0 +1,83 @@
+{
+  "config": {
+    "sid4": 7838,
+    "port": 8638,
+    "prefix": "s7838",
+    "seed": 7838,
+    "verify_seed": 267838,
+    "domain_id": 6,
+    "model": "qwen2:7b",
+    "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)"
+  },
+  "part1": {
+    "outcomes": {
+      "login_success": 200,
+      "login_token_preview": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI...",
+      "login_invalid": 401,
+      "me_missing_token": 401,
+      "me_invalid_token": 401,
+      "me_expired_token": 401,
+      "me_success": 200,
+      "me_identity": {
+        "id": 1,
+        "username": "reader_7838",
+        "role": "reader"
+      },
+      "create_reader_forbidden": 403,
+      "create_writer": 201,
+      "create_moderator": 201,
+      "list_reader": 200,
+      "delete_writer_forbidden": 403,
+      "delete_moderator": 200,
+      "delete_unused_owner_moderator": 204
+    },
+    "expected": {
+      "login_success": 200,
+      "login_token_preview": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI...",
+      "login_invalid": 401,
+      "me_missing_token": 401,
+      "me_invalid_token": 401,
+      "me_expired_token": 401,
+      "me_success": 200,
+      "me_identity": {
+        "id": 1,
+        "username": "reader_7838",
+        "role": "reader"
+      },
+      "create_reader_forbidden": 403,
+      "create_writer": 201,
+      "create_moderator": 201,
+      "list_reader": 200,
+      "delete_writer_forbidden": 403,
+      "delete_moderator": 200,
+      "delete_unused_owner_moderator": 204
+    },
+    "passed": true
+  },
+  "part2": {
+    "attempts": 20,
+    "well_formed_before_repair": 16,
+    "well_formed_before_repair_rate": 0.8,
+    "successful_after_repair": 20,
+    "successful_after_repair_rate": 1.0,
+    "failure_classes": {
+      "malformed_args": 1,
+      "unknown_tool": 1,
+      "text_where_tool_required": 1,
+      "lost_multi_step_chain": 1
+    }
+  },
+  "part3": {
+    "tasks": 3,
+    "stored_reflections": 2
+  },
+  "part4_decisions": {
+    "membership_wins": "Buy Monthly Membership",
+    "pay_per_ride_wins": "Pay Per Ride/Minute"
+  },
+  "part5_attacks": 3,
+  "part6": {
+    "allowed": 5,
+    "blocked": 5
+  }
+}

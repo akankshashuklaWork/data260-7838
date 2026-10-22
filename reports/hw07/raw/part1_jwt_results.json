@@ -1,0 +1,45 @@
+{
+  "outcomes": {
+    "login_success": 200,
+    "login_token_preview": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI...",
+    "login_invalid": 401,
+    "me_missing_token": 401,
+    "me_invalid_token": 401,
+    "me_expired_token": 401,
+    "me_success": 200,
+    "me_identity": {
+      "id": 1,
+      "username": "reader_7838",
+      "role": "reader"
+    },
+    "create_reader_forbidden": 403,
+    "create_writer": 201,
+    "create_moderator": 201,
+    "list_reader": 200,
+    "delete_writer_forbidden": 403,
+    "delete_moderator": 200,
+    "delete_unused_owner_moderator": 204
+  },
+  "expected": {
+    "login_success": 200,
+    "login_token_preview": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI...",
+    "login_invalid": 401,
+    "me_missing_token": 401,
+    "me_invalid_token": 401,
+    "me_expired_token": 401,
+    "me_success": 200,
+    "me_identity": {
+      "id": 1,
+      "username": "reader_7838",
+      "role": "reader"
+    },
+    "create_reader_forbidden": 403,
+    "create_writer": 201,
+    "create_moderator": 201,
+    "list_reader": 200,
+    "delete_writer_forbidden": 403,
+    "delete_moderator": 200,
+    "delete_unused_owner_moderator": 204
+  },
+  "passed": true
+}

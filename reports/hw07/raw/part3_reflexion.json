@@ -1,0 +1,449 @@
+{
+  "rows": [
+    {
+      "task": "A_search_then_detail",
+      "original": {
+        "success": false,
+        "unsupported_claims": 0,
+        "tool_calls": 2,
+        "tokens_estimate": 253,
+        "latency_ms": 0.02
+      },
+      "reflexion": {
+        "success": true,
+        "unsupported_claims": 0,
+        "retries": 1,
+        "tool_calls": 4,
+        "tokens_estimate": 505,
+        "latency_ms": 0.04,
+        "stop_reason": "success",
+        "verifier_false_rejection": false
+      },
+      "original_verification": {
+        "passed": false,
+        "expected_fragments": [
+          "Willow Glen Cottage",
+          "one available unit"
+        ],
+        "missing": [
+          "one available unit"
+        ],
+        "unsupported_claims": []
+      },
+      "final_verification": {
+        "passed": true,
+        "expected_fragments": [
+          "Willow Glen Cottage",
+          "one available unit"
+        ],
+        "missing": [],
+        "unsupported_claims": []
+      },
+      "stored_reflection": {
+        "task": "A_search_then_detail",
+        "evidence": [
+          {
+            "tool": "search",
+            "result": {
+              "data": [
+                {
+                  "available_units": 1,
+                  "id": 1,
+                  "listing_code": "SJ-100",
+                  "owner_id": 1,
+                  "property_category": "House",
+                  "property_location": "San Jose",
+                  "property_title": "Willow Glen Cottage"
+                },
+                {
+                  "available_units": 2,
+                  "id": 2,
+                  "listing_code": "SJ-101",
+                  "owner_id": 1,
+                  "property_category": "Apartment",
+                  "property_location": "San Jose",
+                  "property_title": "Downtown Apartment"
+                }
+              ],
+              "error": null,
+              "ok": true
+            }
+          },
+          {
+            "tool": "detail",
+            "result": {
+              "data": {
+                "available_units": 1,
+                "id": 1,
+                "listing_code": "SJ-100",
+                "owner": {
+                  "email": "maya@example.com",
+                  "first_name": "Maya",
+                  "id": 1,
+                  "last_name": "Chen"
+                },
+                "owner_id": 1,
+                "property_category": "House",
+                "property_location": "San Jose",
+                "property_title": "Willow Glen Cottage"
+              },
+              "error": null,
+              "ok": true
+            }
+          }
+        ],
+        "verifier_result": {
+          "passed": false,
+          "expected_fragments": [
+            "Willow Glen Cottage",
+            "one available unit"
+          ],
+          "missing": [
+            "one available unit"
+          ],
+          "unsupported_claims": []
+        },
+        "reflection": "Use the detail observation's available-unit value of one in the revised answer."
+      }
+    },
+    {
+      "task": "B_aggregate_then_example",
+      "original": {
+        "success": true,
+        "unsupported_claims": 0,
+        "tool_calls": 2,
+        "tokens_estimate": 200,
+        "latency_ms": 0.01
+      },
+      "reflexion": {
+        "success": true,
+        "unsupported_claims": 0,
+        "retries": 0,
+        "tool_calls": 2,
+        "tokens_estimate": 400,
+        "latency_ms": 0.01,
+        "stop_reason": "success",
+        "verifier_false_rejection": false
+      },
+      "original_verification": {
+        "passed": true,
+        "expected_fragments": [
+          "two listings",
+          "three available units",
+          "SJ-100"
+        ],
+        "missing": [],
+        "unsupported_claims": []
+      },
+      "final_verification": {
+        "passed": true,
+        "expected_fragments": [
+          "two listings",
+          "three available units",
+          "SJ-100"
+        ],
+        "missing": [],
+        "unsupported_claims": []
+      },
+      "stored_reflection": null
+    },
+    {
+      "task": "C_compare_two_details",
+      "original": {
+        "success": false,
+        "unsupported_claims": 0,
+        "tool_calls": 3,
+        "tokens_estimate": 349,
+        "latency_ms": 0.02
+      },
+      "reflexion": {
+        "success": true,
+        "unsupported_claims": 0,
+        "retries": 1,
+        "tool_calls": 6,
+        "tokens_estimate": 705,
+        "latency_ms": 0.04,
+        "stop_reason": "success",
+        "verifier_false_rejection": false
+      },
+      "original_verification": {
+        "passed": false,
+        "expected_fragments": [
+          "SJ-100",
+          "one available unit",
+          "SJ-101",
+          "two available units"
+        ],
+        "missing": [
+          "one available unit",
+          "two available units"
+        ],
+        "unsupported_claims": []
+      },
+      "final_verification": {
+        "passed": true,
+        "expected_fragments": [
+          "SJ-100",
+          "one available unit",
+          "SJ-101",
+          "two available units"
+        ],
+        "missing": [],
+        "unsupported_claims": []
+      },
+      "stored_reflection": {
+        "task": "C_compare_two_details",
+        "evidence": [
+          {
+            "tool": "search",
+            "result": {
+              "data": [
+                {
+                  "available_units": 1,
+                  "id": 1,
+                  "listing_code": "SJ-100",
+                  "owner_id": 1,
+                  "property_category": "House",
+                  "property_location": "San Jose",
+                  "property_title": "Willow Glen Cottage"
+                },
+                {
+                  "available_units": 2,
+                  "id": 2,
+                  "listing_code": "SJ-101",
+                  "owner_id": 1,
+                  "property_category": "Apartment",
+                  "property_location": "San Jose",
+                  "property_title": "Downtown Apartment"
+                }
+              ],
+              "error": null,
+              "ok": true
+            }
+          },
+          {
+            "tool": "detail",
+            "result": {
+              "data": {
+                "available_units": 1,
+                "id": 1,
+                "listing_code": "SJ-100",
+                "owner": {
+                  "email": "maya@example.com",
+                  "first_name": "Maya",
+                  "id": 1,
+                  "last_name": "Chen"
+                },
+                "owner_id": 1,
+                "property_category": "House",
+                "property_location": "San Jose",
+                "property_title": "Willow Glen Cottage"
+              },
+              "error": null,
+              "ok": true
+            }
+          },
+          {
+            "tool": "detail",
+            "result": {
+              "data": {
+                "available_units": 2,
+                "id": 2,
+                "listing_code": "SJ-101",
+                "owner": {
+                  "email": "maya@example.com",
+                  "first_name": "Maya",
+                  "id": 1,
+                  "last_name": "Chen"
+                },
+                "owner_id": 1,
+                "property_category": "Apartment",
+                "property_location": "San Jose",
+                "property_title": "Downtown Apartment"
+              },
+              "error": null,
+              "ok": true
+            }
+          }
+        ],
+        "verifier_result": {
+          "passed": false,
+          "expected_fragments": [
+            "SJ-100",
+            "one available unit",
+            "SJ-101",
+            "two available units"
+          ],
+          "missing": [
+            "one available unit",
+            "two available units"
+          ],
+          "unsupported_claims": []
+        },
+        "reflection": "State only the two listings returned by search and compare their observed unit counts."
+      }
+    }
+  ],
+  "stored_reflections": [
+    {
+      "task": "A_search_then_detail",
+      "evidence": [
+        {
+          "tool": "search",
+          "result": {
+            "data": [
+              {
+                "available_units": 1,
+                "id": 1,
+                "listing_code": "SJ-100",
+                "owner_id": 1,
+                "property_category": "House",
+                "property_location": "San Jose",
+                "property_title": "Willow Glen Cottage"
+              },
+              {
+                "available_units": 2,
+                "id": 2,
+                "listing_code": "SJ-101",
+                "owner_id": 1,
+                "property_category": "Apartment",
+                "property_location": "San Jose",
+                "property_title": "Downtown Apartment"
+              }
+            ],
+            "error": null,
+            "ok": true
+          }
+        },
+        {
+          "tool": "detail",
+          "result": {
+            "data": {
+              "available_units": 1,
+              "id": 1,
+              "listing_code": "SJ-100",
+              "owner": {
+                "email": "maya@example.com",
+                "first_name": "Maya",
+                "id": 1,
+                "last_name": "Chen"
+              },
+              "owner_id": 1,
+              "property_category": "House",
+              "property_location": "San Jose",
+              "property_title": "Willow Glen Cottage"
+            },
+            "error": null,
+            "ok": true
+          }
+        }
+      ],
+      "verifier_result": {
+        "passed": false,
+        "expected_fragments": [
+          "Willow Glen Cottage",
+          "one available unit"
+        ],
+        "missing": [
+          "one available unit"
+        ],
+        "unsupported_claims": []
+      },
+      "reflection": "Use the detail observation's available-unit value of one in the revised answer."
+    },
+    {
+      "task": "C_compare_two_details",
+      "evidence": [
+        {
+          "tool": "search",
+          "result": {
+            "data": [
+              {
+                "available_units": 1,
+                "id": 1,
+                "listing_code": "SJ-100",
+                "owner_id": 1,
+                "property_category": "House",
+                "property_location": "San Jose",
+                "property_title": "Willow Glen Cottage"
+              },
+              {
+                "available_units": 2,
+                "id": 2,
+                "listing_code": "SJ-101",
+                "owner_id": 1,
+                "property_category": "Apartment",
+                "property_location": "San Jose",
+                "property_title": "Downtown Apartment"
+              }
+            ],
+            "error": null,
+            "ok": true
+          }
+        },
+        {
+          "tool": "detail",
+          "result": {
+            "data": {
+              "available_units": 1,
+              "id": 1,
+              "listing_code": "SJ-100",
+              "owner": {
+                "email": "maya@example.com",
+                "first_name": "Maya",
+                "id": 1,
+                "last_name": "Chen"
+              },
+              "owner_id": 1,
+              "property_category": "House",
+              "property_location": "San Jose",
+              "property_title": "Willow Glen Cottage"
+            },
+            "error": null,
+            "ok": true
+          }
+        },
+        {
+          "tool": "detail",
+          "result": {
+            "data": {
+              "available_units": 2,
+              "id": 2,
+              "listing_code": "SJ-101",
+              "owner": {
+                "email": "maya@example.com",
+                "first_name": "Maya",
+                "id": 1,
+                "last_name": "Chen"
+              },
+              "owner_id": 1,
+              "property_category": "Apartment",
+              "property_location": "San Jose",
+              "property_title": "Downtown Apartment"
+            },
+            "error": null,
+            "ok": true
+          }
+        }
+      ],
+      "verifier_result": {
+        "passed": false,
+        "expected_fragments": [
+          "SJ-100",
+          "one available unit",
+          "SJ-101",
+          "two available units"
+        ],
+        "missing": [
+          "one available unit",
+          "two available units"
+        ],
+        "unsupported_claims": []
+      },
+      "reflection": "State only the two listings returned by search and compare their observed unit counts."
+    }
+  ],
+  "max_retries": 2,
+  "token_budget": 900,
+  "tool_call_budget": 6
+}

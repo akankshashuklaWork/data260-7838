@@ -1,0 +1,19 @@
+pre-commit run --files code/hw7/lint_probe.py
+
+ruff check...............................................................Failed
+- hook id: ruff-check
+- exit code: 1
+
+E741 Ambiguous variable name: `l`
+ --> code/hw7/lint_probe.py:7:5
+  |
+5 | def project_name() -> str:
+6 |     """Temporary lint proof used only to document the HW7 hook repair."""
+7 |     l = os.path.basename(os.getcwd())
+  |     ^
+8 |     return json.dumps({"name": l})
+  |
+
+Found 1 error.
+
+ruff format..............................................................Passed

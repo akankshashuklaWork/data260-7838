@@ -1,0 +1,13 @@
+{
+  "attempts": 20,
+  "well_formed_before_repair": 16,
+  "well_formed_before_repair_rate": 0.8,
+  "successful_after_repair": 20,
+  "successful_after_repair_rate": 1.0,
+  "failure_classes": {
+    "malformed_args": 1,
+    "unknown_tool": 1,
+    "text_where_tool_required": 1,
+    "lost_multi_step_chain": 1
+  }
+}

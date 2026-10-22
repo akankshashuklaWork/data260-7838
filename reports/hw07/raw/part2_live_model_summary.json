@@ -1,0 +1,12 @@
+{
+  "attempts": 20,
+  "successes": 5,
+  "success_rate": 0.25,
+  "repairs_used": 17,
+  "stop_reasons": {
+    "failed_repair": 12,
+    "step_limit": 3,
+    "success": 5
+  },
+  "tool_calls_total": 56
+}

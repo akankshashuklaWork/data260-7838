@@ -1,4 +1,5 @@
 from datetime import datetime
+
 from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
 
@@ -24,14 +25,24 @@ class OwnerOut(OwnerBase):
     created_at: datetime
     updated_at: datetime
 
+
 class UserCreate(BaseModel):
-    name: str = Field(min_length=1)
-    email: EmailStr
+    """A reader account registration payload; privileged users are seeded locally."""
+
+    username: str = Field(min_length=3, max_length=64, pattern=r"^[A-Za-z0-9_.-]+$")
     password: str = Field(min_length=8)
 
+
 class LoginRequest(BaseModel):
-    email: EmailStr
+    username: str = Field(min_length=3, max_length=64)
     password: str
+
+
+class UserOut(BaseModel):
+    id: int
+    username: str
+    role: str
+
 
 class ListingBase(BaseModel):
     listing_code: str = Field(min_length=3, max_length=32, pattern=r"^[A-Za-z0-9-]+$")
@@ -44,6 +55,7 @@ class ListingBase(BaseModel):
     available_units: int = Field(default=1, ge=0)
     owner_id: int = Field(gt=0)
 
+
 class ListingCreate(ListingBase):
     """Fields accepted when a listing is created."""
 
@@ -51,10 +63,12 @@ class ListingCreate(ListingBase):
 class ListingUpdate(ListingBase):
     """Fields accepted when a listing is updated."""
 
+
 class AmenityOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
     id: int
     amenity: str
+
 
 class ListingOut(ListingBase):
     model_config = ConfigDict(from_attributes=True)

@@ -1,0 +1,3253 @@
+{
+  "decision": "Pay Per Ride/Minute",
+  "justification": [
+    "Citi Bike's captured plan text lists an annual membership at $239/year with 45-minute classic rides.",
+    "The captured pricing text lists a single classic ride at $4.99 for 30 minutes and $0.41/minute afterward.",
+    "The uploaded period has 520 trips across 4745 days; pay-per-ride totals $2594.80.",
+    "Membership plus residual overage totals $3107.00; the simple annual break-even is 48 short rides.",
+    "Decision: Pay Per Ride/Minute. This is a price-only comparison; it assumes classic bikes and uses the observed date span as the membership renewal period."
+  ],
+  "cost_breakdown": {
+    "trip_count": 520,
+    "observation_days": 4745,
+    "membership_years": 13,
+    "pay_per_ride_base": 2594.8,
+    "pay_per_ride_overage": 0.0,
+    "pay_per_ride": 2594.8,
+    "member_fee": 3107.0,
+    "member_residual": 0.0,
+    "membership_total": 3107.0,
+    "break_even_rides_per_year": 48
+  },
+  "weekly": [
+    {
+      "week": "2013-W01",
+      "trips": 1,
+      "average_duration_minutes": 12.9,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W02",
+      "trips": 1,
+      "average_duration_minutes": 20.2,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W03",
+      "trips": 1,
+      "average_duration_minutes": 21.06,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W05",
+      "trips": 1,
+      "average_duration_minutes": 11.05,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W06",
+      "trips": 1,
+      "average_duration_minutes": 13.5,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W07",
+      "trips": 1,
+      "average_duration_minutes": 13.82,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W09",
+      "trips": 1,
+      "average_duration_minutes": 11.54,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W10",
+      "trips": 1,
+      "average_duration_minutes": 8.43,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W11",
+      "trips": 1,
+      "average_duration_minutes": 20.66,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W12",
+      "trips": 1,
+      "average_duration_minutes": 7.67,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W14",
+      "trips": 1,
+      "average_duration_minutes": 10.49,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W15",
+      "trips": 1,
+      "average_duration_minutes": 20.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W16",
+      "trips": 1,
+      "average_duration_minutes": 10.06,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W18",
+      "trips": 1,
+      "average_duration_minutes": 19.41,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W19",
+      "trips": 1,
+      "average_duration_minutes": 9.53,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W20",
+      "trips": 1,
+      "average_duration_minutes": 16.22,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W22",
+      "trips": 1,
+      "average_duration_minutes": 19.52,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W23",
+      "trips": 1,
+      "average_duration_minutes": 7.61,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W24",
+      "trips": 1,
+      "average_duration_minutes": 15.71,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W26",
+      "trips": 1,
+      "average_duration_minutes": 18.51,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W27",
+      "trips": 1,
+      "average_duration_minutes": 21.78,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W28",
+      "trips": 1,
+      "average_duration_minutes": 7.75,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W29",
+      "trips": 1,
+      "average_duration_minutes": 8.88,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W31",
+      "trips": 1,
+      "average_duration_minutes": 20.13,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W32",
+      "trips": 1,
+      "average_duration_minutes": 16.84,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W33",
+      "trips": 1,
+      "average_duration_minutes": 13.99,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W35",
+      "trips": 1,
+      "average_duration_minutes": 15.17,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W36",
+      "trips": 1,
+      "average_duration_minutes": 10.16,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W37",
+      "trips": 1,
+      "average_duration_minutes": 9.65,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W39",
+      "trips": 1,
+      "average_duration_minutes": 17.53,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W40",
+      "trips": 1,
+      "average_duration_minutes": 16.25,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W41",
+      "trips": 1,
+      "average_duration_minutes": 21.61,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W43",
+      "trips": 1,
+      "average_duration_minutes": 12.8,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W44",
+      "trips": 1,
+      "average_duration_minutes": 16.39,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W45",
+      "trips": 1,
+      "average_duration_minutes": 17.47,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W46",
+      "trips": 1,
+      "average_duration_minutes": 7.12,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W48",
+      "trips": 1,
+      "average_duration_minutes": 18.09,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W49",
+      "trips": 1,
+      "average_duration_minutes": 12.83,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W50",
+      "trips": 1,
+      "average_duration_minutes": 9.59,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2013-W52",
+      "trips": 1,
+      "average_duration_minutes": 12.86,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W01",
+      "trips": 1,
+      "average_duration_minutes": 21.78,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W02",
+      "trips": 1,
+      "average_duration_minutes": 9.27,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W04",
+      "trips": 1,
+      "average_duration_minutes": 19.37,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W05",
+      "trips": 1,
+      "average_duration_minutes": 21.78,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W06",
+      "trips": 1,
+      "average_duration_minutes": 14.24,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W07",
+      "trips": 1,
+      "average_duration_minutes": 14.86,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W09",
+      "trips": 1,
+      "average_duration_minutes": 13.21,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W10",
+      "trips": 1,
+      "average_duration_minutes": 12.18,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W11",
+      "trips": 1,
+      "average_duration_minutes": 13.14,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W13",
+      "trips": 1,
+      "average_duration_minutes": 8.76,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W14",
+      "trips": 1,
+      "average_duration_minutes": 17.96,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W15",
+      "trips": 1,
+      "average_duration_minutes": 12.06,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W17",
+      "trips": 1,
+      "average_duration_minutes": 20.31,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W18",
+      "trips": 1,
+      "average_duration_minutes": 11.87,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W19",
+      "trips": 1,
+      "average_duration_minutes": 10.85,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W21",
+      "trips": 1,
+      "average_duration_minutes": 13.42,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W22",
+      "trips": 1,
+      "average_duration_minutes": 21.59,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W23",
+      "trips": 1,
+      "average_duration_minutes": 18.87,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W24",
+      "trips": 1,
+      "average_duration_minutes": 8.84,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W26",
+      "trips": 1,
+      "average_duration_minutes": 20.68,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W27",
+      "trips": 1,
+      "average_duration_minutes": 18.84,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W28",
+      "trips": 1,
+      "average_duration_minutes": 9.75,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W30",
+      "trips": 1,
+      "average_duration_minutes": 9.71,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W31",
+      "trips": 1,
+      "average_duration_minutes": 14.21,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W32",
+      "trips": 1,
+      "average_duration_minutes": 21.09,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W34",
+      "trips": 1,
+      "average_duration_minutes": 9.4,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W35",
+      "trips": 1,
+      "average_duration_minutes": 7.33,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W36",
+      "trips": 1,
+      "average_duration_minutes": 15.67,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W38",
+      "trips": 1,
+      "average_duration_minutes": 16.81,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W39",
+      "trips": 1,
+      "average_duration_minutes": 19.94,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W40",
+      "trips": 1,
+      "average_duration_minutes": 19.46,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W41",
+      "trips": 1,
+      "average_duration_minutes": 12.34,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W43",
+      "trips": 1,
+      "average_duration_minutes": 12.67,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W44",
+      "trips": 1,
+      "average_duration_minutes": 15.81,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W45",
+      "trips": 1,
+      "average_duration_minutes": 8.22,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W47",
+      "trips": 1,
+      "average_duration_minutes": 19.66,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W48",
+      "trips": 1,
+      "average_duration_minutes": 21.36,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W49",
+      "trips": 1,
+      "average_duration_minutes": 8.79,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W51",
+      "trips": 1,
+      "average_duration_minutes": 10.27,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2014-W52",
+      "trips": 1,
+      "average_duration_minutes": 9.29,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W01",
+      "trips": 1,
+      "average_duration_minutes": 16.02,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W02",
+      "trips": 1,
+      "average_duration_minutes": 17.54,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W04",
+      "trips": 1,
+      "average_duration_minutes": 19.2,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W05",
+      "trips": 1,
+      "average_duration_minutes": 7.39,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W06",
+      "trips": 1,
+      "average_duration_minutes": 14.81,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W08",
+      "trips": 1,
+      "average_duration_minutes": 14.76,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W09",
+      "trips": 1,
+      "average_duration_minutes": 7.07,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W10",
+      "trips": 1,
+      "average_duration_minutes": 17.58,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W12",
+      "trips": 1,
+      "average_duration_minutes": 15.45,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W13",
+      "trips": 1,
+      "average_duration_minutes": 18.41,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W14",
+      "trips": 1,
+      "average_duration_minutes": 15.47,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W16",
+      "trips": 1,
+      "average_duration_minutes": 21.41,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W17",
+      "trips": 1,
+      "average_duration_minutes": 8.31,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W18",
+      "trips": 1,
+      "average_duration_minutes": 20.28,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W19",
+      "trips": 1,
+      "average_duration_minutes": 7.01,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W21",
+      "trips": 1,
+      "average_duration_minutes": 11.3,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W22",
+      "trips": 1,
+      "average_duration_minutes": 17.64,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W23",
+      "trips": 1,
+      "average_duration_minutes": 19.64,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W25",
+      "trips": 1,
+      "average_duration_minutes": 11.38,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W26",
+      "trips": 1,
+      "average_duration_minutes": 18.41,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W27",
+      "trips": 1,
+      "average_duration_minutes": 11.29,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W29",
+      "trips": 1,
+      "average_duration_minutes": 9.74,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W30",
+      "trips": 1,
+      "average_duration_minutes": 9.02,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W31",
+      "trips": 1,
+      "average_duration_minutes": 10.19,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W33",
+      "trips": 1,
+      "average_duration_minutes": 20.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W34",
+      "trips": 1,
+      "average_duration_minutes": 21.52,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W35",
+      "trips": 1,
+      "average_duration_minutes": 13.78,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W36",
+      "trips": 1,
+      "average_duration_minutes": 8.83,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W38",
+      "trips": 1,
+      "average_duration_minutes": 20.55,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W39",
+      "trips": 1,
+      "average_duration_minutes": 14.82,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W40",
+      "trips": 1,
+      "average_duration_minutes": 20.88,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W42",
+      "trips": 1,
+      "average_duration_minutes": 20.19,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W43",
+      "trips": 1,
+      "average_duration_minutes": 7.61,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W44",
+      "trips": 1,
+      "average_duration_minutes": 11.69,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W46",
+      "trips": 1,
+      "average_duration_minutes": 14.58,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W47",
+      "trips": 1,
+      "average_duration_minutes": 11.62,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W48",
+      "trips": 1,
+      "average_duration_minutes": 20.11,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W49",
+      "trips": 1,
+      "average_duration_minutes": 7.72,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W51",
+      "trips": 1,
+      "average_duration_minutes": 18.01,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W52",
+      "trips": 1,
+      "average_duration_minutes": 11.4,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2015-W53",
+      "trips": 1,
+      "average_duration_minutes": 16.51,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W02",
+      "trips": 1,
+      "average_duration_minutes": 12.29,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W03",
+      "trips": 1,
+      "average_duration_minutes": 12.82,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W04",
+      "trips": 1,
+      "average_duration_minutes": 12.13,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W06",
+      "trips": 1,
+      "average_duration_minutes": 16.05,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W07",
+      "trips": 1,
+      "average_duration_minutes": 17.66,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W08",
+      "trips": 1,
+      "average_duration_minutes": 10.21,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W10",
+      "trips": 1,
+      "average_duration_minutes": 8.21,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W11",
+      "trips": 1,
+      "average_duration_minutes": 19.21,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W12",
+      "trips": 1,
+      "average_duration_minutes": 12.04,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W13",
+      "trips": 1,
+      "average_duration_minutes": 14.15,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W15",
+      "trips": 1,
+      "average_duration_minutes": 18.28,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W16",
+      "trips": 1,
+      "average_duration_minutes": 16.16,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W17",
+      "trips": 1,
+      "average_duration_minutes": 11.02,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W19",
+      "trips": 1,
+      "average_duration_minutes": 8.68,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W20",
+      "trips": 1,
+      "average_duration_minutes": 16.93,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W21",
+      "trips": 1,
+      "average_duration_minutes": 21.71,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W23",
+      "trips": 1,
+      "average_duration_minutes": 11.79,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W24",
+      "trips": 1,
+      "average_duration_minutes": 14.45,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W25",
+      "trips": 1,
+      "average_duration_minutes": 16.35,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W27",
+      "trips": 1,
+      "average_duration_minutes": 15.93,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W28",
+      "trips": 1,
+      "average_duration_minutes": 18.25,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W29",
+      "trips": 1,
+      "average_duration_minutes": 9.88,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W30",
+      "trips": 1,
+      "average_duration_minutes": 15.22,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W32",
+      "trips": 1,
+      "average_duration_minutes": 7.83,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W33",
+      "trips": 1,
+      "average_duration_minutes": 14.21,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W34",
+      "trips": 1,
+      "average_duration_minutes": 21.77,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W36",
+      "trips": 1,
+      "average_duration_minutes": 7.82,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W37",
+      "trips": 1,
+      "average_duration_minutes": 18.3,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W38",
+      "trips": 1,
+      "average_duration_minutes": 20.55,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W40",
+      "trips": 1,
+      "average_duration_minutes": 14.07,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W41",
+      "trips": 1,
+      "average_duration_minutes": 19.08,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W42",
+      "trips": 1,
+      "average_duration_minutes": 21.57,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W44",
+      "trips": 1,
+      "average_duration_minutes": 16.31,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W45",
+      "trips": 1,
+      "average_duration_minutes": 10.53,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W46",
+      "trips": 1,
+      "average_duration_minutes": 10.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W47",
+      "trips": 1,
+      "average_duration_minutes": 17.35,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W49",
+      "trips": 1,
+      "average_duration_minutes": 7.66,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W50",
+      "trips": 1,
+      "average_duration_minutes": 16.19,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2016-W51",
+      "trips": 1,
+      "average_duration_minutes": 19.42,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W01",
+      "trips": 1,
+      "average_duration_minutes": 15.96,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W02",
+      "trips": 1,
+      "average_duration_minutes": 14.65,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W03",
+      "trips": 1,
+      "average_duration_minutes": 19.77,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W05",
+      "trips": 1,
+      "average_duration_minutes": 7.57,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W06",
+      "trips": 1,
+      "average_duration_minutes": 20.84,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W07",
+      "trips": 1,
+      "average_duration_minutes": 11.51,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W08",
+      "trips": 1,
+      "average_duration_minutes": 14.0,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W10",
+      "trips": 1,
+      "average_duration_minutes": 16.12,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W11",
+      "trips": 1,
+      "average_duration_minutes": 20.28,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W12",
+      "trips": 1,
+      "average_duration_minutes": 21.37,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W14",
+      "trips": 1,
+      "average_duration_minutes": 20.14,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W15",
+      "trips": 1,
+      "average_duration_minutes": 13.66,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W16",
+      "trips": 1,
+      "average_duration_minutes": 20.03,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W18",
+      "trips": 1,
+      "average_duration_minutes": 14.49,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W19",
+      "trips": 1,
+      "average_duration_minutes": 8.31,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W20",
+      "trips": 1,
+      "average_duration_minutes": 13.89,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W22",
+      "trips": 1,
+      "average_duration_minutes": 8.72,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W23",
+      "trips": 1,
+      "average_duration_minutes": 7.49,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W24",
+      "trips": 1,
+      "average_duration_minutes": 10.0,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W25",
+      "trips": 1,
+      "average_duration_minutes": 10.58,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W27",
+      "trips": 1,
+      "average_duration_minutes": 16.27,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W28",
+      "trips": 1,
+      "average_duration_minutes": 12.17,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W29",
+      "trips": 1,
+      "average_duration_minutes": 13.14,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W31",
+      "trips": 1,
+      "average_duration_minutes": 8.24,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W32",
+      "trips": 1,
+      "average_duration_minutes": 13.32,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W33",
+      "trips": 1,
+      "average_duration_minutes": 14.14,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W35",
+      "trips": 1,
+      "average_duration_minutes": 18.54,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W36",
+      "trips": 1,
+      "average_duration_minutes": 17.11,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W37",
+      "trips": 1,
+      "average_duration_minutes": 13.66,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W39",
+      "trips": 1,
+      "average_duration_minutes": 7.36,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W40",
+      "trips": 1,
+      "average_duration_minutes": 12.95,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W41",
+      "trips": 1,
+      "average_duration_minutes": 17.98,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W42",
+      "trips": 1,
+      "average_duration_minutes": 11.0,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W44",
+      "trips": 1,
+      "average_duration_minutes": 10.43,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W45",
+      "trips": 1,
+      "average_duration_minutes": 15.9,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W46",
+      "trips": 1,
+      "average_duration_minutes": 17.66,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W48",
+      "trips": 1,
+      "average_duration_minutes": 17.94,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W49",
+      "trips": 1,
+      "average_duration_minutes": 20.77,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W50",
+      "trips": 1,
+      "average_duration_minutes": 9.91,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2017-W52",
+      "trips": 1,
+      "average_duration_minutes": 9.5,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W01",
+      "trips": 1,
+      "average_duration_minutes": 20.64,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W02",
+      "trips": 1,
+      "average_duration_minutes": 14.76,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W03",
+      "trips": 1,
+      "average_duration_minutes": 13.13,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W05",
+      "trips": 1,
+      "average_duration_minutes": 16.27,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W06",
+      "trips": 1,
+      "average_duration_minutes": 12.74,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W07",
+      "trips": 1,
+      "average_duration_minutes": 11.42,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W09",
+      "trips": 1,
+      "average_duration_minutes": 11.59,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W10",
+      "trips": 1,
+      "average_duration_minutes": 14.53,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W11",
+      "trips": 1,
+      "average_duration_minutes": 20.34,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W13",
+      "trips": 1,
+      "average_duration_minutes": 20.62,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W14",
+      "trips": 1,
+      "average_duration_minutes": 14.17,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W15",
+      "trips": 1,
+      "average_duration_minutes": 16.75,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W17",
+      "trips": 1,
+      "average_duration_minutes": 11.28,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W18",
+      "trips": 1,
+      "average_duration_minutes": 9.67,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W19",
+      "trips": 1,
+      "average_duration_minutes": 20.75,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W20",
+      "trips": 1,
+      "average_duration_minutes": 14.43,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W22",
+      "trips": 1,
+      "average_duration_minutes": 12.13,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W23",
+      "trips": 1,
+      "average_duration_minutes": 11.0,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W24",
+      "trips": 1,
+      "average_duration_minutes": 18.81,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W26",
+      "trips": 1,
+      "average_duration_minutes": 9.13,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W27",
+      "trips": 1,
+      "average_duration_minutes": 14.67,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W28",
+      "trips": 1,
+      "average_duration_minutes": 12.59,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W30",
+      "trips": 1,
+      "average_duration_minutes": 13.03,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W31",
+      "trips": 1,
+      "average_duration_minutes": 15.9,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W32",
+      "trips": 1,
+      "average_duration_minutes": 16.79,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W34",
+      "trips": 1,
+      "average_duration_minutes": 10.0,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W35",
+      "trips": 1,
+      "average_duration_minutes": 9.41,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W36",
+      "trips": 1,
+      "average_duration_minutes": 10.66,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W37",
+      "trips": 1,
+      "average_duration_minutes": 10.04,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W39",
+      "trips": 1,
+      "average_duration_minutes": 8.78,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W40",
+      "trips": 1,
+      "average_duration_minutes": 12.06,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W41",
+      "trips": 1,
+      "average_duration_minutes": 11.27,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W43",
+      "trips": 1,
+      "average_duration_minutes": 15.64,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W44",
+      "trips": 1,
+      "average_duration_minutes": 13.79,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W45",
+      "trips": 1,
+      "average_duration_minutes": 8.51,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W47",
+      "trips": 1,
+      "average_duration_minutes": 14.35,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W48",
+      "trips": 1,
+      "average_duration_minutes": 7.62,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W49",
+      "trips": 1,
+      "average_duration_minutes": 20.2,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W50",
+      "trips": 1,
+      "average_duration_minutes": 15.01,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2018-W52",
+      "trips": 1,
+      "average_duration_minutes": 19.75,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W01",
+      "trips": 1,
+      "average_duration_minutes": 17.9,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W02",
+      "trips": 1,
+      "average_duration_minutes": 10.28,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W04",
+      "trips": 1,
+      "average_duration_minutes": 7.04,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W05",
+      "trips": 1,
+      "average_duration_minutes": 14.84,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W06",
+      "trips": 1,
+      "average_duration_minutes": 15.13,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W08",
+      "trips": 1,
+      "average_duration_minutes": 21.87,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W09",
+      "trips": 1,
+      "average_duration_minutes": 8.86,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W10",
+      "trips": 1,
+      "average_duration_minutes": 8.05,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W12",
+      "trips": 1,
+      "average_duration_minutes": 21.5,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W13",
+      "trips": 1,
+      "average_duration_minutes": 14.31,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W14",
+      "trips": 1,
+      "average_duration_minutes": 11.46,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W15",
+      "trips": 1,
+      "average_duration_minutes": 20.92,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W17",
+      "trips": 1,
+      "average_duration_minutes": 11.27,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W18",
+      "trips": 1,
+      "average_duration_minutes": 9.59,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W19",
+      "trips": 1,
+      "average_duration_minutes": 19.97,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W21",
+      "trips": 1,
+      "average_duration_minutes": 17.49,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W22",
+      "trips": 1,
+      "average_duration_minutes": 14.83,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W23",
+      "trips": 1,
+      "average_duration_minutes": 10.19,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W25",
+      "trips": 1,
+      "average_duration_minutes": 12.69,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W26",
+      "trips": 1,
+      "average_duration_minutes": 16.09,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W27",
+      "trips": 1,
+      "average_duration_minutes": 13.34,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W29",
+      "trips": 1,
+      "average_duration_minutes": 9.22,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W30",
+      "trips": 1,
+      "average_duration_minutes": 21.07,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W31",
+      "trips": 1,
+      "average_duration_minutes": 8.17,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W32",
+      "trips": 1,
+      "average_duration_minutes": 18.94,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W34",
+      "trips": 1,
+      "average_duration_minutes": 17.8,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W35",
+      "trips": 1,
+      "average_duration_minutes": 18.73,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W36",
+      "trips": 1,
+      "average_duration_minutes": 9.13,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W38",
+      "trips": 1,
+      "average_duration_minutes": 21.11,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W39",
+      "trips": 1,
+      "average_duration_minutes": 17.32,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W40",
+      "trips": 1,
+      "average_duration_minutes": 13.88,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W42",
+      "trips": 1,
+      "average_duration_minutes": 18.75,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W43",
+      "trips": 1,
+      "average_duration_minutes": 19.57,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W44",
+      "trips": 1,
+      "average_duration_minutes": 18.89,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W46",
+      "trips": 1,
+      "average_duration_minutes": 13.18,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W47",
+      "trips": 1,
+      "average_duration_minutes": 7.45,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W48",
+      "trips": 1,
+      "average_duration_minutes": 10.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W49",
+      "trips": 1,
+      "average_duration_minutes": 15.19,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W51",
+      "trips": 1,
+      "average_duration_minutes": 11.01,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2019-W52",
+      "trips": 1,
+      "average_duration_minutes": 16.68,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W01",
+      "trips": 1,
+      "average_duration_minutes": 7.75,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W03",
+      "trips": 1,
+      "average_duration_minutes": 7.58,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W04",
+      "trips": 1,
+      "average_duration_minutes": 15.09,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W05",
+      "trips": 1,
+      "average_duration_minutes": 12.47,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W07",
+      "trips": 1,
+      "average_duration_minutes": 20.84,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W08",
+      "trips": 1,
+      "average_duration_minutes": 9.69,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W09",
+      "trips": 1,
+      "average_duration_minutes": 17.49,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W10",
+      "trips": 1,
+      "average_duration_minutes": 10.5,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W12",
+      "trips": 1,
+      "average_duration_minutes": 14.92,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W13",
+      "trips": 1,
+      "average_duration_minutes": 16.91,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W14",
+      "trips": 1,
+      "average_duration_minutes": 16.9,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W16",
+      "trips": 1,
+      "average_duration_minutes": 18.43,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W17",
+      "trips": 1,
+      "average_duration_minutes": 8.54,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W18",
+      "trips": 1,
+      "average_duration_minutes": 15.76,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W20",
+      "trips": 1,
+      "average_duration_minutes": 17.24,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W21",
+      "trips": 1,
+      "average_duration_minutes": 14.84,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W22",
+      "trips": 1,
+      "average_duration_minutes": 17.96,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W24",
+      "trips": 1,
+      "average_duration_minutes": 14.33,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W25",
+      "trips": 1,
+      "average_duration_minutes": 9.68,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W26",
+      "trips": 1,
+      "average_duration_minutes": 15.91,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W27",
+      "trips": 1,
+      "average_duration_minutes": 20.72,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W29",
+      "trips": 1,
+      "average_duration_minutes": 17.33,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W30",
+      "trips": 1,
+      "average_duration_minutes": 12.67,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W31",
+      "trips": 1,
+      "average_duration_minutes": 10.47,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W33",
+      "trips": 1,
+      "average_duration_minutes": 19.16,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W34",
+      "trips": 1,
+      "average_duration_minutes": 18.92,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W35",
+      "trips": 1,
+      "average_duration_minutes": 13.02,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W37",
+      "trips": 1,
+      "average_duration_minutes": 11.7,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W38",
+      "trips": 1,
+      "average_duration_minutes": 18.26,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W39",
+      "trips": 1,
+      "average_duration_minutes": 21.35,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W41",
+      "trips": 1,
+      "average_duration_minutes": 9.29,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W42",
+      "trips": 1,
+      "average_duration_minutes": 8.88,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W43",
+      "trips": 1,
+      "average_duration_minutes": 18.99,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W44",
+      "trips": 1,
+      "average_duration_minutes": 19.99,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W46",
+      "trips": 1,
+      "average_duration_minutes": 17.33,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W47",
+      "trips": 1,
+      "average_duration_minutes": 14.77,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W48",
+      "trips": 1,
+      "average_duration_minutes": 10.41,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W50",
+      "trips": 1,
+      "average_duration_minutes": 21.7,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W51",
+      "trips": 1,
+      "average_duration_minutes": 7.74,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2020-W52",
+      "trips": 1,
+      "average_duration_minutes": 20.5,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W01",
+      "trips": 1,
+      "average_duration_minutes": 17.24,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W02",
+      "trips": 1,
+      "average_duration_minutes": 17.23,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W03",
+      "trips": 1,
+      "average_duration_minutes": 16.02,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W04",
+      "trips": 1,
+      "average_duration_minutes": 15.31,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W06",
+      "trips": 1,
+      "average_duration_minutes": 15.71,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W07",
+      "trips": 1,
+      "average_duration_minutes": 8.46,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W08",
+      "trips": 1,
+      "average_duration_minutes": 10.14,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W10",
+      "trips": 1,
+      "average_duration_minutes": 19.61,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W11",
+      "trips": 1,
+      "average_duration_minutes": 15.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W12",
+      "trips": 1,
+      "average_duration_minutes": 18.2,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W14",
+      "trips": 1,
+      "average_duration_minutes": 14.87,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W15",
+      "trips": 1,
+      "average_duration_minutes": 7.63,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W16",
+      "trips": 1,
+      "average_duration_minutes": 8.83,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W18",
+      "trips": 1,
+      "average_duration_minutes": 10.49,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W19",
+      "trips": 1,
+      "average_duration_minutes": 10.62,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W20",
+      "trips": 1,
+      "average_duration_minutes": 14.55,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W21",
+      "trips": 1,
+      "average_duration_minutes": 8.11,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W23",
+      "trips": 1,
+      "average_duration_minutes": 11.8,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W24",
+      "trips": 1,
+      "average_duration_minutes": 8.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W25",
+      "trips": 1,
+      "average_duration_minutes": 9.99,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W27",
+      "trips": 1,
+      "average_duration_minutes": 21.02,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W28",
+      "trips": 1,
+      "average_duration_minutes": 9.9,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W29",
+      "trips": 1,
+      "average_duration_minutes": 15.52,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W31",
+      "trips": 1,
+      "average_duration_minutes": 12.85,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W32",
+      "trips": 1,
+      "average_duration_minutes": 15.25,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W33",
+      "trips": 1,
+      "average_duration_minutes": 10.43,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W35",
+      "trips": 1,
+      "average_duration_minutes": 19.03,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W36",
+      "trips": 1,
+      "average_duration_minutes": 9.09,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W37",
+      "trips": 1,
+      "average_duration_minutes": 10.34,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W38",
+      "trips": 1,
+      "average_duration_minutes": 13.32,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W40",
+      "trips": 1,
+      "average_duration_minutes": 10.25,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W41",
+      "trips": 1,
+      "average_duration_minutes": 13.12,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W42",
+      "trips": 1,
+      "average_duration_minutes": 14.17,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W44",
+      "trips": 1,
+      "average_duration_minutes": 15.78,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W45",
+      "trips": 1,
+      "average_duration_minutes": 16.48,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W46",
+      "trips": 1,
+      "average_duration_minutes": 14.45,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W48",
+      "trips": 1,
+      "average_duration_minutes": 13.31,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W49",
+      "trips": 1,
+      "average_duration_minutes": 18.75,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W50",
+      "trips": 1,
+      "average_duration_minutes": 8.16,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2021-W51",
+      "trips": 1,
+      "average_duration_minutes": 20.69,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W01",
+      "trips": 1,
+      "average_duration_minutes": 13.44,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W02",
+      "trips": 1,
+      "average_duration_minutes": 21.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W03",
+      "trips": 1,
+      "average_duration_minutes": 9.35,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W05",
+      "trips": 1,
+      "average_duration_minutes": 18.65,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W06",
+      "trips": 1,
+      "average_duration_minutes": 19.7,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W07",
+      "trips": 1,
+      "average_duration_minutes": 21.86,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W09",
+      "trips": 1,
+      "average_duration_minutes": 14.07,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W10",
+      "trips": 1,
+      "average_duration_minutes": 14.49,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W11",
+      "trips": 1,
+      "average_duration_minutes": 18.88,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W13",
+      "trips": 1,
+      "average_duration_minutes": 10.79,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W14",
+      "trips": 1,
+      "average_duration_minutes": 17.17,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W15",
+      "trips": 1,
+      "average_duration_minutes": 11.73,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W16",
+      "trips": 1,
+      "average_duration_minutes": 13.01,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W18",
+      "trips": 1,
+      "average_duration_minutes": 8.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W19",
+      "trips": 1,
+      "average_duration_minutes": 14.79,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W20",
+      "trips": 1,
+      "average_duration_minutes": 16.31,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W22",
+      "trips": 1,
+      "average_duration_minutes": 7.31,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W23",
+      "trips": 1,
+      "average_duration_minutes": 21.66,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W24",
+      "trips": 1,
+      "average_duration_minutes": 19.78,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W26",
+      "trips": 1,
+      "average_duration_minutes": 20.95,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W27",
+      "trips": 1,
+      "average_duration_minutes": 12.65,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W28",
+      "trips": 1,
+      "average_duration_minutes": 9.64,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W30",
+      "trips": 1,
+      "average_duration_minutes": 21.2,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W31",
+      "trips": 1,
+      "average_duration_minutes": 9.31,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W32",
+      "trips": 1,
+      "average_duration_minutes": 13.38,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W33",
+      "trips": 1,
+      "average_duration_minutes": 10.07,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W35",
+      "trips": 1,
+      "average_duration_minutes": 16.33,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W36",
+      "trips": 1,
+      "average_duration_minutes": 15.74,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W37",
+      "trips": 1,
+      "average_duration_minutes": 21.97,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W39",
+      "trips": 1,
+      "average_duration_minutes": 19.44,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W40",
+      "trips": 1,
+      "average_duration_minutes": 17.79,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W41",
+      "trips": 1,
+      "average_duration_minutes": 14.76,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W43",
+      "trips": 1,
+      "average_duration_minutes": 10.53,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W44",
+      "trips": 1,
+      "average_duration_minutes": 9.21,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W45",
+      "trips": 1,
+      "average_duration_minutes": 21.55,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W47",
+      "trips": 1,
+      "average_duration_minutes": 9.02,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W48",
+      "trips": 1,
+      "average_duration_minutes": 17.74,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W49",
+      "trips": 1,
+      "average_duration_minutes": 17.65,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W50",
+      "trips": 1,
+      "average_duration_minutes": 16.69,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2022-W52",
+      "trips": 1,
+      "average_duration_minutes": 7.05,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W01",
+      "trips": 1,
+      "average_duration_minutes": 18.07,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W02",
+      "trips": 1,
+      "average_duration_minutes": 17.85,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W04",
+      "trips": 1,
+      "average_duration_minutes": 10.06,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W05",
+      "trips": 1,
+      "average_duration_minutes": 20.66,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W06",
+      "trips": 1,
+      "average_duration_minutes": 12.02,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W08",
+      "trips": 1,
+      "average_duration_minutes": 9.16,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W09",
+      "trips": 1,
+      "average_duration_minutes": 16.17,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W10",
+      "trips": 1,
+      "average_duration_minutes": 13.95,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W11",
+      "trips": 1,
+      "average_duration_minutes": 21.02,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W13",
+      "trips": 1,
+      "average_duration_minutes": 19.64,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W14",
+      "trips": 1,
+      "average_duration_minutes": 18.57,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W15",
+      "trips": 1,
+      "average_duration_minutes": 17.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W17",
+      "trips": 1,
+      "average_duration_minutes": 13.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W18",
+      "trips": 1,
+      "average_duration_minutes": 16.09,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W19",
+      "trips": 1,
+      "average_duration_minutes": 8.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W21",
+      "trips": 1,
+      "average_duration_minutes": 19.2,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W22",
+      "trips": 1,
+      "average_duration_minutes": 8.08,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W23",
+      "trips": 1,
+      "average_duration_minutes": 7.54,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W25",
+      "trips": 1,
+      "average_duration_minutes": 16.86,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W26",
+      "trips": 1,
+      "average_duration_minutes": 18.92,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W27",
+      "trips": 1,
+      "average_duration_minutes": 15.11,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W28",
+      "trips": 1,
+      "average_duration_minutes": 14.9,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W30",
+      "trips": 1,
+      "average_duration_minutes": 9.77,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W31",
+      "trips": 1,
+      "average_duration_minutes": 7.52,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W32",
+      "trips": 1,
+      "average_duration_minutes": 14.94,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W34",
+      "trips": 1,
+      "average_duration_minutes": 16.43,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W35",
+      "trips": 1,
+      "average_duration_minutes": 17.31,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W36",
+      "trips": 1,
+      "average_duration_minutes": 7.2,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W38",
+      "trips": 1,
+      "average_duration_minutes": 11.91,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W39",
+      "trips": 1,
+      "average_duration_minutes": 12.85,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W40",
+      "trips": 1,
+      "average_duration_minutes": 21.6,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W42",
+      "trips": 1,
+      "average_duration_minutes": 7.84,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W43",
+      "trips": 1,
+      "average_duration_minutes": 15.31,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W44",
+      "trips": 1,
+      "average_duration_minutes": 18.99,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W45",
+      "trips": 1,
+      "average_duration_minutes": 13.87,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W47",
+      "trips": 1,
+      "average_duration_minutes": 12.22,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W48",
+      "trips": 1,
+      "average_duration_minutes": 21.8,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W49",
+      "trips": 1,
+      "average_duration_minutes": 16.18,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W51",
+      "trips": 1,
+      "average_duration_minutes": 19.58,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2023-W52",
+      "trips": 1,
+      "average_duration_minutes": 13.11,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W01",
+      "trips": 1,
+      "average_duration_minutes": 13.92,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W03",
+      "trips": 1,
+      "average_duration_minutes": 14.64,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W04",
+      "trips": 1,
+      "average_duration_minutes": 20.66,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W05",
+      "trips": 1,
+      "average_duration_minutes": 9.58,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W06",
+      "trips": 1,
+      "average_duration_minutes": 9.4,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W08",
+      "trips": 1,
+      "average_duration_minutes": 12.53,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W09",
+      "trips": 1,
+      "average_duration_minutes": 19.91,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W10",
+      "trips": 1,
+      "average_duration_minutes": 17.24,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W12",
+      "trips": 1,
+      "average_duration_minutes": 13.86,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W13",
+      "trips": 1,
+      "average_duration_minutes": 15.51,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W14",
+      "trips": 1,
+      "average_duration_minutes": 15.07,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W16",
+      "trips": 1,
+      "average_duration_minutes": 13.43,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W17",
+      "trips": 1,
+      "average_duration_minutes": 7.12,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W18",
+      "trips": 1,
+      "average_duration_minutes": 10.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W20",
+      "trips": 1,
+      "average_duration_minutes": 17.98,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W21",
+      "trips": 1,
+      "average_duration_minutes": 15.64,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W22",
+      "trips": 1,
+      "average_duration_minutes": 20.6,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W23",
+      "trips": 1,
+      "average_duration_minutes": 11.93,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W25",
+      "trips": 1,
+      "average_duration_minutes": 15.75,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W26",
+      "trips": 1,
+      "average_duration_minutes": 7.82,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W27",
+      "trips": 1,
+      "average_duration_minutes": 8.82,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W29",
+      "trips": 1,
+      "average_duration_minutes": 9.87,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W30",
+      "trips": 1,
+      "average_duration_minutes": 21.23,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W31",
+      "trips": 1,
+      "average_duration_minutes": 18.69,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W33",
+      "trips": 1,
+      "average_duration_minutes": 17.58,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W34",
+      "trips": 1,
+      "average_duration_minutes": 18.38,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W35",
+      "trips": 1,
+      "average_duration_minutes": 8.28,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W37",
+      "trips": 1,
+      "average_duration_minutes": 14.09,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W38",
+      "trips": 1,
+      "average_duration_minutes": 12.33,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W39",
+      "trips": 1,
+      "average_duration_minutes": 15.26,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W40",
+      "trips": 1,
+      "average_duration_minutes": 20.46,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W42",
+      "trips": 1,
+      "average_duration_minutes": 17.08,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W43",
+      "trips": 1,
+      "average_duration_minutes": 20.28,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W44",
+      "trips": 1,
+      "average_duration_minutes": 14.73,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W46",
+      "trips": 1,
+      "average_duration_minutes": 14.51,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W47",
+      "trips": 1,
+      "average_duration_minutes": 19.7,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W48",
+      "trips": 1,
+      "average_duration_minutes": 7.28,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W50",
+      "trips": 1,
+      "average_duration_minutes": 10.91,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W51",
+      "trips": 1,
+      "average_duration_minutes": 7.75,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2024-W52",
+      "trips": 1,
+      "average_duration_minutes": 19.86,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W02",
+      "trips": 1,
+      "average_duration_minutes": 12.3,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W03",
+      "trips": 1,
+      "average_duration_minutes": 7.38,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W04",
+      "trips": 1,
+      "average_duration_minutes": 16.85,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W05",
+      "trips": 1,
+      "average_duration_minutes": 13.0,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W07",
+      "trips": 1,
+      "average_duration_minutes": 9.23,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W08",
+      "trips": 1,
+      "average_duration_minutes": 17.81,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W09",
+      "trips": 1,
+      "average_duration_minutes": 18.12,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W11",
+      "trips": 1,
+      "average_duration_minutes": 18.58,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W12",
+      "trips": 1,
+      "average_duration_minutes": 7.95,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W13",
+      "trips": 1,
+      "average_duration_minutes": 14.29,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W15",
+      "trips": 1,
+      "average_duration_minutes": 18.56,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W16",
+      "trips": 1,
+      "average_duration_minutes": 13.9,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W17",
+      "trips": 1,
+      "average_duration_minutes": 9.02,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W18",
+      "trips": 1,
+      "average_duration_minutes": 10.02,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W20",
+      "trips": 1,
+      "average_duration_minutes": 16.16,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W21",
+      "trips": 1,
+      "average_duration_minutes": 8.75,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W22",
+      "trips": 1,
+      "average_duration_minutes": 16.97,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W24",
+      "trips": 1,
+      "average_duration_minutes": 8.42,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W25",
+      "trips": 1,
+      "average_duration_minutes": 12.36,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W26",
+      "trips": 1,
+      "average_duration_minutes": 12.17,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W28",
+      "trips": 1,
+      "average_duration_minutes": 17.7,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W29",
+      "trips": 1,
+      "average_duration_minutes": 20.63,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W30",
+      "trips": 1,
+      "average_duration_minutes": 20.81,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W32",
+      "trips": 1,
+      "average_duration_minutes": 20.87,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W33",
+      "trips": 1,
+      "average_duration_minutes": 20.22,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W34",
+      "trips": 1,
+      "average_duration_minutes": 21.41,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W35",
+      "trips": 1,
+      "average_duration_minutes": 11.25,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W37",
+      "trips": 1,
+      "average_duration_minutes": 12.8,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W38",
+      "trips": 1,
+      "average_duration_minutes": 20.14,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W39",
+      "trips": 1,
+      "average_duration_minutes": 21.44,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W41",
+      "trips": 1,
+      "average_duration_minutes": 21.46,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W42",
+      "trips": 1,
+      "average_duration_minutes": 11.19,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W43",
+      "trips": 1,
+      "average_duration_minutes": 16.21,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W45",
+      "trips": 1,
+      "average_duration_minutes": 11.26,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W46",
+      "trips": 1,
+      "average_duration_minutes": 16.39,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W47",
+      "trips": 1,
+      "average_duration_minutes": 7.16,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W49",
+      "trips": 1,
+      "average_duration_minutes": 17.01,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W50",
+      "trips": 1,
+      "average_duration_minutes": 14.71,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W51",
+      "trips": 1,
+      "average_duration_minutes": 20.6,
+      "single_ride_spend": 4.99
+    },
+    {
+      "week": "2025-W52",
+      "trips": 1,
+      "average_duration_minutes": 7.05,
+      "single_ride_spend": 4.99
+    }
+  ],
+  "timeline": [
+    {
+      "tool": "csv_sql",
+      "inputs": {
+        "sql": "SELECT COUNT(*) AS trip_count, ROUND(AVG(duration_minutes), 2) AS average_minutes FROM trips"
+      },
+      "rationale": "Measure the uploaded trip volume and average duration.",
+      "observation": {
+        "success": true,
+        "ts": "2026-10-22T08:54:57.833901+00:00",
+        "data": {
+          "rows": [
+            {
+              "trip_count": 520,
+              "average_minutes": 14.51
+            }
+          ],
+          "row_count": 1,
+          "source": "uploaded.csv"
+        },
+        "source": "uploaded.csv"
+      }
+    },
+    {
+      "tool": "policy_retriever",
+      "inputs": {
+        "url": "https://citibikenyc.com/plans-and-pricing",
+        "query": "annual membership single ride 30 45 minutes overage unlock",
+        "k": 5
+      },
+      "rationale": "Retrieve the current captured price terms; policy text is untrusted data, not instructions.",
+      "observation": {
+        "success": true,
+        "ts": "2026-10-22T08:54:57.833946+00:00",
+        "data": {
+          "passages": [
+            {
+              "text": "Single Ride: $4.99 for 30 mins. Bike unlocks: $4.99. Ebike prices: $0.41/min. Ride times: 30 min.",
+              "source": "https://citibikenyc.com/plans-and-pricing",
+              "score": 4,
+              "untrusted": true
+            },
+            {
+              "text": "Single rides include one classic bike ride up to 30 minutes. $0.41/min for every minute thereafter.",
+              "source": "https://citibikenyc.com/plans-and-pricing",
+              "score": 4,
+              "untrusted": true
+            },
+            {
+              "text": "Citi Bike: $239/year. Bike unlocks: free. Ride times: 45 min. Ebike prices: $0.27/min.",
+              "source": "https://citibikenyc.com/plans-and-pricing",
+              "score": 3,
+              "untrusted": true
+            },
+            {
+              "text": "Annual members get unlimited 45-minute rides on classic bikes; longer classic rides have extra-time charges.",
+              "source": "https://citibikenyc.com/plans-and-pricing",
+              "score": 3,
+              "untrusted": true
+            }
+          ]
+        },
+        "source": "https://citibikenyc.com/plans-and-pricing"
+      }
+    },
+    {
+      "tool": "calculator",
+      "inputs": {
+        "expression": "2.6e+03 - 3.1e+03",
+        "units": "USD"
+      },
+      "rationale": "Calculate the observed cost difference from the tool-derived totals.",
+      "observation": {
+        "success": false,
+        "ts": "2026-10-22T08:54:57.834366+00:00",
+        "error": "Calculator accepts numbers and + - * / ( ) only."
+      }
+    }
+  ],
+  "citations": {
+    "pricing_url": "https://citibikenyc.com/plans-and-pricing",
+    "capture_timestamp": "2026-10-22T08:54:57.433992+00:00",
+    "snapshot_sha256": "abb90afdd6feb6a6f5b82390f8626f4e348239db6f44db08815b9f05073cf6f0"
+  },
+  "metrics": {
+    "step_count": 3,
+    "total_time_ms": 0,
+    "stop_reason": "cost_comparison_complete",
+    "trip_query": {
+      "success": true,
+      "ts": "2026-10-22T08:54:57.833901+00:00",
+      "data": {
+        "rows": [
+          {
+            "trip_count": 520,
+            "average_minutes": 14.51
+          }
+        ],
+        "row_count": 1,
+        "source": "uploaded.csv"
+      },
+      "source": "uploaded.csv"
+    },
+    "calculation": {
+      "success": false,
+      "ts": "2026-10-22T08:54:57.834366+00:00",
+      "error": "Calculator accepts numbers and + - * / ( ) only."
+    }
+  }
+}

@@ -1,21 +1,18 @@
 from datetime import datetime
-from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, Text, Index, func
+
+from sqlalchemy import Boolean, DateTime, ForeignKey, Index, Integer, String, Text, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 from .database import Base
+
 
 class User(Base):
     __tablename__ = "users"
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    name: Mapped[str] = mapped_column(String(255), nullable=False)
-    email: Mapped[str] = mapped_column(String(255), unique=True, index=True, nullable=False)
+    username: Mapped[str] = mapped_column(String(64), unique=True, index=True, nullable=False)
     password_hash: Mapped[str] = mapped_column(String(255), nullable=False)
+    role: Mapped[str] = mapped_column(String(16), nullable=False, default="reader")
 
-class SessionToken(Base):
-    __tablename__ = "sessions"
-    id: Mapped[str] = mapped_column(String(64), primary_key=True)
-    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime, nullable=False)
-    expires_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, index=True)
 
 class RentalHousingListing(Base):
     __tablename__ = "rental_housing_listings"
@@ -31,19 +28,31 @@ class RentalHousingListing(Base):
     owner_id: Mapped[int] = mapped_column(
         ForeignKey("property_owners.id", ondelete="RESTRICT"), nullable=False, index=True
     )
-    created_at: Mapped[datetime] = mapped_column(DateTime, server_default=func.now(), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime, server_default=func.now(), nullable=False
+    )
     updated_at: Mapped[datetime] = mapped_column(
         DateTime, server_default=func.now(), onupdate=func.now(), nullable=False
     )
-    related_rows = relationship("ListingAmenity", back_populates="listing", cascade="all, delete-orphan")
+    related_rows = relationship(
+        "ListingAmenity", back_populates="listing", cascade="all, delete-orphan"
+    )
     owner = relationship("PropertyOwner", back_populates="listings")
 
-Index("ix_listing_location_category", RentalHousingListing.property_location, RentalHousingListing.property_category)
+
+Index(
+    "ix_listing_location_category",
+    RentalHousingListing.property_location,
+    RentalHousingListing.property_category,
+)
+
 
 class ListingAmenity(Base):
     __tablename__ = "listing_amenities"
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    listing_id: Mapped[int] = mapped_column(ForeignKey("rental_housing_listings.id", ondelete="CASCADE"), nullable=False, index=True)
+    listing_id: Mapped[int] = mapped_column(
+        ForeignKey("rental_housing_listings.id", ondelete="CASCADE"), nullable=False, index=True
+    )
     amenity: Mapped[str] = mapped_column(String(100), nullable=False)
     listing = relationship("RentalHousingListing", back_populates="related_rows")
 
@@ -54,7 +63,9 @@ class PropertyOwner(Base):
     first_name: Mapped[str] = mapped_column(String(100), nullable=False)
     last_name: Mapped[str] = mapped_column(String(100), nullable=False)
     email: Mapped[str] = mapped_column(String(255), unique=True, index=True, nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime, server_default=func.now(), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime, server_default=func.now(), nullable=False
+    )
     updated_at: Mapped[datetime] = mapped_column(
         DateTime, server_default=func.now(), onupdate=func.now(), nullable=False
     )

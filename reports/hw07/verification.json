@@ -1,0 +1,40 @@
+{
+  "homework": 7,
+  "SID4": 7838,
+  "commit_hash": "2bd08d957fc4a32846564486c2617ec02a1a781d",
+  "model": "qwen2:7b",
+  "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
+  "seed": 7838,
+  "verify_seed": 267838,
+  "checks": [
+    {
+      "name": "JWT authentication and reader/writer/moderator status codes",
+      "passed": true
+    },
+    {
+      "name": "20 fixed Part 2 attempts repair to success",
+      "passed": true
+    },
+    {
+      "name": "Reflexion runs have stored evidence and bounded retries",
+      "passed": true
+    },
+    {
+      "name": "Bike scenarios make opposite required decisions",
+      "passed": true
+    },
+    {
+      "name": "Each bike CSV has at least 500 rows",
+      "passed": true
+    },
+    {
+      "name": "File-tool safety contract has five allows and five blocks",
+      "passed": true
+    },
+    {
+      "name": "Pricing snapshot has URL/date/hash",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

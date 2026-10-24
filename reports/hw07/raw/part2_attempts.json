@@ -99,7 +99,7 @@
       "tool_calls": 2,
       "repairs": 0,
       "initial_well_formed": true,
-      "latency_ms": 0.03,
+      "latency_ms": 0.02,
       "trace": [
         {
           "step": 1,
@@ -649,7 +649,7 @@
       "tool_calls": 2,
       "repairs": 0,
       "initial_well_formed": true,
-      "latency_ms": 0.02,
+      "latency_ms": 0.01,
       "trace": [
         {
           "step": 1,
@@ -924,7 +924,7 @@
       "tool_calls": 2,
       "repairs": 0,
       "initial_well_formed": true,
-      "latency_ms": 0.02,
+      "latency_ms": 0.01,
       "trace": [
         {
           "step": 1,
@@ -1389,7 +1389,7 @@
       "tool_calls": 2,
       "repairs": 0,
       "initial_well_formed": true,
-      "latency_ms": 0.02,
+      "latency_ms": 0.01,
       "trace": [
         {
           "step": 1,
@@ -1558,7 +1558,7 @@
       "tool_calls": 3,
       "repairs": 1,
       "initial_well_formed": false,
-      "latency_ms": 0.03,
+      "latency_ms": 0.02,
       "trace": [
         {
           "step": 1,
@@ -1676,7 +1676,7 @@
       "tool_calls": 2,
       "repairs": 1,
       "initial_well_formed": false,
-      "latency_ms": 0.06,
+      "latency_ms": 0.05,
       "trace": [
         {
           "step": 1,

@@ -75,7 +75,21 @@ def _command_stays_in_sandbox(command: str) -> bool:
         tokens = shlex.split(command)
     except ValueError:
         return False
-    if not tokens or tokens[0] in {"cd", "source", "."}:
+    if not tokens or tokens[0] in {
+        "cd",
+        "source",
+        ".",
+        "bash",
+        "sh",
+        "zsh",
+        "python",
+        "python3",
+        "perl",
+        "ruby",
+        "node",
+        "osascript",
+        "env",
+    }:
         return False
     root = SAFE_PREFIXES[0]
     for token in tokens:

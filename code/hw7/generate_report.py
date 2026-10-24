@@ -212,6 +212,27 @@ def report_story() -> list[Any]:
     ]
     story.extend(evidence_image("JWT role and failure checks", "part1_auth.png", styles))
     story.extend(
+        evidence_image(
+            "Actual rental API login response captured from live Swagger UI",
+            "actual_rental_login.png",
+            styles,
+        )
+    )
+    story.extend(
+        evidence_image(
+            "Actual rental API invalid-login response captured from live Swagger UI",
+            "actual_rental_invalid_login.png",
+            styles,
+        )
+    )
+    story.extend(
+        evidence_image(
+            "Actual rental API missing-token response captured from live browser",
+            "actual_rental_me_missing_token.png",
+            styles,
+        )
+    )
+    story.extend(
         [
             PageBreak(),
             p("Lint and commit hook", styles, "main"),

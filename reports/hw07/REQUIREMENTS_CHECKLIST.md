@@ -74,7 +74,7 @@ an item that cannot be verified from a local checkout.
 | Requirement | Status | Evidence |
 |---|---|---|
 | Six tools, `max_lines`, short edit diff, and `file_pattern` | PASS | `code/hw7/file_tools.py` |
-| Module-level allow-list plus independent destructive-command check | PASS | `SAFE_PREFIXES`, `is_destructive`, `confirm_bash` |
+| Module-level allow-list plus independent destructive-command check | PASS | `SAFE_PREFIXES`, `is_destructive`, `confirm_bash`; shell paths and chaining are sandbox-checked |
 | Temporary sandbox glob → search → read integration | PASS | `raw/part6_safety_results.json`; `screenshots/part6_safety.png` |
 | Five pass and five blocked safety-gate tests, with a false allow fixed | PASS | same raw JSON and evidence image |
 

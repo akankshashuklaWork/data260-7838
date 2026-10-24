@@ -442,7 +442,13 @@ def report_story() -> list[Any]:
                 "    if is_destructive(command):\n"
                 "        return {'allowed': bool(auto_approve),\n"
                 "                'reason': 'destructive command requires explicit confirmation'}\n"
+                "    if not _command_stays_in_sandbox(command):\n"
+                "        return {'allowed': False,\n"
+                "                'reason': 'path or shell syntax escapes SAFE_PREFIXES'}\n"
                 "    return {'allowed': True, 'reason': 'non-destructive command'}\n\n"
+                "def _command_stays_in_sandbox(command: str):\n"
+                "    # reject shell chaining and paths outside the configured sandbox\n"
+                "    ...\n\n"
                 "def search_in_files(query: str, file_pattern: str = '**/*'):\n"
                 "    # searches only files returned below SAFE_PREFIXES\n"
                 "    ...",

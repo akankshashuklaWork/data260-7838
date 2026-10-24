@@ -10,6 +10,7 @@ import difflib
 import glob
 import os
 import re
+import shlex
 import subprocess
 from pathlib import Path
 from typing import Any
@@ -19,7 +20,7 @@ _DESTRUCTIVE_PATTERNS = (
     r"\brm\s+(?:-[A-Za-z]*r[A-Za-z]*|--recursive)\b",
     r"\b(sudo|doas|su)\b",
     r"\b(chmod|chown|chgrp)\b",
-    r"\b(mkfs|dd)\b",
+    r"\b(mkfs|dd|mkdir|mktemp|touch|truncate|fallocate|install)\b",
     r"/dev/(?:disk|sd|nvme|rdisk|zero|random)",
     r">>?(?:\s*)/(?:$|[^\s])",
 )
@@ -52,7 +53,39 @@ def confirm_bash(command: str, auto_approve: bool = False) -> dict[str, Any]:
             "allowed": bool(auto_approve),
             "reason": "destructive command requires explicit confirmation",
         }
+    if not _command_stays_in_sandbox(command):
+        return {
+            "allowed": False,
+            "reason": "command contains shell syntax or a path outside SAFE_PREFIXES",
+        }
     return {"allowed": True, "reason": "non-destructive command"}
+
+
+def _command_stays_in_sandbox(command: str) -> bool:
+    """Reject shell escapes before a supposedly safe command is executed.
+
+    ``cwd`` alone is not a boundary: ``cd ..`` and relative paths can still
+    reach files outside the course sandbox.  The gate therefore permits only
+    simple commands whose explicit path operands resolve below a configured
+    prefix.  Destructive commands are handled separately by ``is_destructive``.
+    """
+    if not SAFE_PREFIXES or any(marker in command for marker in (";", "|", "&", "`", "$(", "<")):
+        return False
+    try:
+        tokens = shlex.split(command)
+    except ValueError:
+        return False
+    if not tokens or tokens[0] in {"cd", "source", "."}:
+        return False
+    root = SAFE_PREFIXES[0]
+    for token in tokens:
+        if token.startswith("-") or "/" not in token and not token.startswith("."):
+            continue
+        candidate = Path(token)
+        resolved = candidate.resolve() if candidate.is_absolute() else (root / candidate).resolve()
+        if not any(resolved.is_relative_to(prefix) for prefix in SAFE_PREFIXES):
+            return False
+    return True
 
 
 def read_file(path: str | Path, max_lines: int = 200) -> dict[str, Any]:

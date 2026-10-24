@@ -12,6 +12,7 @@ import hashlib
 import math
 import re
 import sqlite3
+import time
 from collections import defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
@@ -30,6 +31,70 @@ SELECT_ONLY = re.compile(
     r"^\s*select\s+.+\s+from\s+trips(?:\s+where\s+.+)?\s*$", re.IGNORECASE | re.DOTALL
 )
 CALCULATOR_PATTERN = re.compile(r"^[0-9+\-*/().\s]+$")
+
+# The three MRKL tool contracts are kept beside the implementations so the UI,
+# the agent, and the report use the same names and input/output shapes.
+TOOL_SCHEMAS: dict[str, dict[str, Any]] = {
+    "csv_sql": {
+        "input": {
+            "type": "object",
+            "properties": {"sql": {"type": "string"}},
+            "required": ["sql"],
+            "additionalProperties": False,
+        },
+        "output": {
+            "type": "object",
+            "properties": {
+                "rows": {"type": "array", "items": {"type": "object"}},
+                "row_count": {"type": "number"},
+                "source": {"const": "uploaded.csv"},
+            },
+        },
+    },
+    "policy_retriever": {
+        "input": {
+            "type": "object",
+            "properties": {
+                "url": {"type": "string", "format": "uri"},
+                "query": {"type": "string"},
+                "k": {"type": "integer", "minimum": 1, "maximum": 5},
+            },
+            "required": ["url", "query"],
+            "additionalProperties": False,
+        },
+        "output": {
+            "type": "object",
+            "properties": {
+                "passages": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "text": {"type": "string"},
+                            "source": {"type": "string"},
+                            "score": {"type": "number"},
+                        },
+                    },
+                }
+            },
+        },
+    },
+    "calculator": {
+        "input": {
+            "type": "object",
+            "properties": {
+                "expression": {"type": "string", "pattern": r"^[0-9+\-*/().\s]+$"},
+                "units": {"type": "string"},
+            },
+            "required": ["expression"],
+            "additionalProperties": False,
+        },
+        "output": {
+            "type": "object",
+            "properties": {"value": {"type": "number"}, "units": {"type": "string"}},
+        },
+    },
+}
 
 
 def _timestamp() -> str:
@@ -193,6 +258,7 @@ class ReActBikeAgent:
         return output
 
     def run(self) -> dict[str, Any]:
+        started = time.perf_counter()
         count = self._observe(
             "csv_sql",
             {
@@ -216,7 +282,7 @@ class ReActBikeAgent:
         arithmetic = self._observe(
             "calculator",
             {
-                "expression": f"{costs['pay_per_ride']:.2} - {costs['membership_total']:.2}",
+                "expression": f"{costs['pay_per_ride']:.2f} - {costs['membership_total']:.2f}",
                 "units": "USD",
             },
             "Calculate the observed cost difference from the tool-derived totals.",
@@ -243,7 +309,7 @@ class ReActBikeAgent:
             },
             "metrics": {
                 "step_count": len(self.timeline),
-                "total_time_ms": sum(0 for _ in self.timeline),
+                "total_time_ms": round((time.perf_counter() - started) * 1000, 2),
                 "stop_reason": "cost_comparison_complete",
                 "trip_query": count,
                 "calculation": arithmetic,

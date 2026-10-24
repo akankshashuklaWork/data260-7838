@@ -3,26 +3,26 @@
     "glob": {
       "ok": true,
       "files": [
-        "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-6tem6g_n/app.py",
-        "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-6tem6g_n/config.py",
-        "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-6tem6g_n/worker.py"
+        "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-5bm6j6d2/app.py",
+        "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-5bm6j6d2/config.py",
+        "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-5bm6j6d2/worker.py"
       ]
     },
     "search": {
       "ok": true,
       "matches": [
         {
-          "path": "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-6tem6g_n/app.py",
+          "path": "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-5bm6j6d2/app.py",
           "line": 1,
           "text": "DEBUG = True"
         },
         {
-          "path": "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-6tem6g_n/config.py",
+          "path": "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-5bm6j6d2/config.py",
           "line": 1,
           "text": "DEBUG = False"
         },
         {
-          "path": "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-6tem6g_n/worker.py",
+          "path": "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-5bm6j6d2/worker.py",
           "line": 2,
           "text": "    return 'DEBUG worker'"
         }
@@ -30,7 +30,7 @@
     },
     "read": {
       "ok": true,
-      "path": "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-6tem6g_n/app.py",
+      "path": "/private/var/folders/jw/tw4k1xhx6ql7nr7m1xn_qmhh0000gn/T/hw7-sandbox-5bm6j6d2/app.py",
       "content": "DEBUG = True\nprint('app')",
       "truncated": false
     }

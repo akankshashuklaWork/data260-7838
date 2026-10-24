@@ -6,7 +6,12 @@ import json
 import subprocess
 from pathlib import Path
 
+from fastapi.testclient import TestClient
+
+from .bike_agent import TOOL_SCHEMAS
+from .bike_ui import app as bike_ui
 from .config import CONFIG
+from .evidence_screenshots import generate as generate_evidence_screenshots
 from .run_artifacts import main as generate_artifacts
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -20,12 +25,19 @@ def check(name: str, passed: bool, detail: str = "") -> dict[str, object]:
 
 def main() -> int:
     generated = generate_artifacts()
+    screenshots = generate_evidence_screenshots()
     part1 = json.loads((RAW / "part1_jwt_results.json").read_text(encoding="utf-8"))
     part2 = json.loads((RAW / "part2_summary.json").read_text(encoding="utf-8"))
     part3 = json.loads((RAW / "part3_reflexion.json").read_text(encoding="utf-8"))
     part4_a = json.loads((RAW / "bike_membership_wins_summary.json").read_text(encoding="utf-8"))
     part4_b = json.loads((RAW / "bike_pay_per_ride_wins_summary.json").read_text(encoding="utf-8"))
     part6 = json.loads((RAW / "part6_safety_results.json").read_text(encoding="utf-8"))
+    trip_csv = (RAW / "bike_membership_wins_trips.csv").read_bytes()
+    ui_response = TestClient(bike_ui).post(
+        "/run",
+        files={"trip_csv": ("trips.csv", trip_csv, "text/csv")},
+        data={"pricing_url": "https://citibikenyc.com/plans-and-pricing"},
+    )
     checks = [
         check("JWT authentication and reader/writer/moderator status codes", part1["passed"]),
         check(
@@ -53,6 +65,33 @@ def main() -> int:
         check(
             "Pricing snapshot has URL/date/hash",
             (REPORT / "pricing/citibike_pricing_snapshot.json").exists(),
+        ),
+        check(
+            "MRKL tool schemas define the required three tools",
+            set(TOOL_SCHEMAS) == {"csv_sql", "policy_retriever", "calculator"},
+        ),
+        check(
+            "Bike UI renders timeline, citation timestamp, and metrics",
+            ui_response.status_code == 200
+            and "Timeline" in ui_response.text
+            and "captured:" in ui_response.text
+            and "Steps:" in ui_response.text,
+        ),
+        check(
+            "Required evidence images were generated from saved run artifacts",
+            {
+                "part1_auth",
+                "part1_lint",
+                "part2_tasks",
+                "part2_recovery",
+                "part3_reflexion",
+                "part4_membership",
+                "part4_pay_per_ride",
+                "part5_attacks",
+                "part6_safety",
+            }
+            == set(screenshots)
+            and all(path.exists() for path in screenshots.values()),
         ),
     ]
     commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()

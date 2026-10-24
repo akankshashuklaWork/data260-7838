@@ -113,7 +113,7 @@
         "unsupported_claims": 0,
         "tool_calls": 2,
         "tokens_estimate": 200,
-        "latency_ms": 0.01
+        "latency_ms": 0.02
       },
       "reflexion": {
         "success": true,
@@ -121,7 +121,7 @@
         "retries": 0,
         "tool_calls": 2,
         "tokens_estimate": 400,
-        "latency_ms": 0.01,
+        "latency_ms": 0.02,
         "stop_reason": "success",
         "verifier_false_rejection": false
       },

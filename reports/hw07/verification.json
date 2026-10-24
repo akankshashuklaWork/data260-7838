@@ -1,7 +1,7 @@
 {
   "homework": 7,
   "SID4": 7838,
-  "commit_hash": "995f90cb76057cf588f6bebe00dc998d1d540d79",
+  "commit_hash": "80384f56e5be301082158bb099bfb8da34266754",
   "model": "qwen2:7b",
   "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
   "seed": 7838,
@@ -33,6 +33,18 @@
     },
     {
       "name": "Pricing snapshot has URL/date/hash",
+      "passed": true
+    },
+    {
+      "name": "MRKL tool schemas define the required three tools",
+      "passed": true
+    },
+    {
+      "name": "Bike UI renders timeline, citation timestamp, and metrics",
+      "passed": true
+    },
+    {
+      "name": "Required evidence images were generated from saved run artifacts",
       "passed": true
     }
   ],

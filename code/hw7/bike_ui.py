@@ -38,6 +38,7 @@ async def run(trip_csv: UploadFile = File(...), pricing_url: str = Form(PRICING_
     return (
         f"<main><h1>{result['decision']}</h1><p>{' '.join(result['justification'])}</p>"
         f"<h2>Cost breakdown</h2><pre>{result['cost_breakdown']}</pre><h2>Timeline</h2><ol>{timeline}</ol>"
-        f"<p>Citation: {citations['pricing_url']} | snapshot SHA-256: {citations['snapshot_sha256']}</p>"
+        f"<p>Citation: {citations['pricing_url']} | captured: {citations['capture_timestamp']} | "
+        f"snapshot SHA-256: {citations['snapshot_sha256']}</p>"
         f"<p>Steps: {result['metrics']['step_count']} | Stop: {result['metrics']['stop_reason']}</p></main>"
     )

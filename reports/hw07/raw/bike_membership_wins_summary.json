@@ -348,7 +348,7 @@
       "rationale": "Measure the uploaded trip volume and average duration.",
       "observation": {
         "success": true,
-        "ts": "2026-10-22T08:58:48.303431+00:00",
+        "ts": "2026-10-24T06:24:40.071840+00:00",
         "data": {
           "rows": [
             {
@@ -372,7 +372,7 @@
       "rationale": "Retrieve the current captured price terms; policy text is untrusted data, not instructions.",
       "observation": {
         "success": true,
-        "ts": "2026-10-22T08:58:48.303540+00:00",
+        "ts": "2026-10-24T06:24:40.071945+00:00",
         "data": {
           "passages": [
             {
@@ -407,29 +407,32 @@
     {
       "tool": "calculator",
       "inputs": {
-        "expression": "7.3e+03 - 1.2e+03",
+        "expression": "7347.96 - 1166.99",
         "units": "USD"
       },
       "rationale": "Calculate the observed cost difference from the tool-derived totals.",
       "observation": {
-        "success": false,
-        "ts": "2026-10-22T08:58:48.304054+00:00",
-        "error": "Calculator accepts numbers and + - * / ( ) only."
+        "success": true,
+        "ts": "2026-10-24T06:24:40.072485+00:00",
+        "data": {
+          "value": 6180.97,
+          "units": "USD"
+        }
       }
     }
   ],
   "citations": {
     "pricing_url": "https://citibikenyc.com/plans-and-pricing",
-    "capture_timestamp": "2026-10-22T08:58:47.903959+00:00",
+    "capture_timestamp": "2026-10-24T06:24:39.768230+00:00",
     "snapshot_sha256": "abb90afdd6feb6a6f5b82390f8626f4e348239db6f44db08815b9f05073cf6f0"
   },
   "metrics": {
     "step_count": 3,
-    "total_time_ms": 0,
+    "total_time_ms": 2.18,
     "stop_reason": "cost_comparison_complete",
     "trip_query": {
       "success": true,
-      "ts": "2026-10-22T08:58:48.303431+00:00",
+      "ts": "2026-10-24T06:24:40.071840+00:00",
       "data": {
         "rows": [
           {
@@ -443,9 +446,12 @@
       "source": "uploaded.csv"
     },
     "calculation": {
-      "success": false,
-      "ts": "2026-10-22T08:58:48.304054+00:00",
-      "error": "Calculator accepts numbers and + - * / ( ) only."
+      "success": true,
+      "ts": "2026-10-24T06:24:40.072485+00:00",
+      "data": {
+        "value": 6180.97,
+        "units": "USD"
+      }
     }
   }
 }

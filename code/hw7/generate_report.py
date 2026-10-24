@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import shutil
+import subprocess
 from html import escape
 from pathlib import Path
 from typing import Any
@@ -14,6 +15,8 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.platypus import (
+    Image,
+    KeepTogether,
     PageBreak,
     Paragraph,
     Preformatted,
@@ -21,6 +24,8 @@ from reportlab.platypus import (
     Table,
     TableStyle,
 )
+
+from .evidence_screenshots import generate as generate_evidence_screenshots
 
 ROOT = Path(__file__).resolve().parents[2]
 REPORT = ROOT / "reports/hw07"
@@ -136,23 +141,32 @@ def plain_table(rows: list[list[str]], widths: list[float] | None = None) -> Tab
     return table
 
 
-def output_capture(label: str, output: str, styles: dict[str, ParagraphStyle]) -> list[Any]:
-    return [
-        p(f"Saved terminal output - {label}", styles, "sub"),
-        code("Akanksha Shukla | DATA 260 HW7\n" + output, styles),
-    ]
+def evidence_image(label: str, filename: str, styles: dict[str, ParagraphStyle]) -> list[Any]:
+    """Attach one labelled PNG directly below the associated code excerpt."""
+    image = Image(str(REPORT / "screenshots" / filename))
+    max_width = 7.0 * inch
+    max_height = 7.1 * inch
+    scale = min(max_width / image.imageWidth, max_height / image.imageHeight)
+    image.drawWidth = image.imageWidth * scale
+    image.drawHeight = image.imageHeight * scale
+    return [KeepTogether([p(f"Screenshot - {label}", styles, "sub"), image])]
+
+
+def tagged_commit() -> str:
+    """Return the source commit identified by the required hw7 tag."""
+    try:
+        return subprocess.check_output(["git", "rev-parse", "hw7^{}"], cwd=ROOT, text=True).strip()
+    except subprocess.CalledProcessError:
+        return "hw7 tag not yet created"
 
 
 def report_story() -> list[Any]:
     styles = build_styles()
-    part1 = read_json("part1_jwt_results.json")
-    part2_summary = read_json("part2_summary.json")
     live_summary = read_json("part2_live_model_summary.json")
     part3 = read_json("part3_reflexion.json")
     membership = read_json("bike_membership_wins_summary.json")
     pay_per_ride = read_json("bike_pay_per_ride_wins_summary.json")
     attacks = read_json("part5_attack_before_after.json")
-    part6 = read_json("part6_safety_results.json")
     verification = json.loads((REPORT / "verification.json").read_text(encoding="utf-8"))
     pricing = json.loads(
         (REPORT / "pricing/citibike_pricing_snapshot.json").read_text(encoding="utf-8")
@@ -164,12 +178,13 @@ def report_story() -> list[Any]:
         p("GitHub repository: https://github.com/akankshashuklaWork/data260-7838", styles, "body"),
         p(
             "Configuration: SID4 7838; port 8638; prefix s7838; seed 7838; verification seed 267838; domain 6 (Rental Housing Listings). "
-            "Hardware: MacBook Pro with Apple M4 Pro and 48 GB unified memory. Local model: qwen2:7b through Ollama.",
+            "Hardware: MacBook Pro with Apple M4 Pro and 48 GB unified memory. Local model: qwen2:7b through Ollama. "
+            f"Tagged source commit: {tagged_commit()}.",
             styles,
         ),
         p("Evidence note", styles, "main"),
         p(
-            "The output blocks below are compact captures from the saved local run artifacts. They are included directly below the related source excerpt so each behavior can be checked without relying on a recreated user-interface image.",
+            "Each evidence image below is rendered directly from the saved local run output and is placed below its related source excerpt. Every image is labelled and includes my name; no test result was recreated by hand.",
             styles,
         ),
         p("Part 1 - JWT authentication and role authorization", styles, "main"),
@@ -195,8 +210,7 @@ def report_story() -> list[Any]:
             styles,
         ),
     ]
-    status_lines = "\n".join(f"{key}: {value}" for key, value in part1["outcomes"].items())
-    story.extend(output_capture("JWT role and failure checks", status_lines, styles))
+    story.extend(evidence_image("JWT role and failure checks", "part1_auth.png", styles))
     story.extend(
         [
             PageBreak(),
@@ -209,11 +223,8 @@ def report_story() -> list[Any]:
                 "E741: l = os.path.basename(os.getcwd())\n# fixed\nfolder_name = os.path.basename(os.getcwd())",
                 styles,
             ),
-            *output_capture(
-                "post-fix pre-commit",
-                "ruff check ... Passed\nruff format ... Passed\n\n"
-                "The final source commit also runs this installed pre-commit hook.",
-                styles,
+            *evidence_image(
+                "Ruff failure, fix, and successful pre-commit", "part1_lint.png", styles
             ),
             PageBreak(),
             p("Part 2 - bounded rental-domain tool agent", styles, "main"),
@@ -237,15 +248,10 @@ def report_story() -> list[Any]:
             ),
         ]
     )
-    deterministic_lines = (
-        f"fixed attempts: {part2_summary['attempts']}\n"
-        f"well formed before repair: {part2_summary['well_formed_before_repair']}/20 ({part2_summary['well_formed_before_repair_rate']:.0%})\n"
-        f"successful after repair: {part2_summary['successful_after_repair']}/20 ({part2_summary['successful_after_repair_rate']:.0%})\n"
-        f"failure classes: {part2_summary['failure_classes']}\n"
-        "A: search then detail | B: aggregate then detail | C: search then two details\n"
-        "Impossible id 999: returned 'Listing 999 was not found' without crashing."
+    story.extend(evidence_image("agent tasks A, B, and C", "part2_tasks.png", styles))
+    story.extend(
+        evidence_image("nonexistent ID recovery and reliability", "part2_recovery.png", styles)
     )
-    story.extend(output_capture("fixed agent evaluation", deterministic_lines, styles))
     story.append(
         p(
             f"Live qwen2:7b reliability run: {live_summary['successes']}/20 completed the required chain ({live_summary['success_rate']:.0%}); "
@@ -290,19 +296,55 @@ def report_story() -> list[Any]:
     story.append(
         plain_table(compare_rows, [1.45 * inch, 1.35 * inch, 1.35 * inch, 0.65 * inch, 0.95 * inch])
     )
-    reflection = part3["stored_reflections"][0]
-    reflection_view = {
-        "task": reflection["task"],
-        "first_evidence": reflection["evidence"][0],
-        "verifier_result": reflection["verifier_result"],
-        "stored_reflection": reflection["reflection"],
-    }
-    story.extend(
-        output_capture(
-            "stored failed-then-retry reflection",
-            json.dumps(reflection_view, indent=2),
+    original_rows = [row["original"] for row in part3["rows"]]
+    reflexion_rows = [row["reflexion"] for row in part3["rows"]]
+    metrics_rows = [
+        ["Metric", "Original loop", "Reflexion loop"],
+        [
+            "Task success",
+            f"{sum(row['success'] for row in original_rows)}/3",
+            f"{sum(row['success'] for row in reflexion_rows)}/3",
+        ],
+        [
+            "Unsupported claims",
+            str(sum(row["unsupported_claims"] for row in original_rows)),
+            str(sum(row["unsupported_claims"] for row in reflexion_rows)),
+        ],
+        [
+            "Retry rate",
+            "0/3 (0%)",
+            f"{sum(row['retries'] for row in reflexion_rows)}/3 ({sum(row['retries'] for row in reflexion_rows) / 3:.0%})",
+        ],
+        [
+            "Tool calls",
+            str(sum(row["tool_calls"] for row in original_rows)),
+            str(sum(row["tool_calls"] for row in reflexion_rows)),
+        ],
+        [
+            "Tokens",
+            str(sum(row["tokens_estimate"] for row in original_rows)),
+            str(sum(row["tokens_estimate"] for row in reflexion_rows)),
+        ],
+        [
+            "Latency (ms)",
+            f"{sum(row['latency_ms'] for row in original_rows):.2f}",
+            f"{sum(row['latency_ms'] for row in reflexion_rows):.2f}",
+        ],
+        [
+            "Verifier false rejections",
+            "0",
+            str(sum(row["verifier_false_rejection"] for row in reflexion_rows)),
+        ],
+    ]
+    story.append(plain_table(metrics_rows, [2.4 * inch, 2.1 * inch, 2.1 * inch]))
+    story.append(
+        p(
+            "The deterministic verifier did not incorrectly reject a correct answer in these three runs (0 false rejections).",
             styles,
         )
+    )
+    story.extend(
+        evidence_image("stored failed-then-retry reflection", "part3_reflexion.png", styles)
     )
 
     story.extend(
@@ -314,6 +356,12 @@ def report_story() -> list[Any]:
                 styles,
             ),
             code(
+                "# code/hw7/bike_agent.py\n"
+                "TOOL_SCHEMAS = {\n"
+                "  'csv_sql': {'input': {'sql': 'string'}, 'output': {'rows': 'Array<object>', 'row_count': 'number', 'source': 'uploaded.csv'}},\n"
+                "  'policy_retriever': {'input': {'url': 'string', 'query': 'string', 'k?': 'integer'}, 'output': {'passages': '[text, source, score]'}},\n"
+                "  'calculator': {'input': {'expression': '^[0-9+\\-*/().\\s]+$', 'units?': 'string'}, 'output': {'value': 'number', 'units?': 'string'}}\n"
+                "}\n\n"
                 "def calculator(expression: str, units: str = 'USD'):\n"
                 "    if not CALCULATOR_PATTERN.fullmatch(expression):\n"
                 "        return envelope(False, error='Calculator accepts numbers and + - * / ( ) only.')\n"
@@ -340,12 +388,10 @@ def report_story() -> list[Any]:
                 styles,
             )
         )
-        timeline = "\n".join(
-            f"{item['tool']}: {item['rationale']}" for item in scenario["timeline"]
+        screenshot_name = (
+            "part4_membership.png" if scenario is membership else "part4_pay_per_ride.png"
         )
-        story.extend(
-            output_capture(label, timeline + f"\nDecision: {scenario['decision']}", styles)
-        )
+        story.extend(evidence_image(f"UI result - {label}", screenshot_name, styles))
     story.append(
         p(
             f"Pricing citation: {pricing['url']} | captured {pricing['access_date']} | SHA-256 {pricing['sha256']}.",
@@ -381,6 +427,7 @@ def report_story() -> list[Any]:
             styles,
         )
     )
+    story.extend(evidence_image("three prompt-injection attacks", "part5_attacks.png", styles))
 
     story.extend(
         [
@@ -403,13 +450,9 @@ def report_story() -> list[Any]:
             ),
         ]
     )
-    safe_output = (
-        "integration: glob -> search DEBUG -> read app.py\n"
-        f"allowed tests: {sum(row['passed'] for row in part6['allowed_tests'])}/5\n"
-        f"blocked tests: {sum(row['passed'] for row in part6['blocked_tests'])}/5\n"
-        f"repair note: {part6['false_allow_fixed']}"
+    story.extend(
+        evidence_image("file-tool integration and safety tests", "part6_safety.png", styles)
     )
-    story.extend(output_capture("file-tool integration and safety tests", safe_output, styles))
 
     story.extend(
         [
@@ -431,10 +474,16 @@ def report_story() -> list[Any]:
             styles,
         )
     )
+    story.append(p("AI use statement", styles, "main"))
+    ai_use = (REPORT / "AI_USE.md").read_text(encoding="utf-8").splitlines()
+    for line in ai_use:
+        if line and not line.startswith("#"):
+            story.append(p(line, styles))
     return story
 
 
 def main() -> None:
+    generate_evidence_screenshots()
     output = REPORT / "Shukla_HW7.pdf"
     doc = SimpleDocTemplate(
         str(output),

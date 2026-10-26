@@ -24,9 +24,17 @@ make run-log-hw07
 make report-hw07
 ```
 
-The submission materials are in `reports/hw07/`, including the PDF report,
-full run log, raw per-attempt results, pricing snapshot, metrics, and AI-use
-record.
+Start the Citi Bike comparison UI at `http://127.0.0.1:8638` with:
+
+```bash
+make run-hw07
+```
+
+The HW7 report and reproducibility materials are in `reports/hw07/`. The final
+report is `Shukla_HW7.pdf`. The folder also contains the run log, raw results,
+metrics, pricing record, verification result, requirement checklist, and the
+separate AI-use disclosure. The latest objective self-check passes all nine
+checks.
 
 ## HW6: MongoDB Documents and Long-Term Memory
 

@@ -11,7 +11,6 @@ from fastapi.testclient import TestClient
 from .bike_agent import TOOL_SCHEMAS
 from .bike_ui import app as bike_ui
 from .config import CONFIG
-from .evidence_screenshots import generate as generate_evidence_screenshots
 from .run_artifacts import main as generate_artifacts
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -25,7 +24,6 @@ def check(name: str, passed: bool, detail: str = "") -> dict[str, object]:
 
 def main() -> int:
     generated = generate_artifacts()
-    screenshots = generate_evidence_screenshots()
     part1 = json.loads((RAW / "part1_jwt_results.json").read_text(encoding="utf-8"))
     part2 = json.loads((RAW / "part2_summary.json").read_text(encoding="utf-8"))
     part3 = json.loads((RAW / "part3_reflexion.json").read_text(encoding="utf-8"))
@@ -76,22 +74,6 @@ def main() -> int:
             and "Timeline" in ui_response.text
             and "captured:" in ui_response.text
             and "Steps:" in ui_response.text,
-        ),
-        check(
-            "Required evidence images were generated from saved run artifacts",
-            {
-                "part1_auth",
-                "part1_lint",
-                "part2_tasks",
-                "part2_recovery",
-                "part3_reflexion",
-                "part4_membership",
-                "part4_pay_per_ride",
-                "part5_attacks",
-                "part6_safety",
-            }
-            == set(screenshots)
-            and all(path.exists() for path in screenshots.values()),
         ),
     ]
     commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()

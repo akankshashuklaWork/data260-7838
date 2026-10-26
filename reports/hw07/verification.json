@@ -1,7 +1,7 @@
 {
   "homework": 7,
   "SID4": 7838,
-  "commit_hash": "6c781b2b560cbd632ce418bc44dd1e823bca0d3e",
+  "commit_hash": "1df969ff6a29f9979377d4dc63b8ea85401ebfc3",
   "model": "qwen2:7b",
   "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
   "seed": 7838,
@@ -41,10 +41,6 @@
     },
     {
       "name": "Bike UI renders timeline, citation timestamp, and metrics",
-      "passed": true
-    },
-    {
-      "name": "Required evidence images were generated from saved run artifacts",
       "passed": true
     }
   ],

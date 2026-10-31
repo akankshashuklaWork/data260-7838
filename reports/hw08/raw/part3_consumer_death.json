@@ -1,0 +1,52 @@
+{
+  "before": {
+    "scenario": "consumer_death",
+    "variant": "before",
+    "correlation_id": "kill-before-b07731",
+    "partition": 0,
+    "message_offset": 5,
+    "committed_offset_after_kill": 6,
+    "committed_offset_after_restart": 6,
+    "received_by_restarted_writer": false,
+    "completed_after_restart": false,
+    "drafts_published": 0,
+    "commit_after_processing": false,
+    "message_lost": true,
+    "writer_console": [
+      "2026-10-31T07:55:10.675596Z [WRITER-1] assigned partitions=[0, 1]",
+      "2026-10-31T07:55:10.678371Z [WRITER-1] Consumer is ready and listening... topic=s7838_tasks group=s7838_test_death_before_d6ebd6",
+      "2026-10-31T07:55:10.799742Z [WRITER-1] received s7838_tasks partition=0 offset=5 correlation_id=kill-before-b07731",
+      "2026-10-31T07:55:10.801873Z [WRITER-1] processing correlation_id=kill-before-b07731",
+      "2026-10-31T07:55:11.307060Z [TEST] SIGKILL sent to WRITER-1 mid-processing correlation_id=kill-before-b07731",
+      "2026-10-31T07:55:16.805719Z [WRITER-2] assigned partitions=[0, 1]",
+      "2026-10-31T07:55:16.810988Z [WRITER-2] Consumer is ready and listening... topic=s7838_tasks group=s7838_test_death_before_d6ebd6"
+    ]
+  },
+  "after": {
+    "scenario": "consumer_death",
+    "variant": "after",
+    "correlation_id": "kill-after-5aac3f",
+    "partition": 0,
+    "message_offset": 6,
+    "committed_offset_after_kill": 6,
+    "committed_offset_after_restart": 7,
+    "received_by_restarted_writer": true,
+    "completed_after_restart": true,
+    "drafts_published": 1,
+    "commit_after_processing": true,
+    "message_lost": false,
+    "writer_console": [
+      "2026-10-31T07:55:40.193149Z [WRITER-1] assigned partitions=[0, 1]",
+      "2026-10-31T07:55:40.195609Z [WRITER-1] Consumer is ready and listening... topic=s7838_tasks group=s7838_test_death_after_4a0c00",
+      "2026-10-31T07:55:40.314876Z [WRITER-1] received s7838_tasks partition=0 offset=6 correlation_id=kill-after-5aac3f",
+      "2026-10-31T07:55:40.315187Z [WRITER-1] processing correlation_id=kill-after-5aac3f",
+      "2026-10-31T07:55:41.022545Z [TEST] SIGKILL sent to WRITER-1 mid-processing correlation_id=kill-after-5aac3f",
+      "2026-10-31T07:55:46.199493Z [WRITER-2] assigned partitions=[0, 1]",
+      "2026-10-31T07:55:46.206081Z [WRITER-2] Consumer is ready and listening... topic=s7838_tasks group=s7838_test_death_after_4a0c00",
+      "2026-10-31T07:55:46.207337Z [WRITER-2] received s7838_tasks partition=0 offset=6 correlation_id=kill-after-5aac3f",
+      "2026-10-31T07:55:46.207727Z [WRITER-2] processing correlation_id=kill-after-5aac3f",
+      "2026-10-31T07:55:50.208003Z [WRITER-2] sending to s7838_drafts correlation_id=kill-after-5aac3f",
+      "2026-10-31T07:55:50.222561Z [WRITER-2] processed correlation_id=kill-after-5aac3f -> s7838_drafts"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+NAMES          IMAGE                STATUS                    PORTS
+s7838_api      hw8-api              Up 2 seconds              0.0.0.0:8638->8638/tcp, [::]:8638->8638/tcp
+s7838_worker   hw8-worker           Up 2 seconds              
+s7838_kafka    apache/kafka:3.9.2   Up 14 seconds (healthy)   0.0.0.0:9092->9092/tcp, [::]:9092->9092/tcp

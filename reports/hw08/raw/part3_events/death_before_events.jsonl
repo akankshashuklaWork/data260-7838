@@ -1,0 +1,6 @@
+{"ts": 1793433310.6758678, "iso": "2026-10-31T07:55:10.675869Z", "agent": "writer", "instance": "1", "event": "assigned", "partitions": [0, 1]}
+{"ts": 1793433310.678397, "iso": "2026-10-31T07:55:10.678398Z", "agent": "writer", "instance": "1", "event": "ready", "topic": "s7838_tasks", "group": "s7838_test_death_before_d6ebd6"}
+{"ts": 1793433310.799795, "iso": "2026-10-31T07:55:10.799796Z", "agent": "writer", "instance": "1", "event": "received", "topic": "s7838_tasks", "partition": 0, "offset": 5, "correlation_id": "kill-before-b07731", "entity_id": "listing-1", "seq": 1}
+{"ts": 1793433310.8016388, "iso": "2026-10-31T07:55:10.801640Z", "agent": "writer", "instance": "1", "event": "committed", "topic": "s7838_tasks", "partition": 0, "offset": 5, "correlation_id": "kill-before-b07731", "entity_id": "listing-1", "seq": 1}
+{"ts": 1793433316.806509, "iso": "2026-10-31T07:55:16.806512Z", "agent": "writer", "instance": "2", "event": "assigned", "partitions": [0, 1]}
+{"ts": 1793433316.81108, "iso": "2026-10-31T07:55:16.811081Z", "agent": "writer", "instance": "2", "event": "ready", "topic": "s7838_tasks", "group": "s7838_test_death_before_d6ebd6"}

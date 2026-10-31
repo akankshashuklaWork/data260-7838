@@ -1,0 +1,189 @@
+2026-10-31T07:56:53.567782Z [TEST] === duplicate:after ===
+2026-10-31T07:56:53.693089Z [WRITER-1] assigned partitions=[0, 1]
+2026-10-31T07:56:53.695580Z [WRITER-1] Consumer is ready and listening... topic=s7838_tasks group=s7838_test_duplicate_after_d978d2
+2026-10-31T07:56:53.822429Z [WRITER-1] received s7838_tasks partition=0 offset=32 correlation_id=dup-after-87c7a0
+2026-10-31T07:56:53.822872Z [WRITER-1] processing correlation_id=dup-after-87c7a0
+2026-10-31T07:56:54.024158Z [WRITER-1] sending to s7838_drafts correlation_id=dup-after-87c7a0
+2026-10-31T07:56:54.032050Z [WRITER-1] processed correlation_id=dup-after-87c7a0 -> s7838_drafts
+2026-10-31T07:56:54.430941Z [WRITER-1] received s7838_tasks partition=0 offset=33 correlation_id=dup-after-87c7a0
+2026-10-31T07:56:54.431970Z [WRITER-1] duplicate skipped correlation_id=dup-after-87c7a0
+2026-10-31T07:56:56.195210Z [TEST] duplicate:after result: {"scenario": "duplicate_delivery", "variant": "after", "correlation_id": "dup-after-87c7a0", "deliveries": 2, "processed": 1, "duplicates_skipped": 1, "drafts_published": 1, "side_effect_repeated": false}
+2026-10-31T07:56:56.195243Z [TEST] === death:after ===
+2026-10-31T07:56:56.944772Z [TEST] Writer killed mid-processing correlation_id=kill-after-378b5c
+2026-10-31T07:56:56.316470Z [WRITER-1] assigned partitions=[0, 1]
+2026-10-31T07:56:56.319085Z [WRITER-1] Consumer is ready and listening... topic=s7838_tasks group=s7838_test_death_after_b91d2b
+2026-10-31T07:56:56.435203Z [WRITER-1] received s7838_tasks partition=0 offset=34 correlation_id=kill-after-378b5c
+2026-10-31T07:56:56.435535Z [WRITER-1] processing correlation_id=kill-after-378b5c
+2026-10-31T07:56:56.944863Z [TEST] SIGKILL sent to WRITER-1 mid-processing correlation_id=kill-after-378b5c
+2026-10-31T07:57:02.319922Z [WRITER-2] assigned partitions=[0, 1]
+2026-10-31T07:57:02.324808Z [WRITER-2] Consumer is ready and listening... topic=s7838_tasks group=s7838_test_death_after_b91d2b
+2026-10-31T07:57:02.326039Z [WRITER-2] received s7838_tasks partition=0 offset=34 correlation_id=kill-after-378b5c
+2026-10-31T07:57:02.326566Z [WRITER-2] processing correlation_id=kill-after-378b5c
+2026-10-31T07:57:06.326894Z [WRITER-2] sending to s7838_drafts correlation_id=kill-after-378b5c
+2026-10-31T07:57:06.331053Z [WRITER-2] processed correlation_id=kill-after-378b5c -> s7838_drafts
+2026-10-31T07:57:09.417462Z [TEST] death:after result: {"scenario": "consumer_death", "variant": "after", "correlation_id": "kill-after-378b5c", "partition": 0, "message_offset": 34, "committed_offset_after_kill": 34, "committed_offset_after_restart": 35, "received_by_restarted_writer": true, "completed_after_restart": true, "drafts_published": 1, "commit_after_processing": true, "message_lost": false}
+2026-10-31T07:57:09.417480Z [TEST] === poison:after ===
+2026-10-31T07:57:09.537062Z [WRITER-1] assigned partitions=[0, 1]
+2026-10-31T07:57:09.539090Z [WRITER-1] Consumer is ready and listening... topic=s7838_tasks group=s7838_test_poison_after_ce8208
+2026-10-31T07:57:09.663944Z [WRITER-1] received s7838_tasks partition=0 offset=35 correlation_id=poison-after-f373ab
+2026-10-31T07:57:09.664300Z [WRITER-1] processing correlation_id=poison-after-f373ab
+2026-10-31T07:57:09.664324Z [WRITER-1] attempt_failed correlation_id=poison-after-f373ab {'attempt': 1, 'error': "ValueError('task message needs a non-empty question')", 'will_retry': True}
+2026-10-31T07:57:09.965868Z [WRITER-1] processing correlation_id=poison-after-f373ab
+2026-10-31T07:57:09.966056Z [WRITER-1] attempt_failed correlation_id=poison-after-f373ab {'attempt': 2, 'error': "ValueError('task message needs a non-empty question')", 'will_retry': True}
+2026-10-31T07:57:10.267715Z [WRITER-1] processing correlation_id=poison-after-f373ab
+2026-10-31T07:57:10.267804Z [WRITER-1] attempt_failed correlation_id=poison-after-f373ab {'attempt': 3, 'error': "ValueError('task message needs a non-empty question')", 'will_retry': False}
+2026-10-31T07:57:10.279110Z [WRITER-1] moved to s7838_dead_letter after 3 attempts correlation_id=poison-after-f373ab
+2026-10-31T07:57:10.780857Z [WRITER-1] received s7838_tasks partition=0 offset=36 correlation_id=good-after-39837d
+2026-10-31T07:57:10.782696Z [WRITER-1] processing correlation_id=good-after-39837d
+2026-10-31T07:57:10.782842Z [WRITER-1] sending to s7838_drafts correlation_id=good-after-39837d
+2026-10-31T07:57:10.788117Z [WRITER-1] processed correlation_id=good-after-39837d -> s7838_drafts
+2026-10-31T07:57:14.963977Z [TEST] poison:after result: {"scenario": "poison_message", "variant": "after", "poison_correlation_id": "poison-after-f373ab", "good_correlation_id": "good-after-39837d", "poison_attempts": 3, "retry_limit": 3, "moved_to_dead_letter": 1, "dead_letter_record": {"correlation_id": "poison-after-f373ab", "source_topic": "s7838_tasks", "partition": 0, "offset": 35, "attempts": 3, "error": "ValueError('task message needs a non-empty question')", "original": "{\"correlation_id\":\"poison-after-f373ab\",\"entity_id\":\"listing-poison\",\"seq\":1,\"plan\":[\"Check the price.\",\"Check the lease terms.\",\"Check the neighborhood.\"],\"work_ms\":0}", "failed_by": "WRITER-1", "_partition": 0, "_offset": 1}, "good_message_processed": true, "good_message_blocked": false}
+2026-10-31T07:57:14.963992Z [TEST] === ordering:after ===
+2026-10-31T07:57:15.073201Z [WRITER-A] assigned partitions=[0, 1]
+2026-10-31T07:57:15.075595Z [WRITER-A] Consumer is ready and listening... topic=s7838_tasks group=s7838_test_ordering_keyed_475db4
+2026-10-31T07:57:17.078481Z [WRITER-B] assigned partitions=[0]
+2026-10-31T07:57:17.078651Z [WRITER-A] assigned partitions=[1]
+2026-10-31T07:57:17.082380Z [WRITER-B] Consumer is ready and listening... topic=s7838_tasks group=s7838_test_ordering_keyed_475db4
+2026-10-31T07:57:17.245234Z [WRITER-A] received s7838_tasks partition=1 offset=20 correlation_id=order-00-48d722
+2026-10-31T07:57:17.245914Z [WRITER-A] processing correlation_id=order-00-48d722
+2026-10-31T07:57:17.247063Z [WRITER-B] received s7838_tasks partition=0 offset=37 correlation_id=order-02-ed24fe
+2026-10-31T07:57:17.247525Z [WRITER-B] processing correlation_id=order-02-ed24fe
+2026-10-31T07:57:17.546787Z [WRITER-A] sending to s7838_drafts correlation_id=order-00-48d722
+2026-10-31T07:57:17.560029Z [WRITER-A] processed correlation_id=order-00-48d722 -> s7838_drafts
+2026-10-31T07:57:17.564661Z [WRITER-A] received s7838_tasks partition=1 offset=21 correlation_id=order-01-65b311
+2026-10-31T07:57:17.565105Z [WRITER-A] processing correlation_id=order-01-65b311
+2026-10-31T07:57:17.948835Z [WRITER-B] sending to s7838_drafts correlation_id=order-02-ed24fe
+2026-10-31T07:57:17.962194Z [WRITER-B] processed correlation_id=order-02-ed24fe -> s7838_drafts
+2026-10-31T07:57:17.966607Z [WRITER-B] received s7838_tasks partition=0 offset=38 correlation_id=order-03-571c66
+2026-10-31T07:57:17.966818Z [WRITER-B] processing correlation_id=order-03-571c66
+2026-10-31T07:57:18.066314Z [WRITER-A] sending to s7838_drafts correlation_id=order-01-65b311
+2026-10-31T07:57:18.070726Z [WRITER-A] processed correlation_id=order-01-65b311 -> s7838_drafts
+2026-10-31T07:57:18.072977Z [WRITER-A] received s7838_tasks partition=1 offset=22 correlation_id=order-04-0e1218
+2026-10-31T07:57:18.073206Z [WRITER-A] processing correlation_id=order-04-0e1218
+2026-10-31T07:57:18.467596Z [WRITER-B] sending to s7838_drafts correlation_id=order-03-571c66
+2026-10-31T07:57:18.474875Z [WRITER-B] processed correlation_id=order-03-571c66 -> s7838_drafts
+2026-10-31T07:57:18.481164Z [WRITER-B] received s7838_tasks partition=0 offset=39 correlation_id=order-05-ffd51b
+2026-10-31T07:57:18.481704Z [WRITER-B] processing correlation_id=order-05-ffd51b
+2026-10-31T07:57:18.774418Z [WRITER-A] sending to s7838_drafts correlation_id=order-04-0e1218
+2026-10-31T07:57:18.781370Z [WRITER-A] processed correlation_id=order-04-0e1218 -> s7838_drafts
+2026-10-31T07:57:18.782160Z [WRITER-B] sending to s7838_drafts correlation_id=order-05-ffd51b
+2026-10-31T07:57:18.786020Z [WRITER-A] received s7838_tasks partition=1 offset=23 correlation_id=order-07-b415d8
+2026-10-31T07:57:18.786707Z [WRITER-B] processed correlation_id=order-05-ffd51b -> s7838_drafts
+2026-10-31T07:57:18.787720Z [WRITER-A] processing correlation_id=order-07-b415d8
+2026-10-31T07:57:18.792848Z [WRITER-B] received s7838_tasks partition=0 offset=40 correlation_id=order-06-b8c526
+2026-10-31T07:57:18.793125Z [WRITER-B] processing correlation_id=order-06-b8c526
+2026-10-31T07:57:18.888420Z [WRITER-A] sending to s7838_drafts correlation_id=order-07-b415d8
+2026-10-31T07:57:18.894109Z [WRITER-A] processed correlation_id=order-07-b415d8 -> s7838_drafts
+2026-10-31T07:57:18.899430Z [WRITER-A] received s7838_tasks partition=1 offset=24 correlation_id=order-11-bf6321
+2026-10-31T07:57:18.899663Z [WRITER-A] processing correlation_id=order-11-bf6321
+2026-10-31T07:57:19.094332Z [WRITER-B] sending to s7838_drafts correlation_id=order-06-b8c526
+2026-10-31T07:57:19.099226Z [WRITER-B] processed correlation_id=order-06-b8c526 -> s7838_drafts
+2026-10-31T07:57:19.101953Z [WRITER-B] received s7838_tasks partition=0 offset=41 correlation_id=order-08-4701b4
+2026-10-31T07:57:19.102175Z [WRITER-B] processing correlation_id=order-08-4701b4
+2026-10-31T07:57:19.401780Z [WRITER-A] sending to s7838_drafts correlation_id=order-11-bf6321
+2026-10-31T07:57:19.402451Z [WRITER-B] sending to s7838_drafts correlation_id=order-08-4701b4
+2026-10-31T07:57:19.405134Z [WRITER-A] processed correlation_id=order-11-bf6321 -> s7838_drafts
+2026-10-31T07:57:19.406260Z [WRITER-B] processed correlation_id=order-08-4701b4 -> s7838_drafts
+2026-10-31T07:57:19.407093Z [WRITER-A] received s7838_tasks partition=1 offset=25 correlation_id=order-15-f0166e
+2026-10-31T07:57:19.407397Z [WRITER-A] processing correlation_id=order-15-f0166e
+2026-10-31T07:57:19.407622Z [WRITER-B] received s7838_tasks partition=0 offset=42 correlation_id=order-09-539218
+2026-10-31T07:57:19.407798Z [WRITER-B] processing correlation_id=order-09-539218
+2026-10-31T07:57:19.508396Z [WRITER-B] sending to s7838_drafts correlation_id=order-09-539218
+2026-10-31T07:57:19.512783Z [WRITER-B] processed correlation_id=order-09-539218 -> s7838_drafts
+2026-10-31T07:57:19.515146Z [WRITER-B] received s7838_tasks partition=0 offset=43 correlation_id=order-10-91405c
+2026-10-31T07:57:19.515483Z [WRITER-B] processing correlation_id=order-10-91405c
+2026-10-31T07:57:19.708620Z [WRITER-A] sending to s7838_drafts correlation_id=order-15-f0166e
+2026-10-31T07:57:19.715129Z [WRITER-A] processed correlation_id=order-15-f0166e -> s7838_drafts
+2026-10-31T07:57:19.718544Z [WRITER-A] received s7838_tasks partition=1 offset=26 correlation_id=order-17-5010ab
+2026-10-31T07:57:19.718933Z [WRITER-A] processing correlation_id=order-17-5010ab
+2026-10-31T07:57:19.816705Z [WRITER-B] sending to s7838_drafts correlation_id=order-10-91405c
+2026-10-31T07:57:19.823372Z [WRITER-B] processed correlation_id=order-10-91405c -> s7838_drafts
+2026-10-31T07:57:19.827795Z [WRITER-B] received s7838_tasks partition=0 offset=44 correlation_id=order-12-fea0da
+2026-10-31T07:57:19.828290Z [WRITER-B] processing correlation_id=order-12-fea0da
+2026-10-31T07:57:20.420150Z [WRITER-A] sending to s7838_drafts correlation_id=order-17-5010ab
+2026-10-31T07:57:20.423194Z [WRITER-A] processed correlation_id=order-17-5010ab -> s7838_drafts
+2026-10-31T07:57:20.427239Z [WRITER-A] received s7838_tasks partition=1 offset=27 correlation_id=order-18-5cbe8c
+2026-10-31T07:57:20.427731Z [WRITER-A] processing correlation_id=order-18-5cbe8c
+2026-10-31T07:57:20.529501Z [WRITER-B] sending to s7838_drafts correlation_id=order-12-fea0da
+2026-10-31T07:57:20.531561Z [WRITER-B] processed correlation_id=order-12-fea0da -> s7838_drafts
+2026-10-31T07:57:20.532744Z [WRITER-B] received s7838_tasks partition=0 offset=45 correlation_id=order-13-13391e
+2026-10-31T07:57:20.532831Z [WRITER-B] processing correlation_id=order-13-13391e
+2026-10-31T07:57:21.033999Z [WRITER-B] sending to s7838_drafts correlation_id=order-13-13391e
+2026-10-31T07:57:21.038656Z [WRITER-B] processed correlation_id=order-13-13391e -> s7838_drafts
+2026-10-31T07:57:21.041562Z [WRITER-B] received s7838_tasks partition=0 offset=46 correlation_id=order-14-9666a9
+2026-10-31T07:57:21.041896Z [WRITER-B] processing correlation_id=order-14-9666a9
+2026-10-31T07:57:21.129034Z [WRITER-A] sending to s7838_drafts correlation_id=order-18-5cbe8c
+2026-10-31T07:57:21.133283Z [WRITER-A] processed correlation_id=order-18-5cbe8c -> s7838_drafts
+2026-10-31T07:57:21.342309Z [WRITER-B] sending to s7838_drafts correlation_id=order-14-9666a9
+2026-10-31T07:57:21.347315Z [WRITER-B] processed correlation_id=order-14-9666a9 -> s7838_drafts
+2026-10-31T07:57:21.350918Z [WRITER-B] received s7838_tasks partition=0 offset=47 correlation_id=order-16-16a2a3
+2026-10-31T07:57:21.351178Z [WRITER-B] processing correlation_id=order-16-16a2a3
+2026-10-31T07:57:21.852355Z [WRITER-B] sending to s7838_drafts correlation_id=order-16-16a2a3
+2026-10-31T07:57:21.856701Z [WRITER-B] processed correlation_id=order-16-16a2a3 -> s7838_drafts
+2026-10-31T07:57:21.859534Z [WRITER-B] received s7838_tasks partition=0 offset=48 correlation_id=order-19-e8adc1
+2026-10-31T07:57:21.859872Z [WRITER-B] processing correlation_id=order-19-e8adc1
+2026-10-31T07:57:22.561195Z [WRITER-B] sending to s7838_drafts correlation_id=order-19-e8adc1
+2026-10-31T07:57:22.568200Z [WRITER-B] processed correlation_id=order-19-e8adc1 -> s7838_drafts
+2026-10-31T07:57:23.846909Z [TEST] ordering:after result: {"scenario": "ordering", "variant": "keyed", "verify_seed": 267838, "messages": 20, "per_entity": {"listing-1": {"messages": 8, "partitions_used": [0], "processed_seq_order": [1, 2, 3, 4, 5, 6, 7, 8], "in_order": true}, "listing-2": {"messages": 5, "partitions_used": [1], "processed_seq_order": [1, 2, 3, 4, 5], "in_order": true}, "listing-3": {"messages": 3, "partitions_used": [1], "processed_seq_order": [1, 2, 3], "in_order": true}, "listing-6": {"messages": 4, "partitions_used": [0], "processed_seq_order": [1, 2, 3, 4], "in_order": true}}, "entities_out_of_order": [], "entities_split_across_partitions": [], "all_in_order": true, "all_in_one_partition": true}
+{
+  "homework": 8,
+  "SID4": 7838,
+  "commit_hash": "c811a5eb3ec85fc3a1106415c6031a8a4ca62c8e",
+  "uncommitted_changes_in_code_hw8": true,
+  "model": "qwen2:7b (live Part 2 run); offline stub model inside this self-check",
+  "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
+  "seed": 7838,
+  "verify_seed": 267838,
+  "checks": [
+    {
+      "name": "All seven PREFIX topics exist (tasks has 2 partitions)",
+      "passed": true,
+      "detail": "{\"s7838_dead_letter\": 1, \"s7838_final\": 1, \"s7838_entity_responses\": 1, \"s7838_drafts\": 1, \"s7838_entity_requests\": 1, \"s7838_inbox\": 1, \"s7838_tasks\": 2}"
+    },
+    {
+      "name": "CREATE_LISTING returns success, a UUID listing_id, and the same correlation_id",
+      "passed": true
+    },
+    {
+      "name": "GET_LISTING returns the created listing with the same correlation_id",
+      "passed": true
+    },
+    {
+      "name": "Unknown listing_id gives success=false, an error, and the same correlation_id",
+      "passed": true
+    },
+    {
+      "name": "Unknown operation is rejected with a clean error and the same correlation_id",
+      "passed": true
+    },
+    {
+      "name": "Missing, empty, and invalid fields are rejected",
+      "passed": true
+    },
+    {
+      "name": "Worker container logged 'Consumer is ready and listening...'",
+      "passed": true
+    },
+    {
+      "name": "Pipeline returns an approved answer on s7838_final with the same correlation_id",
+      "passed": true
+    },
+    {
+      "name": "Replayed message causes no extra side effect (idempotency)",
+      "passed": true
+    },
+    {
+      "name": "Killed Writer's message is redelivered and offset is committed only after processing",
+      "passed": true
+    },
+    {
+      "name": "Poison message is retried up to the limit, dead-lettered, and does not block the next",
+      "passed": true
+    },
+    {
+      "name": "Keyed 20-message VERIFY_SEED run keeps each entity in one partition, in order",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

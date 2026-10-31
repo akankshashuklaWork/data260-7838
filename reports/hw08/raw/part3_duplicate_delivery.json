@@ -1,0 +1,44 @@
+{
+  "before": {
+    "scenario": "duplicate_delivery",
+    "variant": "before",
+    "correlation_id": "dup-before-741bb7",
+    "deliveries": 2,
+    "processed": 2,
+    "duplicates_skipped": 0,
+    "drafts_published": 2,
+    "side_effect_repeated": true,
+    "writer_console": [
+      "2026-10-31T07:55:05.400425Z [WRITER-1] assigned partitions=[0, 1]",
+      "2026-10-31T07:55:05.402958Z [WRITER-1] Consumer is ready and listening... topic=s7838_tasks group=s7838_test_duplicate_before_5d1eee",
+      "2026-10-31T07:55:05.529645Z [WRITER-1] received s7838_tasks partition=0 offset=1 correlation_id=dup-before-741bb7",
+      "2026-10-31T07:55:05.529990Z [WRITER-1] processing correlation_id=dup-before-741bb7",
+      "2026-10-31T07:55:05.730798Z [WRITER-1] sending to s7838_drafts correlation_id=dup-before-741bb7",
+      "2026-10-31T07:55:05.739011Z [WRITER-1] processed correlation_id=dup-before-741bb7 -> s7838_drafts",
+      "2026-10-31T07:55:06.138268Z [WRITER-1] received s7838_tasks partition=0 offset=2 correlation_id=dup-before-741bb7",
+      "2026-10-31T07:55:06.139059Z [WRITER-1] processing correlation_id=dup-before-741bb7",
+      "2026-10-31T07:55:06.340303Z [WRITER-1] sending to s7838_drafts correlation_id=dup-before-741bb7",
+      "2026-10-31T07:55:06.342915Z [WRITER-1] processed correlation_id=dup-before-741bb7 -> s7838_drafts"
+    ]
+  },
+  "after": {
+    "scenario": "duplicate_delivery",
+    "variant": "after",
+    "correlation_id": "dup-after-52c796",
+    "deliveries": 2,
+    "processed": 1,
+    "duplicates_skipped": 1,
+    "drafts_published": 1,
+    "side_effect_repeated": false,
+    "writer_console": [
+      "2026-10-31T07:55:08.045177Z [WRITER-1] assigned partitions=[0, 1]",
+      "2026-10-31T07:55:08.048039Z [WRITER-1] Consumer is ready and listening... topic=s7838_tasks group=s7838_test_duplicate_after_3134dc",
+      "2026-10-31T07:55:08.163645Z [WRITER-1] received s7838_tasks partition=0 offset=3 correlation_id=dup-after-52c796",
+      "2026-10-31T07:55:08.163975Z [WRITER-1] processing correlation_id=dup-after-52c796",
+      "2026-10-31T07:55:08.365157Z [WRITER-1] sending to s7838_drafts correlation_id=dup-after-52c796",
+      "2026-10-31T07:55:08.373663Z [WRITER-1] processed correlation_id=dup-after-52c796 -> s7838_drafts",
+      "2026-10-31T07:55:08.773344Z [WRITER-1] received s7838_tasks partition=0 offset=4 correlation_id=dup-after-52c796",
+      "2026-10-31T07:55:08.774377Z [WRITER-1] duplicate skipped correlation_id=dup-after-52c796"
+    ]
+  }
+}

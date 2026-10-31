@@ -1,0 +1,23 @@
+{
+  "correlation_id": "c6199a7b-2ac1-494f-b67f-1a5d8a11e9f4",
+  "final": {
+    "correlation_id": "c6199a7b-2ac1-494f-b67f-1a5d8a11e9f4",
+    "status": "approved",
+    "answer": "Draft answer to 'What should a renter check before signing a lease for a two-bedroom apartment in San Jose?': first, State the key facts a renter must check. Then, Explain why each fact matters. Then, Give one clear recommendation. Compare these points against the listing details before you decide."
+  },
+  "seconds": 0.1,
+  "model": "stub",
+  "journey": [
+    "2026-10-31T07:39:24.379040Z [YOU] sent to s7838_inbox partition=0 offset=0 correlation_id=c6199a7b-2ac1-494f-b67f-1a5d8a11e9f4",
+    "2026-10-31T07:39:24.379267Z [YOU] question message={\"correlation_id\":\"c6199a7b-2ac1-494f-b67f-1a5d8a11e9f4\",\"question\":\"What should a renter check before signing a lease for a two-bedroom apartment in San Jose?\"}",
+    "2026-10-31T07:39:24.379452Z [PLANNER] received s7838_inbox partition=0 offset=0 correlation_id=c6199a7b-2ac1-494f-b67f-1a5d8a11e9f4",
+    "2026-10-31T07:39:24.382968Z [WRITER] received s7838_tasks partition=1 offset=0 correlation_id=c6199a7b-2ac1-494f-b67f-1a5d8a11e9f4",
+    "2026-10-31T07:39:24.383042Z [PLANNER] processed correlation_id=c6199a7b-2ac1-494f-b67f-1a5d8a11e9f4 -> s7838_tasks",
+    "2026-10-31T07:39:24.386732Z [REVIEWER] received s7838_drafts partition=0 offset=0 correlation_id=c6199a7b-2ac1-494f-b67f-1a5d8a11e9f4",
+    "2026-10-31T07:39:24.386845Z [WRITER] processed correlation_id=c6199a7b-2ac1-494f-b67f-1a5d8a11e9f4 -> s7838_drafts",
+    "2026-10-31T07:39:24.389907Z [YOU] received from s7838_final partition=0 offset=0 correlation_id=c6199a7b-2ac1-494f-b67f-1a5d8a11e9f4",
+    "2026-10-31T07:39:24.390066Z [REVIEWER] processed correlation_id=c6199a7b-2ac1-494f-b67f-1a5d8a11e9f4 -> s7838_final"
+  ],
+  "returncode": 0,
+  "stderr": ""
+}

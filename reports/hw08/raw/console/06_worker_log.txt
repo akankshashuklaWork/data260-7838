@@ -1,0 +1,13 @@
+2026-10-31T07:54:53.503226Z [WORKER] Consumer is ready and listening... topic=s7838_entity_requests
+2026-10-31T07:54:56.368110Z [WORKER] received topic=s7838_entity_requests partition=0 offset=0 correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 operation=CREATE_LISTING reply_to=s7838_entity_responses
+2026-10-31T07:54:56.368174Z [WORKER] request message={"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51","reply_to":"s7838_entity_responses","operation":"CREATE_LISTING","data":{"propertyTitle":"Sunny 2BR near Caltrain","propertyLocation":"San Jose, CA","submitterEmail":"akanksha@example.com","propertyDescription":"Bright two-bedroom apartment with parking, laundry, and a quiet courtyard.","propertyCategory":"Apartment","termsAccepted":"true"}}
+2026-10-31T07:54:56.368185Z [WORKER] processing correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 operation=CREATE_LISTING
+2026-10-31T07:54:56.368226Z [WORKER] sending response topic=s7838_entity_responses correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 success=True
+2026-10-31T07:54:56.368249Z [WORKER] response message={"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51","success":true,"listing_id":"051b7737-9584-4cb5-94fd-ead24080843f","message":"Listing created"}
+2026-10-31T07:54:56.948023Z [WORKER] received topic=s7838_entity_requests partition=0 offset=1 correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 operation=GET_LISTING reply_to=s7838_entity_responses
+2026-10-31T07:54:56.948057Z [WORKER] request message={"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51","reply_to":"s7838_entity_responses","operation":"GET_LISTING","data":{"listing_id":"051b7737-9584-4cb5-94fd-ead24080843f"}}
+2026-10-31T07:54:56.948063Z [WORKER] processing correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 operation=GET_LISTING
+2026-10-31T07:54:56.948071Z [WORKER] sending response topic=s7838_entity_responses correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 success=True
+2026-10-31T07:54:56.948082Z [WORKER] response message={"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51","success":true,"listing":{"listing_id":"051b7737-9584-4cb5-94fd-ead24080843f","propertyTitle":"Sunny 2BR near Caltrain","propertyLocation":"San Jose, CA","submitterEmail":"akanksha@example.com","propertyDescription":"Bright two-bedroom apartment with parking, laundry, and a quiet courtyard.","propertyCategory":"Apartment","termsAccepted":"true","submissionDate":"2026-10-31T07:54:56+00:00"}}
+Group Coordinator Request failed: [Error 15] GroupCoordinatorNotAvailableError
+Marking the coordinator dead (node 1)for group s7838_entity_worker_group.

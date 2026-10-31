@@ -1,0 +1,62 @@
+{
+  "homework": 8,
+  "SID4": 7838,
+  "commit_hash": "c811a5eb3ec85fc3a1106415c6031a8a4ca62c8e",
+  "uncommitted_changes_in_code_hw8": true,
+  "model": "qwen2:7b (live Part 2 run); offline stub model inside this self-check",
+  "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
+  "seed": 7838,
+  "verify_seed": 267838,
+  "checks": [
+    {
+      "name": "All seven PREFIX topics exist (tasks has 2 partitions)",
+      "passed": true,
+      "detail": "{\"s7838_dead_letter\": 1, \"s7838_final\": 1, \"s7838_entity_responses\": 1, \"s7838_drafts\": 1, \"s7838_entity_requests\": 1, \"s7838_inbox\": 1, \"s7838_tasks\": 2}"
+    },
+    {
+      "name": "CREATE_LISTING returns success, a UUID listing_id, and the same correlation_id",
+      "passed": true
+    },
+    {
+      "name": "GET_LISTING returns the created listing with the same correlation_id",
+      "passed": true
+    },
+    {
+      "name": "Unknown listing_id gives success=false, an error, and the same correlation_id",
+      "passed": true
+    },
+    {
+      "name": "Unknown operation is rejected with a clean error and the same correlation_id",
+      "passed": true
+    },
+    {
+      "name": "Missing, empty, and invalid fields are rejected",
+      "passed": true
+    },
+    {
+      "name": "Worker container logged 'Consumer is ready and listening...'",
+      "passed": true
+    },
+    {
+      "name": "Pipeline returns an approved answer on s7838_final with the same correlation_id",
+      "passed": true
+    },
+    {
+      "name": "Replayed message causes no extra side effect (idempotency)",
+      "passed": true
+    },
+    {
+      "name": "Killed Writer's message is redelivered and offset is committed only after processing",
+      "passed": true
+    },
+    {
+      "name": "Poison message is retried up to the limit, dead-lettered, and does not block the next",
+      "passed": true
+    },
+    {
+      "name": "Keyed 20-message VERIFY_SEED run keeps each entity in one partition, in order",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

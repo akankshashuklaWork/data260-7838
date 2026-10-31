@@ -1,0 +1,50 @@
+2026-10-31T07:54:56.340009Z [CLIENT] Rental listing Kafka demo for Akanksha Shukla (SID4 7838)
+
+Step 1: create one correlation_id
+2026-10-31T07:54:56.340188Z [CLIENT] correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51
+
+Steps 2-6: CREATE_LISTING -> s7838_entity_requests -> worker -> s7838_entity_responses
+2026-10-31T07:54:56.340198Z [CLIENT] sending CREATE_LISTING correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51
+2026-10-31T07:54:56.340215Z [CLIENT] request body={"operation":"CREATE_LISTING","data":{"propertyTitle":"Sunny 2BR near Caltrain","propertyLocation":"San Jose, CA","submitterEmail":"akanksha@example.com","propertyDescription":"Bright two-bedroom apartment with parking, laundry, and a quiet courtyard.","propertyCategory":"Apartment","termsAccepted":"true"},"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51"}
+2026-10-31T07:54:56.356513Z [FASTAPI] sending request topic=s7838_entity_requests correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 operation=CREATE_LISTING
+2026-10-31T07:54:56.356700Z [FASTAPI] request message={"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51","reply_to":"s7838_entity_responses","operation":"CREATE_LISTING","data":{"propertyTitle":"Sunny 2BR near Caltrain","propertyLocation":"San Jose, CA","submitterEmail":"akanksha@example.com","propertyDescription":"Bright two-bedroom apartment with parking, laundry, and a quiet courtyard.","propertyCategory":"Apartment","termsAccepted":"true"}}
+2026-10-31T07:54:56.368110Z [WORKER] received topic=s7838_entity_requests partition=0 offset=0 correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 operation=CREATE_LISTING reply_to=s7838_entity_responses
+2026-10-31T07:54:56.368174Z [WORKER] request message={"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51","reply_to":"s7838_entity_responses","operation":"CREATE_LISTING","data":{"propertyTitle":"Sunny 2BR near Caltrain","propertyLocation":"San Jose, CA","submitterEmail":"akanksha@example.com","propertyDescription":"Bright two-bedroom apartment with parking, laundry, and a quiet courtyard.","propertyCategory":"Apartment","termsAccepted":"true"}}
+2026-10-31T07:54:56.368185Z [WORKER] processing correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 operation=CREATE_LISTING
+2026-10-31T07:54:56.368226Z [WORKER] sending response topic=s7838_entity_responses correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 success=True
+2026-10-31T07:54:56.368249Z [WORKER] response message={"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51","success":true,"listing_id":"051b7737-9584-4cb5-94fd-ead24080843f","message":"Listing created"}
+2026-10-31T07:54:56.372785Z [FASTAPI] received response topic=s7838_entity_responses partition=0 offset=0 correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51
+2026-10-31T07:54:56.372838Z [FASTAPI] returned to caller correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 success=True
+2026-10-31T07:54:56.376849Z [CLIENT] response received correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51
+2026-10-31T07:54:56.376870Z [CLIENT] response body={"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51","success":true,"listing_id":"051b7737-9584-4cb5-94fd-ead24080843f","message":"Listing created"}
+
+Step 7: extract the generated listing_id from the CREATE_LISTING response
+2026-10-31T07:54:56.942653Z [CLIENT] success=True listing_id=051b7737-9584-4cb5-94fd-ead24080843f
+
+Steps 8-9: GET_LISTING for listing_id=051b7737-9584-4cb5-94fd-ead24080843f (full sequence)
+2026-10-31T07:54:56.942703Z [CLIENT] sending GET_LISTING correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51
+2026-10-31T07:54:56.942738Z [CLIENT] request body={"operation":"GET_LISTING","data":{"listing_id":"051b7737-9584-4cb5-94fd-ead24080843f"},"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51"}
+2026-10-31T07:54:56.945850Z [FASTAPI] sending request topic=s7838_entity_requests correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 operation=GET_LISTING
+2026-10-31T07:54:56.945899Z [FASTAPI] request message={"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51","reply_to":"s7838_entity_responses","operation":"GET_LISTING","data":{"listing_id":"051b7737-9584-4cb5-94fd-ead24080843f"}}
+2026-10-31T07:54:56.948023Z [WORKER] received topic=s7838_entity_requests partition=0 offset=1 correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 operation=GET_LISTING reply_to=s7838_entity_responses
+2026-10-31T07:54:56.948057Z [WORKER] request message={"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51","reply_to":"s7838_entity_responses","operation":"GET_LISTING","data":{"listing_id":"051b7737-9584-4cb5-94fd-ead24080843f"}}
+2026-10-31T07:54:56.948063Z [WORKER] processing correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 operation=GET_LISTING
+2026-10-31T07:54:56.948071Z [WORKER] sending response topic=s7838_entity_responses correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 success=True
+2026-10-31T07:54:56.948082Z [WORKER] response message={"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51","success":true,"listing":{"listing_id":"051b7737-9584-4cb5-94fd-ead24080843f","propertyTitle":"Sunny 2BR near Caltrain","propertyLocation":"San Jose, CA","submitterEmail":"akanksha@example.com","propertyDescription":"Bright two-bedroom apartment with parking, laundry, and a quiet courtyard.","propertyCategory":"Apartment","termsAccepted":"true","submissionDate":"2026-10-31T07:54:56+00:00"}}
+2026-10-31T07:54:56.949363Z [FASTAPI] received response topic=s7838_entity_responses partition=0 offset=1 correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51
+2026-10-31T07:54:56.949435Z [FASTAPI] returned to caller correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51 success=True
+2026-10-31T07:54:56.953369Z [CLIENT] response received correlation_id=c58e13d9-f165-4b30-9f9a-c8e0c1158c51
+2026-10-31T07:54:56.953398Z [CLIENT] response body={"correlation_id":"c58e13d9-f165-4b30-9f9a-c8e0c1158c51","success":true,"listing":{"listing_id":"051b7737-9584-4cb5-94fd-ead24080843f","propertyTitle":"Sunny 2BR near Caltrain","propertyLocation":"San Jose, CA","submitterEmail":"akanksha@example.com","propertyDescription":"Bright two-bedroom apartment with parking, laundry, and a quiet courtyard.","propertyCategory":"Apartment","termsAccepted":"true","submissionDate":"2026-10-31T07:54:56+00:00"}}
+
+Step 10: retrieved listing and correlation_id check
+{
+  "listing_id": "051b7737-9584-4cb5-94fd-ead24080843f",
+  "propertyTitle": "Sunny 2BR near Caltrain",
+  "propertyLocation": "San Jose, CA",
+  "submitterEmail": "akanksha@example.com",
+  "propertyDescription": "Bright two-bedroom apartment with parking, laundry, and a quiet courtyard.",
+  "propertyCategory": "Apartment",
+  "termsAccepted": "true",
+  "submissionDate": "2026-10-31T07:54:56+00:00"
+}
+2026-10-31T07:54:57.495137Z [CLIENT] correlation_id preserved end to end: True

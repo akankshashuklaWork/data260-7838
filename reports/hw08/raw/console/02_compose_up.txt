@@ -1,0 +1,91 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.02kB done
+#1 DONE 0.0s
+
+#2 [worker internal] load build definition from Dockerfile
+#2 transferring dockerfile: 317B done
+#2 DONE 0.0s
+
+#3 [api internal] load metadata for docker.io/library/python:3.11-slim
+#3 DONE 0.0s
+
+#4 [api internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [worker internal] load build context
+#5 transferring context: 281B done
+#5 DONE 0.0s
+
+#6 [api 1/6] FROM docker.io/library/python:3.11-slim@sha256:6d85378d88a19cd4d76079817532d62232be95757cb45945a99fec8e8084b9c2
+#6 resolve docker.io/library/python:3.11-slim@sha256:6d85378d88a19cd4d76079817532d62232be95757cb45945a99fec8e8084b9c2 done
+#6 DONE 0.0s
+
+#7 [worker 3/6] RUN pip install --no-cache-dir fastapi uvicorn aiokafka
+#7 CACHED
+
+#8 [worker 5/6] COPY app ./app
+#8 CACHED
+
+#9 [worker 4/6] COPY config.py common.py ./
+#9 CACHED
+
+#10 [worker 2/6] WORKDIR /app
+#10 CACHED
+
+#11 [worker 6/6] COPY worker ./worker
+#11 CACHED
+
+#12 [worker] exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:ee4e529920e9526c58118e99255e6bba4360277a18cbacbda14033dce2f06eb7 done
+#12 exporting config sha256:2b0173c78bb38f4deeec96c2d745630fe1a7f8ca5c48323211faa6ddd1b1b5d4 done
+#12 exporting attestation manifest sha256:8306b942b90545bc2c98fb78d8828752949aca3ca65f10b0590835cd118ec6a1 0.0s done
+#12 exporting manifest list sha256:23e6b5232fb41f98dad14c9b459834d230e91e3e85d1c1cf85b720ebd06fc323 done
+#12 naming to docker.io/library/hw8-worker:latest done
+#12 unpacking to docker.io/library/hw8-worker:latest done
+#12 DONE 0.1s
+
+#13 [api] exporting to image
+#13 exporting layers done
+#13 exporting manifest sha256:fb4e766eee9b73a15767ce0aa664fcaa7c377efc076648357334249d56701518 done
+#13 exporting config sha256:5d747eaf9cb44d5fe6874452429627c61905a2754db0f336bf8a0b57473ff166 done
+#13 exporting attestation manifest sha256:deacc5c4514565f6421f36eaf21939f1ae1f6da6fbfc6bdb3e521c9dc4d86fb1 0.0s done
+#13 exporting manifest list sha256:7cd9a2a826fae3578016ce49a5baa6f5a1746f834c9cff418379c2c1c7d1171e done
+#13 naming to docker.io/library/hw8-api:latest done
+#13 unpacking to docker.io/library/hw8-api:latest done
+#13 DONE 0.1s
+
+#14 [worker] resolving provenance for metadata file
+#14 DONE 0.0s
+
+#15 [api] resolving provenance for metadata file
+#15 DONE 0.0s
+ Image hw8-worker Building 
+ Image hw8-api Building 
+ Image hw8-worker Built 
+ Image hw8-api Built 
+ Network hw8_default Creating 
+ Network hw8_default Created 
+ Container s7838_kafka Creating 
+ Container s7838_kafka Created 
+ Container s7838_kafka_init Creating 
+ Container s7838_kafka_init Created 
+ Container s7838_worker Creating 
+ Container s7838_api Creating 
+ Container s7838_worker Created 
+ Container s7838_api Created 
+ Container s7838_kafka Starting 
+ Container s7838_kafka Started 
+ Container s7838_kafka Waiting 
+ Container s7838_kafka Healthy 
+ Container s7838_kafka_init Starting 
+ Container s7838_kafka_init Started 
+ Container s7838_kafka_init Waiting 
+ Container s7838_kafka_init Waiting 
+ Container s7838_kafka_init Exited 
+ Container s7838_worker Starting 
+ Container s7838_kafka_init Exited 
+ Container s7838_api Starting 
+ Container s7838_api Started 
+ Container s7838_worker Started

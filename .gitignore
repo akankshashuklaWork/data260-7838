@@ -8,3 +8,6 @@ node_modules/
 dist/
 ecs-task-definition.rendered.json
 ~$*
+
+# HW8 local idempotency stores
+data/hw8/*.db

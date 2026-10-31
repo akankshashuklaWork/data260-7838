@@ -1,0 +1,8 @@
+{"ts": 1793433340.193444, "iso": "2026-10-31T07:55:40.193445Z", "agent": "writer", "instance": "1", "event": "assigned", "partitions": [0, 1]}
+{"ts": 1793433340.195637, "iso": "2026-10-31T07:55:40.195638Z", "agent": "writer", "instance": "1", "event": "ready", "topic": "s7838_tasks", "group": "s7838_test_death_after_4a0c00"}
+{"ts": 1793433340.314931, "iso": "2026-10-31T07:55:40.314931Z", "agent": "writer", "instance": "1", "event": "received", "topic": "s7838_tasks", "partition": 0, "offset": 6, "correlation_id": "kill-after-5aac3f", "entity_id": "listing-1", "seq": 1}
+{"ts": 1793433346.200494, "iso": "2026-10-31T07:55:46.200500Z", "agent": "writer", "instance": "2", "event": "assigned", "partitions": [0, 1]}
+{"ts": 1793433346.206199, "iso": "2026-10-31T07:55:46.206199Z", "agent": "writer", "instance": "2", "event": "ready", "topic": "s7838_tasks", "group": "s7838_test_death_after_4a0c00"}
+{"ts": 1793433346.207398, "iso": "2026-10-31T07:55:46.207399Z", "agent": "writer", "instance": "2", "event": "received", "topic": "s7838_tasks", "partition": 0, "offset": 6, "correlation_id": "kill-after-5aac3f", "entity_id": "listing-1", "seq": 1}
+{"ts": 1793433350.222668, "iso": "2026-10-31T07:55:50.222670Z", "agent": "writer", "instance": "2", "event": "processed", "topic": "s7838_tasks", "partition": 0, "offset": 6, "correlation_id": "kill-after-5aac3f", "entity_id": "listing-1", "seq": 1, "attempts": 1}
+{"ts": 1793433350.2278452, "iso": "2026-10-31T07:55:50.227852Z", "agent": "writer", "instance": "2", "event": "committed", "topic": "s7838_tasks", "partition": 0, "offset": 6, "correlation_id": "kill-after-5aac3f", "entity_id": "listing-1", "seq": 1}

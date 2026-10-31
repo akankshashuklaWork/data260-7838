@@ -1,6 +1,53 @@
-# DATA 260 Homework 1 to 7
+# DATA 260 Homework 1 to 8
 
 Rental Housing Listings - Akanksha Shukla
+
+## HW8: Kafka Request/Response, Three-Agent Pipeline, and Failure Behavior
+
+HW8 moves the rental-listing domain logic out of the API process and behind Kafka.
+The code is in `code/hw8/`. Prefix `s7838`, port 8638, SEED 7838, VERIFY_SEED 267838.
+
+- **Part 1:** `homework_demo.py` calls the FastAPI wrapper (`app/`), which publishes
+  `CREATE_LISTING` / `GET_LISTING` requests to `s7838_entity_requests`. The worker
+  (`worker/consumer.py`) keeps listings in a dict and replies on `s7838_entity_responses`.
+  The same `correlation_id` is preserved at every hop. Kafka, the worker, and the API run
+  as Docker containers.
+- **Part 2:** `planner.py`, `writer.py`, and `reviewer.py` are separate processes connected
+  by `s7838_inbox`, `s7838_tasks`, `s7838_drafts`, and `s7838_final`. Planner and Writer use
+  `qwen2:7b` through Ollama; `send_question.py` sends the question and prints the final JSON.
+- **Part 3:** `reliability.py` holds the fixes (idempotency, commit-after-processing,
+  bounded retries with `s7838_dead_letter`, and the entity partition key).
+  `failure_tests.py` runs each failure before and after its fix.
+
+Start Kafka, the worker, and the API, then run the demo:
+
+```bash
+make up-hw08
+make demo-hw08
+```
+
+Run the four agents in four terminals from `code/hw8/` (Ollama must be running):
+
+```bash
+python planner.py
+python writer.py
+python reviewer.py
+python send_question.py
+```
+
+Run the experiments and checks from the repository root:
+
+```bash
+source .venv/bin/activate
+make pipeline-hw08
+make failures-hw08
+make verify-hw08
+make run-log-hw08
+```
+
+`make run-log-hw08` restarts the Docker stack and produces every result in the report.
+The report, run log, raw CSV/JSON files, metrics, AI-use disclosure, and
+`verification.json` are in `reports/hw08/`.
 
 ## HW7: JWT Authorization, Tool Agents, and Safe Local Tools
 
@@ -397,6 +444,7 @@ python hw1_client.py
 
 Each assignment has its own folder under `reports/`:
 
+- `reports/hw08/` - HW8 report, run log, Kafka failure evidence, and verification
 - `reports/hw04/` - HW4 report, measurements, RAG artifacts, and verification
 - `reports/hw03/` - HW3 report, retrieval evidence, and verification
 - `reports/hw02/` - HW2 report, experiment results, and verification

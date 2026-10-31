@@ -21,7 +21,6 @@ Run the reproducible checks from the repository root:
 source .venv/bin/activate
 make verify-hw07
 make run-log-hw07
-make report-hw07
 ```
 
 Start the Citi Bike comparison UI at `http://127.0.0.1:8638` with:

@@ -18,8 +18,6 @@ SOURCE_FILES = [
     "code/hw7/file_tools.py",
     "code/hw7/run_artifacts.py",
     "code/hw7/run_log.py",
-    "code/hw7/evidence_screenshots.py",
-    "code/hw7/generate_report.py",
     "code/hw7/run_live_model_benchmark.py",
     "code/hw7/verify_hw7.py",
     "code/hw7/config.py",

@@ -18,8 +18,5 @@ run-hw07:
 verify-hw07:
 	PYTHONPATH=code $(PYTHON) -m hw7.verify_hw7
 
-report-hw07:
-	PYTHONPATH=code $(PYTHON) -m hw7.generate_report
-
 run-log-hw07:
 	PYTHONPATH=code $(PYTHON) -m hw7.run_log

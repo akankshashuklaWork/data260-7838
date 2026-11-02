@@ -28,4 +28,4 @@
 
 ## Self-check
 
-`verification.json`: 12 / 12 checks passed (commit c811a5eb3ec8).
+`verification.json`: 12 / 12 checks passed (commit 28cfe7f05d68).

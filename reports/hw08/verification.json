@@ -1,8 +1,8 @@
 {
   "homework": 8,
   "SID4": 7838,
-  "commit_hash": "c811a5eb3ec85fc3a1106415c6031a8a4ca62c8e",
-  "uncommitted_changes_in_code_hw8": true,
+  "commit_hash": "28cfe7f05d68d0ac9bc63af3c1d1e0a33f6bc976",
+  "uncommitted_changes_in_code_hw8": false,
   "model": "qwen2:7b (live Part 2 run); offline stub model inside this self-check",
   "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
   "seed": 7838,

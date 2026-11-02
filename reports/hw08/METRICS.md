@@ -22,7 +22,7 @@
 |---|---|
 | Model | qwen2:7b |
 | Stages | inbox -> tasks -> drafts -> final (Planner, Writer, Reviewer) |
-| End-to-end time | 6.6 s |
+| End-to-end time | about 6-10 s per run (6.6 s in raw/part2_pipeline_live.json) |
 | Final status | approved |
 | correlation_id preserved | True |
 

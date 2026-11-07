@@ -1,0 +1,75 @@
+# Labeled test set for the semantic cache (HW9 Part 3.1).
+# Written and committed BEFORE any threshold sweep. Labels must not be changed after seeing results;
+# a labeling mistake, if found, is documented separately in the report instead of editing this file.
+#
+# seed_queries: the questions that are already answered and cached before each sweep run.
+# cases: the 40 labeled queries. `expect` is hit (the cached answer is correct for this query)
+#        or miss (the cached answer would be wrong, or there is nothing relevant in the cache).
+version: 1
+domain: Rental Housing Listings
+seed_queries:
+  - {id: S01, query: "What is the maximum security deposit a landlord can charge for an unfurnished apartment in California?"}
+  - {id: S02, query: "How many days does a landlord have to return a security deposit after move-out?"}
+  - {id: S03, query: "Can a landlord enter my apartment without notice?"}
+  - {id: S04, query: "What is a month-to-month lease?"}
+  - {id: S05, query: "How much notice must a tenant give to end a month-to-month tenancy?"}
+  - {id: S06, query: "What does a lease renewal clause mean?"}
+  - {id: S07, query: "Is renters insurance required by law for tenants?"}
+  - {id: S08, query: "What is the difference between a condo and a townhouse?"}
+  - {id: S09, query: "What is a sublease?"}
+  - {id: S10, query: "What counts as normal wear and tear for a rental?"}
+  - {id: S11, query: "Are landlords allowed to charge a pet deposit for service animals?"}
+  - {id: S12, query: "What should I check during a rental move-in inspection?"}
+  - {id: S13, query: "How do landlords screen tenants, and what is a credit check?"}
+  - {id: S14, query: "What is a co-signer on a lease?"}
+  - {id: S15, query: "How are late rent fees usually calculated?"}
+  - {id: S16, query: "What is the typical length of a residential lease?"}
+  - {id: S17, query: "Who is responsible for repairs in a rental apartment?"}
+  - {id: S18, query: "What is a security deposit used for?"}
+  - {id: S19, query: "What happens if a tenant breaks a lease early?"}
+  - {id: S20, query: "What is an application fee for a rental?"}
+cases:
+  # ---- 10 exact duplicates (should hit) ----
+  - {id: C01, category: exact_duplicate, seed_id: S01, expect: hit, query: "What is the maximum security deposit a landlord can charge for an unfurnished apartment in California?"}
+  - {id: C02, category: exact_duplicate, seed_id: S02, expect: hit, query: "How many days does a landlord have to return a security deposit after move-out?"}
+  - {id: C03, category: exact_duplicate, seed_id: S03, expect: hit, query: "Can a landlord enter my apartment without notice?"}
+  - {id: C04, category: exact_duplicate, seed_id: S04, expect: hit, query: "What is a month-to-month lease?"}
+  - {id: C05, category: exact_duplicate, seed_id: S05, expect: hit, query: "How much notice must a tenant give to end a month-to-month tenancy?"}
+  - {id: C06, category: exact_duplicate, seed_id: S06, expect: hit, query: "What does a lease renewal clause mean?"}
+  - {id: C07, category: exact_duplicate, seed_id: S07, expect: hit, query: "Is renters insurance required by law for tenants?"}
+  - {id: C08, category: exact_duplicate, seed_id: S08, expect: hit, query: "What is the difference between a condo and a townhouse?"}
+  - {id: C09, category: exact_duplicate, seed_id: S09, expect: hit, query: "What is a sublease?"}
+  - {id: C10, category: exact_duplicate, seed_id: S10, expect: hit, query: "What counts as normal wear and tear for a rental?"}
+  # ---- 10 paraphrases (should hit) ----
+  - {id: C11, category: paraphrase, seed_id: S11, expect: hit, query: "Can an owner demand a pet deposit for a service animal?"}
+  - {id: C12, category: paraphrase, seed_id: S12, expect: hit, query: "What items should be inspected when moving into a rental unit?"}
+  - {id: C13, category: paraphrase, seed_id: S13, expect: hit, query: "How does a landlord screen applicants, and what does a credit check involve?"}
+  - {id: C14, category: paraphrase, seed_id: S14, expect: hit, query: "What does it mean to be a co-signer on a lease?"}
+  - {id: C15, category: paraphrase, seed_id: S15, expect: hit, query: "How is a late rent fee typically computed?"}
+  - {id: C16, category: paraphrase, seed_id: S16, expect: hit, query: "How long does a standard residential lease usually run?"}
+  - {id: C17, category: paraphrase, seed_id: S17, expect: hit, query: "Who has to fix things that break in a rented apartment?"}
+  - {id: C18, category: paraphrase, seed_id: S18, expect: hit, query: "What is a security deposit meant to cover?"}
+  - {id: C19, category: paraphrase, seed_id: S19, expect: hit, query: "What are the consequences if a renter ends a lease early?"}
+  - {id: C20, category: paraphrase, seed_id: S20, expect: hit, query: "What is a rental application fee?"}
+  # ---- 10 superficially similar questions with different correct answers (should miss) ----
+  - {id: C21, category: superficially_similar, seed_id: S01, expect: miss, query: "What is the maximum security deposit a landlord can charge for a commercial office lease in California?"}
+  - {id: C22, category: superficially_similar, seed_id: S02, expect: miss, query: "How many days does a tenant have to pay the security deposit before move-in?"}
+  - {id: C23, category: superficially_similar, seed_id: S03, expect: miss, query: "Can a landlord enter my apartment without notice to make an emergency repair?"}
+  - {id: C24, category: superficially_similar, seed_id: S04, expect: miss, query: "What is a fixed-term lease?"}
+  - {id: C25, category: superficially_similar, seed_id: S05, expect: miss, query: "How much notice must a landlord give to end a month-to-month tenancy?"}
+  - {id: C26, category: superficially_similar, seed_id: S06, expect: miss, query: "What does a lease termination clause mean?"}
+  - {id: C27, category: superficially_similar, seed_id: S07, expect: miss, query: "Is renters insurance required by a lease for tenants?"}
+  - {id: C28, category: superficially_similar, seed_id: S08, expect: miss, query: "What is the difference between a condo and a co-op?"}
+  - {id: C29, category: superficially_similar, seed_id: S09, expect: miss, query: "What is a lease assignment?"}
+  - {id: C30, category: superficially_similar, seed_id: S10, expect: miss, query: "What counts as tenant damage beyond normal wear and tear for a rental?"}
+  # ---- 10 unrelated questions (should miss) ----
+  - {id: C31, category: unrelated, seed_id: null, expect: miss, query: "What is the capital of France?"}
+  - {id: C32, category: unrelated, seed_id: null, expect: miss, query: "How do I bake sourdough bread?"}
+  - {id: C33, category: unrelated, seed_id: null, expect: miss, query: "Who won the 2018 FIFA World Cup?"}
+  - {id: C34, category: unrelated, seed_id: null, expect: miss, query: "What is the boiling point of water at sea level?"}
+  - {id: C35, category: unrelated, seed_id: null, expect: miss, query: "How do I convert Celsius to Fahrenheit?"}
+  - {id: C36, category: unrelated, seed_id: null, expect: miss, query: "Explain how photosynthesis works."}
+  - {id: C37, category: unrelated, seed_id: null, expect: miss, query: "What is the speed of light?"}
+  - {id: C38, category: unrelated, seed_id: null, expect: miss, query: "Recommend a good book about astronomy."}
+  - {id: C39, category: unrelated, seed_id: null, expect: miss, query: "How do I change a flat tire?"}
+  - {id: C40, category: unrelated, seed_id: null, expect: miss, query: "What is the Pythagorean theorem?"}

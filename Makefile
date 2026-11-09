@@ -41,3 +41,32 @@ verify-hw08:
 
 run-log-hw08:
 	PYTHONPATH=code $(PYTHON) -m hw8.run_log
+
+up-hw09:
+	docker compose -f code/hw9/docker-compose.yml up -d
+	docker compose -f code/hw8/docker-compose.yml up -d kafka kafka-init
+
+down-hw09:
+	docker compose -f code/hw9/docker-compose.yml down
+
+run-hw09:
+	PYTHONPATH=code $(PYTHON) -m uvicorn hw9.ingress:app --host 127.0.0.1 --port 8638
+
+part1-hw09:
+	PYTHONPATH=code $(PYTHON) -m hw9.part1_counter_demo
+
+part2-hw09:
+	PYTHONPATH=code $(PYTHON) -m hw9.part2_cache_demo
+
+part3-hw09:
+	PYTHONPATH=code $(PYTHON) -m hw9.part3_sweep
+	PYTHONPATH=code $(PYTHON) -m hw9.part3_stale_demo
+
+part4-hw09:
+	PYTHONPATH=code $(PYTHON) -m hw9.part4.run_part4 all
+
+verify-hw09:
+	PYTHONPATH=code $(PYTHON) -m hw9.verify_hw9
+
+run-log-hw09:
+	PYTHONPATH=code $(PYTHON) -m hw9.run_log

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "V01",
+    "question": "What is the monthly rent for Birch Street?"
+  },
+  {
+    "id": "V02",
+    "question": "How much is the rent at Harbor View per month?"
+  },
+  {
+    "id": "V03",
+    "question": "What is the security deposit for Birch Street?"
+  },
+  {
+    "id": "V04",
+    "question": "What is the pet deposit at Pine Ridge?"
+  },
+  {
+    "id": "V05",
+    "question": "Are pets allowed at Harbor View?"
+  },
+  {
+    "id": "V06",
+    "question": "How long is the lease at Birch Street?"
+  },
+  {
+    "id": "V07",
+    "question": "What parking is available at Harbor View?"
+  },
+  {
+    "id": "V08",
+    "question": "What is the average rent in Tokyo?"
+  },
+  {
+    "id": "V09",
+    "question": "Who wrote the novel Moby Dick?"
+  },
+  {
+    "id": "V10",
+    "question": "What is a good way to learn Spanish quickly?"
+  }
+]

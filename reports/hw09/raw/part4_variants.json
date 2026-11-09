@@ -1,0 +1,1477 @@
+{
+  "table": [
+    {
+      "variant": "Baseline",
+      "questions": 14,
+      "correct": 1,
+      "incorrect": 13,
+      "avg_attempts": 1.0,
+      "avg_latency_ms": 474.8
+    },
+    {
+      "variant": "Evaluator Repair",
+      "questions": 14,
+      "correct": 14,
+      "incorrect": 0,
+      "avg_attempts": 1.93,
+      "avg_latency_ms": 870.8
+    },
+    {
+      "variant": "Lesson Memory",
+      "questions": 14,
+      "correct": 12,
+      "incorrect": 2,
+      "avg_attempts": 1.0,
+      "avg_latency_ms": 485.1
+    },
+    {
+      "variant": "Validated Improvement",
+      "questions": 14,
+      "correct": 12,
+      "incorrect": 2,
+      "avg_attempts": 1.0,
+      "avg_latency_ms": 492.7
+    }
+  ],
+  "details": {
+    "Baseline": [
+      {
+        "id": "X01",
+        "question": "What is the monthly rent for Pine Ridge?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information. Monthly rent for Pine Ridge or any specific property would depend on factors like location, size, and amenities. You should contact the property management or real estate listing for the most accurate information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference monthly rent for Pine Ridge.",
+              "feedback": "Use the reference dataset: Pine Ridge monthly rent is $3,300 per month. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "monthly rent"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information. Monthly rent for Pine Ridge or any specific property would depend on factors like location, size, and amenities. You should contact the property management or real estate listing for the most accurate information.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 1065.3
+      },
+      {
+        "id": "X02",
+        "question": "How much is the monthly rent at Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information. Monthly rent at Oak Terrace would depend on the specific unit size, location, and current market rates. Please contact the property management directly for accurate and up-to-date information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference monthly rent for Oak Terrace.",
+              "feedback": "Use the reference dataset: Oak Terrace monthly rent is $2,750 per month. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "monthly rent"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information. Monthly rent at Oak Terrace would depend on the specific unit size, location, and current market rates. Please contact the property management directly for accurate and up-to-date information.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 1009.3
+      },
+      {
+        "id": "X03",
+        "question": "What is the rent at Lakeside Lofts per month?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference monthly rent for Lakeside Lofts.",
+              "feedback": "Use the reference dataset: Lakeside Lofts monthly rent is $3,950 per month. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "monthly rent"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 258.2
+      },
+      {
+        "id": "X04",
+        "question": "What is the security deposit for Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference security deposit for Oak Terrace.",
+              "feedback": "Use the reference dataset: Oak Terrace security deposit is $2,750. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "security deposit"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 257.3
+      },
+      {
+        "id": "X05",
+        "question": "How much is the security deposit at Lakeside Lofts?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference security deposit for Lakeside Lofts.",
+              "feedback": "Use the reference dataset: Lakeside Lofts security deposit is $3,950. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "security deposit"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 268.4
+      },
+      {
+        "id": "X06",
+        "question": "What is the pet deposit at Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference pet deposit for Oak Terrace.",
+              "feedback": "Use the reference dataset: Oak Terrace pet deposit is $350. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "pet deposit"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 266.5
+      },
+      {
+        "id": "X07",
+        "question": "How much is the pet deposit at Lakeside Lofts?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference pet deposit for Lakeside Lofts.",
+              "feedback": "Use the reference dataset: Lakeside Lofts pet deposit is $450. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "pet deposit"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 272.5
+      },
+      {
+        "id": "X08",
+        "question": "Does Pine Ridge allow pets?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference pet policy for Pine Ridge.",
+              "feedback": "Use the reference dataset: Pine Ridge pet policy is dogs and cats. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "pet policy"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 271.4
+      },
+      {
+        "id": "X09",
+        "question": "How long is the lease term at Lakeside Lofts?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference lease term for Lakeside Lofts.",
+              "feedback": "Use the reference dataset: Lakeside Lofts lease term is 12 months. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "lease term"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 320.8
+      },
+      {
+        "id": "X10",
+        "question": "Which utilities are included in the rent at Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference included utilities for Oak Terrace.",
+              "feedback": "Use the reference dataset: Oak Terrace included utilities is water and trash and gas. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "included utilities"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 293.4
+      },
+      {
+        "id": "X11",
+        "question": "What parking does Pine Ridge have?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference parking for Pine Ridge.",
+              "feedback": "Use the reference dataset: Pine Ridge parking is 1 driveway space. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "parking"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 277.9
+      },
+      {
+        "id": "X12",
+        "question": "What is the typical rent in Chicago?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information. The typical rent in Chicago varies significantly based on location, property type, and size. It's best to check current listings or use online rental platforms for the most accurate and up-to-date information.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The reference data has no facts for this question and the answer correctly declines.",
+              "feedback": null,
+              "failure_type": null,
+              "label": "unrelated"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information. The typical rent in Chicago varies significantly based on location, property type, and size. It's best to check current listings or use online rental platforms for the most accurate and up-to-date information.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 1253.9
+      },
+      {
+        "id": "X13",
+        "question": "What is the boiling point of water at sea level?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The boiling point of water at sea level is 100 degrees Celsius.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The reference data has no facts for this question, but the answer states information anyway.",
+              "feedback": "The reference dataset does not cover this question. Do not answer from general knowledge; say you do not have that information.",
+              "failure_type": "unsupported_answer",
+              "label": "unrelated"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The boiling point of water at sea level is 100 degrees Celsius.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 481.0
+      },
+      {
+        "id": "X14",
+        "question": "Who painted the Mona Lisa?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The Mona Lisa was painted by Leonardo da Vinci.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The reference data has no facts for this question, but the answer states information anyway.",
+              "feedback": "The reference dataset does not cover this question. Do not answer from general knowledge; say you do not have that information.",
+              "failure_type": "unsupported_answer",
+              "label": "unrelated"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The Mona Lisa was painted by Leonardo da Vinci.",
+        "final_result": "REVISE",
+        "lessons_loaded": [],
+        "latency_ms": 351.1
+      }
+    ],
+    "Evaluator Repair": [
+      {
+        "id": "X01",
+        "question": "What is the monthly rent for Pine Ridge?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information. Monthly rent for Pine Ridge or any specific property would depend on factors like location, size, and amenities. You should contact the property management or real estate listing for the most accurate information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference monthly rent for Pine Ridge.",
+              "feedback": "Use the reference dataset: Pine Ridge monthly rent is $3,300 per month. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "monthly rent"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "The monthly rent for Pine Ridge is $3,300.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference monthly rent for Pine Ridge ($3,300 per month).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "monthly rent"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "The monthly rent for Pine Ridge is $3,300.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 1372.2
+      },
+      {
+        "id": "X02",
+        "question": "How much is the monthly rent at Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information. Monthly rent at Oak Terrace would depend on the specific unit size, location, and current market rates. Please contact the property management directly for accurate and up-to-date information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference monthly rent for Oak Terrace.",
+              "feedback": "Use the reference dataset: Oak Terrace monthly rent is $2,750 per month. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "monthly rent"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "The monthly rent at Oak Terrace is $2,750.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference monthly rent for Oak Terrace ($2,750 per month).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "monthly rent"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "The monthly rent at Oak Terrace is $2,750.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 1491.9
+      },
+      {
+        "id": "X03",
+        "question": "What is the rent at Lakeside Lofts per month?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference monthly rent for Lakeside Lofts.",
+              "feedback": "Use the reference dataset: Lakeside Lofts monthly rent is $3,950 per month. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "monthly rent"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "The monthly rent at Lakeside Lofts is $3,950.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference monthly rent for Lakeside Lofts ($3,950 per month).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "monthly rent"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "The monthly rent at Lakeside Lofts is $3,950.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 807.4
+      },
+      {
+        "id": "X04",
+        "question": "What is the security deposit for Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference security deposit for Oak Terrace.",
+              "feedback": "Use the reference dataset: Oak Terrace security deposit is $2,750. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "security deposit"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "The security deposit for Oak Terrace is $2,750.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference security deposit for Oak Terrace ($2,750).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "security deposit"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "The security deposit for Oak Terrace is $2,750.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 755.0
+      },
+      {
+        "id": "X05",
+        "question": "How much is the security deposit at Lakeside Lofts?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference security deposit for Lakeside Lofts.",
+              "feedback": "Use the reference dataset: Lakeside Lofts security deposit is $3,950. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "security deposit"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "The security deposit at Lakeside Lofts is $3,950.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference security deposit for Lakeside Lofts ($3,950).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "security deposit"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "The security deposit at Lakeside Lofts is $3,950.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 831.7
+      },
+      {
+        "id": "X06",
+        "question": "What is the pet deposit at Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference pet deposit for Oak Terrace.",
+              "feedback": "Use the reference dataset: Oak Terrace pet deposit is $350. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "pet deposit"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "The pet deposit at Oak Terrace is $350.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference pet deposit for Oak Terrace ($350).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "pet deposit"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "The pet deposit at Oak Terrace is $350.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 726.7
+      },
+      {
+        "id": "X07",
+        "question": "How much is the pet deposit at Lakeside Lofts?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference pet deposit for Lakeside Lofts.",
+              "feedback": "Use the reference dataset: Lakeside Lofts pet deposit is $450. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "pet deposit"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "The pet deposit at Lakeside Lofts is $450.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference pet deposit for Lakeside Lofts ($450).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "pet deposit"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "The pet deposit at Lakeside Lofts is $450.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 755.7
+      },
+      {
+        "id": "X08",
+        "question": "Does Pine Ridge allow pets?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference pet policy for Pine Ridge.",
+              "feedback": "Use the reference dataset: Pine Ridge pet policy is dogs and cats. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "pet policy"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "Pine Ridge allows dogs and cats as pets.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference pet policy for Pine Ridge (dogs and cats).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "pet policy"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "Pine Ridge allows dogs and cats as pets.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 635.7
+      },
+      {
+        "id": "X09",
+        "question": "How long is the lease term at Lakeside Lofts?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference lease term for Lakeside Lofts.",
+              "feedback": "Use the reference dataset: Lakeside Lofts lease term is 12 months. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "lease term"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "The lease term at Lakeside Lofts is 12 months.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference lease term for Lakeside Lofts (12 months).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "lease term"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "The lease term at Lakeside Lofts is 12 months.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 736.5
+      },
+      {
+        "id": "X10",
+        "question": "Which utilities are included in the rent at Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference included utilities for Oak Terrace.",
+              "feedback": "Use the reference dataset: Oak Terrace included utilities is water and trash and gas. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "included utilities"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "At Oak Terrace, the included utilities in the rent are water, trash, and gas.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference included utilities for Oak Terrace (water and trash and gas).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "included utilities"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "At Oak Terrace, the included utilities in the rent are water, trash, and gas.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 823.3
+      },
+      {
+        "id": "X11",
+        "question": "What parking does Pine Ridge have?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The answer does not give the reference parking for Pine Ridge.",
+              "feedback": "Use the reference dataset: Pine Ridge parking is 1 driveway space. State this exact value.",
+              "failure_type": "missing_value",
+              "label": "parking"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "Pine Ridge provides 1 driveway space for parking.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference parking for Pine Ridge (1 driveway space).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "parking"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "Pine Ridge provides 1 driveway space for parking.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 672.7
+      },
+      {
+        "id": "X12",
+        "question": "What is the typical rent in Chicago?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have that information. The typical rent in Chicago varies significantly based on location, property type, and size. It's best to check current listings or use online rental platforms for the most accurate and up-to-date information.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The reference data has no facts for this question and the answer correctly declines.",
+              "feedback": null,
+              "failure_type": null,
+              "label": "unrelated"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have that information. The typical rent in Chicago varies significantly based on location, property type, and size. It's best to check current listings or use online rental platforms for the most accurate and up-to-date information.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 1033.1
+      },
+      {
+        "id": "X13",
+        "question": "What is the boiling point of water at sea level?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The boiling point of water at sea level is 100 degrees Celsius.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The reference data has no facts for this question, but the answer states information anyway.",
+              "feedback": "The reference dataset does not cover this question. Do not answer from general knowledge; say you do not have that information.",
+              "failure_type": "unsupported_answer",
+              "label": "unrelated"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The reference data has no facts for this question and the answer correctly declines.",
+              "feedback": null,
+              "failure_type": null,
+              "label": "unrelated"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "I don't have that information.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 843.2
+      },
+      {
+        "id": "X14",
+        "question": "Who painted the Mona Lisa?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The Mona Lisa was painted by Leonardo da Vinci.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The reference data has no facts for this question, but the answer states information anyway.",
+              "feedback": "The reference dataset does not cover this question. Do not answer from general knowledge; say you do not have that information.",
+              "failure_type": "unsupported_answer",
+              "label": "unrelated"
+            }
+          },
+          {
+            "attempt": 2,
+            "answer": "I don't have that information.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The reference data has no facts for this question and the answer correctly declines.",
+              "feedback": null,
+              "failure_type": null,
+              "label": "unrelated"
+            }
+          }
+        ],
+        "n_attempts": 2,
+        "final_answer": "I don't have that information.",
+        "final_result": "PASS",
+        "lessons_loaded": [],
+        "latency_ms": 705.7
+      }
+    ],
+    "Lesson Memory": [
+      {
+        "id": "X01",
+        "question": "What is the monthly rent for Pine Ridge?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The monthly rent for Pine Ridge is $3,300.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference monthly rent for Pine Ridge ($3,300 per month).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "monthly rent"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The monthly rent for Pine Ridge is $3,300.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 508.5
+      },
+      {
+        "id": "X02",
+        "question": "How much is the monthly rent at Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The monthly rent at Oak Terrace is $2,750.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference monthly rent for Oak Terrace ($2,750 per month).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "monthly rent"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The monthly rent at Oak Terrace is $2,750.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 322.9
+      },
+      {
+        "id": "X03",
+        "question": "What is the rent at Lakeside Lofts per month?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The rent at Lakeside Lofts is $3,950 per month.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference monthly rent for Lakeside Lofts ($3,950 per month).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "monthly rent"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The rent at Lakeside Lofts is $3,950 per month.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 553.2
+      },
+      {
+        "id": "X04",
+        "question": "What is the security deposit for Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The security deposit for Oak Terrace is $2,750.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference security deposit for Oak Terrace ($2,750).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "security deposit"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The security deposit for Oak Terrace is $2,750.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 478.0
+      },
+      {
+        "id": "X05",
+        "question": "How much is the security deposit at Lakeside Lofts?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The security deposit at Lakeside Lofts is $3,950.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference security deposit for Lakeside Lofts ($3,950).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "security deposit"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The security deposit at Lakeside Lofts is $3,950.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 520.2
+      },
+      {
+        "id": "X06",
+        "question": "What is the pet deposit at Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The pet deposit at Oak Terrace is $350.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference pet deposit for Oak Terrace ($350).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "pet deposit"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The pet deposit at Oak Terrace is $350.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 428.1
+      },
+      {
+        "id": "X07",
+        "question": "How much is the pet deposit at Lakeside Lofts?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The pet deposit at Lakeside Lofts is $450.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference pet deposit for Lakeside Lofts ($450).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "pet deposit"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The pet deposit at Lakeside Lofts is $450.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 482.8
+      },
+      {
+        "id": "X08",
+        "question": "Does Pine Ridge allow pets?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "Pine Ridge allows pets, specifically dogs and cats.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference pet policy for Pine Ridge (dogs and cats).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "pet policy"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "Pine Ridge allows pets, specifically dogs and cats.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 416.3
+      },
+      {
+        "id": "X09",
+        "question": "How long is the lease term at Lakeside Lofts?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The lease term at Lakeside Lofts is 12 months.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference lease term for Lakeside Lofts (12 months).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "lease term"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The lease term at Lakeside Lofts is 12 months.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 467.8
+      },
+      {
+        "id": "X10",
+        "question": "Which utilities are included in the rent at Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The utilities included in the rent at Oak Terrace are water, trash, and gas.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference included utilities for Oak Terrace (water and trash and gas).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "included utilities"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The utilities included in the rent at Oak Terrace are water, trash, and gas.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 400.3
+      },
+      {
+        "id": "X11",
+        "question": "What parking does Pine Ridge have?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "Pine Ridge has 1 driveway space for parking.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference parking for Pine Ridge (1 driveway space).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "parking"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "Pine Ridge has 1 driveway space for parking.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 410.9
+      },
+      {
+        "id": "X12",
+        "question": "What is the typical rent in Chicago?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have the specific information on typical rents in Chicago as my dataset doesn't provide location-specific details beyond the reference dataset.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The reference data has no facts for this question and the answer correctly declines.",
+              "feedback": null,
+              "failure_type": null,
+              "label": "unrelated"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have the specific information on typical rents in Chicago as my dataset doesn't provide location-specific details beyond the reference dataset.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_002"
+        ],
+        "latency_ms": 819.3
+      },
+      {
+        "id": "X13",
+        "question": "What is the boiling point of water at sea level?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The boiling point of water at sea level is 100 degrees Celsius.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The reference data has no facts for this question, but the answer states information anyway.",
+              "feedback": "The reference dataset does not cover this question. Do not answer from general knowledge; say you do not have that information.",
+              "failure_type": "unsupported_answer",
+              "label": "unrelated"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The boiling point of water at sea level is 100 degrees Celsius.",
+        "final_result": "REVISE",
+        "lessons_loaded": [
+          "lesson_002"
+        ],
+        "latency_ms": 573.6
+      },
+      {
+        "id": "X14",
+        "question": "Who painted the Mona Lisa?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The Mona Lisa was painted by Leonardo da Vinci.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The reference data has no facts for this question, but the answer states information anyway.",
+              "feedback": "The reference dataset does not cover this question. Do not answer from general knowledge; say you do not have that information.",
+              "failure_type": "unsupported_answer",
+              "label": "unrelated"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The Mona Lisa was painted by Leonardo da Vinci.",
+        "final_result": "REVISE",
+        "lessons_loaded": [
+          "lesson_002"
+        ],
+        "latency_ms": 409.5
+      }
+    ],
+    "Validated Improvement": [
+      {
+        "id": "X01",
+        "question": "What is the monthly rent for Pine Ridge?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The monthly rent for Pine Ridge is $3,300.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference monthly rent for Pine Ridge ($3,300 per month).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "monthly rent"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The monthly rent for Pine Ridge is $3,300.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 510.8
+      },
+      {
+        "id": "X02",
+        "question": "How much is the monthly rent at Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The monthly rent at Oak Terrace is $2,750.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference monthly rent for Oak Terrace ($2,750 per month).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "monthly rent"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The monthly rent at Oak Terrace is $2,750.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 341.5
+      },
+      {
+        "id": "X03",
+        "question": "What is the rent at Lakeside Lofts per month?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The rent at Lakeside Lofts is $3,950 per month.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference monthly rent for Lakeside Lofts ($3,950 per month).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "monthly rent"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The rent at Lakeside Lofts is $3,950 per month.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 567.0
+      },
+      {
+        "id": "X04",
+        "question": "What is the security deposit for Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The security deposit for Oak Terrace is $2,750.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference security deposit for Oak Terrace ($2,750).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "security deposit"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The security deposit for Oak Terrace is $2,750.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 524.1
+      },
+      {
+        "id": "X05",
+        "question": "How much is the security deposit at Lakeside Lofts?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The security deposit at Lakeside Lofts is $3,950.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference security deposit for Lakeside Lofts ($3,950).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "security deposit"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The security deposit at Lakeside Lofts is $3,950.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 546.7
+      },
+      {
+        "id": "X06",
+        "question": "What is the pet deposit at Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The pet deposit at Oak Terrace is $350.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference pet deposit for Oak Terrace ($350).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "pet deposit"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The pet deposit at Oak Terrace is $350.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 429.3
+      },
+      {
+        "id": "X07",
+        "question": "How much is the pet deposit at Lakeside Lofts?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The pet deposit at Lakeside Lofts is $450.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference pet deposit for Lakeside Lofts ($450).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "pet deposit"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The pet deposit at Lakeside Lofts is $450.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 496.6
+      },
+      {
+        "id": "X08",
+        "question": "Does Pine Ridge allow pets?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "Pine Ridge allows pets, specifically dogs and cats.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference pet policy for Pine Ridge (dogs and cats).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "pet policy"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "Pine Ridge allows pets, specifically dogs and cats.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 419.9
+      },
+      {
+        "id": "X09",
+        "question": "How long is the lease term at Lakeside Lofts?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The lease term at Lakeside Lofts is 12 months.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference lease term for Lakeside Lofts (12 months).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "lease term"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The lease term at Lakeside Lofts is 12 months.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 488.9
+      },
+      {
+        "id": "X10",
+        "question": "Which utilities are included in the rent at Oak Terrace?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The utilities included in the rent at Oak Terrace are water, trash, and gas.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference included utilities for Oak Terrace (water and trash and gas).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "included utilities"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The utilities included in the rent at Oak Terrace are water, trash, and gas.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 435.7
+      },
+      {
+        "id": "X11",
+        "question": "What parking does Pine Ridge have?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "Pine Ridge has 1 driveway space for parking.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The answer matches the reference parking for Pine Ridge (1 driveway space).",
+              "feedback": null,
+              "failure_type": null,
+              "label": "parking"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "Pine Ridge has 1 driveway space for parking.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_001"
+        ],
+        "latency_ms": 441.2
+      },
+      {
+        "id": "X12",
+        "question": "What is the typical rent in Chicago?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "I don't have the specific information on typical rents in Chicago as my dataset doesn't provide location-specific details beyond the reference dataset.",
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "The reference data has no facts for this question and the answer correctly declines.",
+              "feedback": null,
+              "failure_type": null,
+              "label": "unrelated"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "I don't have the specific information on typical rents in Chicago as my dataset doesn't provide location-specific details beyond the reference dataset.",
+        "final_result": "PASS",
+        "lessons_loaded": [
+          "lesson_002"
+        ],
+        "latency_ms": 782.3
+      },
+      {
+        "id": "X13",
+        "question": "What is the boiling point of water at sea level?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The boiling point of water at sea level is 100 degrees Celsius.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The reference data has no facts for this question, but the answer states information anyway.",
+              "feedback": "The reference dataset does not cover this question. Do not answer from general knowledge; say you do not have that information.",
+              "failure_type": "unsupported_answer",
+              "label": "unrelated"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The boiling point of water at sea level is 100 degrees Celsius.",
+        "final_result": "REVISE",
+        "lessons_loaded": [
+          "lesson_002"
+        ],
+        "latency_ms": 519.1
+      },
+      {
+        "id": "X14",
+        "question": "Who painted the Mona Lisa?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": "The Mona Lisa was painted by Leonardo da Vinci.",
+            "evaluation": {
+              "result": "REVISE",
+              "explanation": "The reference data has no facts for this question, but the answer states information anyway.",
+              "feedback": "The reference dataset does not cover this question. Do not answer from general knowledge; say you do not have that information.",
+              "failure_type": "unsupported_answer",
+              "label": "unrelated"
+            }
+          }
+        ],
+        "n_attempts": 1,
+        "final_answer": "The Mona Lisa was painted by Leonardo da Vinci.",
+        "final_result": "REVISE",
+        "lessons_loaded": [
+          "lesson_002"
+        ],
+        "latency_ms": 395.0
+      }
+    ]
+  }
+}

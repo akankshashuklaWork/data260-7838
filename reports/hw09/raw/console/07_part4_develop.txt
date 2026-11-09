@@ -1,0 +1,24 @@
+=== Development: training run (no lessons, no repair) ===
+  T01 REVISE missing_value      What is the monthly rent for Maple Court?
+  T02 REVISE missing_value      What is the monthly rent for Cedar Heights?
+  T03 REVISE missing_value      How much is the rent at Willow Lane each month?
+  T04 REVISE missing_value      What is the security deposit for Maple Court?
+  T05 REVISE missing_value      How much is the security deposit at Willow Lane?
+  T06 REVISE missing_value      What is the pet deposit at Maple Court?
+  T07 REVISE missing_value      How much is the pet deposit at Willow Lane?
+  T08 REVISE missing_value      Does Cedar Heights allow pets?
+  T09 REVISE missing_value      How long is the lease term at Maple Court?
+  T10 REVISE missing_value      Which utilities are included in the rent at Maple Court?
+  T11 REVISE unsupported_answer What is the capital of France?
+  T12 REVISE unsupported_answer How do I bake sourdough bread?
+
+2 candidate lesson(s) from repeated failure patterns
+
+=== Validation (4.3): baseline on validation set: 1/10 correct ===
+  lesson: Before answering a question about a listed property, check the reference datas...
+    correct 1 -> 8  newly correct: ['V01', 'V02', 'V03', 'V04', 'V05', 'V06', 'V07']  regressions: []  => KEEP
+  lesson: If the question is not about a property in the reference dataset, say you don'...
+    correct 8 -> 8  newly correct: []  regressions: []  => KEEP
+  [controlled harmful lesson] correct 8 -> 7  regressions: ['V01']  => REJECT
+
+Saved 2 validated lesson(s) to lessons.json

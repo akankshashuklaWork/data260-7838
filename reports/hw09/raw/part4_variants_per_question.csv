@@ -1,0 +1,57 @@
+variant,id,question,result,attempts,final_answer
+Baseline,X01,What is the monthly rent for Pine Ridge?,REVISE,1,"I don't have that information. Monthly rent for Pine Ridge or any specific property would depend on factors like location, size, and amenities. You should contact the property management or real estate listing for the most accurate information."
+Baseline,X02,How much is the monthly rent at Oak Terrace?,REVISE,1,"I don't have that information. Monthly rent at Oak Terrace would depend on the specific unit size, location, and current market rates. Please contact the property management directly for accurate and up-to-date information."
+Baseline,X03,What is the rent at Lakeside Lofts per month?,REVISE,1,I don't have that information.
+Baseline,X04,What is the security deposit for Oak Terrace?,REVISE,1,I don't have that information.
+Baseline,X05,How much is the security deposit at Lakeside Lofts?,REVISE,1,I don't have that information.
+Baseline,X06,What is the pet deposit at Oak Terrace?,REVISE,1,I don't have that information.
+Baseline,X07,How much is the pet deposit at Lakeside Lofts?,REVISE,1,I don't have that information.
+Baseline,X08,Does Pine Ridge allow pets?,REVISE,1,I don't have that information.
+Baseline,X09,How long is the lease term at Lakeside Lofts?,REVISE,1,I don't have that information.
+Baseline,X10,Which utilities are included in the rent at Oak Terrace?,REVISE,1,I don't have that information.
+Baseline,X11,What parking does Pine Ridge have?,REVISE,1,I don't have that information.
+Baseline,X12,What is the typical rent in Chicago?,PASS,1,"I don't have that information. The typical rent in Chicago varies significantly based on location, property type, and size. It's best to check current listings or use online rental platforms for the most accurate and up-to-date information."
+Baseline,X13,What is the boiling point of water at sea level?,REVISE,1,The boiling point of water at sea level is 100 degrees Celsius.
+Baseline,X14,Who painted the Mona Lisa?,REVISE,1,The Mona Lisa was painted by Leonardo da Vinci.
+Evaluator Repair,X01,What is the monthly rent for Pine Ridge?,PASS,2,"The monthly rent for Pine Ridge is $3,300."
+Evaluator Repair,X02,How much is the monthly rent at Oak Terrace?,PASS,2,"The monthly rent at Oak Terrace is $2,750."
+Evaluator Repair,X03,What is the rent at Lakeside Lofts per month?,PASS,2,"The monthly rent at Lakeside Lofts is $3,950."
+Evaluator Repair,X04,What is the security deposit for Oak Terrace?,PASS,2,"The security deposit for Oak Terrace is $2,750."
+Evaluator Repair,X05,How much is the security deposit at Lakeside Lofts?,PASS,2,"The security deposit at Lakeside Lofts is $3,950."
+Evaluator Repair,X06,What is the pet deposit at Oak Terrace?,PASS,2,The pet deposit at Oak Terrace is $350.
+Evaluator Repair,X07,How much is the pet deposit at Lakeside Lofts?,PASS,2,The pet deposit at Lakeside Lofts is $450.
+Evaluator Repair,X08,Does Pine Ridge allow pets?,PASS,2,Pine Ridge allows dogs and cats as pets.
+Evaluator Repair,X09,How long is the lease term at Lakeside Lofts?,PASS,2,The lease term at Lakeside Lofts is 12 months.
+Evaluator Repair,X10,Which utilities are included in the rent at Oak Terrace?,PASS,2,"At Oak Terrace, the included utilities in the rent are water, trash, and gas."
+Evaluator Repair,X11,What parking does Pine Ridge have?,PASS,2,Pine Ridge provides 1 driveway space for parking.
+Evaluator Repair,X12,What is the typical rent in Chicago?,PASS,1,"I don't have that information. The typical rent in Chicago varies significantly based on location, property type, and size. It's best to check current listings or use online rental platforms for the most accurate and up-to-date information."
+Evaluator Repair,X13,What is the boiling point of water at sea level?,PASS,2,I don't have that information.
+Evaluator Repair,X14,Who painted the Mona Lisa?,PASS,2,I don't have that information.
+Lesson Memory,X01,What is the monthly rent for Pine Ridge?,PASS,1,"The monthly rent for Pine Ridge is $3,300."
+Lesson Memory,X02,How much is the monthly rent at Oak Terrace?,PASS,1,"The monthly rent at Oak Terrace is $2,750."
+Lesson Memory,X03,What is the rent at Lakeside Lofts per month?,PASS,1,"The rent at Lakeside Lofts is $3,950 per month."
+Lesson Memory,X04,What is the security deposit for Oak Terrace?,PASS,1,"The security deposit for Oak Terrace is $2,750."
+Lesson Memory,X05,How much is the security deposit at Lakeside Lofts?,PASS,1,"The security deposit at Lakeside Lofts is $3,950."
+Lesson Memory,X06,What is the pet deposit at Oak Terrace?,PASS,1,The pet deposit at Oak Terrace is $350.
+Lesson Memory,X07,How much is the pet deposit at Lakeside Lofts?,PASS,1,The pet deposit at Lakeside Lofts is $450.
+Lesson Memory,X08,Does Pine Ridge allow pets?,PASS,1,"Pine Ridge allows pets, specifically dogs and cats."
+Lesson Memory,X09,How long is the lease term at Lakeside Lofts?,PASS,1,The lease term at Lakeside Lofts is 12 months.
+Lesson Memory,X10,Which utilities are included in the rent at Oak Terrace?,PASS,1,"The utilities included in the rent at Oak Terrace are water, trash, and gas."
+Lesson Memory,X11,What parking does Pine Ridge have?,PASS,1,Pine Ridge has 1 driveway space for parking.
+Lesson Memory,X12,What is the typical rent in Chicago?,PASS,1,I don't have the specific information on typical rents in Chicago as my dataset doesn't provide location-specific details beyond the reference dataset.
+Lesson Memory,X13,What is the boiling point of water at sea level?,REVISE,1,The boiling point of water at sea level is 100 degrees Celsius.
+Lesson Memory,X14,Who painted the Mona Lisa?,REVISE,1,The Mona Lisa was painted by Leonardo da Vinci.
+Validated Improvement,X01,What is the monthly rent for Pine Ridge?,PASS,1,"The monthly rent for Pine Ridge is $3,300."
+Validated Improvement,X02,How much is the monthly rent at Oak Terrace?,PASS,1,"The monthly rent at Oak Terrace is $2,750."
+Validated Improvement,X03,What is the rent at Lakeside Lofts per month?,PASS,1,"The rent at Lakeside Lofts is $3,950 per month."
+Validated Improvement,X04,What is the security deposit for Oak Terrace?,PASS,1,"The security deposit for Oak Terrace is $2,750."
+Validated Improvement,X05,How much is the security deposit at Lakeside Lofts?,PASS,1,"The security deposit at Lakeside Lofts is $3,950."
+Validated Improvement,X06,What is the pet deposit at Oak Terrace?,PASS,1,The pet deposit at Oak Terrace is $350.
+Validated Improvement,X07,How much is the pet deposit at Lakeside Lofts?,PASS,1,The pet deposit at Lakeside Lofts is $450.
+Validated Improvement,X08,Does Pine Ridge allow pets?,PASS,1,"Pine Ridge allows pets, specifically dogs and cats."
+Validated Improvement,X09,How long is the lease term at Lakeside Lofts?,PASS,1,The lease term at Lakeside Lofts is 12 months.
+Validated Improvement,X10,Which utilities are included in the rent at Oak Terrace?,PASS,1,"The utilities included in the rent at Oak Terrace are water, trash, and gas."
+Validated Improvement,X11,What parking does Pine Ridge have?,PASS,1,Pine Ridge has 1 driveway space for parking.
+Validated Improvement,X12,What is the typical rent in Chicago?,PASS,1,I don't have the specific information on typical rents in Chicago as my dataset doesn't provide location-specific details beyond the reference dataset.
+Validated Improvement,X13,What is the boiling point of water at sea level?,REVISE,1,The boiling point of water at sea level is 100 degrees Celsius.
+Validated Improvement,X14,Who painted the Mona Lisa?,REVISE,1,The Mona Lisa was painted by Leonardo da Vinci.

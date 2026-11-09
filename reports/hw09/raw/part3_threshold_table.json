@@ -1,0 +1,103 @@
+{
+  "cost_per_miss": 1.0,
+  "cost_per_false_hit": 25.0,
+  "table": [
+    {
+      "threshold": 0.75,
+      "queries": 40,
+      "hits": 27,
+      "misses": 13,
+      "false_hits": 7,
+      "missed_hits": 0,
+      "hit_rate": 0.675,
+      "false_hit_rate": 0.35,
+      "false_hit_share_of_hits": 0.2593,
+      "mean_latency_ms": 1639.1,
+      "total_cost": 188.0
+    },
+    {
+      "threshold": 0.8,
+      "queries": 40,
+      "hits": 26,
+      "misses": 14,
+      "false_hits": 6,
+      "missed_hits": 0,
+      "hit_rate": 0.65,
+      "false_hit_rate": 0.3,
+      "false_hit_share_of_hits": 0.2308,
+      "mean_latency_ms": 1760.7,
+      "total_cost": 164.0
+    },
+    {
+      "threshold": 0.85,
+      "queries": 40,
+      "hits": 21,
+      "misses": 19,
+      "false_hits": 4,
+      "missed_hits": 3,
+      "hit_rate": 0.525,
+      "false_hit_rate": 0.2,
+      "false_hit_share_of_hits": 0.1905,
+      "mean_latency_ms": 2481.6,
+      "total_cost": 119.0
+    },
+    {
+      "threshold": 0.9,
+      "queries": 40,
+      "hits": 16,
+      "misses": 24,
+      "false_hits": 3,
+      "missed_hits": 7,
+      "hit_rate": 0.4,
+      "false_hit_rate": 0.15,
+      "false_hit_share_of_hits": 0.1875,
+      "mean_latency_ms": 3082.0,
+      "total_cost": 99.0
+    },
+    {
+      "threshold": 0.95,
+      "queries": 40,
+      "hits": 14,
+      "misses": 26,
+      "false_hits": 1,
+      "missed_hits": 7,
+      "hit_rate": 0.35,
+      "false_hit_rate": 0.05,
+      "false_hit_share_of_hits": 0.0714,
+      "mean_latency_ms": 3305.5,
+      "total_cost": 51.0
+    }
+  ],
+  "sensitivity": {
+    "5": {
+      "costs": {
+        "0.75": 48.0,
+        "0.8": 44.0,
+        "0.85": 39.0,
+        "0.9": 39.0,
+        "0.95": 31.0
+      },
+      "best_threshold": 0.95
+    },
+    "25": {
+      "costs": {
+        "0.75": 188.0,
+        "0.8": 164.0,
+        "0.85": 119.0,
+        "0.9": 99.0,
+        "0.95": 51.0
+      },
+      "best_threshold": 0.95
+    },
+    "100": {
+      "costs": {
+        "0.75": 713.0,
+        "0.8": 614.0,
+        "0.85": 419.0,
+        "0.9": 324.0,
+        "0.95": 126.0
+      },
+      "best_threshold": 0.95
+    }
+  }
+}

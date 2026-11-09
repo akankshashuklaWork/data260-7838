@@ -43,6 +43,8 @@ async def handle(message: dict[str, Any]) -> dict[str, Any]:
     }
     if message.get("entity_id"):
         result["entity_id"] = message["entity_id"]
+    if message.get("context"):  # HW9: record facts that the answer must be based on
+        result["context"] = message["context"]
     return result
 
 

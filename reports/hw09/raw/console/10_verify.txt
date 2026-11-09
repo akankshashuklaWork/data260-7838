@@ -1,0 +1,62 @@
+2026-11-07T08:29:10.648047Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline
+2026-11-07T08:29:10.649406Z [CACHE] stored answer (data_version=static) total_ms=5711.1 pipeline_ms=5.0
+2026-11-07T08:29:10.658362Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='What is a security deposit used for?' latency_ms=8.9
+2026-11-07T08:29:10.667766Z [CACHE] HIT similarity=0.8588 threshold=0.85 matched='What is a security deposit used for?' latency_ms=9.4
+2026-11-07T08:29:10.674458Z [CACHE] MISS best_similarity=0.1141 threshold=0.85 -> running agent pipeline
+2026-11-07T08:29:10.675302Z [CACHE] stored answer (data_version=static) total_ms=7.5 pipeline_ms=5.0
+2026-11-07T08:29:10.689696Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline
+2026-11-07T08:29:10.690521Z [CACHE] stored answer (data_version=1) total_ms=9.0 pipeline_ms=5.0
+2026-11-07T08:29:10.695932Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='What is the monthly rent for the Maple Court two-bedroom apa' latency_ms=4.9
+2026-11-07T08:29:10.701501Z [CACHE] STALE entry for listing 1: stored v1 != current v2 -> invalidated, treating as miss
+2026-11-07T08:29:10.702191Z [CACHE] MISS best_similarity=1.0000 threshold=0.85 -> running agent pipeline
+2026-11-07T08:29:10.703024Z [CACHE] stored answer (data_version=2) total_ms=7.1 pipeline_ms=5.0
+2026-11-07T08:29:10.709712Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='What is the monthly rent for the Maple Court two-bedroom apa' latency_ms=6.7
+{
+  "homework": 9,
+  "SID4": 7838,
+  "commit_hash": "6b0fd1f89da70affffe249986ffa49dc76bb2bb8",
+  "uncommitted_changes_in_code_hw9": true,
+  "model": "qwen2:7b (agents, via Ollama); stand-in agents inside this self-check",
+  "configuration": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "default_threshold": 0.85,
+    "sweep_thresholds": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "redis": "redis-stack-server 7.4 (vector index, COSINE)"
+  },
+  "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
+  "seed": 7838,
+  "verify_seed": 267838,
+  "test_data_sha256": "e3fd91948042cfcb",
+  "passed": true
+}
+PASS  Redis is reachable and the vector index exists
+PASS  Counter returns 1..25 and keys start with the PREFIX
+PASS  Database is written exactly on the 10th and 20th access
+PASS  Miss runs the agent pipeline, stores the answer, and returns is_cached=false
+PASS  Exact duplicate is a hit: is_cached=true, similarity ~1.0, pipeline not run again
+PASS  Paraphrase hits at threshold 0.85 and unrelated question misses
+PASS  Stored entries have a data-version marker
+PASS  Without invalidation the cache returns the stale answer after the record changed
+PASS  Version-marker invalidation recomputes the answer, then the new answer is cached
+PASS  Every Redis key starts with the PREFIX
+PASS  cache_cases.yaml has 40 labeled cases: 10 of each category
+PASS  cache_cases.yaml was committed once, before the sweep results, and is unmodified
+PASS  Threshold table covers 0.75, 0.80, 0.85, 0.90, 0.95 with hit rate, false-hit rate, latency, cost
+PASS  One false hit is recorded in full (both queries, similarity, both answers)
+PASS  Evaluator returns PASS/REVISE against the reference dataset, with feedback only on REVISE
+PASS  Unrelated questions: a refusal passes and an unsupported answer must be revised
+PASS  Training, validation, and test files contain only questions (no expected answers)
+PASS  The three question files do not overlap
+PASS  Stops after the second attempt and reports the final result
+PASS  A controlled flawed initial answer is detected as REVISE
+PASS  A saved lesson is loaded before answering and its use_count increases
+PASS  lessons.json entries have the five required fields
+PASS  Validation gate rejects a lesson that causes a regression
+PASS  Four variants were evaluated on the test set
+PASS  Lessons were created from training data only

@@ -1,0 +1,21 @@
+2026-11-07T08:22:42.507249Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline
+2026-11-07T08:22:47.063064Z [CACHE] stored answer (data_version=static) total_ms=10385.3 pipeline_ms=4554.9
+2026-11-07T08:22:47.470141Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline
+2026-11-07T08:22:52.099578Z [CACHE] stored answer (data_version=static) total_ms=4652.7 pipeline_ms=4628.3
+2026-11-07T08:22:52.132226Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='What is a security deposit used for?' latency_ms=30.9
+2026-11-07T08:22:52.141869Z [CACHE] HIT similarity=0.8588 threshold=0.85 matched='What is a security deposit used for?' latency_ms=8.5
+2026-11-07T08:22:52.150898Z [CACHE] MISS best_similarity=0.4268 threshold=0.85 -> running agent pipeline
+2026-11-07T08:22:55.752904Z [CACHE] stored answer (data_version=static) total_ms=3610.1 pipeline_ms=3601.2
+2026-11-07T08:22:55.779662Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='How many days does a landlord have to return a security depo' latency_ms=25.2
+2026-11-07T08:22:55.787176Z [CACHE] HIT similarity=0.8983 threshold=0.85 matched='How many days does a landlord have to return a security depo' latency_ms=6.6
+2026-11-07T08:22:55.795048Z [CACHE] MISS best_similarity=0.3917 threshold=0.85 -> running agent pipeline
+2026-11-07T08:23:01.662379Z [CACHE] stored answer (data_version=static) total_ms=5874.4 pipeline_ms=5866.7
+2026-11-07T08:23:01.686222Z [CACHE] HIT similarity=0.9645 threshold=0.85 matched='What is a month-to-month lease?' latency_ms=22.9
+2026-11-07T08:23:01.693640Z [CACHE] MISS best_similarity=0.1141 threshold=0.85 -> running agent pipeline
+2026-11-07T08:23:04.861464Z [CACHE] stored answer (data_version=static) total_ms=3174.4 pipeline_ms=3166.5
+2026-11-07T08:23:04.890527Z [CACHE] MISS best_similarity=0.5430 threshold=0.85 -> running agent pipeline
+2026-11-07T08:23:09.186034Z [CACHE] stored answer (data_version=static) total_ms=4323.1 pipeline_ms=4293.5
+2026-11-07T08:23:09.222292Z [CACHE] HIT similarity=0.9434 threshold=0.85 matched='Can a landlord enter my apartment without notice?' latency_ms=34.5
+2026-11-07T08:23:09.229830Z [CACHE] MISS best_similarity=0.5958 threshold=0.85 -> running agent pipeline
+2026-11-07T08:23:14.269670Z [CACHE] stored answer (data_version=static) total_ms=5046.3 pipeline_ms=5038.4
+2026-11-07T08:23:14.301466Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='What is the capital of France?' latency_ms=30.0

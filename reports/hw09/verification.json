@@ -1,0 +1,130 @@
+{
+  "homework": 9,
+  "SID4": 7838,
+  "commit_hash": "6b0fd1f89da70affffe249986ffa49dc76bb2bb8",
+  "uncommitted_changes_in_code_hw9": true,
+  "model": "qwen2:7b (agents, via Ollama); stand-in agents inside this self-check",
+  "configuration": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "default_threshold": 0.85,
+    "sweep_thresholds": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "redis": "redis-stack-server 7.4 (vector index, COSINE)"
+  },
+  "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
+  "seed": 7838,
+  "verify_seed": 267838,
+  "test_data_sha256": "e3fd91948042cfcb",
+  "checks": [
+    {
+      "name": "Redis is reachable and the vector index exists",
+      "passed": true
+    },
+    {
+      "name": "Counter returns 1..25 and keys start with the PREFIX",
+      "passed": true
+    },
+    {
+      "name": "Database is written exactly on the 10th and 20th access",
+      "passed": true
+    },
+    {
+      "name": "Miss runs the agent pipeline, stores the answer, and returns is_cached=false",
+      "passed": true
+    },
+    {
+      "name": "Exact duplicate is a hit: is_cached=true, similarity ~1.0, pipeline not run again",
+      "passed": true,
+      "detail": "pipeline calls after the hit=1"
+    },
+    {
+      "name": "Paraphrase hits at threshold 0.85 and unrelated question misses",
+      "passed": true,
+      "detail": "paraphrase similarity=0.8588, unrelated=0.1141"
+    },
+    {
+      "name": "Stored entries have a data-version marker",
+      "passed": true
+    },
+    {
+      "name": "Without invalidation the cache returns the stale answer after the record changed",
+      "passed": true
+    },
+    {
+      "name": "Version-marker invalidation recomputes the answer, then the new answer is cached",
+      "passed": true
+    },
+    {
+      "name": "Every Redis key starts with the PREFIX",
+      "passed": true,
+      "detail": "stray keys: []"
+    },
+    {
+      "name": "cache_cases.yaml has 40 labeled cases: 10 of each category",
+      "passed": true,
+      "detail": "{\"exact_duplicate\": 10, \"paraphrase\": 10, \"superficially_similar\": 10, \"unrelated\": 10}"
+    },
+    {
+      "name": "cache_cases.yaml was committed once, before the sweep results, and is unmodified",
+      "passed": true
+    },
+    {
+      "name": "Threshold table covers 0.75, 0.80, 0.85, 0.90, 0.95 with hit rate, false-hit rate, latency, cost",
+      "passed": true
+    },
+    {
+      "name": "One false hit is recorded in full (both queries, similarity, both answers)",
+      "passed": true
+    },
+    {
+      "name": "Evaluator returns PASS/REVISE against the reference dataset, with feedback only on REVISE",
+      "passed": true
+    },
+    {
+      "name": "Unrelated questions: a refusal passes and an unsupported answer must be revised",
+      "passed": true
+    },
+    {
+      "name": "Training, validation, and test files contain only questions (no expected answers)",
+      "passed": true
+    },
+    {
+      "name": "The three question files do not overlap",
+      "passed": true
+    },
+    {
+      "name": "Stops after the second attempt and reports the final result",
+      "passed": true
+    },
+    {
+      "name": "A controlled flawed initial answer is detected as REVISE",
+      "passed": true
+    },
+    {
+      "name": "A saved lesson is loaded before answering and its use_count increases",
+      "passed": true
+    },
+    {
+      "name": "lessons.json entries have the five required fields",
+      "passed": true
+    },
+    {
+      "name": "Validation gate rejects a lesson that causes a regression",
+      "passed": true
+    },
+    {
+      "name": "Four variants were evaluated on the test set",
+      "passed": true
+    },
+    {
+      "name": "Lessons were created from training data only",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

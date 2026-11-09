@@ -1,0 +1,71 @@
+[
+  {
+    "step": "first_ask",
+    "answer": "The monthly rent for the Maple Court two-bedroom apartment in San Jose, CA, is $2,450. This includes a security deposit of the same amount. It's important to note that the property allows cats only, with an additional pet deposit of $300. To ensure you have the most current information, it's recommended to check the official website of Maple Court or contact their leasing office directly. Any current promotions or specials should also be confirmed at the time of inquiry.",
+    "is_cached": false,
+    "similarity": 0.0,
+    "latency_ms": 9894.3,
+    "lookup_ms": 5745.6,
+    "pipeline_ms": 4147.2,
+    "matched_query": null,
+    "data_version": "1",
+    "timestamps": {
+      "request_received": 1794040065.460084,
+      "embedded": 1794040071.2045782,
+      "lookup_done": 1794040071.205652,
+      "pipeline_start": 1794040071.2058399,
+      "pipeline_done": 1794040075.3531048
+    }
+  },
+  {
+    "step": "stale_hit",
+    "old_amount_in_answer": true,
+    "answer": "The monthly rent for the Maple Court two-bedroom apartment in San Jose, CA, is $2,450. This includes a security deposit of the same amount. It's important to note that the property allows cats only, with an additional pet deposit of $300. To ensure you have the most current information, it's recommended to check the official website of Maple Court or contact their leasing office directly. Any current promotions or specials should also be confirmed at the time of inquiry.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "latency_ms": 37.4,
+    "lookup_ms": 37.4,
+    "matched_query": "What is the monthly rent for the Maple Court two-bedroom apartment?",
+    "data_version": "1",
+    "timestamps": {
+      "request_received": 1794040075.355936,
+      "embedded": 1794040075.3920078,
+      "lookup_done": 1794040075.39331
+    }
+  },
+  {
+    "step": "after_invalidation",
+    "new_amount_in_answer": true,
+    "answer": "The monthly rent for the Maple Court two-bedroom apartment in San Jose, CA, is $2,650. This includes a security deposit of the same amount. It's important to note that the property allows cats only, with an additional pet deposit of $300. To ensure you have the most current information, it's recommended to check the official website of Maple Court or contact their leasing office directly. Any current promotions or specials should also be confirmed at the time of inquiry.",
+    "is_cached": false,
+    "similarity": 1.0,
+    "latency_ms": 4284.7,
+    "lookup_ms": 7.9,
+    "pipeline_ms": 4275.1,
+    "matched_query": null,
+    "data_version": "2",
+    "timestamps": {
+      "request_received": 1794040075.393557,
+      "embedded": 1794040075.4004211,
+      "lookup_done": 1794040075.401503,
+      "invalidated": 1794040075.402207,
+      "pipeline_start": 1794040075.4022772,
+      "pipeline_done": 1794040079.677372
+    }
+  },
+  {
+    "step": "fresh_hit",
+    "answer": "The monthly rent for the Maple Court two-bedroom apartment in San Jose, CA, is $2,650. This includes a security deposit of the same amount. It's important to note that the property allows cats only, with an additional pet deposit of $300. To ensure you have the most current information, it's recommended to check the official website of Maple Court or contact their leasing office directly. Any current promotions or specials should also be confirmed at the time of inquiry.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "latency_ms": 39.3,
+    "lookup_ms": 39.2,
+    "matched_query": "What is the monthly rent for the Maple Court two-bedroom apartment?",
+    "data_version": "2",
+    "timestamps": {
+      "request_received": 1794040079.678366,
+      "embedded": 1794040079.716395,
+      "lookup_done": 1794040079.7175438
+    }
+  }
+]

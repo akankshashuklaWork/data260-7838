@@ -1,0 +1,249 @@
+{
+  "threshold": 0.85,
+  "queries": 13,
+  "hits": 7,
+  "hit_rate_percent": 53.8,
+  "avg_latency_ms_cached": 22.7,
+  "avg_latency_ms_not_cached": 4446.8,
+  "rows": [
+    {
+      "n": 1,
+      "type": "new",
+      "question": "What is a security deposit used for?",
+      "answer": "A security deposit acts as a financial buffer for landlords to mitigate potential losses due to damages incurred by tenants during their lease period that exceed normal wear and tear. This fund can be utilized to cover expenses related to cleaning, repairs, or to offset any unpaid rent if the tenant vacates the property before the lease expires. Typically, the deposit is refunded to the tenant upon completion of the lease term, after the rental property has been inspected and deemed to be in good condition, with any deductions made for damages that the tenant is responsible for.",
+      "is_cached": false,
+      "similarity": 0.0,
+      "latency_ms": 4652.7,
+      "lookup_ms": 23.2,
+      "pipeline_ms": 4628.3,
+      "matched_query": null,
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039767.4469209,
+        "embedded": 1794039767.469347,
+        "lookup_done": 1794039767.470135,
+        "pipeline_start": 1794039767.470248,
+        "pipeline_done": 1794039772.098598
+      }
+    },
+    {
+      "n": 2,
+      "type": "exact duplicate",
+      "question": "What is a security deposit used for?",
+      "answer": "A security deposit acts as a financial buffer for landlords to mitigate potential losses due to damages incurred by tenants during their lease period that exceed normal wear and tear. This fund can be utilized to cover expenses related to cleaning, repairs, or to offset any unpaid rent if the tenant vacates the property before the lease expires. Typically, the deposit is refunded to the tenant upon completion of the lease term, after the rental property has been inspected and deemed to be in good condition, with any deductions made for damages that the tenant is responsible for.",
+      "is_cached": true,
+      "similarity": 1.0,
+      "latency_ms": 30.9,
+      "lookup_ms": 30.9,
+      "matched_query": "What is a security deposit used for?",
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039772.101315,
+        "embedded": 1794039772.131098,
+        "lookup_done": 1794039772.1322181
+      }
+    },
+    {
+      "n": 3,
+      "type": "paraphrase",
+      "question": "What is a security deposit meant to cover?",
+      "answer": "A security deposit acts as a financial buffer for landlords to mitigate potential losses due to damages incurred by tenants during their lease period that exceed normal wear and tear. This fund can be utilized to cover expenses related to cleaning, repairs, or to offset any unpaid rent if the tenant vacates the property before the lease expires. Typically, the deposit is refunded to the tenant upon completion of the lease term, after the rental property has been inspected and deemed to be in good condition, with any deductions made for damages that the tenant is responsible for.",
+      "is_cached": true,
+      "similarity": 0.8588,
+      "latency_ms": 8.5,
+      "lookup_ms": 8.5,
+      "matched_query": "What is a security deposit used for?",
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039772.13341,
+        "embedded": 1794039772.1406279,
+        "lookup_done": 1794039772.1418612
+      }
+    },
+    {
+      "n": 4,
+      "type": "new",
+      "question": "How many days does a landlord have to return a security deposit after move-out?",
+      "answer": "In most states, a landlord typically has 30 to 60 days from the date a tenant moves out to return the security deposit, minus any deductions for damages beyond normal wear and tear. This timeframe can vary, so it's crucial to consult the specific state's rental laws and the lease agreement for precise details. The landlord must provide a written explanation for any deductions made from the deposit, usually within a week after the inspection. This process ensures transparency and fairness in the handling of security deposits.",
+      "is_cached": false,
+      "similarity": 0.4268,
+      "latency_ms": 3610.1,
+      "lookup_ms": 8.1,
+      "pipeline_ms": 3601.2,
+      "matched_query": null,
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039772.1428108,
+        "embedded": 1794039772.149506,
+        "lookup_done": 1794039772.1508942,
+        "pipeline_start": 1794039772.151021,
+        "pipeline_done": 1794039775.7522008
+      }
+    },
+    {
+      "n": 5,
+      "type": "exact duplicate",
+      "question": "How many days does a landlord have to return a security deposit after move-out?",
+      "answer": "In most states, a landlord typically has 30 to 60 days from the date a tenant moves out to return the security deposit, minus any deductions for damages beyond normal wear and tear. This timeframe can vary, so it's crucial to consult the specific state's rental laws and the lease agreement for precise details. The landlord must provide a written explanation for any deductions made from the deposit, usually within a week after the inspection. This process ensures transparency and fairness in the handling of security deposits.",
+      "is_cached": true,
+      "similarity": 1.0,
+      "latency_ms": 25.2,
+      "lookup_ms": 25.2,
+      "matched_query": "How many days does a landlord have to return a security deposit after move-out?",
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039775.754417,
+        "embedded": 1794039775.7788858,
+        "lookup_done": 1794039775.779655
+      }
+    },
+    {
+      "n": 6,
+      "type": "paraphrase",
+      "question": "Within how many days must a landlord give back my deposit once I move out?",
+      "answer": "In most states, a landlord typically has 30 to 60 days from the date a tenant moves out to return the security deposit, minus any deductions for damages beyond normal wear and tear. This timeframe can vary, so it's crucial to consult the specific state's rental laws and the lease agreement for precise details. The landlord must provide a written explanation for any deductions made from the deposit, usually within a week after the inspection. This process ensures transparency and fairness in the handling of security deposits.",
+      "is_cached": true,
+      "similarity": 0.8983,
+      "latency_ms": 6.6,
+      "lookup_ms": 6.6,
+      "matched_query": "How many days does a landlord have to return a security deposit after move-out?",
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039775.780616,
+        "embedded": 1794039775.786495,
+        "lookup_done": 1794039775.78717
+      }
+    },
+    {
+      "n": 7,
+      "type": "new",
+      "question": "What is a month-to-month lease?",
+      "answer": "A month-to-month lease is a rental agreement that allows tenants to pay rent on a monthly basis without a predetermined end date. This type of lease does not specify a fixed duration, enabling either party to terminate the contract with the appropriate notice period. Typically, rent payments and the landlord's right to evict are linked to the calendar month, necessitating a month's notice for either party to end the agreement. This arrangement offers flexibility for both tenants and landlords, as it allows for easy adjustments to living arrangements. However, it may lack the stability and security provided by leases with set end dates, as either party can terminate the agreement without the need to establish a new contract.",
+      "is_cached": false,
+      "similarity": 0.3917,
+      "latency_ms": 5874.4,
+      "lookup_ms": 7.1,
+      "pipeline_ms": 5866.7,
+      "matched_query": null,
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039775.7879739,
+        "embedded": 1794039775.7944808,
+        "lookup_done": 1794039775.7950442,
+        "pipeline_start": 1794039775.795153,
+        "pipeline_done": 1794039781.6618261
+      }
+    },
+    {
+      "n": 8,
+      "type": "paraphrase",
+      "question": "What does a month to month lease mean?",
+      "answer": "A month-to-month lease is a rental agreement that allows tenants to pay rent on a monthly basis without a predetermined end date. This type of lease does not specify a fixed duration, enabling either party to terminate the contract with the appropriate notice period. Typically, rent payments and the landlord's right to evict are linked to the calendar month, necessitating a month's notice for either party to end the agreement. This arrangement offers flexibility for both tenants and landlords, as it allows for easy adjustments to living arrangements. However, it may lack the stability and security provided by leases with set end dates, as either party can terminate the agreement without the need to establish a new contract.",
+      "is_cached": true,
+      "similarity": 0.9645,
+      "latency_ms": 22.9,
+      "lookup_ms": 22.9,
+      "matched_query": "What is a month-to-month lease?",
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039781.663305,
+        "embedded": 1794039781.685516,
+        "lookup_done": 1794039781.6862159
+      }
+    },
+    {
+      "n": 9,
+      "type": "new",
+      "question": "What is the capital of France?",
+      "answer": "The capital of France is Paris. This vibrant city, often referred to as the \"City of Light,\" is not only the political and cultural center of the country but also a global hub of fashion, art, and gastronomy. Situated in the northern part of France, Paris is renowned for its iconic landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral, attracting millions of visitors each year.",
+      "is_cached": false,
+      "similarity": 0.1141,
+      "latency_ms": 3174.4,
+      "lookup_ms": 6.5,
+      "pipeline_ms": 3166.5,
+      "matched_query": null,
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039781.68709,
+        "embedded": 1794039781.69277,
+        "lookup_done": 1794039781.693633,
+        "pipeline_start": 1794039781.69377,
+        "pipeline_done": 1794039784.860307
+      }
+    },
+    {
+      "n": 10,
+      "type": "new",
+      "question": "Can a landlord enter my apartment without notice?",
+      "answer": "When a landlord wishes to enter a tenant's apartment, they must adhere to both the terms outlined in the lease agreement and local tenant protection laws. Typically, landlords are entitled to enter the property for necessary repairs, safety checks, or to show the property to potential buyers or new tenants. However, they must usually provide reasonable notice, which can vary from a few hours to a full day, depending on the specific regulations in your area. If the landlord enters your apartment without providing the required notice, this action could be considered a violation of your rights. Consulting with a legal advisor is advisable to determine if the landlord's action is permissible under the law and to explore potential remedies, such as seeking compensation or legal action.",
+      "is_cached": false,
+      "similarity": 0.543,
+      "latency_ms": 4323.1,
+      "lookup_ms": 27.6,
+      "pipeline_ms": 4293.5,
+      "matched_query": null,
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039784.862965,
+        "embedded": 1794039784.8897762,
+        "lookup_done": 1794039784.890521,
+        "pipeline_start": 1794039784.890665,
+        "pipeline_done": 1794039789.184196
+      }
+    },
+    {
+      "n": 11,
+      "type": "paraphrase",
+      "question": "Is a landlord allowed to enter my apartment without giving me notice?",
+      "answer": "When a landlord wishes to enter a tenant's apartment, they must adhere to both the terms outlined in the lease agreement and local tenant protection laws. Typically, landlords are entitled to enter the property for necessary repairs, safety checks, or to show the property to potential buyers or new tenants. However, they must usually provide reasonable notice, which can vary from a few hours to a full day, depending on the specific regulations in your area. If the landlord enters your apartment without providing the required notice, this action could be considered a violation of your rights. Consulting with a legal advisor is advisable to determine if the landlord's action is permissible under the law and to explore potential remedies, such as seeking compensation or legal action.",
+      "is_cached": true,
+      "similarity": 0.9434,
+      "latency_ms": 34.5,
+      "lookup_ms": 34.5,
+      "matched_query": "Can a landlord enter my apartment without notice?",
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039789.187818,
+        "embedded": 1794039789.2212029,
+        "lookup_done": 1794039789.222285
+      }
+    },
+    {
+      "n": 12,
+      "type": "new",
+      "question": "What does a lease renewal clause mean?",
+      "answer": "A lease renewal clause in a rental agreement is a contractual provision that grants the tenant the option to extend the lease for a predetermined period. This clause typically specifies the conditions for renewal, including the notice period that both parties must adhere to, any potential payments required for the extension, and the terms that will govern the new lease period. The specifics of the renewal process, such as adjustments to rent or lease conditions, are often detailed within the clause or are negotiated between the landlord and tenant. Essentially, this clause ensures clarity and predictability for both parties regarding the continuation of the rental relationship beyond the initial lease term.",
+      "is_cached": false,
+      "similarity": 0.5958,
+      "latency_ms": 5046.3,
+      "lookup_ms": 6.5,
+      "pipeline_ms": 5038.4,
+      "matched_query": null,
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039789.223336,
+        "embedded": 1794039789.228768,
+        "lookup_done": 1794039789.229826,
+        "pipeline_start": 1794039789.229955,
+        "pipeline_done": 1794039794.268393
+      }
+    },
+    {
+      "n": 13,
+      "type": "exact duplicate",
+      "question": "What is the capital of France?",
+      "answer": "The capital of France is Paris. This vibrant city, often referred to as the \"City of Light,\" is not only the political and cultural center of the country but also a global hub of fashion, art, and gastronomy. Situated in the northern part of France, Paris is renowned for its iconic landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral, attracting millions of visitors each year.",
+      "is_cached": true,
+      "similarity": 1.0,
+      "latency_ms": 30.0,
+      "lookup_ms": 30.0,
+      "matched_query": "What is the capital of France?",
+      "data_version": "static",
+      "timestamps": {
+        "request_received": 1794039794.2714329,
+        "embedded": 1794039794.300679,
+        "lookup_done": 1794039794.3014588
+      }
+    }
+  ]
+}

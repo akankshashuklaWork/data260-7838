@@ -1,0 +1,10 @@
+{
+  "threshold": 0.85,
+  "case_id": "C25",
+  "category": "superficially_similar",
+  "cached_query": "How much notice must a tenant give to end a month-to-month tenancy?",
+  "incoming_query": "How much notice must a landlord give to end a month-to-month tenancy?",
+  "similarity": 0.9808,
+  "cached_answer_returned": "To determine the notice period required for a tenant to end a month-to-month tenancy, one must first identify the local laws governing rental agreements in the specific area where the property is located. These laws can vary significantly by jurisdiction and often dictate the minimum notice period. Next, it is essential to review the lease agreement, as it may contain specific terms that override local laws or provide additional details on notice requirements. Typically, a month-to-month tenancy agreement might stipulate that a tenant must provide at least 30 days' notice before vacating the premises. However, this can vary; some areas might require a notice period of 60 days or more. Therefore, to ensure compliance, tenants should consult local housing regulations and their lease agreement to ascertain the exact notice period required for ending a month-to-month tenancy.",
+  "correct_answer": "In most jurisdictions, a landlord must provide a tenant with at least 30 days' notice before ending a month-to-month tenancy. This period ensures the tenant has sufficient time to prepare for the move. However, specific requirements can vary significantly by location. For instance, in California, landlords are typically required to give a 30-day notice, whereas in New York City, the notice period is often extended to 30 days as well, but the exact requirements can be influenced by the terms of the lease agreement and any applicable local or state laws. It's crucial for landlords to consult local housing regulations and, if necessary, the specific lease agreement to ensure compliance with all legal obligations."
+}

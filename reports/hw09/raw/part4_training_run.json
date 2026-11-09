@@ -1,0 +1,266 @@
+[
+  {
+    "id": "T01",
+    "question": "What is the monthly rent for Maple Court?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "I don't have that information.",
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "The answer does not give the reference monthly rent for Maple Court.",
+          "feedback": "Use the reference dataset: Maple Court monthly rent is $2,450 per month. State this exact value.",
+          "failure_type": "missing_value",
+          "label": "monthly rent"
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "final_answer": "I don't have that information.",
+    "final_result": "REVISE",
+    "lessons_loaded": [],
+    "latency_ms": 322.9
+  },
+  {
+    "id": "T02",
+    "question": "What is the monthly rent for Cedar Heights?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "I don't have that information. Monthly rent for specific properties like Cedar Heights can vary based on location, size, and current market conditions. Please check with a local rental listing service or the property management for the most accurate and up-to-date information.",
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "The answer does not give the reference monthly rent for Cedar Heights.",
+          "feedback": "Use the reference dataset: Cedar Heights monthly rent is $2,900 per month. State this exact value.",
+          "failure_type": "missing_value",
+          "label": "monthly rent"
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "final_answer": "I don't have that information. Monthly rent for specific properties like Cedar Heights can vary based on location, size, and current market conditions. Please check with a local rental listing service or the property management for the most accurate and up-to-date information.",
+    "final_result": "REVISE",
+    "lessons_loaded": [],
+    "latency_ms": 1155.1
+  },
+  {
+    "id": "T03",
+    "question": "How much is the rent at Willow Lane each month?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "I don't have that information. Rent prices can vary and are specific to each property. Please contact the property management or the landlord for the most accurate and current rent amount.",
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "The answer does not give the reference monthly rent for Willow Lane.",
+          "feedback": "Use the reference dataset: Willow Lane monthly rent is $3,600 per month. State this exact value.",
+          "failure_type": "missing_value",
+          "label": "monthly rent"
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "final_answer": "I don't have that information. Rent prices can vary and are specific to each property. Please contact the property management or the landlord for the most accurate and current rent amount.",
+    "final_result": "REVISE",
+    "lessons_loaded": [],
+    "latency_ms": 814.7
+  },
+  {
+    "id": "T04",
+    "question": "What is the security deposit for Maple Court?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "I don't have that information.",
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "The answer does not give the reference security deposit for Maple Court.",
+          "feedback": "Use the reference dataset: Maple Court security deposit is $2,450. State this exact value.",
+          "failure_type": "missing_value",
+          "label": "security deposit"
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "final_answer": "I don't have that information.",
+    "final_result": "REVISE",
+    "lessons_loaded": [],
+    "latency_ms": 238.2
+  },
+  {
+    "id": "T05",
+    "question": "How much is the security deposit at Willow Lane?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "I don't have that information.",
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "The answer does not give the reference security deposit for Willow Lane.",
+          "feedback": "Use the reference dataset: Willow Lane security deposit is $3,600. State this exact value.",
+          "failure_type": "missing_value",
+          "label": "security deposit"
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "final_answer": "I don't have that information.",
+    "final_result": "REVISE",
+    "lessons_loaded": [],
+    "latency_ms": 245.0
+  },
+  {
+    "id": "T06",
+    "question": "What is the pet deposit at Maple Court?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "I don't have that information.",
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "The answer does not give the reference pet deposit for Maple Court.",
+          "feedback": "Use the reference dataset: Maple Court pet deposit is $300. State this exact value.",
+          "failure_type": "missing_value",
+          "label": "pet deposit"
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "final_answer": "I don't have that information.",
+    "final_result": "REVISE",
+    "lessons_loaded": [],
+    "latency_ms": 250.7
+  },
+  {
+    "id": "T07",
+    "question": "How much is the pet deposit at Willow Lane?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "I don't have that information.",
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "The answer does not give the reference pet deposit for Willow Lane.",
+          "feedback": "Use the reference dataset: Willow Lane pet deposit is $500. State this exact value.",
+          "failure_type": "missing_value",
+          "label": "pet deposit"
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "final_answer": "I don't have that information.",
+    "final_result": "REVISE",
+    "lessons_loaded": [],
+    "latency_ms": 256.4
+  },
+  {
+    "id": "T08",
+    "question": "Does Cedar Heights allow pets?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "I don't have that information.",
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "The answer does not give the reference pet policy for Cedar Heights.",
+          "feedback": "Use the reference dataset: Cedar Heights pet policy is no pets. State this exact value.",
+          "failure_type": "missing_value",
+          "label": "pet policy"
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "final_answer": "I don't have that information.",
+    "final_result": "REVISE",
+    "lessons_loaded": [],
+    "latency_ms": 259.5
+  },
+  {
+    "id": "T09",
+    "question": "How long is the lease term at Maple Court?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "I don't have that information.",
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "The answer does not give the reference lease term for Maple Court.",
+          "feedback": "Use the reference dataset: Maple Court lease term is 12 months. State this exact value.",
+          "failure_type": "missing_value",
+          "label": "lease term"
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "final_answer": "I don't have that information.",
+    "final_result": "REVISE",
+    "lessons_loaded": [],
+    "latency_ms": 269.1
+  },
+  {
+    "id": "T10",
+    "question": "Which utilities are included in the rent at Maple Court?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "I don't have that information.",
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "The answer does not give the reference included utilities for Maple Court.",
+          "feedback": "Use the reference dataset: Maple Court included utilities is water and trash. State this exact value.",
+          "failure_type": "missing_value",
+          "label": "included utilities"
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "final_answer": "I don't have that information.",
+    "final_result": "REVISE",
+    "lessons_loaded": [],
+    "latency_ms": 271.8
+  },
+  {
+    "id": "T11",
+    "question": "What is the capital of France?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "The capital of France is Paris.",
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "The reference data has no facts for this question, but the answer states information anyway.",
+          "feedback": "The reference dataset does not cover this question. Do not answer from general knowledge; say you do not have that information.",
+          "failure_type": "unsupported_answer",
+          "label": "unrelated"
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "final_answer": "The capital of France is Paris.",
+    "final_result": "REVISE",
+    "lessons_loaded": [],
+    "latency_ms": 275.4
+  },
+  {
+    "id": "T12",
+    "question": "How do I bake sourdough bread?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "To bake sourdough bread, you need to maintain a sourdough starter, mix it with flour and water, let the dough rise, shape it, and then bake it in a preheated oven at a high temperature for a short period followed by a lower temperature to finish baking.",
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "The reference data has no facts for this question, but the answer states information anyway.",
+          "feedback": "The reference dataset does not cover this question. Do not answer from general knowledge; say you do not have that information.",
+          "failure_type": "unsupported_answer",
+          "label": "unrelated"
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "final_answer": "To bake sourdough bread, you need to maintain a sourdough starter, mix it with flour and water, let the dough rise, shape it, and then bake it in a preheated oven at a high temperature for a short period followed by a lower temperature to finish baking.",
+    "final_result": "REVISE",
+    "lessons_loaded": [],
+    "latency_ms": 1508.7
+  }
+]

@@ -1,0 +1,535 @@
+{
+  "domain": "Rental Housing Listings",
+  "records": [
+    {
+      "id": "P01",
+      "property": "Maple Court",
+      "location": "San Jose, CA",
+      "facts": {
+        "monthly_rent": {
+          "value": "$2,450 per month",
+          "check": {
+            "type": "number",
+            "value": 2450
+          }
+        },
+        "security_deposit": {
+          "value": "$2,450",
+          "check": {
+            "type": "number",
+            "value": 2450
+          }
+        },
+        "pet_policy": {
+          "value": "cats only",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "cat"
+            ],
+            "none": [
+              "dog"
+            ]
+          }
+        },
+        "lease_term_months": {
+          "value": "12 months",
+          "check": {
+            "type": "number",
+            "value": 12
+          }
+        },
+        "utilities_included": {
+          "value": "water and trash",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "water",
+              "trash"
+            ],
+            "none": []
+          }
+        },
+        "parking": {
+          "value": "1 covered space",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "covered"
+            ],
+            "none": []
+          }
+        },
+        "pet_deposit": {
+          "value": "$300",
+          "check": {
+            "type": "number",
+            "value": 300
+          }
+        }
+      }
+    },
+    {
+      "id": "P02",
+      "property": "Cedar Heights",
+      "location": "Sunnyvale, CA",
+      "facts": {
+        "monthly_rent": {
+          "value": "$2,900 per month",
+          "check": {
+            "type": "number",
+            "value": 2900
+          }
+        },
+        "security_deposit": {
+          "value": "$2,900",
+          "check": {
+            "type": "number",
+            "value": 2900
+          }
+        },
+        "pet_policy": {
+          "value": "no pets",
+          "check": {
+            "type": "keywords",
+            "all": [],
+            "any": [
+              "no pets",
+              "no pet",
+              "not allow",
+              "not permitted",
+              "not allowed",
+              "don't allow",
+              "doesn't allow",
+              "prohibit"
+            ],
+            "none": []
+          }
+        },
+        "lease_term_months": {
+          "value": "12 months",
+          "check": {
+            "type": "number",
+            "value": 12
+          }
+        },
+        "utilities_included": {
+          "value": "water and trash and internet",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "water",
+              "trash",
+              "internet"
+            ],
+            "none": []
+          }
+        },
+        "parking": {
+          "value": "1 assigned garage space",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "garage"
+            ],
+            "none": []
+          }
+        }
+      }
+    },
+    {
+      "id": "P03",
+      "property": "Willow Lane",
+      "location": "Santa Clara, CA",
+      "facts": {
+        "monthly_rent": {
+          "value": "$3,600 per month",
+          "check": {
+            "type": "number",
+            "value": 3600
+          }
+        },
+        "security_deposit": {
+          "value": "$3,600",
+          "check": {
+            "type": "number",
+            "value": 3600
+          }
+        },
+        "pet_policy": {
+          "value": "dogs and cats",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "dog",
+              "cat"
+            ],
+            "none": []
+          }
+        },
+        "lease_term_months": {
+          "value": "18 months",
+          "check": {
+            "type": "number",
+            "value": 18
+          }
+        },
+        "utilities_included": {
+          "value": "trash",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "trash"
+            ],
+            "none": []
+          }
+        },
+        "parking": {
+          "value": "2 driveway spaces",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "driveway"
+            ],
+            "none": []
+          }
+        },
+        "pet_deposit": {
+          "value": "$500",
+          "check": {
+            "type": "number",
+            "value": 500
+          }
+        }
+      }
+    },
+    {
+      "id": "P04",
+      "property": "Birch Street",
+      "location": "Mountain View, CA",
+      "facts": {
+        "monthly_rent": {
+          "value": "$4,200 per month",
+          "check": {
+            "type": "number",
+            "value": 4200
+          }
+        },
+        "security_deposit": {
+          "value": "$4,200",
+          "check": {
+            "type": "number",
+            "value": 4200
+          }
+        },
+        "pet_policy": {
+          "value": "pets negotiable",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "negotiable"
+            ],
+            "none": []
+          }
+        },
+        "lease_term_months": {
+          "value": "24 months",
+          "check": {
+            "type": "number",
+            "value": 24
+          }
+        },
+        "utilities_included": {
+          "value": "no utilities",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "no utilities"
+            ],
+            "none": []
+          }
+        },
+        "parking": {
+          "value": "2-car garage",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "garage"
+            ],
+            "none": []
+          }
+        }
+      }
+    },
+    {
+      "id": "P05",
+      "property": "Harbor View",
+      "location": "Oakland, CA",
+      "facts": {
+        "monthly_rent": {
+          "value": "$1,850 per month",
+          "check": {
+            "type": "number",
+            "value": 1850
+          }
+        },
+        "security_deposit": {
+          "value": "$1,850",
+          "check": {
+            "type": "number",
+            "value": 1850
+          }
+        },
+        "pet_policy": {
+          "value": "cats only",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "cat"
+            ],
+            "none": [
+              "dog"
+            ]
+          }
+        },
+        "lease_term_months": {
+          "value": "6 months",
+          "check": {
+            "type": "number",
+            "value": 6
+          }
+        },
+        "utilities_included": {
+          "value": "water and trash",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "water",
+              "trash"
+            ],
+            "none": []
+          }
+        },
+        "parking": {
+          "value": "street parking only",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "street"
+            ],
+            "none": []
+          }
+        },
+        "pet_deposit": {
+          "value": "$250",
+          "check": {
+            "type": "number",
+            "value": 250
+          }
+        }
+      }
+    },
+    {
+      "id": "P06",
+      "property": "Pine Ridge",
+      "location": "Fremont, CA",
+      "facts": {
+        "monthly_rent": {
+          "value": "$3,300 per month",
+          "check": {
+            "type": "number",
+            "value": 3300
+          }
+        },
+        "security_deposit": {
+          "value": "$3,300",
+          "check": {
+            "type": "number",
+            "value": 3300
+          }
+        },
+        "pet_policy": {
+          "value": "dogs and cats",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "dog",
+              "cat"
+            ],
+            "none": []
+          }
+        },
+        "lease_term_months": {
+          "value": "12 months",
+          "check": {
+            "type": "number",
+            "value": 12
+          }
+        },
+        "utilities_included": {
+          "value": "water",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "water"
+            ],
+            "none": []
+          }
+        },
+        "parking": {
+          "value": "1 driveway space",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "driveway"
+            ],
+            "none": []
+          }
+        },
+        "pet_deposit": {
+          "value": "$400",
+          "check": {
+            "type": "number",
+            "value": 400
+          }
+        }
+      }
+    },
+    {
+      "id": "P07",
+      "property": "Oak Terrace",
+      "location": "Palo Alto, CA",
+      "facts": {
+        "monthly_rent": {
+          "value": "$2,750 per month",
+          "check": {
+            "type": "number",
+            "value": 2750
+          }
+        },
+        "security_deposit": {
+          "value": "$2,750",
+          "check": {
+            "type": "number",
+            "value": 2750
+          }
+        },
+        "pet_policy": {
+          "value": "cats only",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "cat"
+            ],
+            "none": [
+              "dog"
+            ]
+          }
+        },
+        "lease_term_months": {
+          "value": "12 months",
+          "check": {
+            "type": "number",
+            "value": 12
+          }
+        },
+        "utilities_included": {
+          "value": "water and trash and gas",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "water",
+              "trash",
+              "gas"
+            ],
+            "none": []
+          }
+        },
+        "parking": {
+          "value": "1 uncovered space",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "uncovered"
+            ],
+            "none": []
+          }
+        },
+        "pet_deposit": {
+          "value": "$350",
+          "check": {
+            "type": "number",
+            "value": 350
+          }
+        }
+      }
+    },
+    {
+      "id": "P08",
+      "property": "Lakeside Lofts",
+      "location": "San Mateo, CA",
+      "facts": {
+        "monthly_rent": {
+          "value": "$3,950 per month",
+          "check": {
+            "type": "number",
+            "value": 3950
+          }
+        },
+        "security_deposit": {
+          "value": "$3,950",
+          "check": {
+            "type": "number",
+            "value": 3950
+          }
+        },
+        "pet_policy": {
+          "value": "dogs and cats",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "dog",
+              "cat"
+            ],
+            "none": []
+          }
+        },
+        "lease_term_months": {
+          "value": "12 months",
+          "check": {
+            "type": "number",
+            "value": 12
+          }
+        },
+        "utilities_included": {
+          "value": "trash and internet",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "trash",
+              "internet"
+            ],
+            "none": []
+          }
+        },
+        "parking": {
+          "value": "1 underground space",
+          "check": {
+            "type": "keywords",
+            "all": [
+              "underground"
+            ],
+            "none": []
+          }
+        },
+        "pet_deposit": {
+          "value": "$450",
+          "check": {
+            "type": "number",
+            "value": 450
+          }
+        }
+      }
+    }
+  ]
+}

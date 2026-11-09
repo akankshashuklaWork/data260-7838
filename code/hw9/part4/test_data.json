@@ -1,0 +1,58 @@
+[
+  {
+    "id": "X01",
+    "question": "What is the monthly rent for Pine Ridge?"
+  },
+  {
+    "id": "X02",
+    "question": "How much is the monthly rent at Oak Terrace?"
+  },
+  {
+    "id": "X03",
+    "question": "What is the rent at Lakeside Lofts per month?"
+  },
+  {
+    "id": "X04",
+    "question": "What is the security deposit for Oak Terrace?"
+  },
+  {
+    "id": "X05",
+    "question": "How much is the security deposit at Lakeside Lofts?"
+  },
+  {
+    "id": "X06",
+    "question": "What is the pet deposit at Oak Terrace?"
+  },
+  {
+    "id": "X07",
+    "question": "How much is the pet deposit at Lakeside Lofts?"
+  },
+  {
+    "id": "X08",
+    "question": "Does Pine Ridge allow pets?"
+  },
+  {
+    "id": "X09",
+    "question": "How long is the lease term at Lakeside Lofts?"
+  },
+  {
+    "id": "X10",
+    "question": "Which utilities are included in the rent at Oak Terrace?"
+  },
+  {
+    "id": "X11",
+    "question": "What parking does Pine Ridge have?"
+  },
+  {
+    "id": "X12",
+    "question": "What is the typical rent in Chicago?"
+  },
+  {
+    "id": "X13",
+    "question": "What is the boiling point of water at sea level?"
+  },
+  {
+    "id": "X14",
+    "question": "Who painted the Mona Lisa?"
+  }
+]

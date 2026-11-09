@@ -1,0 +1,3 @@
+CONTAINER ID   IMAGE                               COMMAND                  CREATED          STATUS                    PORTS                                         NAMES
+d32e44bb07ad   redis/redis-stack-server:7.4.0-v3   "/entrypoint.sh"         18 minutes ago   Up 18 minutes (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   s7838_redis
+c2d98e0152fb   apache/kafka:3.9.2                  "/__cacert_entrypoin…"   5 days ago       Up 17 minutes (healthy)   0.0.0.0:9092->9092/tcp, [::]:9092->9092/tcp   s7838_kafka

@@ -1,0 +1,22 @@
+=== Demo 1 (4.1): one complete revision sequence (controlled flawed first answer) ===
+Question:        What is the monthly rent for Cedar Heights?
+
+Attempt 1 answer: Cedar Heights usually rents for about $2,000 a month.
+  Evaluator result:      REVISE
+  Explanation:           The answer contradicts the reference monthly rent for Cedar Heights.
+  Feedback:              Use the reference dataset: Cedar Heights monthly rent is $2,900 per month. State this exact value.
+
+Attempt 2 answer: The monthly rent for Cedar Heights is $2,900.
+  Evaluator result:      PASS
+  Explanation:           The answer matches the reference monthly rent for Cedar Heights ($2,900 per month).
+
+Number of attempts: 2 (maximum 2)
+Final response:     The monthly rent for Cedar Heights is $2,900.
+Final evaluation:   PASS
+
+=== Demo 2 (4.2): a stored lesson is loaded and reused for a later related question ===
+Later question:  What is the monthly rent at Harbor View?
+Loaded lesson_001: Before answering a question about a listed property, check the reference dataset for that property and state the exact value.
+  use_count 0 -> 1
+Answer:          The monthly rent at Harbor View is $1,850.
+Evaluation:      PASS - The answer matches the reference monthly rent for Harbor View ($1,850 per month).

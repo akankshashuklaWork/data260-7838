@@ -1,0 +1,16 @@
+[
+  {
+    "lesson_id": "lesson_001",
+    "failure_pattern": "The answer gives a wrong or missing value when asked about listed property facts (rent, deposits, pets, lease, utilities, parking).",
+    "correction": "Before answering a question about a listed property, check the reference dataset for that property and state the exact value.",
+    "created_at": "2026-11-07",
+    "use_count": 0
+  },
+  {
+    "lesson_id": "lesson_002",
+    "failure_pattern": "The answer uses general knowledge for a question about unrelated topics that the reference data does not cover.",
+    "correction": "If the question is not about a property in the reference dataset, say you don't have that information instead of answering.",
+    "created_at": "2026-11-07",
+    "use_count": 0
+  }
+]

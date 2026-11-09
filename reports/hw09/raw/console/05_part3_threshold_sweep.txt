@@ -1,0 +1,62 @@
+warm-up run (model loading, not recorded)...
+  [1/50]     4786 ms  What is the maximum security deposit a landlord can charge for an unfu
+  [2/50]     3612 ms  How many days does a landlord have to return a security deposit after 
+  [3/50]     4373 ms  Can a landlord enter my apartment without notice?
+  [4/50]     5830 ms  What is a month-to-month lease?
+  [5/50]     5920 ms  How much notice must a tenant give to end a month-to-month tenancy?
+  [6/50]     5007 ms  What does a lease renewal clause mean?
+  [7/50]     5782 ms  Is renters insurance required by law for tenants?
+  [8/50]     7898 ms  What is the difference between a condo and a townhouse?
+  [9/50]     4593 ms  What is a sublease?
+  [10/50]     4702 ms  What counts as normal wear and tear for a rental?
+  [11/50]     5266 ms  Are landlords allowed to charge a pet deposit for service animals?
+  [12/50]     4779 ms  What should I check during a rental move-in inspection?
+  [13/50]     5229 ms  How do landlords screen tenants, and what is a credit check?
+  [14/50]     5753 ms  What is a co-signer on a lease?
+  [15/50]     4085 ms  How are late rent fees usually calculated?
+  [16/50]     4086 ms  What is the typical length of a residential lease?
+  [17/50]     5003 ms  Who is responsible for repairs in a rental apartment?
+  [18/50]     4414 ms  What is a security deposit used for?
+  [19/50]     5369 ms  What happens if a tenant breaks a lease early?
+  [20/50]     4530 ms  What is an application fee for a rental?
+  [21/50]     5611 ms  Can an owner demand a pet deposit for a service animal?
+  [22/50]     4375 ms  What items should be inspected when moving into a rental unit?
+  [23/50]     6995 ms  How does a landlord screen applicants, and what does a credit check in
+  [24/50]     4718 ms  What does it mean to be a co-signer on a lease?
+  [25/50]     4077 ms  How is a late rent fee typically computed?
+  [26/50]     3440 ms  How long does a standard residential lease usually run?
+  [27/50]     6554 ms  Who has to fix things that break in a rented apartment?
+  [28/50]     4418 ms  What is a security deposit meant to cover?
+  [29/50]     6503 ms  What are the consequences if a renter ends a lease early?
+  [30/50]     3997 ms  What is a rental application fee?
+  [31/50]     4069 ms  What is the maximum security deposit a landlord can charge for a comme
+  [32/50]     3575 ms  How many days does a tenant have to pay the security deposit before mo
+  [33/50]     5145 ms  Can a landlord enter my apartment without notice to make an emergency 
+  [34/50]     3223 ms  What is a fixed-term lease?
+  [35/50]     5012 ms  How much notice must a landlord give to end a month-to-month tenancy?
+  [36/50]     4900 ms  What does a lease termination clause mean?
+  [37/50]     4896 ms  Is renters insurance required by a lease for tenants?
+  [38/50]     7342 ms  What is the difference between a condo and a co-op?
+  [39/50]     4592 ms  What is a lease assignment?
+  [40/50]     6262 ms  What counts as tenant damage beyond normal wear and tear for a rental?
+  [41/50]     3238 ms  What is the capital of France?
+  [42/50]     4651 ms  How do I bake sourdough bread?
+  [43/50]     4411 ms  Who won the 2018 FIFA World Cup?
+  [44/50]     3323 ms  What is the boiling point of water at sea level?
+  [45/50]     3428 ms  How do I convert Celsius to Fahrenheit?
+  [46/50]     8470 ms  Explain how photosynthesis works.
+  [47/50]     3302 ms  What is the speed of light?
+  [48/50]     6704 ms  Recommend a good book about astronomy.
+  [49/50]     5814 ms  How do I change a flat tire?
+  [50/50]     6806 ms  What is the Pythagorean theorem?
+
+Threshold | Hit rate | False-hit rate | Mean latency (ms) | Total cost
+  0.75    |   67.5%  |     35.0%     |       1639.1    |  188.00
+  0.80    |   65.0%  |     30.0%     |       1760.7    |  164.00
+  0.85    |   52.5%  |     20.0%     |       2481.6    |  119.00
+  0.90    |   40.0%  |     15.0%     |       3082.0    |   99.00
+  0.95    |   35.0%  |      5.0%     |       3305.5    |   51.00
+
+Cost sensitivity (cost of a false hit -> best threshold): {'5': 0.95, '25': 0.95, '100': 0.95}
+
+False hit shown for 3.3 (threshold 0.85): C25 vs S05, similarity 0.9808

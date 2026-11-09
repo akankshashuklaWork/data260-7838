@@ -1,0 +1,304 @@
+[2026-11-07T08:22:36+00:00] HW9 reproducible run log (SID4 7838, prefix s7838)
+
+[2026-11-07T08:22:36+00:00] agents and ingress API are running (port 8638)
+[2026-11-07T08:22:47+00:00] warm-up request done (not recorded)
+
+[2026-11-07T08:22:47+00:00] $ docker compose -f code/hw9/docker-compose.yml up -d
+ Container s7838_redis Running
+[2026-11-07T08:22:47+00:00] exit=0
+
+[2026-11-07T08:22:47+00:00] $ docker ps --filter name=s7838_
+CONTAINER ID   IMAGE                               COMMAND                  CREATED          STATUS                    PORTS                                         NAMES
+d32e44bb07ad   redis/redis-stack-server:7.4.0-v3   "/entrypoint.sh"         18 minutes ago   Up 18 minutes (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   s7838_redis
+c2d98e0152fb   apache/kafka:3.9.2                  "/__cacert_entrypoin…"   5 days ago       Up 17 minutes (healthy)   0.0.0.0:9092->9092/tcp, [::]:9092->9092/tcp   s7838_kafka
+[2026-11-07T08:22:47+00:00] exit=0
+
+[2026-11-07T08:22:47+00:00] $ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw9.part1_counter_demo
+=== Testing Counter ===
+
+Access #1: Total = 1
+Access #2: Total = 2
+Access #3: Total = 3
+Access #4: Total = 4
+Access #5: Total = 5
+Access #6: Total = 6
+Access #7: Total = 7
+Access #8: Total = 8
+Access #9: Total = 9
+Access #10: Total = 10
+✓ Synced views to database
+Access #11: Total = 11
+Access #12: Total = 12
+Access #13: Total = 13
+Access #14: Total = 14
+Access #15: Total = 15
+Access #16: Total = 16
+Access #17: Total = 17
+Access #18: Total = 18
+Access #19: Total = 19
+Access #20: Total = 20
+✓ Synced views to database
+Access #21: Total = 21
+Access #22: Total = 22
+Access #23: Total = 23
+Access #24: Total = 24
+Access #25: Total = 25
+
+Redis key s7838:views:listing:1 = 25
+Database view_count for listing 1 = 20 (written only on every 10th view)
+[2026-11-07T08:22:47+00:00] exit=0
+
+[2026-11-07T08:22:47+00:00] $ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw9.part2_cache_demo
+=== Semantic cache test: 13 queries, threshold 0.85 ===
+
+#1  [new            ] is_cached=False similarity=0.0000 latency_ms=   4652.7  What is a security deposit used for?
+#2  [exact duplicate] is_cached=True  similarity=1.0000 latency_ms=     30.9  What is a security deposit used for?
+#3  [paraphrase     ] is_cached=True  similarity=0.8588 latency_ms=      8.5  What is a security deposit meant to cover?
+#4  [new            ] is_cached=False similarity=0.4268 latency_ms=   3610.1  How many days does a landlord have to return a security deposit after move-out?
+#5  [exact duplicate] is_cached=True  similarity=1.0000 latency_ms=     25.2  How many days does a landlord have to return a security deposit after move-out?
+#6  [paraphrase     ] is_cached=True  similarity=0.8983 latency_ms=      6.6  Within how many days must a landlord give back my deposit once I move out?
+#7  [new            ] is_cached=False similarity=0.3917 latency_ms=   5874.4  What is a month-to-month lease?
+#8  [paraphrase     ] is_cached=True  similarity=0.9645 latency_ms=     22.9  What does a month to month lease mean?
+#9  [new            ] is_cached=False similarity=0.1141 latency_ms=   3174.4  What is the capital of France?
+#10 [new            ] is_cached=False similarity=0.5430 latency_ms=   4323.1  Can a landlord enter my apartment without notice?
+#11 [paraphrase     ] is_cached=True  similarity=0.9434 latency_ms=     34.5  Is a landlord allowed to enter my apartment without giving me notice?
+#12 [new            ] is_cached=False similarity=0.5958 latency_ms=   5046.3  What does a lease renewal clause mean?
+#13 [exact duplicate] is_cached=True  similarity=1.0000 latency_ms=     30.0  What is the capital of France?
+
+Cache hit rate: 53.8% (7 of 13 queries)
+Average latency, cached queries:     22.7 ms (7 queries)
+Average latency, non-cached queries: 4,446.8 ms (6 queries)
+[2026-11-07T08:23:14+00:00] exit=0
+
+[2026-11-07T08:23:15+00:00] $ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw9.part3_sweep --refresh
+warm-up run (model loading, not recorded)...
+  [1/50]     4786 ms  What is the maximum security deposit a landlord can charge for an unfu
+  [2/50]     3612 ms  How many days does a landlord have to return a security deposit after 
+  [3/50]     4373 ms  Can a landlord enter my apartment without notice?
+  [4/50]     5830 ms  What is a month-to-month lease?
+  [5/50]     5920 ms  How much notice must a tenant give to end a month-to-month tenancy?
+  [6/50]     5007 ms  What does a lease renewal clause mean?
+  [7/50]     5782 ms  Is renters insurance required by law for tenants?
+  [8/50]     7898 ms  What is the difference between a condo and a townhouse?
+  [9/50]     4593 ms  What is a sublease?
+  [10/50]     4702 ms  What counts as normal wear and tear for a rental?
+  [11/50]     5266 ms  Are landlords allowed to charge a pet deposit for service animals?
+  [12/50]     4779 ms  What should I check during a rental move-in inspection?
+  [13/50]     5229 ms  How do landlords screen tenants, and what is a credit check?
+  [14/50]     5753 ms  What is a co-signer on a lease?
+  [15/50]     4085 ms  How are late rent fees usually calculated?
+  [16/50]     4086 ms  What is the typical length of a residential lease?
+  [17/50]     5003 ms  Who is responsible for repairs in a rental apartment?
+  [18/50]     4414 ms  What is a security deposit used for?
+  [19/50]     5369 ms  What happens if a tenant breaks a lease early?
+  [20/50]     4530 ms  What is an application fee for a rental?
+  [21/50]     5611 ms  Can an owner demand a pet deposit for a service animal?
+  [22/50]     4375 ms  What items should be inspected when moving into a rental unit?
+  [23/50]     6995 ms  How does a landlord screen applicants, and what does a credit check in
+  [24/50]     4718 ms  What does it mean to be a co-signer on a lease?
+  [25/50]     4077 ms  How is a late rent fee typically computed?
+  [26/50]     3440 ms  How long does a standard residential lease usually run?
+  [27/50]     6554 ms  Who has to fix things that break in a rented apartment?
+  [28/50]     4418 ms  What is a security deposit meant to cover?
+  [29/50]     6503 ms  What are the consequences if a renter ends a lease early?
+  [30/50]     3997 ms  What is a rental application fee?
+  [31/50]     4069 ms  What is the maximum security deposit a landlord can charge for a comme
+  [32/50]     3575 ms  How many days does a tenant have to pay the security deposit before mo
+  [33/50]     5145 ms  Can a landlord enter my apartment without notice to make an emergency 
+  [34/50]     3223 ms  What is a fixed-term lease?
+  [35/50]     5012 ms  How much notice must a landlord give to end a month-to-month tenancy?
+  [36/50]     4900 ms  What does a lease termination clause mean?
+  [37/50]     4896 ms  Is renters insurance required by a lease for tenants?
+  [38/50]     7342 ms  What is the difference between a condo and a co-op?
+  [39/50]     4592 ms  What is a lease assignment?
+  [40/50]     6262 ms  What counts as tenant damage beyond normal wear and tear for a rental?
+  [41/50]     3238 ms  What is the capital of France?
+  [42/50]     4651 ms  How do I bake sourdough bread?
+  [43/50]     4411 ms  Who won the 2018 FIFA World Cup?
+  [44/50]     3323 ms  What is the boiling point of water at sea level?
+  [45/50]     3428 ms  How do I convert Celsius to Fahrenheit?
+  [46/50]     8470 ms  Explain how photosynthesis works.
+  [47/50]     3302 ms  What is the speed of light?
+  [48/50]     6704 ms  Recommend a good book about astronomy.
+  [49/50]     5814 ms  How do I change a flat tire?
+  [50/50]     6806 ms  What is the Pythagorean theorem?
+
+Threshold | Hit rate | False-hit rate | Mean latency (ms) | Total cost
+  0.75    |   67.5%  |     35.0%     |       1639.1    |  188.00
+  0.80    |   65.0%  |     30.0%     |       1760.7    |  164.00
+  0.85    |   52.5%  |     20.0%     |       2481.6    |  119.00
+  0.90    |   40.0%  |     15.0%     |       3082.0    |   99.00
+  0.95    |   35.0%  |      5.0%     |       3305.5    |   51.00
+
+Cost sensitivity (cost of a false hit -> best threshold): {'5': 0.95, '25': 0.95, '100': 0.95}
+
+False hit shown for 3.3 (threshold 0.85): C25 vs S05, similarity 0.9808
+[2026-11-07T08:27:45+00:00] exit=0
+
+[2026-11-07T08:27:45+00:00] $ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw9.part3_stale_demo
+Database record: listing 1 Maple Court 2BR monthly_rent=$2,450 data_version=1
+
+--- Step 1: ask once (cache miss, answer is stored with data_version 1) ---
+2026-11-07T08:27:51.205677Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline
+2026-11-07T08:27:55.354370Z [CACHE] stored answer (data_version=1) total_ms=9894.3 pipeline_ms=4147.2
+is_cached=False data_version=1
+Answer: The monthly rent for the Maple Court two-bedroom apartment in San Jose, CA, is $2,450. This includes a security deposit of the same amount. It's important to note that the property allows cats only, with an additional pet deposit of $300. To ensure you have the most current information, it's recommended to check the official website of Maple Court or contact their leasing office directly. Any current promotions or specials should also be confirmed at the time of inquiry.
+
+--- Step 2: update the record so the cached answer becomes stale ---
+Database record now: monthly_rent=$2,650 data_version=2
+
+--- Step 3: ask again with NO invalidation -> the stale answer is returned ---
+2026-11-07T08:27:55.393324Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='What is the monthly rent for the Maple Court two-bedroom apa' latency_ms=37.4
+is_cached=True similarity=1.0 (stored data_version=1, database data_version=2)
+Answer: The monthly rent for the Maple Court two-bedroom apartment in San Jose, CA, is $2,450. This includes a security deposit of the same amount. It's important to note that the property allows cats only, with an additional pet deposit of $300. To ensure you have the most current information, it's recommended to check the official website of Maple Court or contact their leasing office directly. Any current promotions or specials should also be confirmed at the time of inquiry.
+STALE HIT: answer still states the old rent $2,450: True; current rent is $2,650
+
+--- Step 4: invalidation strategy ON (compare the stored data_version with the record) ---
+2026-11-07T08:27:55.401611Z [CACHE] STALE entry for listing 1: stored v1 != current v2 -> invalidated, treating as miss
+2026-11-07T08:27:55.402212Z [CACHE] MISS best_similarity=1.0000 threshold=0.85 -> running agent pipeline
+2026-11-07T08:27:59.678284Z [CACHE] stored answer (data_version=2) total_ms=4284.7 pipeline_ms=4275.1
+is_cached=False data_version=2
+Answer: The monthly rent for the Maple Court two-bedroom apartment in San Jose, CA, is $2,650. This includes a security deposit of the same amount. It's important to note that the property allows cats only, with an additional pet deposit of $300. To ensure you have the most current information, it's recommended to check the official website of Maple Court or contact their leasing office directly. Any current promotions or specials should also be confirmed at the time of inquiry.
+Answer states the new rent $2,650: True
+
+--- Step 5: ask again -> a fresh, correct cache hit ---
+2026-11-07T08:27:59.717674Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='What is the monthly rent for the Maple Court two-bedroom apa' latency_ms=39.3
+is_cached=True similarity=1.0 data_version=2
+
+Trade-off: the version check costs one database read on every cache hit and only protects entries that record which row they depend on; it never serves a stale answer, but a hit is slightly slower.
+[2026-11-07T08:28:00+00:00] exit=0
+
+[2026-11-07T08:28:00+00:00] $ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw9.part4.run_part4 develop
+=== Development: training run (no lessons, no repair) ===
+  T01 REVISE missing_value      What is the monthly rent for Maple Court?
+  T02 REVISE missing_value      What is the monthly rent for Cedar Heights?
+  T03 REVISE missing_value      How much is the rent at Willow Lane each month?
+  T04 REVISE missing_value      What is the security deposit for Maple Court?
+  T05 REVISE missing_value      How much is the security deposit at Willow Lane?
+  T06 REVISE missing_value      What is the pet deposit at Maple Court?
+  T07 REVISE missing_value      How much is the pet deposit at Willow Lane?
+  T08 REVISE missing_value      Does Cedar Heights allow pets?
+  T09 REVISE missing_value      How long is the lease term at Maple Court?
+  T10 REVISE missing_value      Which utilities are included in the rent at Maple Court?
+  T11 REVISE unsupported_answer What is the capital of France?
+  T12 REVISE unsupported_answer How do I bake sourdough bread?
+
+2 candidate lesson(s) from repeated failure patterns
+
+=== Validation (4.3): baseline on validation set: 1/10 correct ===
+  lesson: Before answering a question about a listed property, check the reference datas...
+    correct 1 -> 8  newly correct: ['V01', 'V02', 'V03', 'V04', 'V05', 'V06', 'V07']  regressions: []  => KEEP
+  lesson: If the question is not about a property in the reference dataset, say you don'...
+    correct 8 -> 8  newly correct: []  regressions: []  => KEEP
+  [controlled harmful lesson] correct 8 -> 7  regressions: ['V01']  => REJECT
+
+Saved 2 validated lesson(s) to lessons.json
+[2026-11-07T08:28:30+00:00] exit=0
+
+[2026-11-07T08:28:30+00:00] $ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw9.part4.run_part4 demos
+=== Demo 1 (4.1): one complete revision sequence (controlled flawed first answer) ===
+Question:        What is the monthly rent for Cedar Heights?
+
+Attempt 1 answer: Cedar Heights usually rents for about $2,000 a month.
+  Evaluator result:      REVISE
+  Explanation:           The answer contradicts the reference monthly rent for Cedar Heights.
+  Feedback:              Use the reference dataset: Cedar Heights monthly rent is $2,900 per month. State this exact value.
+
+Attempt 2 answer: The monthly rent for Cedar Heights is $2,900.
+  Evaluator result:      PASS
+  Explanation:           The answer matches the reference monthly rent for Cedar Heights ($2,900 per month).
+
+Number of attempts: 2 (maximum 2)
+Final response:     The monthly rent for Cedar Heights is $2,900.
+Final evaluation:   PASS
+
+=== Demo 2 (4.2): a stored lesson is loaded and reused for a later related question ===
+Later question:  What is the monthly rent at Harbor View?
+Loaded lesson_001: Before answering a question about a listed property, check the reference dataset for that property and state the exact value.
+  use_count 0 -> 1
+Answer:          The monthly rent at Harbor View is $1,850.
+Evaluation:      PASS - The answer matches the reference monthly rent for Harbor View ($1,850 per month).
+[2026-11-07T08:28:31+00:00] exit=0
+
+[2026-11-07T08:28:31+00:00] $ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw9.part4.run_part4 variants
+=== Final evaluation on test_data.json (14 questions, same file for every variant) ===
+Variant                Correct  Incorrect  Avg attempts  Avg latency (ms)
+Baseline                     1         13           1.0             474.8
+Evaluator Repair            14          0          1.93             870.8
+Lesson Memory               12          2           1.0             485.1
+Validated Improvement       12          2           1.0             492.7
+[2026-11-07T08:29:04+00:00] exit=0
+
+[2026-11-07T08:29:04+00:00] $ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m hw9.verify_hw9
+2026-11-07T08:29:10.648047Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline
+2026-11-07T08:29:10.649406Z [CACHE] stored answer (data_version=static) total_ms=5711.1 pipeline_ms=5.0
+2026-11-07T08:29:10.658362Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='What is a security deposit used for?' latency_ms=8.9
+2026-11-07T08:29:10.667766Z [CACHE] HIT similarity=0.8588 threshold=0.85 matched='What is a security deposit used for?' latency_ms=9.4
+2026-11-07T08:29:10.674458Z [CACHE] MISS best_similarity=0.1141 threshold=0.85 -> running agent pipeline
+2026-11-07T08:29:10.675302Z [CACHE] stored answer (data_version=static) total_ms=7.5 pipeline_ms=5.0
+2026-11-07T08:29:10.689696Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline
+2026-11-07T08:29:10.690521Z [CACHE] stored answer (data_version=1) total_ms=9.0 pipeline_ms=5.0
+2026-11-07T08:29:10.695932Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='What is the monthly rent for the Maple Court two-bedroom apa' latency_ms=4.9
+2026-11-07T08:29:10.701501Z [CACHE] STALE entry for listing 1: stored v1 != current v2 -> invalidated, treating as miss
+2026-11-07T08:29:10.702191Z [CACHE] MISS best_similarity=1.0000 threshold=0.85 -> running agent pipeline
+2026-11-07T08:29:10.703024Z [CACHE] stored answer (data_version=2) total_ms=7.1 pipeline_ms=5.0
+2026-11-07T08:29:10.709712Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='What is the monthly rent for the Maple Court two-bedroom apa' latency_ms=6.7
+{
+  "homework": 9,
+  "SID4": 7838,
+  "commit_hash": "6b0fd1f89da70affffe249986ffa49dc76bb2bb8",
+  "uncommitted_changes_in_code_hw9": true,
+  "model": "qwen2:7b (agents, via Ollama); stand-in agents inside this self-check",
+  "configuration": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "default_threshold": 0.85,
+    "sweep_thresholds": [
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "redis": "redis-stack-server 7.4 (vector index, COSINE)"
+  },
+  "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
+  "seed": 7838,
+  "verify_seed": 267838,
+  "test_data_sha256": "e3fd91948042cfcb",
+  "passed": true
+}
+PASS  Redis is reachable and the vector index exists
+PASS  Counter returns 1..25 and keys start with the PREFIX
+PASS  Database is written exactly on the 10th and 20th access
+PASS  Miss runs the agent pipeline, stores the answer, and returns is_cached=false
+PASS  Exact duplicate is a hit: is_cached=true, similarity ~1.0, pipeline not run again
+PASS  Paraphrase hits at threshold 0.85 and unrelated question misses
+PASS  Stored entries have a data-version marker
+PASS  Without invalidation the cache returns the stale answer after the record changed
+PASS  Version-marker invalidation recomputes the answer, then the new answer is cached
+PASS  Every Redis key starts with the PREFIX
+PASS  cache_cases.yaml has 40 labeled cases: 10 of each category
+PASS  cache_cases.yaml was committed once, before the sweep results, and is unmodified
+PASS  Threshold table covers 0.75, 0.80, 0.85, 0.90, 0.95 with hit rate, false-hit rate, latency, cost
+PASS  One false hit is recorded in full (both queries, similarity, both answers)
+PASS  Evaluator returns PASS/REVISE against the reference dataset, with feedback only on REVISE
+PASS  Unrelated questions: a refusal passes and an unsupported answer must be revised
+PASS  Training, validation, and test files contain only questions (no expected answers)
+PASS  The three question files do not overlap
+PASS  Stops after the second attempt and reports the final result
+PASS  A controlled flawed initial answer is detected as REVISE
+PASS  A saved lesson is loaded before answering and its use_count increases
+PASS  lessons.json entries have the five required fields
+PASS  Validation gate rejects a lesson that causes a regression
+PASS  Four variants were evaluated on the test set
+PASS  Lessons were created from training data only
+[2026-11-07T08:29:11+00:00] exit=0
+
+[2026-11-07T08:29:11+00:00] $ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m ruff check code/hw9/__init__.py code/hw9/config.py code/hw9/ingress.py code/hw9/listing_db.py code/hw9/part1_counter_demo.py code/hw9/part2_cache_demo.py code/hw9/part3_stale_demo.py code/hw9/part3_sweep.py code/hw9/part4/__init__.py code/hw9/part4/answering_agent.py code/hw9/part4/evaluator_agent.py code/hw9/part4/lessons.py code/hw9/part4/reference.py code/hw9/part4/run_part4.py code/hw9/pipeline_client.py code/hw9/run_log.py code/hw9/semantic_cache.py code/hw9/verify_hw9.py
+All checks passed!
+[2026-11-07T08:29:11+00:00] exit=0
+
+[2026-11-07T08:29:11+00:00] $ /Users/akanksha/Documents/HW2/data260-7838-github/.venv/bin/python -m ruff format --check code/hw9/__init__.py code/hw9/config.py code/hw9/ingress.py code/hw9/listing_db.py code/hw9/part1_counter_demo.py code/hw9/part2_cache_demo.py code/hw9/part3_stale_demo.py code/hw9/part3_sweep.py code/hw9/part4/__init__.py code/hw9/part4/answering_agent.py code/hw9/part4/evaluator_agent.py code/hw9/part4/lessons.py code/hw9/part4/reference.py code/hw9/part4/run_part4.py code/hw9/pipeline_client.py code/hw9/run_log.py code/hw9/semantic_cache.py code/hw9/verify_hw9.py
+18 files already formatted
+[2026-11-07T08:29:11+00:00] exit=0
+

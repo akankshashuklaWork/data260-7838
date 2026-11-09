@@ -1,0 +1,30 @@
+Database record: listing 1 Maple Court 2BR monthly_rent=$2,450 data_version=1
+
+--- Step 1: ask once (cache miss, answer is stored with data_version 1) ---
+2026-11-07T08:27:51.205677Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline
+2026-11-07T08:27:55.354370Z [CACHE] stored answer (data_version=1) total_ms=9894.3 pipeline_ms=4147.2
+is_cached=False data_version=1
+Answer: The monthly rent for the Maple Court two-bedroom apartment in San Jose, CA, is $2,450. This includes a security deposit of the same amount. It's important to note that the property allows cats only, with an additional pet deposit of $300. To ensure you have the most current information, it's recommended to check the official website of Maple Court or contact their leasing office directly. Any current promotions or specials should also be confirmed at the time of inquiry.
+
+--- Step 2: update the record so the cached answer becomes stale ---
+Database record now: monthly_rent=$2,650 data_version=2
+
+--- Step 3: ask again with NO invalidation -> the stale answer is returned ---
+2026-11-07T08:27:55.393324Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='What is the monthly rent for the Maple Court two-bedroom apa' latency_ms=37.4
+is_cached=True similarity=1.0 (stored data_version=1, database data_version=2)
+Answer: The monthly rent for the Maple Court two-bedroom apartment in San Jose, CA, is $2,450. This includes a security deposit of the same amount. It's important to note that the property allows cats only, with an additional pet deposit of $300. To ensure you have the most current information, it's recommended to check the official website of Maple Court or contact their leasing office directly. Any current promotions or specials should also be confirmed at the time of inquiry.
+STALE HIT: answer still states the old rent $2,450: True; current rent is $2,650
+
+--- Step 4: invalidation strategy ON (compare the stored data_version with the record) ---
+2026-11-07T08:27:55.401611Z [CACHE] STALE entry for listing 1: stored v1 != current v2 -> invalidated, treating as miss
+2026-11-07T08:27:55.402212Z [CACHE] MISS best_similarity=1.0000 threshold=0.85 -> running agent pipeline
+2026-11-07T08:27:59.678284Z [CACHE] stored answer (data_version=2) total_ms=4284.7 pipeline_ms=4275.1
+is_cached=False data_version=2
+Answer: The monthly rent for the Maple Court two-bedroom apartment in San Jose, CA, is $2,650. This includes a security deposit of the same amount. It's important to note that the property allows cats only, with an additional pet deposit of $300. To ensure you have the most current information, it's recommended to check the official website of Maple Court or contact their leasing office directly. Any current promotions or specials should also be confirmed at the time of inquiry.
+Answer states the new rent $2,650: True
+
+--- Step 5: ask again -> a fresh, correct cache hit ---
+2026-11-07T08:27:59.717674Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='What is the monthly rent for the Maple Court two-bedroom apa' latency_ms=39.3
+is_cached=True similarity=1.0 data_version=2
+
+Trade-off: the version check costs one database read on every cache hit and only protects entries that record which row they depend on; it never serves a stale answer, but a hit is slightly slower.

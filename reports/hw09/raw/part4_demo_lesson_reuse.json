@@ -1,0 +1,22 @@
+{
+  "question": "What is the monthly rent at Harbor View?",
+  "lessons_loaded": [
+    "lesson_001"
+  ],
+  "answer": "The monthly rent at Harbor View is $1,850.",
+  "evaluation": {
+    "result": "PASS",
+    "explanation": "The answer matches the reference monthly rent for Harbor View ($1,850 per month).",
+    "feedback": null,
+    "failure_type": null,
+    "label": "monthly rent"
+  },
+  "use_count_before": {
+    "lesson_001": 0,
+    "lesson_002": 0
+  },
+  "use_count_after": {
+    "lesson_001": 1,
+    "lesson_002": 0
+  }
+}

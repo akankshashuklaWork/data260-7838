@@ -1,0 +1,19 @@
+=== Semantic cache test: 13 queries, threshold 0.85 ===
+
+#1  [new            ] is_cached=False similarity=0.0000 latency_ms=   4652.7  What is a security deposit used for?
+#2  [exact duplicate] is_cached=True  similarity=1.0000 latency_ms=     30.9  What is a security deposit used for?
+#3  [paraphrase     ] is_cached=True  similarity=0.8588 latency_ms=      8.5  What is a security deposit meant to cover?
+#4  [new            ] is_cached=False similarity=0.4268 latency_ms=   3610.1  How many days does a landlord have to return a security deposit after move-out?
+#5  [exact duplicate] is_cached=True  similarity=1.0000 latency_ms=     25.2  How many days does a landlord have to return a security deposit after move-out?
+#6  [paraphrase     ] is_cached=True  similarity=0.8983 latency_ms=      6.6  Within how many days must a landlord give back my deposit once I move out?
+#7  [new            ] is_cached=False similarity=0.3917 latency_ms=   5874.4  What is a month-to-month lease?
+#8  [paraphrase     ] is_cached=True  similarity=0.9645 latency_ms=     22.9  What does a month to month lease mean?
+#9  [new            ] is_cached=False similarity=0.1141 latency_ms=   3174.4  What is the capital of France?
+#10 [new            ] is_cached=False similarity=0.5430 latency_ms=   4323.1  Can a landlord enter my apartment without notice?
+#11 [paraphrase     ] is_cached=True  similarity=0.9434 latency_ms=     34.5  Is a landlord allowed to enter my apartment without giving me notice?
+#12 [new            ] is_cached=False similarity=0.5958 latency_ms=   5046.3  What does a lease renewal clause mean?
+#13 [exact duplicate] is_cached=True  similarity=1.0000 latency_ms=     30.0  What is the capital of France?
+
+Cache hit rate: 53.8% (7 of 13 queries)
+Average latency, cached queries:     22.7 ms (7 queries)
+Average latency, non-cached queries: 4,446.8 ms (6 queries)

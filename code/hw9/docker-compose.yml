@@ -1,0 +1,14 @@
+name: hw9
+
+services:
+  # Redis Stack = Redis plus the search module, which provides the vector index used by the semantic cache.
+  redis:
+    image: redis/redis-stack-server:7.4.0-v3
+    container_name: s7838_redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 20

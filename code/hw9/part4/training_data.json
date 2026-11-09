@@ -1,0 +1,50 @@
+[
+  {
+    "id": "T01",
+    "question": "What is the monthly rent for Maple Court?"
+  },
+  {
+    "id": "T02",
+    "question": "What is the monthly rent for Cedar Heights?"
+  },
+  {
+    "id": "T03",
+    "question": "How much is the rent at Willow Lane each month?"
+  },
+  {
+    "id": "T04",
+    "question": "What is the security deposit for Maple Court?"
+  },
+  {
+    "id": "T05",
+    "question": "How much is the security deposit at Willow Lane?"
+  },
+  {
+    "id": "T06",
+    "question": "What is the pet deposit at Maple Court?"
+  },
+  {
+    "id": "T07",
+    "question": "How much is the pet deposit at Willow Lane?"
+  },
+  {
+    "id": "T08",
+    "question": "Does Cedar Heights allow pets?"
+  },
+  {
+    "id": "T09",
+    "question": "How long is the lease term at Maple Court?"
+  },
+  {
+    "id": "T10",
+    "question": "Which utilities are included in the rent at Maple Court?"
+  },
+  {
+    "id": "T11",
+    "question": "What is the capital of France?"
+  },
+  {
+    "id": "T12",
+    "question": "How do I bake sourdough bread?"
+  }
+]

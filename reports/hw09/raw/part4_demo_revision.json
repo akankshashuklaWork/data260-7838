@@ -1,0 +1,32 @@
+{
+  "question": "What is the monthly rent for Cedar Heights?",
+  "attempts": [
+    {
+      "attempt": 1,
+      "answer": "Cedar Heights usually rents for about $2,000 a month.",
+      "evaluation": {
+        "result": "REVISE",
+        "explanation": "The answer contradicts the reference monthly rent for Cedar Heights.",
+        "feedback": "Use the reference dataset: Cedar Heights monthly rent is $2,900 per month. State this exact value.",
+        "failure_type": "wrong_value",
+        "label": "monthly rent"
+      }
+    },
+    {
+      "attempt": 2,
+      "answer": "The monthly rent for Cedar Heights is $2,900.",
+      "evaluation": {
+        "result": "PASS",
+        "explanation": "The answer matches the reference monthly rent for Cedar Heights ($2,900 per month).",
+        "feedback": null,
+        "failure_type": null,
+        "label": "monthly rent"
+      }
+    }
+  ],
+  "n_attempts": 2,
+  "final_answer": "The monthly rent for Cedar Heights is $2,900.",
+  "final_result": "PASS",
+  "lessons_loaded": [],
+  "latency_ms": 510.8
+}

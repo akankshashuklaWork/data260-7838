@@ -1,6 +1,44 @@
-# DATA 260 Homework 1 to 8
+# DATA 260 Homework 1 to 9
 
 Rental Housing Listings - Akanksha Shukla
+
+## HW9: Redis Caching and a Self-Improving Two-Agent System
+
+HW9 adds caching in front of the HW8 system and measures the speed and correctness trade-off. The code is
+in `code/hw9/`. Prefix `s7838`, port 8638, SEED 7838, VERIFY_SEED 267838; every Redis key starts with `s7838`.
+
+- **Part 1:** `listing_db.py` has `increment_listing_views()`, which counts views in Redis with `INCR`
+  and writes the database row on every 10th view. Demo: `part1_counter_demo.py`.
+- **Part 2:** `ingress.py` is a semantic cache in front of the HW8 Planner/Writer/Reviewer pipeline. Query
+  embeddings (all-MiniLM-L6-v2) are stored in a Redis vector index (`semantic_cache.py`) and matched by
+  cosine similarity (starting threshold 0.85). Demo: `part2_cache_demo.py`.
+- **Part 3:** `cache_cases.yaml` has 40 labeled queries (committed before the sweep). `part3_sweep.py` runs
+  thresholds 0.75 to 0.95 and the cost model; `part3_stale_demo.py` shows a stale answer and invalidation.
+- **Part 4:** `part4/` has the Answering Agent, the Evaluator Agent, lessons, the reference dataset, and
+  the training, validation, and test question files. `part4/run_part4.py` runs the four variants.
+
+Start Redis and Kafka, then the HW8 agents and the ingress API (stop the HW8 `api` container first, since
+both use port 8638):
+
+```bash
+make up-hw09
+cd code/hw8 && python planner.py     # terminals 1-3: planner.py, writer.py, reviewer.py
+make run-hw09                        # ingress API on http://127.0.0.1:8638
+```
+
+Run each part from the repository root:
+
+```bash
+make part1-hw09
+make part2-hw09
+make part3-hw09
+make part4-hw09
+make verify-hw09
+make run-log-hw09                    # starts the agents and the API itself, then runs everything
+```
+
+Results, the run log, raw data, metrics, the AI-use disclosure, and `verification.json` are in
+`reports/hw09/`.
 
 ## HW8: Kafka Request/Response, Three-Agent Pipeline, and Failure Behavior
 
@@ -444,6 +482,7 @@ python hw1_client.py
 
 Each assignment has its own folder under `reports/`:
 
+- `reports/hw09/` - HW9 report, run log, cache and agent results, and verification
 - `reports/hw08/` - HW8 report, run log, Kafka failure evidence, and verification
 - `reports/hw04/` - HW4 report, measurements, RAG artifacts, and verification
 - `reports/hw03/` - HW3 report, retrieval evidence, and verification

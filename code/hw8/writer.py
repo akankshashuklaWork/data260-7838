@@ -15,14 +15,19 @@ SYSTEM = (
 )
 
 
-async def write_draft(question: str, plan: list[str]) -> str:
+async def write_draft(question: str, plan: list[str], context: str = "") -> str:
     if SETTINGS.llm_mode == "stub":
         return (
             f"Draft answer to '{question}': first, " + " Then, ".join(plan) + " "
             "Compare these points against the listing details before you decide."
         )
     steps = "\n".join(f"{i}. {step}" for i, step in enumerate(plan, 1))
-    return await ask_model(SYSTEM, f"Question: {question}\nPlan:\n{steps}")
+    facts = (
+        f"\nFacts (use only these facts for any specific numbers or terms): {context}"
+        if context
+        else ""
+    )
+    return await ask_model(SYSTEM, f"Question: {question}{facts}\nPlan:\n{steps}")
 
 
 async def handle(message: dict[str, Any]) -> dict[str, Any]:
@@ -37,7 +42,7 @@ async def handle(message: dict[str, Any]) -> dict[str, Any]:
         "correlation_id": message["correlation_id"],  # preserved unchanged
         "question": question,
         "plan": plan,
-        "draft": await write_draft(question, plan),
+        "draft": await write_draft(question, plan, str(message.get("context") or "")),
     }
     for field in ("entity_id", "seq"):
         if field in message:

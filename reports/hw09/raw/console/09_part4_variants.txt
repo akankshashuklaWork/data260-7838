@@ -1,0 +1,6 @@
+=== Final evaluation on test_data.json (14 questions, same file for every variant) ===
+Variant                Correct  Incorrect  Avg attempts  Avg latency (ms)
+Baseline                     1         13           1.0             474.8
+Evaluator Repair            14          0          1.93             870.8
+Lesson Memory               12          2           1.0             485.1
+Validated Improvement       12          2           1.0             492.7

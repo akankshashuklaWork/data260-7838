@@ -41,4 +41,4 @@ Validation baseline (no lessons): 1 of 10 correct.
 
 ## Self-check
 
-`verification.json`: 25 / 25 checks passed (commit 6b0fd1f89da7).
+`verification.json`: 25 / 25 checks passed (commit ddc193c3fd4f).

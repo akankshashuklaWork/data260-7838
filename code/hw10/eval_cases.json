@@ -1,0 +1,282 @@
+[
+  {
+    "case_id": "C01",
+    "trace_id": "fd0c1e47-3894-401b-967b-ce452d153181",
+    "question": "What should a renter check before signing a lease for a two-bedroom apartment in San Jose?",
+    "context": "",
+    "plan": [
+      "Verify the apartment's condition: Ensure the apartment meets your expectations in terms of cleanliness, functionality, and safety. Check for any damages or repairs needed.",
+      "Review the lease agreement: Thoroughly read through the lease to understand all terms, conditions, and responsibilities. Pay special attention to rent amount, due dates, lease duration, and any restrictions.",
+      "Confirm neighborhood safety and amenities: Research the area around the apartment to ensure it is safe and convenient for your needs, considering factors like proximity to public transportation, grocery stores, and other services."
+    ],
+    "draft": "Before signing a lease for a two-bedroom apartment in San Jose, it's crucial to conduct a comprehensive check to ensure a smooth and satisfactory living experience. First, inspect the apartment meticulously to confirm its condition aligns with your expectations. Look for signs of wear and tear, cleanliness, and safety features. Ensure that all appliances are in working order and that any necessary repairs have been addressed.\n\nNext, carefully review the lease agreement to understand all the terms and conditions. Pay close attention to the rent amount, payment schedule, lease duration, and any restrictions or penalties. Make sure you understand the responsibilities of both the landlord and tenant, including maintenance expectations and allowable alterations.\n\nLastly, research the neighborhood to confirm its safety and convenience. Consider factors such as proximity to public transportation, grocery stores, schools, and other amenities that are important to you. Check crime rates, noise levels, and the overall community atmosphere to ensure the location meets your lifestyle needs. This step is crucial for long-term satisfaction and comfort in your new home.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:38:57.588809Z"
+  },
+  {
+    "case_id": "C02",
+    "trace_id": "663bb1d6-0f1b-4484-bf7b-01c241ed0e28",
+    "question": "How much security deposit can a landlord legally ask for in California?",
+    "context": "",
+    "plan": [
+      "Research state laws: Look up California's specific tenant protection laws, focusing on security deposit regulations.",
+      "Consult local ordinances: Check if there are any additional city or county regulations that apply to security deposits in California.",
+      "Review landlord-tenant guidelines: Examine detailed guidelines provided by legal resources or tenant advocacy groups for clarity on security deposit limits and requirements."
+    ],
+    "draft": "In California, the legal framework for security deposits is governed by the California Tenant Protection Act, also known as AB 1482. This law sets the maximum security deposit that a landlord can legally ask for. For tenants moving into a single-family home or a one-to-four unit building, the landlord can charge up to two months' rent as a security deposit. For larger buildings with five or more units, the deposit is capped at one and a half months' rent. Landlords must provide the tenant with a receipt and must return the deposit, minus any deductions for damages not caused by the tenant's actions, within 21 days after the tenant moves out. Additionally, local cities and counties may have their own ordinances that impose further restrictions or requirements on security deposits, so it's important for both landlords and tenants to be aware of these local regulations.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:39:03.446277Z"
+  },
+  {
+    "case_id": "C03",
+    "trace_id": "24059449-a987-4dd3-a4c7-f202f2e43d40",
+    "question": "How can I tell whether a rental listing is a scam?",
+    "context": "",
+    "plan": [
+      "Verify the contact information: Ensure the landlord's contact details are professional and consistent across the listing and any communications. Scammers often use fake email addresses or phone numbers.",
+      "Check for payment requests: Be wary of requests for upfront payments or fees before viewing the property or signing a lease. Legitimate landlords typically require a deposit or first month's rent after the lease agreement is signed.",
+      "Research the property: Use online resources to search for the property address. If the listing seems too good to be true or the property does not match the description or photos found online, it may be a scam."
+    ],
+    "draft": "To determine if a rental listing is a scam, start by verifying the contact information. A legitimate landlord will provide a professional email address and phone number that matches the listing. Scammers often use fake contact details. Next, be cautious about any requests for immediate payment. Legitimate landlords typically require a deposit or first month's rent after the lease agreement is signed, not before. Finally, research the property online. If the listing's description or photos don't match what you find online, or if the property seems too good to be true, it could be a red flag. Cross-referencing the property address with online databases can help confirm its authenticity.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:39:09.255470Z"
+  },
+  {
+    "case_id": "C04",
+    "trace_id": "11565238-8464-4b03-af10-e569d07d5594",
+    "question": "What is the difference between a fixed-term lease and a month-to-month rental agreement?",
+    "context": "",
+    "plan": [
+      "**Duration and Commitment**: A fixed-term lease has a specific end date agreed upon by both parties, offering a set period of commitment, such as 6 months or 1 year. A month-to-month rental agreement, on the other hand, does not have a defined end date; it continues until either the landlord or tenant gives notice to end the tenancy.",
+      "**Renewal**: In a fixed-term lease, the agreement typically auto-renews for the same period unless one party decides to terminate it before the end date. For a month-to-month rental, the tenancy continues on a rolling basis until either the landlord or tenant provides notice, allowing for more flexibility but also potentially more uncertainty.",
+      "**Termination**: Fixed-term leases often require a specific notice period for either party to end the agreement at the expiration of the lease term. Month-to-month agreements usually require a notice period that is shorter, often just a few weeks, which can affect the stability and predictability of the tenancy."
+    ],
+    "draft": "A fixed-term lease and a month-to-month rental agreement differ fundamentally in their duration, commitment level, and termination processes. A fixed-term lease is characterized by a predetermined end date, offering a structured commitment period, such as six months or a year. This type of agreement typically auto-renews for the same duration unless one party decides to terminate it before the lease expires. Conversely, a month-to-month rental agreement lacks a defined end date, allowing for continuous tenancy until either the landlord or tenant provides notice to end the agreement. This setup provides greater flexibility but may introduce more uncertainty. In terms of renewal, fixed-term leases often require a specific notice period for either party to extend or terminate the agreement at the lease's conclusion. Month-to-month agreements, however, usually necessitate a shorter notice period, typically a few weeks, which can affect the stability and predictability of the tenancy.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:39:18.177679Z"
+  },
+  {
+    "case_id": "C05",
+    "trace_id": "470a064b-291f-4a45-bfe1-48e6374b1ebc",
+    "question": "Can my landlord raise the rent in the middle of a lease?",
+    "context": "",
+    "plan": [
+      "Review your lease agreement to check if it includes any clauses about rent increases during the lease term.",
+      "Consult local rental housing laws to determine if there are restrictions on rent increases during a lease period.",
+      "Contact your landlord or property management to ask about the specific circumstances for rent increase during your lease."
+    ],
+    "draft": "When considering whether your landlord can raise the rent during a lease term, it's crucial to first examine your lease agreement. Most leases specify conditions under which rent adjustments can occur, such as at lease renewal or due to significant property improvements. If your lease does not permit mid-lease rent increases, your landlord's ability to raise the rent might be limited. Additionally, local rental housing laws often provide further guidance, potentially imposing restrictions on rent increases during lease periods, especially if the increase is substantial or occurs frequently. It's advisable to discuss your concerns with your landlord or property management, asking for clarification on their policy and the reasons behind any proposed rent increase. This dialogue can help you understand your rights and potentially negotiate terms that are more favorable to you.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:39:23.170225Z"
+  },
+  {
+    "case_id": "C06",
+    "trace_id": "e8bf45f2-7640-4e75-a9fd-3c6d578649ef",
+    "question": "What should I do if my landlord does not return my security deposit?",
+    "context": "",
+    "plan": [
+      "Review your lease agreement to understand the specific terms and conditions regarding security deposit refunds.",
+      "Send a formal written notice to your landlord, detailing your claim for the security deposit and requesting a prompt response or a detailed explanation of any deductions.",
+      "If the issue remains unresolved, consider seeking mediation through a local tenant-landlord organization or small claims court to legally pursue the return of your deposit."
+    ],
+    "draft": "If you find your landlord has failed to return your security deposit, start by thoroughly reviewing your lease agreement to pinpoint the exact conditions and procedures for deposit refunds. Next, send a formal, written notice to your landlord, clearly stating your claim for the deposit and requesting a timely response or a detailed explanation for any deductions made. If this approach does not yield results, seek assistance from local tenant-landlord organizations or explore legal options through small claims court to legally pursue the return of your deposit. It's crucial to document all communications and actions taken throughout this process for potential legal support.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:39:27.809842Z"
+  },
+  {
+    "case_id": "C07",
+    "trace_id": "8ecf46ec-ed10-496f-9da9-f18f0d544e0b",
+    "question": "Is a pet deposit normally refundable?",
+    "context": "",
+    "plan": [
+      "Research the landlord-tenant laws in your area to understand the regulations on pet deposits.",
+      "Consult the lease agreement for specific terms regarding pet deposits, including conditions for refundability.",
+      "Contact the landlord or property management for clarification on the refundability of the pet deposit based on local laws and lease specifics."
+    ],
+    "draft": "The refundability of a pet deposit typically hinges on local landlord-tenant laws and the specific terms outlined in the lease agreement. Generally, pet deposits are designed to cover potential damages caused by pets. Under most jurisdictions, if the pet does not cause any damage beyond normal wear and tear, the deposit should be fully refundable upon the tenant's departure. However, the exact conditions for refundability can vary widely. For instance, some leases might stipulate that the deposit is non-refundable if the pet damages the property or if the pet is not removed by the end of the lease term. It's crucial to review the lease agreement carefully and understand the landlord's policies. Direct communication with the landlord or property management can provide clarity on whether the pet deposit is refundable and under what conditions.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:39:33.062860Z"
+  },
+  {
+    "case_id": "C08",
+    "trace_id": "e1ab51a0-1b30-46c9-b779-5e99e0073ea4",
+    "question": "What questions should I ask a landlord during a viewing?",
+    "context": "",
+    "plan": [
+      "Can you describe the maintenance history of the property?",
+      "Are there any specific rules or regulations I should be aware of as a tenant?",
+      "What is the process for addressing repairs and maintenance requests?"
+    ],
+    "draft": "When viewing a rental property, it's crucial to ask insightful questions to ensure you understand the dynamics of living there. First, inquire about the maintenance history to gauge the property's condition and the landlord's responsiveness to upkeep. This can give you a clear picture of potential future issues. Next, ask about any specific rules or regulations to ensure they align with your lifestyle and expectations. Understanding these can prevent misunderstandings later. Lastly, clarify the process for addressing repairs and maintenance requests. Knowing how promptly and efficiently issues are handled can significantly impact your living experience, ensuring that any necessary fixes are attended to without delay.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:39:37.134380Z"
+  },
+  {
+    "case_id": "C09",
+    "trace_id": "b8ba1b3c-dec1-453d-9db7-e7df3d4ad9ed",
+    "question": "What are the monthly rent and the pet policy at Maple Court?",
+    "context": "Maple Court 2BR in San Jose, CA (Apartment): monthly rent $2,450, security deposit $2,450, pet policy: cats only, $300 pet deposit.",
+    "plan": [
+      "Visit the official website of Maple Court or search for recent property listings online to find the most current monthly rent information.",
+      "Look for a section on the website dedicated to leasing or rentals, which often includes details on rent amounts and policies.",
+      "Check for any specific sections on pet policies, which may detail whether pets are allowed, the types of pets, and any associated fees or restrictions."
+    ],
+    "draft": "As of the most recent information available, the monthly rent for a 2-bedroom apartment at Maple Court in San Jose, CA, is $2,450. The security deposit matches the monthly rent amount at $2,450. In terms of pet policy, Maple Court allows cats only, with a pet deposit of $300. For the most accurate and up-to-date information, it's advisable to visit the official Maple Court website or contact the leasing office directly, as policies and prices can change over time.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:39:41.875206Z"
+  },
+  {
+    "case_id": "C10",
+    "trace_id": "2126f15c-4d62-4225-a16e-2f05c17e8854",
+    "question": "How much is the security deposit at Cedar Heights, and what type of property is it?",
+    "context": "Cedar Heights 1BR in Sunnyvale, CA (Condo): monthly rent $2,900, security deposit $2,900, pet policy: no pets.",
+    "plan": [
+      "Visit the official Cedar Heights website or contact their leasing office directly to inquire about the security deposit amount.",
+      "Look for information on the property type, such as apartment, townhouse, or studio, which is typically listed on the website or provided by the leasing agent.",
+      "Confirm any additional details about amenities, location, or specific property features that might be relevant to your needs."
+    ],
+    "draft": "The security deposit at Cedar Heights, a 1-bedroom condo located in Sunnyvale, California, is set at $2,900. This property is classified as a condo, offering a distinct living experience compared to apartments or townhouses. Sunnyvale, known for its pleasant climate and proximity to Silicon Valley, provides residents with access to a vibrant community and numerous tech industry connections. Amenities at Cedar Heights might include features such as a gym, pool, or secure parking, which are typically highlighted on the official website or discussed during a property tour. It's important to note that the property does not allow pets, which might be a consideration for those with furry companions.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:39:47.128868Z"
+  },
+  {
+    "case_id": "C11",
+    "trace_id": "d6f8d44b-b187-497c-872c-eaf4c8fda57b",
+    "question": "Can I keep a dog at Willow Lane?",
+    "context": "Willow Lane Townhouse in Santa Clara, CA (Townhouse): monthly rent $3,600, security deposit $3,600, pet policy: dogs and cats, $500 pet deposit.",
+    "plan": [
+      "Review the rental agreement for any pet policies.",
+      "Contact the landlord to inquire about pet allowances.",
+      "Present any necessary documentation or guarantees for the dog."
+    ],
+    "draft": "To determine if you can keep a dog at Willow Lane Townhouse in Santa Clara, CA, you should first review the rental agreement for any specific pet policies. Typically, the fact that the property allows dogs and cats suggests that pets are generally permitted. However, it's crucial to check for any restrictions on dog breeds, size limits, or additional fees. The mention of a $500 pet deposit indicates that there might be an upfront cost associated with having a pet.\n\nNext, it's advisable to contact the landlord or property management directly to confirm the pet policy and discuss any specific requirements or guidelines for having a dog. You might need to provide documentation such as proof of your dog's vaccinations, a letter from your veterinarian, or a pet behavior guarantee to demonstrate that your dog will not cause damage or disturb neighbors.\n\nBy following these steps, you can ensure that you have a clear understanding of whether keeping a dog at Willow Lane is feasible and what the necessary steps are to make it happen.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:39:52.829285Z"
+  },
+  {
+    "case_id": "C12",
+    "trace_id": "67b1c685-1b96-4f1e-b826-c0ea2896d8c3",
+    "question": "Is Birch Street more expensive per month than Harbor View?",
+    "context": "Birch Street House in Mountain View, CA (House): monthly rent $4,200, security deposit $4,200, pet policy: pets negotiable.",
+    "plan": [
+      "Research the average monthly rent for Birch Street properties.",
+      "Gather information on the average monthly rent for Harbor View properties.",
+      "Compare the two averages to determine which location is more expensive per month."
+    ],
+    "draft": "To accurately answer the question about whether Birch Street is more expensive per month than Harbor View, we need to compare the average monthly rents for properties in these two locations. However, since specific data for Birch Street and Harbor View are not provided, we can only discuss the general approach.\n\nFirst, we would research the average monthly rent for properties on Birch Street in Mountain View, CA. Given that the provided information only includes details for a single property on Birch Street, it's not sufficient to determine the average rent for all properties there. Typically, this would involve looking at listings, rental agreements, or real estate databases for a broader range of properties.\n\nSecond, we would gather information on the average monthly rent for properties in Harbor View. This would involve similar research methods, such as examining listings, rental agreements, or real estate data, to find the average rent for properties in this area.\n\nFinally, by comparing these averages, we could determine which location has a higher average monthly rent. Without specific data, we cannot definitively state that Birch Street is more expensive than Harbor View. The actual comparison would require detailed information on the average rents for both locations.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:39:59.354744Z"
+  },
+  {
+    "case_id": "C13",
+    "trace_id": "5a5ff856-b071-4b02-8e65-ccd41c852950",
+    "question": "What are the monthly rent and the location of Pine Ridge?",
+    "context": "Pine Ridge 3BR in Fremont, CA (House): monthly rent $3,300, security deposit $3,300, pet policy: dogs and cats, $400 pet deposit.",
+    "plan": [
+      "Identify the specific listing or source for Pine Ridge rental information.",
+      "Review the details provided for Pine Ridge to find the monthly rent amount.",
+      "Note or record the location details of Pine Ridge as described in the source."
+    ],
+    "draft": "Pine Ridge offers a 3-bedroom house for rent in Fremont, California. The monthly rent for this property is $3,300, and it includes a security deposit of the same amount. Pine Ridge's pet policy is accommodating, allowing both dogs and cats, with a pet deposit of $400 required.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:40:02.508783Z"
+  },
+  {
+    "case_id": "C14",
+    "trace_id": "bf7ecebf-df82-4e72-a7b7-b527da1a116c",
+    "question": "Is the place any good?",
+    "context": "",
+    "plan": [
+      "Define \"good\" based on specific criteria such as location, price, amenities, and safety.",
+      "Research the property thoroughly, including online reviews, local crime statistics, and neighborhood information.",
+      "Compare the findings with your defined criteria to make a comprehensive assessment of the place."
+    ],
+    "draft": "To determine if a rental property is \"good,\" one must consider several key factors: location, price, amenities, and safety. Location should be convenient for daily needs, such as proximity to public transportation, grocery stores, and healthcare facilities. Price should align with the local market, ensuring the rent is reasonable compared to the property's size and condition. Amenities, including parking, laundry facilities, and community spaces, enhance the living experience. Safety involves checking local crime rates and the property's security measures. By researching online reviews, local crime statistics, and neighborhood information, one can gather comprehensive data. Comparing these findings against the defined criteria allows for a thorough assessment. If the property scores well across all these aspects, it can be considered \"good.\"",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:40:07.653480Z"
+  },
+  {
+    "case_id": "C15",
+    "trace_id": "904b73f3-4b42-443c-b404-94ba1d6daed9",
+    "question": "What is the monthly rent at Oak Meadows?",
+    "context": "",
+    "plan": [
+      "Identify the specific Oak Meadows location or property type (e.g., studio, one-bedroom, etc.).",
+      "Search for the most recent rental listings or contact the property management directly for the current monthly rent.",
+      "Verify the information by checking multiple sources or the property’s official website for the most accurate and up-to-date rent amount."
+    ],
+    "draft": "To determine the monthly rent at Oak Meadows, one must first specify the exact location or property type, such as whether it's Oak Meadows in a particular city or a specific type of apartment within the complex. Once the precise property is identified, the next step involves searching for the most recent rental listings, which can typically be found on real estate websites, classified ads, or directly through the property management. It's crucial to verify the information by cross-referencing with the property's official website or contacting the management directly for the most accurate and up-to-date rent amount. This process ensures that the rent figure provided is current and reflects any recent changes or adjustments in pricing.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:40:12.601411Z"
+  },
+  {
+    "case_id": "C16",
+    "trace_id": "0bba406c-0613-4f5d-b0ba-e07db3c9cbbb",
+    "question": "Write a short poem about the stock market.",
+    "context": "",
+    "plan": [
+      "Begin by setting the tone and theme of the poem, focusing on the dynamic and often unpredictable nature of the stock market.",
+      "Incorporate metaphors or analogies that compare the stock market to natural phenomena or human emotions to convey its volatility and impact on people's lives.",
+      "Conclude with a reflective or hopeful note, suggesting that despite its unpredictability, the stock market offers opportunities for growth and learning."
+    ],
+    "draft": "In the market's vast, fluctuating sea,\nWhere stocks dance with the winds of destiny,\nBeneath the sun's golden rays, or under the moon's silver glow,\nInvestors navigate, their fates aglow.\n\nThe market, a tempestuous sea, where fortunes are born and die,\nA rollercoaster ride, where dreams soar high or crash to the ground,\nA symphony of risk and reward, where hope and fear are intertwined,\nA labyrinth of numbers, where the future's path is never defined.\n\nYet, in this ever-changing dance, where the market's rhythm takes control,\nLies a lesson in resilience, in adapting and learning to unfold.\nFor every fall, a rise, in the cycle of market's endless play,\nTeaches us to trust, to dream, and to find our way.\n\nSo, in the market's unpredictable embrace,\nSeek wisdom, courage, and a steadfast grace.\nFor within its chaos, lies the seed of growth,\nA journey of self-discovery, where every step is a new dawn.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:40:19.628913Z"
+  },
+  {
+    "case_id": "C17",
+    "trace_id": "87519076-7963-4a0f-a456-59871772e3f9",
+    "question": "What is the exact square footage of Harbor View?",
+    "context": "Harbor View Studio in Oakland, CA (Apartment): monthly rent $1,850, security deposit $1,850, pet policy: cats only, $250 pet deposit.",
+    "plan": [
+      "Identify the specific source of information about Harbor View, such as the property's official website, real estate listings, or local property records.",
+      "Locate the square footage details for Harbor View within the source. This information is typically found in the property description or specifications section.",
+      "Confirm the accuracy of the square footage by cross-referencing with multiple sources if possible, or by contacting a real estate professional for verification."
+    ],
+    "draft": "To determine the exact square footage of Harbor View, one should start by accessing the property's official website or real estate listings where detailed information about the apartment is usually provided. Typically, this data is found in the property description or specifications section. It's advisable to cross-reference this information with local property records or consult with a real estate professional for verification. Without direct access to these sources, providing a specific square footage figure for Harbor View is not possible. However, the details about the monthly rent ($1,850), security deposit ($1,850), and pet policy (allowing cats with a $250 pet deposit) can be confirmed independently of the square footage.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:40:25.186320Z"
+  },
+  {
+    "case_id": "C18",
+    "trace_id": "306e0328-8bcc-4d45-9917-8edbba0f62e3",
+    "question": "Will rents in San Jose go up next year?",
+    "context": "",
+    "plan": [
+      "Research current market trends in San Jose.",
+      "Analyze predictions from real estate experts.",
+      "Consider economic indicators affecting the housing market."
+    ],
+    "draft": "To predict whether rents in San Jose will increase next year, we must first examine the current market trends and economic indicators. Currently, San Jose's rental market is experiencing a steady demand due to its thriving tech industry and strong job market, which attracts a large number of residents. Real estate experts have noted that while the market is not as overheated as it was in previous years, there is still a significant demand for rental properties, suggesting that rents may continue to rise to meet this demand.\n\nEconomic indicators also play a crucial role in shaping the rental market. The local economy, employment rates, and interest rates are key factors. If the economy remains strong, with low unemployment and stable interest rates, it is likely that rents will continue to rise to accommodate the high demand for housing. Additionally, any changes in government policies, such as tax incentives for landlords or regulations affecting housing supply, could also influence rent prices.\n\nIn conclusion, based on the current trends and economic indicators, it is probable that rents in San Jose will increase next year, as the demand for housing outpaces the supply, and economic stability supports this upward pressure.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:40:31.047043Z"
+  },
+  {
+    "case_id": "C19",
+    "trace_id": "8a34a239-f748-46f1-951a-639d2fb9e85b",
+    "question": "Do I need renters insurance and how much does it cost?",
+    "context": "",
+    "plan": [
+      "Assess your personal belongings to determine the coverage you need.",
+      "Research insurance policies and compare quotes from different providers.",
+      "Choose a policy that matches your coverage needs and budget."
+    ],
+    "draft": "Renters insurance is essential as it protects your personal belongings from various risks such as theft, damage, or accidents, which are not covered by your landlord's insurance. To determine the coverage you need, assess the value of your belongings. Most policies offer coverage for personal property, liability, and additional living expenses. Researching insurance policies involves comparing the coverage limits, deductibles, and premiums offered by different providers. Typically, the cost of renters insurance varies based on factors like the value of your belongings, the coverage limits you choose, and the deductible you set. A policy might cost anywhere from $15 to $30 per month, depending on these factors and your specific location. It's advisable to compare quotes from several insurers to find the best balance between coverage and cost.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:40:35.586995Z"
+  },
+  {
+    "case_id": "C20",
+    "trace_id": "225e3363-8e7d-4b8f-a72f-c8c9bab9a0c6",
+    "question": "Summarize a tenant's rights in Texas in one sentence.",
+    "context": "",
+    "plan": [
+      "Tenants in Texas have the right to a habitable living environment, privacy, and protection against unlawful discrimination and evictions without just cause.",
+      "They must receive proper notice for repairs and rent increases, and have the option to repair and deduct if the landlord fails to maintain the property.",
+      "Tenants also have the right to a fair and timely dispute resolution process through the Texas Department of Housing and Community Affairs if issues arise with their landlord."
+    ],
+    "draft": "In Texas, tenants are entitled to a safe living environment, privacy, protection against unlawful discrimination and evictions without正当 reason, fair notice for repairs and rent hikes, the option to repair and deduct if the landlord fails to maintain the property, and access to a fair dispute resolution process through the Texas Department of Housing and Community Affairs for any landlord-related issues.",
+    "source": "Writer draft from s7838_drafts (qwen2:7b, temperature 0)",
+    "created_at": "2026-11-12T00:40:39.712691Z"
+  }
+]

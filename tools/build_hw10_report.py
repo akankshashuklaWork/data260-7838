@@ -180,7 +180,7 @@ def build() -> None:
     s += [p("DATA 260 Homework 10: Operations Dashboard, Judge Validation, and Tracing", "Main")]
     s += [
         p(
-            "Akanksha Shukla | Repository: https://github.com/akankshashuklaWork/data260-7838 (collaborators Sbnikitha and supriyaselvanganesan have access) | Tagged commit: "
+            "Akanksha Shukla | Repository: https://github.com/akankshashuklaWork/data260-7838 | Tagged commit: "
             + COMMIT
         )
     ]

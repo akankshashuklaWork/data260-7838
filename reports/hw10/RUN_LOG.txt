@@ -284,3 +284,70 @@ PASS  human_labels.csv has one whole-number 1-5 label for each of the 20 cases
 PASS  The human labels were committed before the judge scores were produced
 [2026-11-16T09:55:19+00:00] exit=0
 
+[2026-11-16T09:56:41+00:00] $ make verify-hw10 (final run on the tagged commit)
+PYTHONPATH=code .venv/bin/python -m hw10.verify_hw10
+{"ingress_http": false}
+2026-11-16T09:56:29.328622Z [EVALUATOR] skipped malformed message on s7838_tasks: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')
+2026-11-16T09:56:29.328688Z [EVALUATOR] skipped malformed message on s7838_tasks: ValueError('message is not a JSON object')
+2026-11-16T09:56:29.328743Z [EVALUATOR] skipped malformed message on s7838_tasks: KeyError('correlation_id')
+2026-11-16T09:56:30.029129Z [EVALUATOR] Consumer is ready and listening... topics=['s7838_tasks', 's7838_drafts', 's7838_final'] judge=fake-judge warm_up_ms=0
+2026-11-16T09:56:34.036433Z [EVALUATOR] skipped malformed message on s7838_final: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')
+
+2026-11-16T09:56:39.059629Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline trace_id=1d4442ed-2819-48dd-902a-667f622fad41
+2026-11-16T09:56:39.074876Z [CACHE] stored answer (data_version=static) total_ms=5037.7 pipeline_ms=14.5
+2026-11-16T09:56:39.082253Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='[verify10-6e8f09] What is a security deposit used for in a r' latency_ms=7.3 trace_id=6502e23f-d4d6-410c-a6c7-9c5c691433c9
+2026-11-16T09:56:39.118857Z [CACHE] MISS best_similarity=0.0178 threshold=0.85 -> running agent pipeline trace_id=a4fce190-1c64-4fb7-8282-167351c9f079
+2026-11-16T09:56:39.119803Z [EVALUATOR] trace_id=1d4442ed-2819-48dd-902a-667f622fad41 evaluated in 0ms {'plan_quality': 4, 'writer_helpfulness': 3, 'final_helpfulness': 3}
+2026-11-16T09:56:39.729308Z [CACHE] FAILED stage=planner error=ValueError('inbox message needs a non-empty question') trace_id=a4fce190-1c64-4fb7-8282-167351c9f079
+2026-11-16T09:56:39.739400Z [CACHE] MISS best_similarity=0.5659 threshold=0.85 -> running agent pipeline trace_id=d12582cc-195b-46a8-959d-08aaaae45a88
+2026-11-16T09:56:39.750755Z [CACHE] stored answer (data_version=static) total_ms=21.2 pipeline_ms=10.2
+2026-11-16T09:56:39.751550Z [EVALUATOR] trace_id=d12582cc-195b-46a8-959d-08aaaae45a88 evaluated in 0ms ConnectionError: judge unavailable (simulated)
+2026-11-16T09:56:39.862814Z [CACHE] MISS best_similarity=0.4021 threshold=0.85 -> running agent pipeline trace_id=9ae11ea5-2ec0-4351-8ddb-68d5f7815d42
+2026-11-16T09:56:39.875523Z [CACHE] stored answer (data_version=static) total_ms=23.4 pipeline_ms=11.5
+2026-11-16T09:56:39.876340Z [EVALUATOR] trace_id=9ae11ea5-2ec0-4351-8ddb-68d5f7815d42 evaluated in 0ms {'plan_quality': 4, 'writer_helpfulness': 3, 'final_helpfulness': 3}
+{
+  "homework": 10,
+  "SID4": 7838,
+  "commit_hash": "a6152ec63cec5b5ab530ed93a31d21c09e412952",
+  "uncommitted_changes_in_code": false,
+  "model": "qwen2:7b (agents, via Ollama); stub agents and a fake judge inside this self-check",
+  "configuration": {
+    "judge_model": "qwen3:8b",
+    "judge_temperature": 0,
+    "judge_scale": "1-5",
+    "kafka": "localhost:9092",
+    "redis": "redis-stack-server 7.4"
+  },
+  "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
+  "seed": 7838,
+  "verify_seed": 267838,
+  "eval_cases_sha256": "63a2909827506234",
+  "passed": true
+}
+PASS  Span has trace_id, stage, start, end, status, error and a duration
+PASS  A failing block is recorded as status=error with the exception text, then re-raised
+PASS  A span without a trace_id is not written
+PASS  Percentiles use linear interpolation (p50 of 1..100 is 50.5, p95 is 95.05)
+PASS  Stage table: % of end-to-end is mean stage / mean end-to-end and the shares total <= 100
+PASS  Spearman is +1 for the same order, -1 for the reverse order, and NaN for a constant judge
+PASS  Mean absolute difference and repeatability match a hand-computed example
+PASS  Malformed evaluator input is skipped and an incomplete join gives up after its timeout
+PASS  Final-vs-draft interpretation states plainly when the final answer is the draft
+PASS  Cache miss: one trace_id has spans for the cache lookup, every queue, all three agents, and the evaluation
+PASS  The spans come from separate processes (ingress, PLANNER, WRITER, REVIEWER, evaluator)
+PASS  The Planner plan, Writer draft and Reviewer final all carry the same correlation_id as the trace_id
+PASS  Queue-wait spans exist for all four topics with non-negative, sane durations
+PASS  Cache hit: cache_lookup says hit, the request is marked cached, and no agent ran
+PASS  Failed trace: the Planner span shows the error, a dead_letter span follows, and the request names the failing stage
+PASS  Evaluator saves Plan Quality, Writer Helpfulness (with trace_id), Final Helpfulness (with final answer) on a 1-5 scale
+PASS  Final-vs-draft improvement stores both scores, their difference, and an interpretation
+PASS  A malformed message and an unavailable judge are recorded and do not stop the evaluator
+PASS  Summary metrics from spans: 5 requests, 1 hit, 1 error, and hit rate / error rate follow from the counts
+PASS  Summary page renders without an error and shows request count, hit rate, and error rate
+PASS  Evaluation page renders without an error
+PASS  Trace page labels the cache-hit, cache-miss, and failed paths differently for the right trace_id
+PASS  eval_cases.json holds 20 distinct Writer drafts, each with its trace_id and question
+PASS  human_labels.csv has one whole-number 1-5 label for each of the 20 cases
+PASS  The human labels were committed before the judge scores were produced
+[2026-11-16T09:56:47+00:00] exit=0
+

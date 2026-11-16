@@ -1,8 +1,8 @@
 {
   "homework": 10,
   "SID4": 7838,
-  "commit_hash": "95ead7a5eacdd4bf96a9cb6e0e7e9e707520a76d",
-  "uncommitted_changes_in_code": true,
+  "commit_hash": "a6152ec63cec5b5ab530ed93a31d21c09e412952",
+  "uncommitted_changes_in_code": false,
   "model": "qwen2:7b (agents, via Ollama); stub agents and a fake judge inside this self-check",
   "configuration": {
     "judge_model": "qwen3:8b",
@@ -72,7 +72,7 @@
     {
       "name": "Queue-wait spans exist for all four topics with non-negative, sane durations",
       "passed": true,
-      "detail": "[('queue_inbox', 2.4), ('queue_tasks', 2.1), ('queue_drafts', 1.7), ('queue_final', 1.3)]"
+      "detail": "[('queue_inbox', 1.9), ('queue_tasks', 1.9), ('queue_drafts', 1.2), ('queue_final', 1.1)]"
     },
     {
       "name": "Cache hit: cache_lookup says hit, the request is marked cached, and no agent ran",
@@ -104,7 +104,7 @@
     {
       "name": "Summary page renders without an error and shows request count, hit rate, and error rate",
       "passed": true,
-      "detail": "metrics={'Requests': '5', 'Semantic-cache hit rate': '20.0%', 'Error rate': '20.0%', 'End-to-end latency (p50 / p95)': '22 ms / 5.76 s', 'Entries now in the Redis semantic cache': '3'}"
+      "detail": "metrics={'Requests': '5', 'Semantic-cache hit rate': '20.0%', 'Error rate': '20.0%', 'End-to-end latency (p50 / p95)': '22 ms / 4.29 s', 'Entries now in the Redis semantic cache': '3'}"
     },
     {
       "name": "Evaluation page renders without an error",

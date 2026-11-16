@@ -1,28 +1,28 @@
 PYTHONPATH=code .venv/bin/python -m hw10.verify_hw10
 {"ingress_http": false}
-2026-11-16T09:54:55.477549Z [EVALUATOR] skipped malformed message on s7838_tasks: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')
-2026-11-16T09:54:55.477614Z [EVALUATOR] skipped malformed message on s7838_tasks: ValueError('message is not a JSON object')
-2026-11-16T09:54:55.477664Z [EVALUATOR] skipped malformed message on s7838_tasks: KeyError('correlation_id')
-2026-11-16T09:54:56.195842Z [EVALUATOR] Consumer is ready and listening... topics=['s7838_tasks', 's7838_drafts', 's7838_final'] judge=fake-judge warm_up_ms=0
+2026-11-16T09:56:29.328622Z [EVALUATOR] skipped malformed message on s7838_tasks: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')
+2026-11-16T09:56:29.328688Z [EVALUATOR] skipped malformed message on s7838_tasks: ValueError('message is not a JSON object')
+2026-11-16T09:56:29.328743Z [EVALUATOR] skipped malformed message on s7838_tasks: KeyError('correlation_id')
+2026-11-16T09:56:30.029129Z [EVALUATOR] Consumer is ready and listening... topics=['s7838_tasks', 's7838_drafts', 's7838_final'] judge=fake-judge warm_up_ms=0
+2026-11-16T09:56:34.036433Z [EVALUATOR] skipped malformed message on s7838_final: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')
 
-2026-11-16T09:55:06.953498Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline trace_id=71439587-af45-4ecd-8d35-8bb7c091bfb5
-2026-11-16T09:55:06.954996Z [EVALUATOR] skipped malformed message on s7838_final: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')
-2026-11-16T09:55:06.973078Z [CACHE] stored answer (data_version=static) total_ms=6767.6 pipeline_ms=15.8
-2026-11-16T09:55:06.981328Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='[verify10-47ab7f] What is a security deposit used for in a r' latency_ms=8.2 trace_id=78a0fc98-5e61-4755-b571-086f5622afcd
-2026-11-16T09:55:07.029787Z [CACHE] MISS best_similarity=0.0230 threshold=0.85 -> running agent pipeline trace_id=12604a7b-733d-47a3-bade-9f13c02ae74c
-2026-11-16T09:55:07.030803Z [EVALUATOR] trace_id=71439587-af45-4ecd-8d35-8bb7c091bfb5 evaluated in 0ms {'plan_quality': 4, 'writer_helpfulness': 3, 'final_helpfulness': 3}
-2026-11-16T09:55:07.640112Z [CACHE] FAILED stage=planner error=ValueError('inbox message needs a non-empty question') trace_id=12604a7b-733d-47a3-bade-9f13c02ae74c
-2026-11-16T09:55:07.655765Z [CACHE] MISS best_similarity=0.5700 threshold=0.85 -> running agent pipeline trace_id=624a9d25-6370-4339-8def-b9896ad6a799
-2026-11-16T09:55:07.668408Z [CACHE] stored answer (data_version=static) total_ms=27.6 pipeline_ms=11.3
-2026-11-16T09:55:07.670353Z [EVALUATOR] trace_id=624a9d25-6370-4339-8def-b9896ad6a799 evaluated in 0ms ConnectionError: judge unavailable (simulated)
-2026-11-16T09:55:07.778387Z [CACHE] MISS best_similarity=0.3898 threshold=0.85 -> running agent pipeline trace_id=d81d058b-9f11-4be3-911d-a4773a785965
-2026-11-16T09:55:07.786146Z [CACHE] stored answer (data_version=static) total_ms=16.7 pipeline_ms=7.0
-2026-11-16T09:55:07.786950Z [EVALUATOR] trace_id=d81d058b-9f11-4be3-911d-a4773a785965 evaluated in 0ms {'plan_quality': 4, 'writer_helpfulness': 3, 'final_helpfulness': 3}
+2026-11-16T09:56:39.059629Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline trace_id=1d4442ed-2819-48dd-902a-667f622fad41
+2026-11-16T09:56:39.074876Z [CACHE] stored answer (data_version=static) total_ms=5037.7 pipeline_ms=14.5
+2026-11-16T09:56:39.082253Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='[verify10-6e8f09] What is a security deposit used for in a r' latency_ms=7.3 trace_id=6502e23f-d4d6-410c-a6c7-9c5c691433c9
+2026-11-16T09:56:39.118857Z [CACHE] MISS best_similarity=0.0178 threshold=0.85 -> running agent pipeline trace_id=a4fce190-1c64-4fb7-8282-167351c9f079
+2026-11-16T09:56:39.119803Z [EVALUATOR] trace_id=1d4442ed-2819-48dd-902a-667f622fad41 evaluated in 0ms {'plan_quality': 4, 'writer_helpfulness': 3, 'final_helpfulness': 3}
+2026-11-16T09:56:39.729308Z [CACHE] FAILED stage=planner error=ValueError('inbox message needs a non-empty question') trace_id=a4fce190-1c64-4fb7-8282-167351c9f079
+2026-11-16T09:56:39.739400Z [CACHE] MISS best_similarity=0.5659 threshold=0.85 -> running agent pipeline trace_id=d12582cc-195b-46a8-959d-08aaaae45a88
+2026-11-16T09:56:39.750755Z [CACHE] stored answer (data_version=static) total_ms=21.2 pipeline_ms=10.2
+2026-11-16T09:56:39.751550Z [EVALUATOR] trace_id=d12582cc-195b-46a8-959d-08aaaae45a88 evaluated in 0ms ConnectionError: judge unavailable (simulated)
+2026-11-16T09:56:39.862814Z [CACHE] MISS best_similarity=0.4021 threshold=0.85 -> running agent pipeline trace_id=9ae11ea5-2ec0-4351-8ddb-68d5f7815d42
+2026-11-16T09:56:39.875523Z [CACHE] stored answer (data_version=static) total_ms=23.4 pipeline_ms=11.5
+2026-11-16T09:56:39.876340Z [EVALUATOR] trace_id=9ae11ea5-2ec0-4351-8ddb-68d5f7815d42 evaluated in 0ms {'plan_quality': 4, 'writer_helpfulness': 3, 'final_helpfulness': 3}
 {
   "homework": 10,
   "SID4": 7838,
-  "commit_hash": "95ead7a5eacdd4bf96a9cb6e0e7e9e707520a76d",
-  "uncommitted_changes_in_code": true,
+  "commit_hash": "a6152ec63cec5b5ab530ed93a31d21c09e412952",
+  "uncommitted_changes_in_code": false,
   "model": "qwen2:7b (agents, via Ollama); stub agents and a fake judge inside this self-check",
   "configuration": {
     "judge_model": "qwen3:8b",

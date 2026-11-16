@@ -1,0 +1,286 @@
+[2026-11-12T03:58:13+00:00] HW10 run log (SID4 7838, prefix s7838)
+
+[2026-11-12T03:58:12+00:00] $ python -m hw10.capture_traces
+2026-11-12T02:27:17.498746Z [TRACES] cache-miss trace_id=eeea390f-2c98-4419-8a46-c449443e2da6 latency_ms=6523.3
+2026-11-12T02:27:27.578609Z [TRACES] paraphrase 'Which things should I check in the pet clauses of a rental lease?': is_cached=True similarity=0.972
+2026-11-12T02:27:27.578628Z [TRACES] cache-hit trace_id=75c73fce-e6ac-4c1e-bba9-de1bf5b177e4 latency_ms=41.9
+2026-11-12T02:27:28.204189Z [TRACES] failed trace_id=17a9d205-17bb-4870-a1f9-061524259f9e stage=planner error=ValueError('inbox message needs a non-empty question')
+{
+  "cache_hit": {
+    "trace_id": "75c73fce-e6ac-4c1e-bba9-de1bf5b177e4",
+    "question": "Which things should I check in the pet clauses of a rental lease?",
+    "matched_query": "What should I look for in the pet clauses of a rental lease?",
+    "similarity": 0.972,
+    "latency_ms": 41.9,
+    "stages": [
+      "request",
+      "cache_lookup"
+    ]
+  },
+  "cache_miss": {
+    "trace_id": "eeea390f-2c98-4419-8a46-c449443e2da6",
+    "question": "What should I look for in the pet clauses of a rental lease?",
+    "latency_ms": 6523.3,
+    "evaluated": true,
+    "stages": [
+      "request",
+      "cache_lookup",
+      "queue_inbox",
+      "planner",
+      "queue_tasks",
+      "writer",
+      "queue_drafts",
+      "queue_final",
+      "reviewer",
+      "evaluation",
+      "cache_store"
+    ]
+  },
+  "failed": {
+    "trace_id": "17a9d205-17bb-4870-a1f9-061524259f9e",
+    "question": "   ",
+    "failed_stage": "planner",
+    "error": "ValueError('inbox message needs a non-empty question')",
+    "stages": [
+      "request",
+      "cache_lookup",
+      "queue_inbox",
+      "planner",
+      "planner",
+      "planner",
+      "dead_letter"
+    ]
+  }
+}
+[2026-11-12T03:58:13+00:00] exit=0
+
+[2026-11-12T00:55:25+00:00] $ python -m hw10.loadtest   (50 cache misses, then 15 hit checks)
+2026-11-12T00:43:24.430956Z [LOAD] warm-up done trace_id=348e4b6a-2d31-4ea5-8c4c-9622c508f320; cache emptied; starting 50 misses
+2026-11-12T00:43:39.911095Z [LOAD] 01/50 miss trace_id=22c77a4c-9f78-46dd-84fe-f09b074a43c4 latency_ms=8426 evaluated=True
+2026-11-12T00:43:52.654511Z [LOAD] 02/50 miss trace_id=b0a364e2-8a85-4b20-bad5-f35dbea55ead latency_ms=5181 evaluated=True
+2026-11-12T00:44:04.429566Z [LOAD] 03/50 miss trace_id=134ee230-ee63-47d6-90e1-4bf86a1f44dd latency_ms=4221 evaluated=True
+2026-11-12T00:44:17.491325Z [LOAD] 04/50 miss trace_id=2cc06431-b31b-4f5f-966e-fabb14b7154a latency_ms=5500 evaluated=True
+2026-11-12T00:44:29.799011Z [LOAD] 05/50 miss trace_id=54b133c2-f427-4a66-8e4f-574d6be39934 latency_ms=5247 evaluated=True
+2026-11-12T00:44:41.234727Z [LOAD] 06/50 miss trace_id=10fb6219-a2d6-4f96-b627-0b80f5b04b1c latency_ms=3862 evaluated=True
+2026-11-12T00:44:55.326685Z [LOAD] 07/50 miss trace_id=60ab4d2f-c072-44db-9541-683d482e7b6f latency_ms=6017 evaluated=True
+2026-11-12T00:45:07.241777Z [LOAD] 08/50 miss trace_id=fb3619a4-4371-4269-8d33-c0d6c1279968 latency_ms=5358 evaluated=True
+2026-11-12T00:45:19.425703Z [LOAD] 09/50 miss trace_id=3762e35c-9828-4839-b6c6-26a694586058 latency_ms=5621 evaluated=True
+2026-11-12T00:45:31.918036Z [LOAD] 10/50 miss trace_id=b585eb15-93bf-4416-bdca-cf4640af19c5 latency_ms=4918 evaluated=True
+2026-11-12T00:45:43.265953Z [LOAD] 11/50 miss trace_id=059c61dc-3027-4ba0-aafe-816d78e1d739 latency_ms=4793 evaluated=True
+2026-11-12T00:45:56.779093Z [LOAD] 12/50 miss trace_id=84cd03e8-68d9-4274-8039-34f8b5c10a6c latency_ms=5947 evaluated=True
+2026-11-12T00:46:10.449899Z [LOAD] 13/50 miss trace_id=c971dc53-51d0-4e55-a70f-b9644a453ecc latency_ms=4583 evaluated=True
+2026-11-12T00:46:24.433092Z [LOAD] 14/50 miss trace_id=10d04d6b-3941-49e6-a0ab-0f2e8a32590d latency_ms=6409 evaluated=True
+2026-11-12T00:46:41.211063Z [LOAD] 15/50 miss trace_id=8942f790-3cec-4552-b1d9-55e3369e8923 latency_ms=6688 evaluated=True
+2026-11-12T00:46:55.408765Z [LOAD] 16/50 miss trace_id=364ade33-19fb-4350-becd-9373904813c1 latency_ms=6618 evaluated=True
+2026-11-12T00:47:07.423939Z [LOAD] 17/50 miss trace_id=c93efdb0-d9c2-4939-986c-0d2c896964de latency_ms=5958 evaluated=True
+2026-11-12T00:47:20.149645Z [LOAD] 18/50 miss trace_id=1ad7851b-c9b1-4ad0-8fd2-62293b4a2f81 latency_ms=6155 evaluated=True
+2026-11-12T00:47:33.674581Z [LOAD] 19/50 miss trace_id=ba627d60-649e-4899-beaf-8efbb4bc3b1c latency_ms=5940 evaluated=True
+2026-11-12T00:47:47.872537Z [LOAD] 20/50 miss trace_id=5dcd4758-1b5a-4754-9233-6f6237b77660 latency_ms=6627 evaluated=True
+2026-11-12T00:47:58.859720Z [LOAD] 21/50 miss trace_id=50fdba09-8188-49cf-8a40-2d67728f5ed5 latency_ms=3904 evaluated=True
+2026-11-12T00:48:09.173885Z [LOAD] 22/50 miss trace_id=c6bba5a5-0c67-4130-84d0-ba4e33545155 latency_ms=4243 evaluated=True
+2026-11-12T00:48:22.683213Z [LOAD] 23/50 miss trace_id=d2528b21-003c-442d-8bfe-3b68081446a4 latency_ms=5937 evaluated=True
+2026-11-12T00:48:34.703274Z [LOAD] 24/50 miss trace_id=57883d25-c0a2-44e4-95b7-97eedc20e2f3 latency_ms=4956 evaluated=True
+2026-11-12T00:48:48.227312Z [LOAD] 25/50 miss trace_id=4e867449-768c-484e-9268-218ae7da3110 latency_ms=5453 evaluated=True
+2026-11-12T00:49:03.306365Z [LOAD] 26/50 miss trace_id=a7c0a009-905e-4462-b61c-e40a27618013 latency_ms=7494 evaluated=True
+2026-11-12T00:49:16.393266Z [LOAD] 27/50 miss trace_id=d1b3a2ed-e22c-43a0-8674-b526dc9e7582 latency_ms=3483 evaluated=True
+2026-11-12T00:49:30.968975Z [LOAD] 28/50 miss trace_id=094954c9-5b74-4ace-a16b-323d8a5f3796 latency_ms=6996 evaluated=True
+2026-11-12T00:49:44.118096Z [LOAD] 29/50 miss trace_id=89cd3e7f-c29f-463f-b7cd-d85373ece770 latency_ms=6059 evaluated=True
+2026-11-12T00:50:06.925997Z [LOAD] 30/50 miss trace_id=fbeca16f-6cae-4aee-aa7d-7e4ec8cca187 latency_ms=14228 evaluated=True
+2026-11-12T00:50:25.425056Z [LOAD] 31/50 miss trace_id=2275f798-9c21-4680-a705-e74ab9832265 latency_ms=7389 evaluated=True
+2026-11-12T00:50:39.641469Z [LOAD] 32/50 miss trace_id=65e3f37d-2882-4682-b2cf-994435fefe26 latency_ms=5109 evaluated=True
+2026-11-12T00:50:57.406434Z [LOAD] 33/50 miss trace_id=a417b30a-1bdb-4a59-9503-aec3119fa68f latency_ms=5117 evaluated=True
+2026-11-12T00:51:07.716638Z [LOAD] 34/50 miss trace_id=ecbbc9f0-c343-403d-9b7b-de787fb74a9f latency_ms=3736 evaluated=True
+2026-11-12T00:51:20.655489Z [LOAD] 35/50 miss trace_id=568a49b0-2574-4b43-ab35-04f0f27da242 latency_ms=5862 evaluated=True
+2026-11-12T00:51:35.864988Z [LOAD] 36/50 miss trace_id=bd211991-9dd3-4644-94b1-a5d59ad6d5cb latency_ms=6606 evaluated=True
+2026-11-12T00:51:50.718981Z [LOAD] 37/50 miss trace_id=f1fcc68d-cb65-4ab5-96fb-0e4b3e4b859b latency_ms=6763 evaluated=True
+2026-11-12T00:52:06.933683Z [LOAD] 38/50 miss trace_id=1361c72e-31b8-4bbd-96a4-37ecd2093369 latency_ms=7616 evaluated=True
+2026-11-12T00:52:23.004809Z [LOAD] 39/50 miss trace_id=221b71d9-7244-405d-824f-2035f83853e0 latency_ms=7472 evaluated=True
+2026-11-12T00:52:38.843263Z [LOAD] 40/50 miss trace_id=a27c2ed7-60bd-480a-b5fd-8556d0b805cb latency_ms=6735 evaluated=True
+2026-11-12T00:52:50.437525Z [LOAD] 41/50 miss trace_id=e66c0374-d057-465e-8f8a-253bbd365a33 latency_ms=4515 evaluated=True
+2026-11-12T00:53:06.093238Z [LOAD] 42/50 miss trace_id=9457be6a-6296-454d-b9c2-f4f38cf3065f latency_ms=6056 evaluated=True
+2026-11-12T00:53:19.929723Z [LOAD] 43/50 miss trace_id=1ab07374-55ba-4658-aa8c-ba56cfbf6a42 latency_ms=5747 evaluated=True
+2026-11-12T00:53:37.410370Z [LOAD] 44/50 miss trace_id=c556ffab-b144-4730-8efc-fb53b1a0d9d4 latency_ms=7364 evaluated=True
+2026-11-12T00:53:53.006236Z [LOAD] 45/50 miss trace_id=9515d0fc-276e-4689-80c7-80955cbc7f4d latency_ms=5482 evaluated=True
+2026-11-12T00:54:08.714397Z [LOAD] 46/50 miss trace_id=cf7a18c6-fbfa-4caa-b134-7b14264056bf latency_ms=6612 evaluated=True
+2026-11-12T00:54:22.379888Z [LOAD] 47/50 miss trace_id=dad181be-76b1-48e3-9333-9d38549fc8e7 latency_ms=5051 evaluated=True
+2026-11-12T00:54:38.522274Z [LOAD] 48/50 miss trace_id=1c3c8856-69bb-4ecd-a524-f9defdb1d0d2 latency_ms=7544 evaluated=True
+2026-11-12T00:55:00.130301Z [LOAD] 49/50 miss trace_id=aad9326d-4e02-420b-b5f4-164bfc618b1c latency_ms=10970 evaluated=True
+2026-11-12T00:55:25.802124Z [LOAD] 50/50 miss trace_id=8e86d1fe-169d-4718-b67c-1c86a0b2d249 latency_ms=14019 evaluated=True
+2026-11-12T00:55:25.842324Z [LOAD] hit-check 01 is_cached=True latency_ms=37.5
+2026-11-12T00:55:25.854338Z [LOAD] hit-check 02 is_cached=True latency_ms=10.5
+2026-11-12T00:55:25.864152Z [LOAD] hit-check 03 is_cached=True latency_ms=8.5
+2026-11-12T00:55:25.876437Z [LOAD] hit-check 04 is_cached=True latency_ms=10.7
+2026-11-12T00:55:25.887427Z [LOAD] hit-check 05 is_cached=True latency_ms=9.4
+2026-11-12T00:55:25.898131Z [LOAD] hit-check 06 is_cached=True latency_ms=9.2
+2026-11-12T00:55:25.909141Z [LOAD] hit-check 07 is_cached=True latency_ms=9.6
+2026-11-12T00:55:25.920490Z [LOAD] hit-check 08 is_cached=True latency_ms=9.9
+2026-11-12T00:55:25.930262Z [LOAD] hit-check 09 is_cached=True latency_ms=8.4
+2026-11-12T00:55:25.941178Z [LOAD] hit-check 10 is_cached=True latency_ms=9.5
+2026-11-12T00:55:25.951142Z [LOAD] hit-check 11 is_cached=True latency_ms=8.5
+2026-11-12T00:55:25.962243Z [LOAD] hit-check 12 is_cached=True latency_ms=9.7
+2026-11-12T00:55:25.971919Z [LOAD] hit-check 13 is_cached=True latency_ms=8.4
+2026-11-12T00:55:25.982630Z [LOAD] hit-check 14 is_cached=True latency_ms=9.4
+2026-11-12T00:55:25.992076Z [LOAD] hit-check 15 is_cached=True latency_ms=8.1
+done: 50 misses (0 served from cache), 15 hit checks
+[2026-11-12T03:58:13+00:00] exit=0
+
+[2026-11-12T03:58:13+00:00] $ .venv/bin/python -m hw10.analyze_latency
+Stage                    p50 ms     p95 ms  % of e2e
+Cache lookup               41.3       75.2      0.3%
+Planner                  1708.0     3630.6     14.0%
+Writer                   3898.5     6384.9     29.4%
+Reviewer                    0.0        0.0      0.0%
+Queue wait (total)         16.2       56.5      0.2%
+Evaluation               7488.6    10773.8     56.0%
+end-to-end p50=13563ms p95=20095ms; unaccounted=0.0%; dominant=Evaluation
+cache-hit: {'n': 15, 'all_cached': True, 'request_p50_ms': 9.463, 'request_p95_ms': 18.79240000000002, 'lookup_p50_ms': 9.124, 'lookup_p95_ms': 18.40860000000002}
+[2026-11-12T03:58:13+00:00] exit=0
+
+[2026-11-12T03:58:13+00:00] $ .venv/bin/python -m hw10.verify_hw10
+{"ingress_http": false}
+2026-11-12T03:58:14.319438Z [EVALUATOR] skipped malformed message on s7838_tasks: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')
+2026-11-12T03:58:14.319509Z [EVALUATOR] skipped malformed message on s7838_tasks: ValueError('message is not a JSON object')
+2026-11-12T03:58:14.319561Z [EVALUATOR] skipped malformed message on s7838_tasks: KeyError('correlation_id')
+2026-11-12T03:58:15.018768Z [EVALUATOR] Consumer is ready and listening... topics=['s7838_tasks', 's7838_drafts', 's7838_final'] judge=fake-judge warm_up_ms=0
+2026-11-12T03:58:19.019011Z [EVALUATOR] skipped malformed message on s7838_final: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')
+2026-11-12T03:58:23.815205Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline trace_id=6861377a-fe74-4bd2-a60e-9b3690472778
+2026-11-12T03:58:23.828025Z [CACHE] stored answer (data_version=static) total_ms=4808.9 pipeline_ms=12.0
+2026-11-12T03:58:23.838879Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='[verify10-aeb69a] What is a security deposit used for in a r' latency_ms=10.8 trace_id=472e8fa1-408c-4898-91bf-4b7601b2080b
+2026-11-12T03:58:23.881139Z [CACHE] MISS best_similarity=0.0212 threshold=0.85 -> running agent pipeline trace_id=be97d3cc-164e-4717-809f-b1729aa6d181
+2026-11-12T03:58:23.882134Z [EVALUATOR] trace_id=6861377a-fe74-4bd2-a60e-9b3690472778 evaluated in 0ms {'plan_quality': 4, 'writer_helpfulness': 3, 'final_helpfulness': 3}
+2026-11-12T03:58:24.488494Z [CACHE] FAILED stage=planner error=ValueError('inbox message needs a non-empty question') trace_id=be97d3cc-164e-4717-809f-b1729aa6d181
+2026-11-12T03:58:24.497803Z [CACHE] MISS best_similarity=0.5791 threshold=0.85 -> running agent pipeline trace_id=7020249e-3195-4809-8e1c-89f8f23fbfe8
+2026-11-12T03:58:24.503380Z [CACHE] stored answer (data_version=static) total_ms=14.6 pipeline_ms=4.9
+2026-11-12T03:58:24.504162Z [EVALUATOR] trace_id=7020249e-3195-4809-8e1c-89f8f23fbfe8 evaluated in 0ms ConnectionError: judge unavailable (simulated)
+2026-11-12T03:58:24.614786Z [CACHE] MISS best_similarity=0.4077 threshold=0.85 -> running agent pipeline trace_id=080dae4a-07b3-47b1-85ec-955579cbcd4a
+2026-11-12T03:58:24.620056Z [CACHE] stored answer (data_version=static) total_ms=15.3 pipeline_ms=4.6
+2026-11-12T03:58:24.620753Z [EVALUATOR] trace_id=080dae4a-07b3-47b1-85ec-955579cbcd4a evaluated in 0ms {'plan_quality': 4, 'writer_helpfulness': 3, 'final_helpfulness': 3}
+{
+  "homework": 10,
+  "SID4": 7838,
+  "commit_hash": "6dc5cb3da032c644735f49ecb9df1c00d1fa4cbf",
+  "uncommitted_changes_in_code": true,
+  "model": "qwen2:7b (agents, via Ollama); stub agents and a fake judge inside this self-check",
+  "configuration": {
+    "judge_model": "qwen3:8b",
+    "judge_temperature": 0,
+    "judge_scale": "1-5",
+    "kafka": "localhost:9092",
+    "redis": "redis-stack-server 7.4"
+  },
+  "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
+  "seed": 7838,
+  "verify_seed": 267838,
+  "eval_cases_sha256": "63a2909827506234",
+  "passed": true
+}
+PASS  Span has trace_id, stage, start, end, status, error and a duration
+PASS  A failing block is recorded as status=error with the exception text, then re-raised
+PASS  A span without a trace_id is not written
+PASS  Percentiles use linear interpolation (p50 of 1..100 is 50.5, p95 is 95.05)
+PASS  Stage table: % of end-to-end is mean stage / mean end-to-end and the shares total <= 100
+PASS  Spearman is +1 for the same order, -1 for the reverse order, and NaN for a constant judge
+PASS  Mean absolute difference and repeatability match a hand-computed example
+PASS  Malformed evaluator input is skipped and an incomplete join gives up after its timeout
+PASS  Final-vs-draft interpretation states plainly when the final answer is the draft
+PASS  Cache miss: one trace_id has spans for the cache lookup, every queue, all three agents, and the evaluation
+PASS  The spans come from separate processes (ingress, PLANNER, WRITER, REVIEWER, evaluator)
+PASS  The Planner plan, Writer draft and Reviewer final all carry the same correlation_id as the trace_id
+PASS  Queue-wait spans exist for all four topics with non-negative, sane durations
+PASS  Cache hit: cache_lookup says hit, the request is marked cached, and no agent ran
+PASS  Failed trace: the Planner span shows the error, a dead_letter span follows, and the request names the failing stage
+PASS  Evaluator saves Plan Quality, Writer Helpfulness (with trace_id), Final Helpfulness (with final answer) on a 1-5 scale
+PASS  Final-vs-draft improvement stores both scores, their difference, and an interpretation
+PASS  A malformed message and an unavailable judge are recorded and do not stop the evaluator
+PASS  Summary metrics from spans: 5 requests, 1 hit, 1 error, and hit rate / error rate follow from the counts
+PASS  Summary page renders without an error and shows request count, hit rate, and error rate
+PASS  Evaluation page renders without an error
+PASS  Trace page labels the cache-hit, cache-miss, and failed paths differently for the right trace_id
+PASS  eval_cases.json holds 20 distinct Writer drafts, each with its trace_id and question
+[2026-11-12T03:58:26+00:00] exit=0
+
+[2026-11-12T03:58:26+00:00] $ .venv/bin/python -m ruff check code/hw10 code/hw8/tracing.py code/hw9/ingress.py code/hw9/pipeline_client.py
+All checks passed!
+[2026-11-12T03:58:27+00:00] exit=0
+
+[2026-11-16T09:36:42+00:00] $ make validate-hw10 (python -m hw10.validate_judge --sensitivity)
+PYTHONPATH=code .venv/bin/python -m hw10.validate_judge --sensitivity
+2026-11-16T09:31:39.346262Z [JUDGE] warm-up 3220 ms; settings={'judge_model': 'qwen3:8b', 'runtime': 'Ollama (local)', 'temperature': 0.0, 'seed': 7838, 'num_ctx': 4096, 'thinking': False, 'scale': '1-5 integer (1 very poor, 5 excellent)', 'framework': 'deepeval 4.3.4 GEval', 'rubric_version': 'hw10-v1', 'rubric_hash': '0267d43bd1de', 'call_timeout_s': 120.0}
+2026-11-16T09:32:31.692022Z [JUDGE] documented settings run 1: [5, 5, 5, 5, 4, 5, 4, 3, 5, 4, 4, 2, 5, 3, 2, 5, 2, 4, 4, 5]
+2026-11-16T09:33:24.412836Z [JUDGE] documented settings run 2: [5, 5, 5, 5, 4, 5, 4, 3, 5, 4, 4, 2, 5, 3, 2, 5, 2, 4, 4, 5]
+2026-11-16T09:34:14.588072Z [JUDGE] documented settings run 3: [5, 5, 5, 5, 4, 5, 4, 3, 5, 4, 4, 2, 5, 3, 2, 5, 2, 4, 4, 5]
+2026-11-16T09:35:03.959968Z [JUDGE] temperature 0.7 run 1: [4, 5, 5, 5, 5, 5, 5, 3, 5, 4, 4, 3, 4, 3, 2, 5, 1, 3, 5, 5]
+2026-11-16T09:35:54.503386Z [JUDGE] temperature 0.7 run 2: [5, 5, 5, 5, 4, 5, 5, 3, 5, 4, 4, 2, 4, 3, 2, 5, 2, 4, 4, 5]
+2026-11-16T09:36:42.163445Z [JUDGE] temperature 0.7 run 3: [4, 5, 5, 5, 5, 5, 5, 3, 5, 4, 4, 2, 5, 3, 2, 5, 2, 3, 4, 5]
+2026-11-16T09:36:42.166071Z [JUDGE] human vs judge run 1: spearman=0.290 (p=0.2155) MAD=1.50
+2026-11-16T09:36:42.166099Z [JUDGE] repeatability: {'runs': 3, 'cases': 20, 'cases_changed': 0.0, 'pairs_changed': 0.0, 'mean_abs_change': 0.0, 'max_abs_change': 0, 'mean_range': 0.0, 'max_range': 0}
+exit=0
+[2026-11-16T09:39:31+00:00] exit=0
+
+[2026-11-16T09:55:09+00:00] $ make verify-hw10 (python -m hw10.verify_hw10)
+PYTHONPATH=code .venv/bin/python -m hw10.verify_hw10
+{"ingress_http": false}
+2026-11-16T09:54:55.477549Z [EVALUATOR] skipped malformed message on s7838_tasks: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')
+2026-11-16T09:54:55.477614Z [EVALUATOR] skipped malformed message on s7838_tasks: ValueError('message is not a JSON object')
+2026-11-16T09:54:55.477664Z [EVALUATOR] skipped malformed message on s7838_tasks: KeyError('correlation_id')
+2026-11-16T09:54:56.195842Z [EVALUATOR] Consumer is ready and listening... topics=['s7838_tasks', 's7838_drafts', 's7838_final'] judge=fake-judge warm_up_ms=0
+
+2026-11-16T09:55:06.953498Z [CACHE] MISS best_similarity=0.0000 threshold=0.85 -> running agent pipeline trace_id=71439587-af45-4ecd-8d35-8bb7c091bfb5
+2026-11-16T09:55:06.954996Z [EVALUATOR] skipped malformed message on s7838_final: JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')
+2026-11-16T09:55:06.973078Z [CACHE] stored answer (data_version=static) total_ms=6767.6 pipeline_ms=15.8
+2026-11-16T09:55:06.981328Z [CACHE] HIT similarity=1.0000 threshold=0.85 matched='[verify10-47ab7f] What is a security deposit used for in a r' latency_ms=8.2 trace_id=78a0fc98-5e61-4755-b571-086f5622afcd
+2026-11-16T09:55:07.029787Z [CACHE] MISS best_similarity=0.0230 threshold=0.85 -> running agent pipeline trace_id=12604a7b-733d-47a3-bade-9f13c02ae74c
+2026-11-16T09:55:07.030803Z [EVALUATOR] trace_id=71439587-af45-4ecd-8d35-8bb7c091bfb5 evaluated in 0ms {'plan_quality': 4, 'writer_helpfulness': 3, 'final_helpfulness': 3}
+2026-11-16T09:55:07.640112Z [CACHE] FAILED stage=planner error=ValueError('inbox message needs a non-empty question') trace_id=12604a7b-733d-47a3-bade-9f13c02ae74c
+2026-11-16T09:55:07.655765Z [CACHE] MISS best_similarity=0.5700 threshold=0.85 -> running agent pipeline trace_id=624a9d25-6370-4339-8def-b9896ad6a799
+2026-11-16T09:55:07.668408Z [CACHE] stored answer (data_version=static) total_ms=27.6 pipeline_ms=11.3
+2026-11-16T09:55:07.670353Z [EVALUATOR] trace_id=624a9d25-6370-4339-8def-b9896ad6a799 evaluated in 0ms ConnectionError: judge unavailable (simulated)
+2026-11-16T09:55:07.778387Z [CACHE] MISS best_similarity=0.3898 threshold=0.85 -> running agent pipeline trace_id=d81d058b-9f11-4be3-911d-a4773a785965
+2026-11-16T09:55:07.786146Z [CACHE] stored answer (data_version=static) total_ms=16.7 pipeline_ms=7.0
+2026-11-16T09:55:07.786950Z [EVALUATOR] trace_id=d81d058b-9f11-4be3-911d-a4773a785965 evaluated in 0ms {'plan_quality': 4, 'writer_helpfulness': 3, 'final_helpfulness': 3}
+{
+  "homework": 10,
+  "SID4": 7838,
+  "commit_hash": "95ead7a5eacdd4bf96a9cb6e0e7e9e707520a76d",
+  "uncommitted_changes_in_code": true,
+  "model": "qwen2:7b (agents, via Ollama); stub agents and a fake judge inside this self-check",
+  "configuration": {
+    "judge_model": "qwen3:8b",
+    "judge_temperature": 0,
+    "judge_scale": "1-5",
+    "kafka": "localhost:9092",
+    "redis": "redis-stack-server 7.4"
+  },
+  "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
+  "seed": 7838,
+  "verify_seed": 267838,
+  "eval_cases_sha256": "63a2909827506234",
+  "passed": true
+}
+PASS  Span has trace_id, stage, start, end, status, error and a duration
+PASS  A failing block is recorded as status=error with the exception text, then re-raised
+PASS  A span without a trace_id is not written
+PASS  Percentiles use linear interpolation (p50 of 1..100 is 50.5, p95 is 95.05)
+PASS  Stage table: % of end-to-end is mean stage / mean end-to-end and the shares total <= 100
+PASS  Spearman is +1 for the same order, -1 for the reverse order, and NaN for a constant judge
+PASS  Mean absolute difference and repeatability match a hand-computed example
+PASS  Malformed evaluator input is skipped and an incomplete join gives up after its timeout
+PASS  Final-vs-draft interpretation states plainly when the final answer is the draft
+PASS  Cache miss: one trace_id has spans for the cache lookup, every queue, all three agents, and the evaluation
+PASS  The spans come from separate processes (ingress, PLANNER, WRITER, REVIEWER, evaluator)
+PASS  The Planner plan, Writer draft and Reviewer final all carry the same correlation_id as the trace_id
+PASS  Queue-wait spans exist for all four topics with non-negative, sane durations
+PASS  Cache hit: cache_lookup says hit, the request is marked cached, and no agent ran
+PASS  Failed trace: the Planner span shows the error, a dead_letter span follows, and the request names the failing stage
+PASS  Evaluator saves Plan Quality, Writer Helpfulness (with trace_id), Final Helpfulness (with final answer) on a 1-5 scale
+PASS  Final-vs-draft improvement stores both scores, their difference, and an interpretation
+PASS  A malformed message and an unavailable judge are recorded and do not stop the evaluator
+PASS  Summary metrics from spans: 5 requests, 1 hit, 1 error, and hit rate / error rate follow from the counts
+PASS  Summary page renders without an error and shows request count, hit rate, and error rate
+PASS  Evaluation page renders without an error
+PASS  Trace page labels the cache-hit, cache-miss, and failed paths differently for the right trace_id
+PASS  eval_cases.json holds 20 distinct Writer drafts, each with its trace_id and question
+PASS  human_labels.csv has one whole-number 1-5 label for each of the 20 cases
+PASS  The human labels were committed before the judge scores were produced
+[2026-11-16T09:55:19+00:00] exit=0
+

@@ -1,0 +1,9 @@
+Stage                    p50 ms     p95 ms  % of e2e
+Cache lookup               41.3       75.2      0.3%
+Planner                  1708.0     3630.6     14.0%
+Writer                   3898.5     6384.9     29.4%
+Reviewer                    0.0        0.0      0.0%
+Queue wait (total)         16.2       56.5      0.2%
+Evaluation               7488.6    10773.8     56.0%
+end-to-end p50=13563ms p95=20095ms; unaccounted=0.0%; dominant=Evaluation
+cache-hit: {'n': 15, 'all_cached': True, 'request_p50_ms': 9.463, 'request_p95_ms': 18.79240000000002, 'lookup_p50_ms': 9.124, 'lookup_p95_ms': 18.40860000000002}

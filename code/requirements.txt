@@ -38,3 +38,8 @@ aiokafka>=0.10.0
 
 # HW9 Redis cache and vector index
 redis>=5.0
+
+# HW10 dashboard, local-judge evaluation, and statistics
+streamlit==1.67.0
+deepeval==4.3.4
+scipy==1.18.1

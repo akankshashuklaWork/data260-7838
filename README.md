@@ -1,6 +1,39 @@
-# DATA 260 Homework 1 to 9
+# DATA 260 Homework 1 to 10
 
 Rental Housing Listings - Akanksha Shukla
+
+## HW10: Operations Dashboard, Automated Evaluation, Judge Validation, and Tracing
+
+HW10 evaluates the HW8 Kafka pipeline, checks whether the automated judge can be trusted, and adds
+end-to-end tracing. The code is in `code/hw10/`. Prefix `s7838`, SEED 7838, VERIFY_SEED 267838. The Streamlit
+dashboard runs on PORT_BASE 8638; the HW9 ingress API now runs on 8639 (`INGRESS_PORT`).
+
+- **Part 1:** `dashboard.py` (Streamlit) has a Summary page (requests, hit rate, error rate, latency), an
+  Evaluation page (scores by stage and case, judge validation), and a Trace lookup page by `trace_id`.
+- **Part 2:** `evaluator.py` is a Kafka consumer that joins the Planner plan, Writer draft, and Reviewer
+  final by `correlation_id` and scores them with a local judge (`judge.py`: DeepEval GEval on Ollama
+  `qwen3:8b`, 1-5 scale, temperature 0, seed 7838). Malformed messages, a missing message, and an
+  unavailable judge are all bounded.
+- **Part 3:** `eval_cases.json` freezes 20 Writer drafts; `human_labels.csv` holds the hand-assigned 1-5
+  helpfulness labels (`make label-hw10`). `validate_judge.py` reports Spearman correlation, mean absolute
+  difference, and three-run repeatability, and refuses to run until both files are committed.
+- **Part 4:** `hw8/tracing.py` writes one JSON span per stage (the HW8 `correlation_id` is the `trace_id`).
+  `capture_traces.py` records a cache-hit, a cache-miss, and a failed trace; `loadtest.py` +
+  `analyze_latency.py` give p50/p95 per stage over 50 confirmed cache misses.
+
+```bash
+make up-hw09                         # Kafka + Redis
+make up-hw10                         # planner, writer, reviewer, evaluator, ingress (8639)
+make traces-hw10                     # the three example traces
+make latency-hw10                    # 50 cache misses, then the stage-latency table
+make dashboard-hw10                  # http://127.0.0.1:8638
+make label-hw10                      # you label the 20 drafts by hand, then commit both files
+make validate-hw10                   # judge vs human labels + repeatability
+make down-hw10 && make verify-hw10   # smoke test writes reports/hw10/verification.json
+make finalize-hw10                   # raw evidence + METRICS.md
+```
+
+Results, run log, raw data, metrics, AI-use disclosure, and `verification.json` are in `reports/hw10/`.
 
 ## HW9: Redis Caching and a Self-Improving Two-Agent System
 

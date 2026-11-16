@@ -1,0 +1,129 @@
+{
+  "created": "2026-11-16T09:34:14.588119Z",
+  "criterion": "Writer Helpfulness (1-5) on the Writer draft",
+  "judge_settings": {
+    "judge_model": "qwen3:8b",
+    "runtime": "Ollama (local)",
+    "temperature": 0.0,
+    "seed": 7838,
+    "num_ctx": 4096,
+    "thinking": false,
+    "scale": "1-5 integer (1 very poor, 5 excellent)",
+    "framework": "deepeval 4.3.4 GEval",
+    "rubric_version": "hw10-v1",
+    "rubric_hash": "0267d43bd1de",
+    "call_timeout_s": 120.0
+  },
+  "frozen_files_committed_at": {
+    "eval_cases.json": "95ead7a5eacdd4bf96a9cb6e0e7e9e707520a76d",
+    "human_labels.csv": "95ead7a5eacdd4bf96a9cb6e0e7e9e707520a76d"
+  },
+  "human_labels": {
+    "C01": 5,
+    "C02": 2,
+    "C03": 3,
+    "C04": 3,
+    "C05": 2,
+    "C06": 4,
+    "C07": 3,
+    "C08": 3,
+    "C09": 4,
+    "C10": 2,
+    "C11": 2,
+    "C12": 1,
+    "C13": 4,
+    "C14": 2,
+    "C15": 3,
+    "C16": 2,
+    "C17": 3,
+    "C18": 3,
+    "C19": 3,
+    "C20": 1
+  },
+  "runs": 3,
+  "documented": {
+    "per_run": [
+      {
+        "run": 1,
+        "spearman_rho": 0.2895955324634452,
+        "spearman_p_value": 0.2155420382271067,
+        "spearman_n": 20,
+        "mean_abs_diff": 1.5
+      },
+      {
+        "run": 2,
+        "spearman_rho": 0.2895955324634452,
+        "spearman_p_value": 0.2155420382271067,
+        "spearman_n": 20,
+        "mean_abs_diff": 1.5
+      },
+      {
+        "run": 3,
+        "spearman_rho": 0.2895955324634452,
+        "spearman_p_value": 0.2155420382271067,
+        "spearman_n": 20,
+        "mean_abs_diff": 1.5
+      }
+    ],
+    "mean_of_runs": {
+      "rho": 0.2895955324634452,
+      "p_value": 0.2155420382271067,
+      "n": 20,
+      "mean_abs_diff": 1.5
+    },
+    "repeatability": {
+      "runs": 3,
+      "cases": 20,
+      "cases_changed": 0.0,
+      "pairs_changed": 0.0,
+      "mean_abs_change": 0.0,
+      "max_abs_change": 0,
+      "mean_range": 0.0,
+      "max_range": 0
+    }
+  },
+  "seconds": 155.2,
+  "sensitivity": {
+    "temperature": 0.7,
+    "note": "seed changed each run; shows how repeatability degrades when sampling is on",
+    "per_run": [
+      {
+        "run": 1,
+        "spearman_rho": 0.00850988326703006,
+        "spearman_p_value": 0.9715954916644194,
+        "spearman_n": 20,
+        "mean_abs_diff": 1.7
+      },
+      {
+        "run": 2,
+        "spearman_rho": 0.22014311552090385,
+        "spearman_p_value": 0.3510109436672714,
+        "spearman_n": 20,
+        "mean_abs_diff": 1.5
+      },
+      {
+        "run": 3,
+        "spearman_rho": 0.11478322048871363,
+        "spearman_p_value": 0.6298973290230061,
+        "spearman_n": 20,
+        "mean_abs_diff": 1.6
+      }
+    ],
+    "mean_of_runs": {
+      "rho": 0.10712400452652007,
+      "p_value": 0.6530542297641919,
+      "n": 20,
+      "mean_abs_diff": 1.6
+    },
+    "repeatability": {
+      "runs": 3,
+      "cases": 20,
+      "cases_changed": 0.35,
+      "pairs_changed": 0.23333333333333334,
+      "mean_abs_change": 0.23333333333333334,
+      "max_abs_change": 1,
+      "mean_range": 0.35,
+      "max_range": 1
+    }
+  }
+}

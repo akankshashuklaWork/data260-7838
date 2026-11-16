@@ -1,0 +1,51 @@
+2026-11-12T02:27:17.498746Z [TRACES] cache-miss trace_id=eeea390f-2c98-4419-8a46-c449443e2da6 latency_ms=6523.3
+2026-11-12T02:27:27.578609Z [TRACES] paraphrase 'Which things should I check in the pet clauses of a rental lease?': is_cached=True similarity=0.972
+2026-11-12T02:27:27.578628Z [TRACES] cache-hit trace_id=75c73fce-e6ac-4c1e-bba9-de1bf5b177e4 latency_ms=41.9
+2026-11-12T02:27:28.204189Z [TRACES] failed trace_id=17a9d205-17bb-4870-a1f9-061524259f9e stage=planner error=ValueError('inbox message needs a non-empty question')
+{
+  "cache_hit": {
+    "trace_id": "75c73fce-e6ac-4c1e-bba9-de1bf5b177e4",
+    "question": "Which things should I check in the pet clauses of a rental lease?",
+    "matched_query": "What should I look for in the pet clauses of a rental lease?",
+    "similarity": 0.972,
+    "latency_ms": 41.9,
+    "stages": [
+      "request",
+      "cache_lookup"
+    ]
+  },
+  "cache_miss": {
+    "trace_id": "eeea390f-2c98-4419-8a46-c449443e2da6",
+    "question": "What should I look for in the pet clauses of a rental lease?",
+    "latency_ms": 6523.3,
+    "evaluated": true,
+    "stages": [
+      "request",
+      "cache_lookup",
+      "queue_inbox",
+      "planner",
+      "queue_tasks",
+      "writer",
+      "queue_drafts",
+      "queue_final",
+      "reviewer",
+      "evaluation",
+      "cache_store"
+    ]
+  },
+  "failed": {
+    "trace_id": "17a9d205-17bb-4870-a1f9-061524259f9e",
+    "question": "   ",
+    "failed_stage": "planner",
+    "error": "ValueError('inbox message needs a non-empty question')",
+    "stages": [
+      "request",
+      "cache_lookup",
+      "queue_inbox",
+      "planner",
+      "planner",
+      "planner",
+      "dead_letter"
+    ]
+  }
+}

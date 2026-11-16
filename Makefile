@@ -70,3 +70,39 @@ verify-hw09:
 
 run-log-hw09:
 	PYTHONPATH=code $(PYTHON) -m hw9.run_log
+
+# ---- HW10: Streamlit operations dashboard, evaluation, judge validation, tracing ----
+# Kafka and Redis come from `make up-hw09`; the Ollama server must be running (qwen2:7b, qwen3:8b).
+up-hw10:
+	PYTHONPATH=code $(PYTHON) -m hw10.stack up
+
+down-hw10:
+	PYTHONPATH=code $(PYTHON) -m hw10.stack down
+
+status-hw10:
+	PYTHONPATH=code $(PYTHON) -m hw10.stack status
+
+dashboard-hw10:
+	PYTHONPATH=code $(PYTHON) -m streamlit run code/hw10/dashboard.py --server.port 8638 --server.address 127.0.0.1 --browser.gatherUsageStats false
+
+eval-cases-hw10:
+	PYTHONPATH=code $(PYTHON) -m hw10.build_eval_cases
+
+label-hw10:
+	PYTHONPATH=code $(PYTHON) -m hw10.label_drafts
+
+traces-hw10:
+	PYTHONPATH=code $(PYTHON) -m hw10.capture_traces
+
+latency-hw10:
+	PYTHONPATH=code $(PYTHON) -m hw10.loadtest
+	PYTHONPATH=code $(PYTHON) -m hw10.analyze_latency
+
+validate-hw10:
+	PYTHONPATH=code $(PYTHON) -m hw10.validate_judge --sensitivity
+
+finalize-hw10:
+	PYTHONPATH=code $(PYTHON) -m hw10.finalize
+
+verify-hw10:
+	PYTHONPATH=code $(PYTHON) -m hw10.verify_hw10

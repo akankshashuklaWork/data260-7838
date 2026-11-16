@@ -1,0 +1,645 @@
+{
+  "started": "2026-11-12T00:43:10.646689Z",
+  "judge_model": "qwen3:8b",
+  "misses": [
+    {
+      "index": 1,
+      "question": "How is a rental application fee calculated, and can it be refunded?",
+      "trace_id": "22c77a4c-9f78-46dd-84fe-f09b074a43c4",
+      "is_cached": false,
+      "similarity": 0.0,
+      "client_ms": 8429.2,
+      "latency_ms": 8426.4,
+      "evaluated": true
+    },
+    {
+      "index": 2,
+      "question": "What does joint and several liability mean for roommates on one lease?",
+      "trace_id": "b0a364e2-8a85-4b20-bad5-f35dbea55ead",
+      "is_cached": false,
+      "similarity": 0.2334,
+      "client_ms": 5182.7,
+      "latency_ms": 5181.1,
+      "evaluated": true
+    },
+    {
+      "index": 3,
+      "question": "How many days of notice must a landlord give before entering my apartment?",
+      "trace_id": "134ee230-ee63-47d6-90e1-4bf86a1f44dd",
+      "is_cached": false,
+      "similarity": 0.3241,
+      "client_ms": 4224.3,
+      "latency_ms": 4221.3,
+      "evaluated": true
+    },
+    {
+      "index": 4,
+      "question": "What happens if I break my lease early in California?",
+      "trace_id": "2cc06431-b31b-4f5f-966e-fabb14b7154a",
+      "is_cached": false,
+      "similarity": 0.4309,
+      "client_ms": 5502.5,
+      "latency_ms": 5500.0,
+      "evaluated": true
+    },
+    {
+      "index": 5,
+      "question": "Who normally pays for water, gas, and electricity in an apartment lease?",
+      "trace_id": "54b133c2-f427-4a66-8e4f-574d6be39934",
+      "is_cached": false,
+      "similarity": 0.4353,
+      "client_ms": 5249.5,
+      "latency_ms": 5247.2,
+      "evaluated": true
+    },
+    {
+      "index": 6,
+      "question": "When is subletting my apartment allowed?",
+      "trace_id": "10fb6219-a2d6-4f96-b627-0b80f5b04b1c",
+      "is_cached": false,
+      "similarity": 0.5595,
+      "client_ms": 3864.3,
+      "latency_ms": 3861.9,
+      "evaluated": true
+    },
+    {
+      "index": 7,
+      "question": "How can I verify that the person advertising a rental really owns the building?",
+      "trace_id": "60ab4d2f-c072-44db-9541-683d482e7b6f",
+      "is_cached": false,
+      "similarity": 0.3824,
+      "client_ms": 6019.7,
+      "latency_ms": 6017.3,
+      "evaluated": true
+    },
+    {
+      "index": 8,
+      "question": "Do studios usually require a smaller security deposit than larger units?",
+      "trace_id": "fb3619a4-4371-4269-8d33-c0d6c1279968",
+      "is_cached": false,
+      "similarity": 0.3036,
+      "client_ms": 5359.8,
+      "latency_ms": 5358.0,
+      "evaluated": true
+    },
+    {
+      "index": 9,
+      "question": "What is a rent-controlled unit and how do I find out whether mine is covered?",
+      "trace_id": "3762e35c-9828-4839-b6c6-26a694586058",
+      "is_cached": false,
+      "similarity": 0.5015,
+      "client_ms": 5623.8,
+      "latency_ms": 5621.4,
+      "evaluated": true
+    },
+    {
+      "index": 10,
+      "question": "How should I document the condition of an apartment on move-in day?",
+      "trace_id": "b585eb15-93bf-4416-bdca-cf4640af19c5",
+      "is_cached": false,
+      "similarity": 0.5811,
+      "client_ms": 4921.8,
+      "latency_ms": 4918.2,
+      "evaluated": true
+    },
+    {
+      "index": 11,
+      "question": "Are landlords required to provide air conditioning in California?",
+      "trace_id": "059c61dc-3027-4ba0-aafe-816d78e1d739",
+      "is_cached": false,
+      "similarity": 0.5733,
+      "client_ms": 4795.4,
+      "latency_ms": 4792.7,
+      "evaluated": true
+    },
+    {
+      "index": 12,
+      "question": "What is a co-signer and when does a landlord ask for one?",
+      "trace_id": "84cd03e8-68d9-4274-8039-34f8b5c10a6c",
+      "is_cached": false,
+      "similarity": 0.4755,
+      "client_ms": 5949.7,
+      "latency_ms": 5946.8,
+      "evaluated": true
+    },
+    {
+      "index": 13,
+      "question": "How long can a landlord keep my deposit after I move out?",
+      "trace_id": "c971dc53-51d0-4e55-a70f-b9644a453ecc",
+      "is_cached": false,
+      "similarity": 0.5953,
+      "client_ms": 4585.5,
+      "latency_ms": 4582.9,
+      "evaluated": true
+    },
+    {
+      "index": 14,
+      "question": "What fees are commonly hidden in rental listings besides the rent?",
+      "trace_id": "10d04d6b-3941-49e6-a0ab-0f2e8a32590d",
+      "is_cached": false,
+      "similarity": 0.6468,
+      "client_ms": 6411.4,
+      "latency_ms": 6408.9,
+      "evaluated": true
+    },
+    {
+      "index": 15,
+      "question": "Is renters insurance required by law, or only by some landlords?",
+      "trace_id": "8942f790-3cec-4552-b1d9-55e3369e8923",
+      "is_cached": false,
+      "similarity": 0.573,
+      "client_ms": 6691.4,
+      "latency_ms": 6688.2,
+      "evaluated": true
+    },
+    {
+      "index": 16,
+      "question": "How do I ask a landlord to repair a broken heater?",
+      "trace_id": "364ade33-19fb-4350-becd-9373904813c1",
+      "is_cached": false,
+      "similarity": 0.4207,
+      "client_ms": 6620.2,
+      "latency_ms": 6617.5,
+      "evaluated": true
+    },
+    {
+      "index": 17,
+      "question": "What is the typical length of a residential lease in Silicon Valley?",
+      "trace_id": "c93efdb0-d9c2-4939-986c-0d2c896964de",
+      "is_cached": false,
+      "similarity": 0.4961,
+      "client_ms": 5960.5,
+      "latency_ms": 5957.8,
+      "evaluated": true
+    },
+    {
+      "index": 18,
+      "question": "Can a landlord refuse to rent to someone because they have a service animal?",
+      "trace_id": "1ad7851b-c9b1-4ad0-8fd2-62293b4a2f81",
+      "is_cached": false,
+      "similarity": 0.4905,
+      "client_ms": 6157.7,
+      "latency_ms": 6154.7,
+      "evaluated": true
+    },
+    {
+      "index": 19,
+      "question": "What credit score do most landlords expect from applicants?",
+      "trace_id": "ba627d60-649e-4899-beaf-8efbb4bc3b1c",
+      "is_cached": false,
+      "similarity": 0.4925,
+      "client_ms": 5942.4,
+      "latency_ms": 5939.8,
+      "evaluated": true
+    },
+    {
+      "index": 20,
+      "question": "How do I read the utilities section of a lease agreement?",
+      "trace_id": "5dcd4758-1b5a-4754-9233-6f6237b77660",
+      "is_cached": false,
+      "similarity": 0.5424,
+      "client_ms": 6629.0,
+      "latency_ms": 6626.8,
+      "evaluated": true
+    },
+    {
+      "index": 21,
+      "question": "What should I know about parking rules when renting a townhouse?",
+      "trace_id": "50fdba09-8188-49cf-8a40-2d67728f5ed5",
+      "is_cached": false,
+      "similarity": 0.4456,
+      "client_ms": 3908.0,
+      "latency_ms": 3904.5,
+      "evaluated": true
+    },
+    {
+      "index": 22,
+      "question": "How is a prorated first month of rent calculated?",
+      "trace_id": "c6bba5a5-0c67-4130-84d0-ba4e33545155",
+      "is_cached": false,
+      "similarity": 0.5395,
+      "client_ms": 4247.7,
+      "latency_ms": 4243.4,
+      "evaluated": true
+    },
+    {
+      "index": 23,
+      "question": "What can I do if my neighbors are constantly noisy?",
+      "trace_id": "d2528b21-003c-442d-8bfe-3b68081446a4",
+      "is_cached": false,
+      "similarity": 0.2684,
+      "client_ms": 5939.5,
+      "latency_ms": 5936.6,
+      "evaluated": true
+    },
+    {
+      "index": 24,
+      "question": "How do landlords usually verify an applicant's income?",
+      "trace_id": "57883d25-c0a2-44e4-95b7-97eedc20e2f3",
+      "is_cached": false,
+      "similarity": 0.64,
+      "client_ms": 4958.3,
+      "latency_ms": 4956.1,
+      "evaluated": true
+    },
+    {
+      "index": 25,
+      "question": "Is it legal for a landlord to change the locks without notice?",
+      "trace_id": "4e867449-768c-484e-9268-218ae7da3110",
+      "is_cached": false,
+      "similarity": 0.5859,
+      "client_ms": 5455.3,
+      "latency_ms": 5452.9,
+      "evaluated": true
+    },
+    {
+      "index": 26,
+      "question": "What is the difference between a condo and an apartment for a tenant?",
+      "trace_id": "a7c0a009-905e-4462-b61c-e40a27618013",
+      "is_cached": false,
+      "similarity": 0.4968,
+      "client_ms": 7496.1,
+      "latency_ms": 7493.7,
+      "evaluated": true
+    },
+    {
+      "index": 27,
+      "question": "How much notice must I give before I move out of a month-to-month rental?",
+      "trace_id": "d1b3a2ed-e22c-43a0-8674-b526dc9e7582",
+      "is_cached": false,
+      "similarity": 0.6994,
+      "client_ms": 3484.7,
+      "latency_ms": 3482.8,
+      "evaluated": true
+    },
+    {
+      "index": 28,
+      "question": "What does normal wear and tear mean when a deposit is returned?",
+      "trace_id": "094954c9-5b74-4ace-a16b-323d8a5f3796",
+      "is_cached": false,
+      "similarity": 0.3815,
+      "client_ms": 6998.5,
+      "latency_ms": 6996.4,
+      "evaluated": true
+    },
+    {
+      "index": 29,
+      "question": "How do I handle a landlord who sells the building while I live there?",
+      "trace_id": "89cd3e7f-c29f-463f-b7cd-d85373ece770",
+      "is_cached": false,
+      "similarity": 0.6097,
+      "client_ms": 6061.4,
+      "latency_ms": 6058.8,
+      "evaluated": true
+    },
+    {
+      "index": 30,
+      "question": "What are the pros and cons of renting a house instead of an apartment?",
+      "trace_id": "fbeca16f-6cae-4aee-aa7d-7e4ec8cca187",
+      "is_cached": false,
+      "similarity": 0.5293,
+      "client_ms": 14231.5,
+      "latency_ms": 14227.7,
+      "evaluated": true
+    },
+    {
+      "index": 31,
+      "question": "Is Cedar Heights a good choice for someone who works from home?",
+      "trace_id": "2275f798-9c21-4680-a705-e74ab9832265",
+      "is_cached": false,
+      "similarity": 0.3862,
+      "client_ms": 7392.3,
+      "latency_ms": 7389.0,
+      "evaluated": true
+    },
+    {
+      "index": 32,
+      "question": "Does Willow Lane allow both dogs and cats?",
+      "trace_id": "65e3f37d-2882-4682-b2cf-994435fefe26",
+      "is_cached": false,
+      "similarity": 0.3993,
+      "client_ms": 5111.1,
+      "latency_ms": 5108.6,
+      "evaluated": true
+    },
+    {
+      "index": 33,
+      "question": "What would I pay up front to move into Pine Ridge?",
+      "trace_id": "a417b30a-1bdb-4a59-9503-aec3119fa68f",
+      "is_cached": false,
+      "similarity": 0.3861,
+      "client_ms": 5120.2,
+      "latency_ms": 5117.3,
+      "evaluated": true
+    },
+    {
+      "index": 34,
+      "question": "How does the rent at Birch Street compare with the deposit there?",
+      "trace_id": "ecbbc9f0-c343-403d-9b7b-de787fb74a9f",
+      "is_cached": false,
+      "similarity": 0.5204,
+      "client_ms": 3738.6,
+      "latency_ms": 3736.5,
+      "evaluated": true
+    },
+    {
+      "index": 35,
+      "question": "Which listing in Oakland would suit a student on a small budget?",
+      "trace_id": "568a49b0-2574-4b43-ab35-04f0f27da242",
+      "is_cached": false,
+      "similarity": 0.3763,
+      "client_ms": 5863.9,
+      "latency_ms": 5861.9,
+      "evaluated": true
+    },
+    {
+      "index": 36,
+      "question": "What documents should I bring to a rental application appointment?",
+      "trace_id": "bd211991-9dd3-4644-94b1-a5d59ad6d5cb",
+      "is_cached": false,
+      "similarity": 0.5485,
+      "client_ms": 6611.3,
+      "latency_ms": 6606.1,
+      "evaluated": true
+    },
+    {
+      "index": 37,
+      "question": "How do I negotiate a lower rent with a private landlord?",
+      "trace_id": "f1fcc68d-cb65-4ab5-96fb-0e4b3e4b859b",
+      "is_cached": false,
+      "similarity": 0.4946,
+      "client_ms": 6765.8,
+      "latency_ms": 6762.8,
+      "evaluated": true
+    },
+    {
+      "index": 38,
+      "question": "What is an estoppel certificate and why might a tenant sign one?",
+      "trace_id": "1361c72e-31b8-4bbd-96a4-37ecd2093369",
+      "is_cached": false,
+      "similarity": 0.6439,
+      "client_ms": 7618.6,
+      "latency_ms": 7616.4,
+      "evaluated": true
+    },
+    {
+      "index": 39,
+      "question": "How can I spot mold problems before I rent a unit?",
+      "trace_id": "221b71d9-7244-405d-824f-2035f83853e0",
+      "is_cached": false,
+      "similarity": 0.4311,
+      "client_ms": 7475.5,
+      "latency_ms": 7472.1,
+      "evaluated": true
+    },
+    {
+      "index": 40,
+      "question": "Do landlords have to allow me to paint the walls?",
+      "trace_id": "a27c2ed7-60bd-480a-b5fd-8556d0b805cb",
+      "is_cached": false,
+      "similarity": 0.4941,
+      "client_ms": 6738.8,
+      "latency_ms": 6735.3,
+      "evaluated": true
+    },
+    {
+      "index": 41,
+      "question": "What are common reasons a rental application gets rejected?",
+      "trace_id": "e66c0374-d057-465e-8f8a-253bbd365a33",
+      "is_cached": false,
+      "similarity": 0.5722,
+      "client_ms": 4518.7,
+      "latency_ms": 4515.4,
+      "evaluated": true
+    },
+    {
+      "index": 42,
+      "question": "How do I get my deposit back if my roommate moves out early?",
+      "trace_id": "9457be6a-6296-454d-b9c2-f4f38cf3065f",
+      "is_cached": false,
+      "similarity": 0.6858,
+      "client_ms": 6058.8,
+      "latency_ms": 6056.5,
+      "evaluated": true
+    },
+    {
+      "index": 43,
+      "question": "What is the purpose of a move-out inspection?",
+      "trace_id": "1ab07374-55ba-4658-aa8c-ba56cfbf6a42",
+      "is_cached": false,
+      "similarity": 0.3517,
+      "client_ms": 5749.9,
+      "latency_ms": 5747.3,
+      "evaluated": true
+    },
+    {
+      "index": 44,
+      "question": "Can a landlord charge a late fee of any amount they like?",
+      "trace_id": "c556ffab-b144-4730-8efc-fb53b1a0d9d4",
+      "is_cached": false,
+      "similarity": 0.5561,
+      "client_ms": 7368.0,
+      "latency_ms": 7364.3,
+      "evaluated": true
+    },
+    {
+      "index": 45,
+      "question": "How do I find out whether a building has had pest problems?",
+      "trace_id": "9515d0fc-276e-4689-80c7-80955cbc7f4d",
+      "is_cached": false,
+      "similarity": 0.5597,
+      "client_ms": 5485.0,
+      "latency_ms": 5482.1,
+      "evaluated": true
+    },
+    {
+      "index": 46,
+      "question": "What does a lease clause about guests and occupancy limits usually say?",
+      "trace_id": "cf7a18c6-fbfa-4caa-b134-7b14264056bf",
+      "is_cached": false,
+      "similarity": 0.5683,
+      "client_ms": 6615.2,
+      "latency_ms": 6612.4,
+      "evaluated": true
+    },
+    {
+      "index": 47,
+      "question": "How should I plan my budget so rent stays under one third of my income?",
+      "trace_id": "dad181be-76b1-48e3-9333-9d38549fc8e7",
+      "is_cached": false,
+      "similarity": 0.5616,
+      "client_ms": 5055.0,
+      "latency_ms": 5051.2,
+      "evaluated": true
+    },
+    {
+      "index": 48,
+      "question": "What internet and cable arrangements are typical in apartment buildings?",
+      "trace_id": "1c3c8856-69bb-4ecd-a524-f9defdb1d0d2",
+      "is_cached": false,
+      "similarity": 0.4482,
+      "client_ms": 7547.2,
+      "latency_ms": 7544.5,
+      "evaluated": true
+    },
+    {
+      "index": 49,
+      "question": "What are my options if the landlord refuses to renew my lease?",
+      "trace_id": "aad9326d-4e02-420b-b5f4-164bfc618b1c",
+      "is_cached": false,
+      "similarity": 0.5669,
+      "client_ms": 10973.3,
+      "latency_ms": 10970.3,
+      "evaluated": true
+    },
+    {
+      "index": 50,
+      "question": "How do shared-wall noise rules differ between a duplex and a high-rise?",
+      "trace_id": "8e86d1fe-169d-4718-b67c-1c86a0b2d249",
+      "is_cached": false,
+      "similarity": 0.3409,
+      "client_ms": 14023.0,
+      "latency_ms": 14019.1,
+      "evaluated": true
+    }
+  ],
+  "hits": [
+    {
+      "index": 1,
+      "question": "How is a rental application fee calculated, and can it be refunded?",
+      "trace_id": "114ca20b-baea-4bf4-bc20-ca2f55bff4e0",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 40.0,
+      "latency_ms": 37.5
+    },
+    {
+      "index": 2,
+      "question": "What does joint and several liability mean for roommates on one lease?",
+      "trace_id": "52d8d171-65df-4b42-915e-631eae32dfaa",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 11.9,
+      "latency_ms": 10.5
+    },
+    {
+      "index": 3,
+      "question": "How many days of notice must a landlord give before entering my apartment?",
+      "trace_id": "693e3032-af4a-497d-8bf6-6c1324c6ada9",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 9.7,
+      "latency_ms": 8.5
+    },
+    {
+      "index": 4,
+      "question": "What happens if I break my lease early in California?",
+      "trace_id": "3a50239c-ef8b-47b4-9f74-df40629b879d",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 12.2,
+      "latency_ms": 10.7
+    },
+    {
+      "index": 5,
+      "question": "Who normally pays for water, gas, and electricity in an apartment lease?",
+      "trace_id": "8ec76660-99cf-4aa4-916b-793a5aafcd00",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 10.9,
+      "latency_ms": 9.4
+    },
+    {
+      "index": 6,
+      "question": "When is subletting my apartment allowed?",
+      "trace_id": "5f3eb75f-684d-46fb-b601-c97faf7146bf",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 10.6,
+      "latency_ms": 9.2
+    },
+    {
+      "index": 7,
+      "question": "How can I verify that the person advertising a rental really owns the building?",
+      "trace_id": "c60e3472-737a-4e8d-8639-b69fc37b78aa",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 10.9,
+      "latency_ms": 9.6
+    },
+    {
+      "index": 8,
+      "question": "Do studios usually require a smaller security deposit than larger units?",
+      "trace_id": "3a882d64-112b-4456-9e4b-d5b8b0eac613",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 11.3,
+      "latency_ms": 9.9
+    },
+    {
+      "index": 9,
+      "question": "What is a rent-controlled unit and how do I find out whether mine is covered?",
+      "trace_id": "982a0173-1bc8-4e2d-af24-33242b425826",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 9.7,
+      "latency_ms": 8.4
+    },
+    {
+      "index": 10,
+      "question": "How should I document the condition of an apartment on move-in day?",
+      "trace_id": "8bde81ab-5227-4470-aea3-60ffecf1dcfe",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 10.8,
+      "latency_ms": 9.5
+    },
+    {
+      "index": 11,
+      "question": "Are landlords required to provide air conditioning in California?",
+      "trace_id": "8b599652-7102-4eac-8617-b14813329e41",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 9.9,
+      "latency_ms": 8.5
+    },
+    {
+      "index": 12,
+      "question": "What is a co-signer and when does a landlord ask for one?",
+      "trace_id": "7115f243-9f31-4086-8cb3-e185440b2c59",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 11.0,
+      "latency_ms": 9.7
+    },
+    {
+      "index": 13,
+      "question": "How long can a landlord keep my deposit after I move out?",
+      "trace_id": "24d766d4-8099-46d3-a462-0fb47139eb1a",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 9.6,
+      "latency_ms": 8.4
+    },
+    {
+      "index": 14,
+      "question": "What fees are commonly hidden in rental listings besides the rent?",
+      "trace_id": "9f82ab3a-4a32-4353-a20d-14e518b38553",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 10.6,
+      "latency_ms": 9.4
+    },
+    {
+      "index": 15,
+      "question": "Is renters insurance required by law, or only by some landlords?",
+      "trace_id": "7792db72-4a7d-4225-b9ce-532d39fc641b",
+      "is_cached": true,
+      "similarity": 1.0,
+      "client_ms": 9.4,
+      "latency_ms": 8.1
+    }
+  ],
+  "warmup_trace_id": "348e4b6a-2d31-4ea5-8c4c-9622c508f320",
+  "finished": "2026-11-12T00:55:25.992151Z"
+}

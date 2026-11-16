@@ -1,0 +1,133 @@
+{
+  "homework": 10,
+  "SID4": 7838,
+  "commit_hash": "95ead7a5eacdd4bf96a9cb6e0e7e9e707520a76d",
+  "uncommitted_changes_in_code": true,
+  "model": "qwen2:7b (agents, via Ollama); stub agents and a fake judge inside this self-check",
+  "configuration": {
+    "judge_model": "qwen3:8b",
+    "judge_temperature": 0,
+    "judge_scale": "1-5",
+    "kafka": "localhost:9092",
+    "redis": "redis-stack-server 7.4"
+  },
+  "hardware": "MacBook Pro (Apple M4 Pro, 48 GB unified memory)",
+  "seed": 7838,
+  "verify_seed": 267838,
+  "eval_cases_sha256": "63a2909827506234",
+  "checks": [
+    {
+      "name": "Span has trace_id, stage, start, end, status, error and a duration",
+      "passed": true
+    },
+    {
+      "name": "A failing block is recorded as status=error with the exception text, then re-raised",
+      "passed": true
+    },
+    {
+      "name": "A span without a trace_id is not written",
+      "passed": true
+    },
+    {
+      "name": "Percentiles use linear interpolation (p50 of 1..100 is 50.5, p95 is 95.05)",
+      "passed": true
+    },
+    {
+      "name": "Stage table: % of end-to-end is mean stage / mean end-to-end and the shares total <= 100",
+      "passed": true,
+      "detail": "planner share=19.09"
+    },
+    {
+      "name": "Spearman is +1 for the same order, -1 for the reverse order, and NaN for a constant judge",
+      "passed": true
+    },
+    {
+      "name": "Mean absolute difference and repeatability match a hand-computed example",
+      "passed": true,
+      "detail": "{\"runs\": 3, \"cases\": 3, \"cases_changed\": 0.333, \"pairs_changed\": 0.222, \"mean_abs_change\": 0.222, \"max_abs_change\": 1, \"mean_range\": 0.333, \"max_range\": 1}"
+    },
+    {
+      "name": "Malformed evaluator input is skipped and an incomplete join gives up after its timeout",
+      "passed": true,
+      "detail": "waited 0.20s"
+    },
+    {
+      "name": "Final-vs-draft interpretation states plainly when the final answer is the draft",
+      "passed": true
+    },
+    {
+      "name": "Cache miss: one trace_id has spans for the cache lookup, every queue, all three agents, and the evaluation",
+      "passed": true,
+      "detail": "stages=['cache_lookup', 'cache_store', 'evaluation', 'planner', 'queue_drafts', 'queue_final', 'queue_inbox', 'queue_tasks', 'request', 'reviewer', 'writer']"
+    },
+    {
+      "name": "The spans come from separate processes (ingress, PLANNER, WRITER, REVIEWER, evaluator)",
+      "passed": true,
+      "detail": "services=['PLANNER', 'REVIEWER', 'WRITER', 'evaluator', 'ingress']"
+    },
+    {
+      "name": "The Planner plan, Writer draft and Reviewer final all carry the same correlation_id as the trace_id",
+      "passed": true
+    },
+    {
+      "name": "Queue-wait spans exist for all four topics with non-negative, sane durations",
+      "passed": true,
+      "detail": "[('queue_inbox', 2.4), ('queue_tasks', 2.1), ('queue_drafts', 1.7), ('queue_final', 1.3)]"
+    },
+    {
+      "name": "Cache hit: cache_lookup says hit, the request is marked cached, and no agent ran",
+      "passed": true,
+      "detail": "stages=['cache_lookup', 'request']"
+    },
+    {
+      "name": "Failed trace: the Planner span shows the error, a dead_letter span follows, and the request names the failing stage",
+      "passed": true,
+      "detail": "planner error attempts=3"
+    },
+    {
+      "name": "Evaluator saves Plan Quality, Writer Helpfulness (with trace_id), Final Helpfulness (with final answer) on a 1-5 scale",
+      "passed": true
+    },
+    {
+      "name": "Final-vs-draft improvement stores both scores, their difference, and an interpretation",
+      "passed": true
+    },
+    {
+      "name": "A malformed message and an unavailable judge are recorded and do not stop the evaluator",
+      "passed": true
+    },
+    {
+      "name": "Summary metrics from spans: 5 requests, 1 hit, 1 error, and hit rate / error rate follow from the counts",
+      "passed": true,
+      "detail": "{\"requests\": 5, \"hits\": 1, \"misses\": 4, \"errors\": 1}"
+    },
+    {
+      "name": "Summary page renders without an error and shows request count, hit rate, and error rate",
+      "passed": true,
+      "detail": "metrics={'Requests': '5', 'Semantic-cache hit rate': '20.0%', 'Error rate': '20.0%', 'End-to-end latency (p50 / p95)': '22 ms / 5.76 s', 'Entries now in the Redis semantic cache': '3'}"
+    },
+    {
+      "name": "Evaluation page renders without an error",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "Trace page labels the cache-hit, cache-miss, and failed paths differently for the right trace_id",
+      "passed": true,
+      "detail": "{\"miss\": true, \"hit\": true, \"failed\": true}"
+    },
+    {
+      "name": "eval_cases.json holds 20 distinct Writer drafts, each with its trace_id and question",
+      "passed": true
+    },
+    {
+      "name": "human_labels.csv has one whole-number 1-5 label for each of the 20 cases",
+      "passed": true
+    },
+    {
+      "name": "The human labels were committed before the judge scores were produced",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

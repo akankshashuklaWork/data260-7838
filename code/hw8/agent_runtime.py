@@ -25,6 +25,7 @@ from reliability import (
     partition_key,
     run_with_retries,
 )
+from tracing import write_span  # HW10: one structured span per stage, keyed by correlation_id
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -125,6 +126,21 @@ async def run_agent(agent: str, in_topic: str, out_topic: str, handler: Any) -> 
             )
             emit("received", **detail)
 
+            # HW10 queue-wait span: from the moment the producer created the record until this
+            # consumer received it (Kafka CreateTime, same machine clock).
+            received_at = time.time()
+            if msg.timestamp and msg.timestamp > 0:
+                write_span(
+                    correlation_id,
+                    "queue_" + in_topic.removeprefix(f"{CONFIG.prefix}_"),
+                    min(msg.timestamp / 1000, received_at),
+                    received_at,
+                    service=s.label,
+                    topic=msg.topic,
+                    partition=msg.partition,
+                    offset=msg.offset,
+                )
+
             if s.commit_mode == "early":  # "before": commit on receipt, work not done yet
                 await commit_offset(consumer, msg)
                 emit("committed", **detail)
@@ -132,14 +148,37 @@ async def run_agent(agent: str, in_topic: str, out_topic: str, handler: Any) -> 
             if store and correlation_id and store.seen(correlation_id):
                 log(s.label, f"duplicate skipped correlation_id={correlation_id}")
                 emit("duplicate_skipped", **detail)
+                write_span(
+                    correlation_id, agent, received_at, time.time(), status="skipped",
+                    service=s.label, reason="duplicate",
+                )  # fmt: skip
             else:
+                attempt_no = 0
 
                 async def attempt_once() -> dict[str, Any] | None:
+                    nonlocal attempt_no
+                    attempt_no += 1
                     message = json.loads(msg.value.decode())
                     if not isinstance(message, dict):
                         raise ValueError("message must be a JSON object")
                     log(s.label, f"processing correlation_id={correlation_id}")
-                    result = await handler(message)
+                    work_started = time.time()
+                    where = {
+                        "attempt": attempt_no,
+                        "partition": msg.partition,
+                        "offset": msg.offset,
+                    }
+                    try:
+                        result = await handler(message)
+                    except Exception as exc:
+                        write_span(
+                            correlation_id, agent, work_started, time.time(), status="error",
+                            error=f"{type(exc).__name__}: {exc}"[:300], service=s.label, **where,
+                        )  # fmt: skip
+                        raise
+                    write_span(
+                        correlation_id, agent, work_started, time.time(), service=s.label, **where
+                    )
                     if result is not None:
                         log(s.label, f"sending to {out_topic} correlation_id={correlation_id}")
                         await producer.send_and_wait(
@@ -172,6 +211,11 @@ async def run_agent(agent: str, in_topic: str, out_topic: str, handler: Any) -> 
                         f"correlation_id={correlation_id}",
                     )
                     emit("dead_letter", **detail, attempts=attempts, error=outcome)
+                    now = time.time()
+                    write_span(
+                        correlation_id, "dead_letter", now, now, status="error", error=str(outcome),
+                        service=s.label, failed_stage=agent, attempts=attempts,
+                    )  # fmt: skip
 
             if s.commit_mode == "late":  # "after": commit only once the work is done
                 await commit_offset(consumer, msg)

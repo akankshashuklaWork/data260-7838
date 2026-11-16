@@ -52,7 +52,9 @@ class FakePipeline:
     def __init__(self) -> None:
         self.calls = 0
 
-    async def ask(self, question: str, context: str = "") -> tuple[str, float]:
+    async def ask(
+        self, question: str, context: str = "", trace_id: str | None = None
+    ) -> tuple[str, float]:
         self.calls += 1
         return f"answer {self.calls} for: {question} | {context}", 5.0
 
